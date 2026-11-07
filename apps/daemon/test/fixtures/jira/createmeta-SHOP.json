@@ -1,0 +1,1450 @@
+{
+ "project": "SHOP",
+ "types": [
+  {
+   "id": "14532",
+   "name": "Story",
+   "subtask": false
+  },
+  {
+   "id": "14533",
+   "name": "Task",
+   "subtask": false
+  },
+  {
+   "id": "14534",
+   "name": "Bug",
+   "subtask": false
+  },
+  {
+   "id": "14535",
+   "name": "Epic",
+   "subtask": false
+  },
+  {
+   "id": "14536",
+   "name": "Subtask",
+   "subtask": true
+  },
+  {
+   "id": "14648",
+   "name": "Test",
+   "subtask": false
+  },
+  {
+   "id": "17295",
+   "name": "Support",
+   "subtask": false
+  },
+  {
+   "id": "17328",
+   "name": "Spike",
+   "subtask": false
+  }
+ ],
+ "fields": {
+  "14532": [
+   {
+    "required": false,
+    "schema": {
+     "type": "user",
+     "system": "assignee"
+    },
+    "name": "Assignee",
+    "key": "assignee",
+    "autoCompleteUrl": "https://acme.atlassian.net/rest/api/3/user/assignable/search?project=SHOP&query=",
+    "hasDefaultValue": true,
+    "operations": [
+     "set"
+    ],
+    "fieldId": "assignee"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "array",
+     "items": "attachment",
+     "system": "attachment"
+    },
+    "name": "Attachment",
+    "key": "attachment",
+    "hasDefaultValue": false,
+    "operations": [
+     "set",
+     "copy"
+    ],
+    "fieldId": "attachment"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "array",
+     "items": "option",
+     "custom": "com.atlassian.jira.plugin.system.customfieldtypes:multicheckboxes",
+     "customId": 10000
+    },
+    "name": "Flagged",
+    "key": "customfield_10000",
+    "hasDefaultValue": false,
+    "operations": [
+     "add",
+     "set",
+     "remove"
+    ],
+    "allowedValues": [
+     {
+      "value": "Impediment",
+      "id": "10000"
+     }
+    ],
+    "fieldId": "customfield_10000"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "array",
+     "items": "json",
+     "custom": "com.pyxis.greenhopper.jira:gh-sprint",
+     "customId": 10521
+    },
+    "name": "Sprint",
+    "key": "customfield_10521",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "fieldId": "customfield_10521"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "any",
+     "custom": "com.pyxis.greenhopper.jira:gh-lexo-rank",
+     "customId": 11220
+    },
+    "name": "Rank",
+    "key": "customfield_11220",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "fieldId": "customfield_11220"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "any",
+     "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:devsummarycf",
+     "customId": 13320
+    },
+    "name": "Development",
+    "key": "customfield_13320",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "fieldId": "customfield_13320"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "number",
+     "custom": "com.pyxis.greenhopper.jira:jsw-story-points",
+     "customId": 16486
+    },
+    "name": "Story point estimate",
+    "key": "customfield_16486",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "fieldId": "customfield_16486"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "string",
+     "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+     "customId": 16727
+    },
+    "name": "Solution",
+    "key": "customfield_16727",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "fieldId": "customfield_16727"
+   },
+   {
+    "required": true,
+    "schema": {
+     "type": "string",
+     "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+     "customId": 16728
+    },
+    "name": "Acceptance criteria",
+    "key": "customfield_16728",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "fieldId": "customfield_16728"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "array",
+     "items": "user",
+     "custom": "com.atlassian.jira.plugin.system.customfieldtypes:people",
+     "customId": 17282,
+     "configuration": {
+      "isMulti": true
+     }
+    },
+    "name": "QA Assignee",
+    "key": "customfield_17282",
+    "autoCompleteUrl": "https://acme.atlassian.net/rest/api/1.0/users/picker?fieldName=customfield_17282&showAvatar=true&query=",
+    "hasDefaultValue": false,
+    "operations": [
+     "add",
+     "set",
+     "remove"
+    ],
+    "fieldId": "customfield_17282"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "array",
+     "items": "design.field.name",
+     "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:designcf",
+     "customId": 17460
+    },
+    "name": "Design",
+    "key": "customfield_17460",
+    "autoCompleteUrl": "",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "fieldId": "customfield_17460"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "any",
+     "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:vulnerabilitycf",
+     "customId": 17563
+    },
+    "name": "Vulnerability",
+    "key": "customfield_17563",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "fieldId": "customfield_17563"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "array",
+     "items": "user",
+     "custom": "com.atlassian.jira.plugin.system.customfieldtypes:people",
+     "customId": 17564,
+     "configuration": {
+      "isMulti": true
+     }
+    },
+    "name": "Reviewer",
+    "key": "customfield_17564",
+    "autoCompleteUrl": "https://acme.atlassian.net/rest/api/1.0/users/picker?fieldName=customfield_17564&showAvatar=true&query=",
+    "hasDefaultValue": false,
+    "operations": [
+     "add",
+     "set",
+     "remove"
+    ],
+    "fieldId": "customfield_17564"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "string",
+     "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+     "customId": 17581
+    },
+    "name": "Impact",
+    "key": "customfield_17581",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "fieldId": "customfield_17581"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "datetime",
+     "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datetime",
+     "customId": 17701
+    },
+    "name": "Start Ticket Timestamp",
+    "key": "customfield_17701",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "fieldId": "customfield_17701"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "datetime",
+     "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datetime",
+     "customId": 17702
+    },
+    "name": "End Ticket Timestamp",
+    "key": "customfield_17702",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "fieldId": "customfield_17702"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "string",
+     "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+     "customId": 17703
+    },
+    "name": "Circle Time Recorded",
+    "key": "customfield_17703",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "fieldId": "customfield_17703"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "option",
+     "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+     "customId": 21369
+    },
+    "name": "Dev Self-Testing Quality",
+    "key": "customfield_21369",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "allowedValues": [
+     {
+      "value": "Passed",
+      "id": "23379"
+     },
+     {
+      "value": "Failed",
+      "id": "23380"
+     }
+    ],
+    "fieldId": "customfield_21369"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "string",
+     "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+     "customId": 21870
+    },
+    "name": "Customer Name",
+    "key": "customfield_21870",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "fieldId": "customfield_21870"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "number",
+     "custom": "com.atlassian.jira.plugin.system.customfieldtypes:float",
+     "customId": 29369
+    },
+    "name": "QA Story point estimate",
+    "key": "customfield_29369",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "fieldId": "customfield_29369"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "string",
+     "system": "description"
+    },
+    "name": "Description",
+    "key": "description",
+    "hasDefaultValue": true,
+    "operations": [
+     "set"
+    ],
+    "defaultValue": {
+     "type": "doc",
+     "version": 1,
+     "content": [
+      {
+       "type": "bulletList",
+       "content": [
+        {
+         "type": "listItem",
+         "content": [
+          {
+           "type": "paragraph",
+           "content": [
+            {
+             "type": "text",
+             "text": "What is the requirement of this Story?"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "listItem",
+         "content": [
+          {
+           "type": "paragraph",
+           "content": [
+            {
+             "type": "text",
+             "text": "What is the expected input?"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "listItem",
+         "content": [
+          {
+           "type": "paragraph",
+           "content": [
+            {
+             "type": "text",
+             "text": "What is the expected output?"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "paragraph"
+      }
+     ]
+    },
+    "fieldId": "description"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "array",
+     "items": "version",
+     "system": "fixVersions"
+    },
+    "name": "Fix versions",
+    "key": "fixVersions",
+    "hasDefaultValue": false,
+    "operations": [
+     "set",
+     "add",
+     "remove"
+    ],
+    "allowedValues": [
+     {
+      "id": "48887",
+      "description": "Release Manager: Morgan Diaz",
+      "name": "2.1.0",
+      "archived": false,
+      "released": true,
+      "startDate": "2024-10-31",
+      "releaseDate": "2024-12-06",
+      "userStartDate": "30/Oct/24",
+      "userReleaseDate": "05/Dec/24",
+      "projectId": 15624
+     }
+    ],
+    "fieldId": "fixVersions"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "array",
+     "items": "issuelinks",
+     "system": "issuelinks"
+    },
+    "name": "Linked work items",
+    "key": "issuelinks",
+    "autoCompleteUrl": "https://acme.atlassian.net/rest/api/3/issue/picker?currentProjectId=&showSubTaskParent=true&showSubTasks=true&currentIssueKey=null&query=",
+    "hasDefaultValue": false,
+    "operations": [
+     "add",
+     "copy"
+    ],
+    "fieldId": "issuelinks"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "issuerestriction",
+     "system": "issuerestriction"
+    },
+    "name": "Restrict to",
+    "key": "issuerestriction",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "allowedValues": [],
+    "fieldId": "issuerestriction"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "issuetype",
+     "system": "issuetype"
+    },
+    "name": "Issue Type",
+    "key": "issuetype",
+    "hasDefaultValue": false,
+    "operations": [],
+    "allowedValues": [
+     {
+      "id": "14532",
+      "description": "Stories track functionality or features expressed as user goals.",
+      "name": "Story",
+      "subtask": false,
+      "entityId": "89386fcb-7b79-4a8c-9772-f662d8cf0c2e",
+      "hierarchyLevel": 0
+     }
+    ],
+    "fieldId": "issuetype"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "array",
+     "items": "string",
+     "system": "labels"
+    },
+    "name": "Labels",
+    "key": "labels",
+    "autoCompleteUrl": "https://acme.atlassian.net/rest/api/1.0/labels/suggest?query=",
+    "hasDefaultValue": false,
+    "operations": [
+     "add",
+     "set",
+     "remove"
+    ],
+    "fieldId": "labels"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "issuelink",
+     "system": "parent"
+    },
+    "name": "Parent",
+    "key": "parent",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "fieldId": "parent"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "priority",
+     "system": "priority"
+    },
+    "name": "Priority",
+    "key": "priority",
+    "hasDefaultValue": true,
+    "operations": [
+     "set"
+    ],
+    "allowedValues": [
+     {
+      "name": "Blocker",
+      "id": "1"
+     },
+     {
+      "name": "Critical",
+      "id": "2"
+     },
+     {
+      "name": "Major",
+      "id": "3"
+     },
+     {
+      "name": "Minor",
+      "id": "4"
+     },
+     {
+      "name": "IFFEasy",
+      "id": "10000"
+     },
+     {
+      "name": "Trivial",
+      "id": "5"
+     }
+    ],
+    "defaultValue": {
+     "name": "Minor",
+     "id": "4"
+    },
+    "fieldId": "priority"
+   },
+   {
+    "required": true,
+    "schema": {
+     "type": "project",
+     "system": "project"
+    },
+    "name": "Project",
+    "key": "project",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "allowedValues": [
+     {
+      "id": "15624",
+      "key": "SHOP",
+      "name": "Acme Shop",
+      "projectTypeKey": "software",
+      "simplified": true,
+      "projectCategory": {
+       "id": "10100",
+       "description": "All Engineering Projects",
+       "name": "Engineering"
+      }
+     }
+    ],
+    "fieldId": "project"
+   },
+   {
+    "required": true,
+    "schema": {
+     "type": "string",
+     "system": "summary"
+    },
+    "name": "Summary",
+    "key": "summary",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "fieldId": "summary"
+   }
+  ],
+  "14534": [
+   {
+    "required": false,
+    "schema": {
+     "type": "user",
+     "system": "assignee"
+    },
+    "name": "Assignee",
+    "key": "assignee",
+    "autoCompleteUrl": "https://acme.atlassian.net/rest/api/3/user/assignable/search?project=SHOP&query=",
+    "hasDefaultValue": true,
+    "operations": [
+     "set"
+    ],
+    "fieldId": "assignee"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "array",
+     "items": "attachment",
+     "system": "attachment"
+    },
+    "name": "Attachment",
+    "key": "attachment",
+    "hasDefaultValue": false,
+    "operations": [
+     "set",
+     "copy"
+    ],
+    "fieldId": "attachment"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "array",
+     "items": "option",
+     "custom": "com.atlassian.jira.plugin.system.customfieldtypes:multicheckboxes",
+     "customId": 10000
+    },
+    "name": "Flagged",
+    "key": "customfield_10000",
+    "hasDefaultValue": false,
+    "operations": [
+     "add",
+     "set",
+     "remove"
+    ],
+    "allowedValues": [
+     {
+      "value": "Impediment",
+      "id": "10000"
+     }
+    ],
+    "fieldId": "customfield_10000"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "datetime",
+     "custom": "com.atlassian.jira.ext.charting:firstresponsedate",
+     "customId": 10021
+    },
+    "name": "First Response",
+    "key": "customfield_10021",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "fieldId": "customfield_10021"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "array",
+     "items": "json",
+     "custom": "com.pyxis.greenhopper.jira:gh-sprint",
+     "customId": 10521
+    },
+    "name": "Sprint",
+    "key": "customfield_10521",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "fieldId": "customfield_10521"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "any",
+     "custom": "com.pyxis.greenhopper.jira:gh-lexo-rank",
+     "customId": 11220
+    },
+    "name": "Rank",
+    "key": "customfield_11220",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "fieldId": "customfield_11220"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "any",
+     "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:devsummarycf",
+     "customId": 13320
+    },
+    "name": "Development",
+    "key": "customfield_13320",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "fieldId": "customfield_13320"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "number",
+     "custom": "com.pyxis.greenhopper.jira:jsw-story-points",
+     "customId": 16486
+    },
+    "name": "Story point estimate",
+    "key": "customfield_16486",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "fieldId": "customfield_16486"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "option",
+     "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+     "customId": 16594
+    },
+    "name": "Root cause",
+    "key": "customfield_16594",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "allowedValues": [
+     {
+      "value": "Enhancement request",
+      "id": "15159"
+     },
+     {
+      "value": "Environment specific",
+      "id": "15164"
+     },
+     {
+      "value": "Improper use of software",
+      "id": "15160"
+     },
+     {
+      "value": "Incompatible product version",
+      "id": "18508"
+     },
+     {
+      "value": "Known issue",
+      "id": "15628"
+     },
+     {
+      "value": "Lack of self-testing",
+      "id": "24501"
+     },
+     {
+      "value": "Lack of test cases",
+      "id": "15161"
+     },
+     {
+      "value": "Lack of testing",
+      "id": "15162"
+     },
+     {
+      "value": "Missing/Incorrect configuration",
+      "id": "24502"
+     },
+     {
+      "value": "Non-standard file format",
+      "id": "15529"
+     },
+     {
+      "value": "Release issue",
+      "id": "15267"
+     },
+     {
+      "value": "Requirement issue",
+      "id": "15163"
+     },
+     {
+      "value": "Third-party issue",
+      "id": "15498"
+     },
+     {
+      "value": "User guide issue",
+      "id": "15314"
+     },
+     {
+      "value": "Others",
+      "id": "15258"
+     }
+    ],
+    "fieldId": "customfield_16594"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "string",
+     "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+     "customId": 16595
+    },
+    "name": "Root cause description",
+    "key": "customfield_16595",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "fieldId": "customfield_16595"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "string",
+     "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+     "customId": 16727
+    },
+    "name": "Solution",
+    "key": "customfield_16727",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "fieldId": "customfield_16727"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "string",
+     "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+     "customId": 16728
+    },
+    "name": "Acceptance criteria",
+    "key": "customfield_16728",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "fieldId": "customfield_16728"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "array",
+     "items": "user",
+     "custom": "com.atlassian.jira.plugin.system.customfieldtypes:people",
+     "customId": 17282,
+     "configuration": {
+      "isMulti": true
+     }
+    },
+    "name": "QA Assignee",
+    "key": "customfield_17282",
+    "autoCompleteUrl": "https://acme.atlassian.net/rest/api/1.0/users/picker?fieldName=customfield_17282&showAvatar=true&query=",
+    "hasDefaultValue": false,
+    "operations": [
+     "add",
+     "set",
+     "remove"
+    ],
+    "fieldId": "customfield_17282"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "option",
+     "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+     "customId": 17407
+    },
+    "name": "Resolution",
+    "key": "customfield_17407",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "allowedValues": [
+     {
+      "value": "Done",
+      "id": "18180"
+     },
+     {
+      "value": "Fixed",
+      "id": "18181"
+     },
+     {
+      "value": "Won't Fix",
+      "id": "18182"
+     },
+     {
+      "value": "Duplicate",
+      "id": "18183"
+     },
+     {
+      "value": "Cannot Reproduce",
+      "id": "18184"
+     },
+     {
+      "value": "Answered",
+      "id": "18185"
+     },
+     {
+      "value": "Deffered",
+      "id": "18186"
+     },
+     {
+      "value": "Delivered",
+      "id": "18187"
+     },
+     {
+      "value": "No Response From Reporter",
+      "id": "18188"
+     },
+     {
+      "value": "Cancelled",
+      "id": "18189"
+     },
+     {
+      "value": "Won't Do",
+      "id": "18190"
+     },
+     {
+      "value": "Declined",
+      "id": "18191"
+     },
+     {
+      "value": "Invalid",
+      "id": "17794"
+     },
+     {
+      "value": "Fix",
+      "id": "17793"
+     },
+     {
+      "value": "Can't Fix",
+      "id": "17795"
+     }
+    ],
+    "fieldId": "customfield_17407"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "array",
+     "items": "design.field.name",
+     "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:designcf",
+     "customId": 17460
+    },
+    "name": "Design",
+    "key": "customfield_17460",
+    "autoCompleteUrl": "",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "fieldId": "customfield_17460"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "option",
+     "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+     "customId": 17543
+    },
+    "name": "Regression",
+    "key": "customfield_17543",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "allowedValues": [
+     {
+      "value": "Yes",
+      "id": "18115"
+     },
+     {
+      "value": "No",
+      "id": "18116"
+     }
+    ],
+    "fieldId": "customfield_17543"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "any",
+     "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:vulnerabilitycf",
+     "customId": 17563
+    },
+    "name": "Vulnerability",
+    "key": "customfield_17563",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "fieldId": "customfield_17563"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "array",
+     "items": "user",
+     "custom": "com.atlassian.jira.plugin.system.customfieldtypes:people",
+     "customId": 17564,
+     "configuration": {
+      "isMulti": true
+     }
+    },
+    "name": "Reviewer",
+    "key": "customfield_17564",
+    "autoCompleteUrl": "https://acme.atlassian.net/rest/api/1.0/users/picker?fieldName=customfield_17564&showAvatar=true&query=",
+    "hasDefaultValue": false,
+    "operations": [
+     "add",
+     "set",
+     "remove"
+    ],
+    "fieldId": "customfield_17564"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "datetime",
+     "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datetime",
+     "customId": 17701
+    },
+    "name": "Start Ticket Timestamp",
+    "key": "customfield_17701",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "fieldId": "customfield_17701"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "datetime",
+     "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datetime",
+     "customId": 17702
+    },
+    "name": "End Ticket Timestamp",
+    "key": "customfield_17702",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "fieldId": "customfield_17702"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "string",
+     "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+     "customId": 17703
+    },
+    "name": "Circle Time Recorded",
+    "key": "customfield_17703",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "fieldId": "customfield_17703"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "option",
+     "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+     "customId": 21369
+    },
+    "name": "Dev Self-Testing Quality",
+    "key": "customfield_21369",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "allowedValues": [
+     {
+      "value": "Passed",
+      "id": "23379"
+     },
+     {
+      "value": "Failed",
+      "id": "23380"
+     }
+    ],
+    "fieldId": "customfield_21369"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "string",
+     "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+     "customId": 21870
+    },
+    "name": "Customer Name",
+    "key": "customfield_21870",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "fieldId": "customfield_21870"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "string",
+     "system": "description"
+    },
+    "name": "Description",
+    "key": "description",
+    "hasDefaultValue": true,
+    "operations": [
+     "set"
+    ],
+    "defaultValue": {
+     "type": "doc",
+     "version": 1,
+     "content": [
+      {
+       "type": "bulletList",
+       "content": [
+        {
+         "type": "listItem",
+         "content": [
+          {
+           "type": "paragraph",
+           "content": [
+            {
+             "type": "text",
+             "text": "What is the behavior of the issue/error/bug?"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "listItem",
+         "content": [
+          {
+           "type": "paragraph",
+           "content": [
+            {
+             "type": "text",
+             "text": "What is the actual result?"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "listItem",
+         "content": [
+          {
+           "type": "paragraph",
+           "content": [
+            {
+             "type": "text",
+             "text": "What is the expected result?"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "paragraph"
+      }
+     ]
+    },
+    "fieldId": "description"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "array",
+     "items": "version",
+     "system": "fixVersions"
+    },
+    "name": "Fix versions",
+    "key": "fixVersions",
+    "hasDefaultValue": false,
+    "operations": [
+     "set",
+     "add",
+     "remove"
+    ],
+    "allowedValues": [
+     {
+      "id": "48887",
+      "description": "Release Manager: Morgan Diaz",
+      "name": "2.1.0",
+      "archived": false,
+      "released": true,
+      "startDate": "2024-10-31",
+      "releaseDate": "2024-12-06",
+      "userStartDate": "30/Oct/24",
+      "userReleaseDate": "05/Dec/24",
+      "projectId": 15624
+     }
+    ],
+    "fieldId": "fixVersions"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "array",
+     "items": "issuelinks",
+     "system": "issuelinks"
+    },
+    "name": "Linked work items",
+    "key": "issuelinks",
+    "autoCompleteUrl": "https://acme.atlassian.net/rest/api/3/issue/picker?currentProjectId=&showSubTaskParent=true&showSubTasks=true&currentIssueKey=null&query=",
+    "hasDefaultValue": false,
+    "operations": [
+     "add",
+     "copy"
+    ],
+    "fieldId": "issuelinks"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "issuerestriction",
+     "system": "issuerestriction"
+    },
+    "name": "Restrict to",
+    "key": "issuerestriction",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "allowedValues": [],
+    "fieldId": "issuerestriction"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "issuetype",
+     "system": "issuetype"
+    },
+    "name": "Issue Type",
+    "key": "issuetype",
+    "hasDefaultValue": false,
+    "operations": [],
+    "allowedValues": [
+     {
+      "id": "14534",
+      "description": "Bugs track problems or errors.",
+      "name": "Bug",
+      "subtask": false,
+      "entityId": "3d6b0cdc-76f7-4cfa-a67b-b342d464d49d",
+      "hierarchyLevel": 0
+     }
+    ],
+    "fieldId": "issuetype"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "array",
+     "items": "string",
+     "system": "labels"
+    },
+    "name": "Labels",
+    "key": "labels",
+    "autoCompleteUrl": "https://acme.atlassian.net/rest/api/1.0/labels/suggest?query=",
+    "hasDefaultValue": false,
+    "operations": [
+     "add",
+     "set",
+     "remove"
+    ],
+    "fieldId": "labels"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "issuelink",
+     "system": "parent"
+    },
+    "name": "Parent",
+    "key": "parent",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "fieldId": "parent"
+   },
+   {
+    "required": false,
+    "schema": {
+     "type": "priority",
+     "system": "priority"
+    },
+    "name": "Priority",
+    "key": "priority",
+    "hasDefaultValue": true,
+    "operations": [
+     "set"
+    ],
+    "allowedValues": [
+     {
+      "name": "Blocker",
+      "id": "1"
+     },
+     {
+      "name": "Critical",
+      "id": "2"
+     },
+     {
+      "name": "Major",
+      "id": "3"
+     },
+     {
+      "name": "Minor",
+      "id": "4"
+     },
+     {
+      "name": "IFFEasy",
+      "id": "10000"
+     },
+     {
+      "name": "Trivial",
+      "id": "5"
+     }
+    ],
+    "defaultValue": {
+     "name": "Minor",
+     "id": "4"
+    },
+    "fieldId": "priority"
+   },
+   {
+    "required": true,
+    "schema": {
+     "type": "project",
+     "system": "project"
+    },
+    "name": "Project",
+    "key": "project",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "allowedValues": [
+     {
+      "id": "15624",
+      "key": "SHOP",
+      "name": "Acme Shop",
+      "projectTypeKey": "software",
+      "simplified": true,
+      "projectCategory": {
+       "id": "10100",
+       "description": "All Engineering Projects",
+       "name": "Engineering"
+      }
+     }
+    ],
+    "fieldId": "project"
+   },
+   {
+    "required": true,
+    "schema": {
+     "type": "string",
+     "system": "summary"
+    },
+    "name": "Summary",
+    "key": "summary",
+    "hasDefaultValue": false,
+    "operations": [
+     "set"
+    ],
+    "fieldId": "summary"
+   }
+  ]
+ }
+}

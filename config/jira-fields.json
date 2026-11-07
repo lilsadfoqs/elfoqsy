@@ -1,0 +1,57 @@
+{
+  "_comment": "The ticket view's fields by their Jira names and ids. Ids differ per Jira site: at start-up an id is kept while it still carries its name, and otherwise moves to the one field with that name. Moves and misses are logged (jira.fields).",
+  "fields": {
+    "storyPoints": {
+      "name": "Story point estimate",
+      "id": "customfield_16486"
+    },
+    "acceptanceCriteria": {
+      "name": "Acceptance criteria",
+      "id": "customfield_16728"
+    },
+    "solution": {
+      "name": "Solution",
+      "id": "customfield_16727"
+    },
+    "impact": {
+      "name": "Impact",
+      "id": "customfield_17581"
+    },
+    "design": {
+      "name": "Design",
+      "id": "customfield_17460"
+    },
+    "rootCause": {
+      "name": "Root cause description",
+      "id": "customfield_16595"
+    },
+    "failedAc": {
+      "name": "Failed Acceptance Criteria",
+      "id": "customfield_17566"
+    },
+    "sprint": {
+      "name": "Sprint",
+      "id": "customfield_10521"
+    },
+    "qaAssignee": {
+      "name": "QA Assignee",
+      "id": "customfield_17282"
+    },
+    "reviewer": {
+      "name": "Reviewer",
+      "id": "customfield_17564"
+    },
+    "qaPoints": {
+      "name": "QA Story point estimate",
+      "id": "customfield_29369"
+    },
+    "flagged": {
+      "name": "Flagged",
+      "id": "customfield_10000"
+    },
+    "development": {
+      "name": "Development",
+      "id": "customfield_13320"
+    }
+  }
+}

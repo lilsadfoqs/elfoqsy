@@ -1,0 +1,1400 @@
+{
+ "key": "SHOP-3538",
+ "id": "2668210",
+ "full": true,
+ "fields": {
+  "issuetype": {
+   "id": "14532",
+   "description": "Stories track functionality or features expressed as user goals.",
+   "name": "Story",
+   "subtask": false,
+   "entityId": "89386fcb-7b79-4a8c-9772-f662d8cf0c2e",
+   "hierarchyLevel": 0
+  },
+  "parent": {
+   "id": "2668206",
+   "key": "SHOP-3534",
+   "fields": {
+    "summary": "[Checkout V2] Checkout Performance (Phase 1): shop-api work for checkout P90 under 800 ms",
+    "status": {
+     "description": "",
+     "name": "BACKLOG",
+     "id": "14377",
+     "statusCategory": {
+      "id": 2,
+      "key": "new",
+      "colorName": "blue-gray",
+      "name": "To Do"
+     }
+    },
+    "priority": {
+     "name": "Major",
+     "id": "3"
+    },
+    "issuetype": {
+     "id": "14535",
+     "description": "Epics track collections of related bugs, stories, and tasks.",
+     "name": "Epic",
+     "subtask": false,
+     "entityId": "bfdde146-f097-442b-872a-f161bf66fcca",
+     "hierarchyLevel": 1
+    }
+   }
+  },
+  "project": {
+   "id": "15624",
+   "key": "SHOP",
+   "name": "Acme Shop",
+   "projectTypeKey": "software",
+   "simplified": true,
+   "projectCategory": {
+    "id": "10100",
+    "description": "All Engineering Projects",
+    "name": "Engineering"
+   }
+  },
+  "customfield_16728": {
+   "type": "doc",
+   "version": 1,
+   "content": [
+    {
+     "type": "orderedList",
+     "content": [
+      {
+       "type": "listItem",
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "Fault injection (worker killed mid-commit, InventorySynced lost, Postgres unavailable for 10 minutes) loses no stock update and decrements no item twice."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "listItem",
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "A hold is released only after the stock commit is confirmed, or when the payment expires or is refunded."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "listItem",
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "Guest carts that never reach checkout are never synced."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "listItem",
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "The reconcile job reports and releases holds left over for more than 24 hours."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "customfield_16486": 8,
+  "created": "2026-10-07T21:30:41.316-0700",
+  "priority": {
+   "name": "Blocker",
+   "id": "1"
+  },
+  "labels": [
+   "checkout-v2"
+  ],
+  "issuelinks": [
+   {
+    "id": "699052",
+    "type": {
+     "id": "10402",
+     "name": "Blocks",
+     "inward": "is blocked by",
+     "outward": "blocks"
+    },
+    "inwardIssue": {
+     "id": "2668219",
+     "key": "SHOP-3543",
+     "fields": {
+      "summary": "[Checkout V2] Phase 1 infrastructure: reservation store, workflow cluster, Kafka topics, Redis streams, Postgres",
+      "status": {
+       "description": "",
+       "name": "OPEN",
+       "id": "14365",
+       "statusCategory": {
+        "id": 2,
+        "key": "new",
+        "colorName": "blue-gray",
+        "name": "To Do"
+       }
+      },
+      "priority": {
+       "name": "Blocker",
+       "id": "1"
+      },
+      "issuetype": {
+       "id": "14533",
+       "description": "Tasks track small, distinct pieces of work.",
+       "name": "Task",
+       "subtask": false,
+       "entityId": "1888db5e-400f-482f-aebf-ee1a68436fe5",
+       "hierarchyLevel": 0
+      },
+      "assignee": {
+       "displayName": "Morgan Diaz"
+      }
+     }
+    }
+   },
+   {
+    "id": "699055",
+    "type": {
+     "id": "10402",
+     "name": "Blocks",
+     "inward": "is blocked by",
+     "outward": "blocks"
+    },
+    "inwardIssue": {
+     "id": "2668209",
+     "key": "SHOP-3537",
+     "fields": {
+      "summary": "[Checkout V2] Initialize the reservation store and the hold by cart id (P04, shop-api side)",
+      "status": {
+       "description": "",
+       "name": "OPEN",
+       "id": "14365",
+       "statusCategory": {
+        "id": 2,
+        "key": "new",
+        "colorName": "blue-gray",
+        "name": "To Do"
+       }
+      },
+      "priority": {
+       "name": "Blocker",
+       "id": "1"
+      },
+      "issuetype": {
+       "id": "14532",
+       "description": "Stories track functionality or features expressed as user goals.",
+       "name": "Story",
+       "subtask": false,
+       "entityId": "89386fcb-7b79-4a8c-9772-f662d8cf0c2e",
+       "hierarchyLevel": 0
+      },
+      "assignee": {
+       "displayName": "Jordan Park"
+      }
+     }
+    }
+   },
+   {
+    "id": "699057",
+    "type": {
+     "id": "10404",
+     "name": "Relates",
+     "inward": "Relates",
+     "outward": "Relates"
+    },
+    "outwardIssue": {
+     "id": "2656550",
+     "key": "CORE-18632",
+     "fields": {
+      "summary": "[Checkout V2] Stream order events into the reservation store and track the stock commit",
+      "status": {
+       "description": "",
+       "name": "Open",
+       "id": "1",
+       "statusCategory": {
+        "id": 2,
+        "key": "new",
+        "colorName": "blue-gray",
+        "name": "To Do"
+       }
+      },
+      "priority": {
+       "name": "Minor",
+       "id": "4"
+      },
+      "issuetype": {
+       "id": "6",
+       "description": "A user story. Created by JIRA Software - do not edit or delete.",
+       "name": "Story",
+       "subtask": false,
+       "hierarchyLevel": 0
+      },
+      "assignee": null
+     }
+    }
+   },
+   {
+    "id": "699378",
+    "type": {
+     "id": "10404",
+     "name": "Relates",
+     "inward": "Relates",
+     "outward": "Relates"
+    },
+    "inwardIssue": {
+     "id": "2668615",
+     "key": "SHOP-3559",
+     "fields": {
+      "summary": "[Checkout V2] Phase 1 contract: schema gate and the shared message types (cart context, order_events, stock event, Inventory Sync)",
+      "status": {
+       "description": "",
+       "name": "OPEN",
+       "id": "14365",
+       "statusCategory": {
+        "id": 2,
+        "key": "new",
+        "colorName": "blue-gray",
+        "name": "To Do"
+       }
+      },
+      "priority": {
+       "name": "Blocker",
+       "id": "1"
+      },
+      "issuetype": {
+       "id": "14532",
+       "description": "Stories track functionality or features expressed as user goals.",
+       "name": "Story",
+       "subtask": false,
+       "entityId": "89386fcb-7b79-4a8c-9772-f662d8cf0c2e",
+       "hierarchyLevel": 0
+      },
+      "assignee": null
+     }
+    }
+   }
+  ],
+  "assignee": {
+   "accountId": "acc-me",
+   "displayName": "Alex Rivera",
+   "active": true,
+   "accountType": "atlassian"
+  },
+  "updated": "2026-10-11T19:01:25.426-0700",
+  "status": {
+   "description": "",
+   "name": "OPEN",
+   "id": "14365",
+   "statusCategory": {
+    "id": 2,
+    "key": "new",
+    "colorName": "blue-gray",
+    "name": "To Do"
+   }
+  },
+  "description": {
+   "type": "doc",
+   "version": 1,
+   "content": [
+    {
+     "type": "heading",
+     "attrs": {
+      "level": 3
+     },
+     "content": [
+      {
+       "type": "text",
+       "text": "Why"
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "content": [
+      {
+       "type": "text",
+       "text": "With holds now placed in the reservation store at add-to-cart (CORE-18632), the stock count in the inventory database is only decremented after payment capture. Losing that commit is the hardest failure of Checkout V2: the order ships, the shelf count stays high, and the next customer buys an item that is not there."
+      }
+     ]
+    },
+    {
+     "type": "heading",
+     "attrs": {
+      "level": 3
+     },
+     "content": [
+      {
+       "type": "text",
+       "text": "Scope"
+      }
+     ]
+    },
+    {
+     "type": "bulletList",
+     "content": [
+      {
+       "type": "listItem",
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "New worker "
+          },
+          {
+           "type": "text",
+           "text": "shop-worker/src/inventory_sync",
+           "marks": [
+            {
+             "type": "code"
+            }
+           ]
+          },
+          {
+           "type": "text",
+           "text": " (TypeScript, Node 24, Vitest)."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "listItem",
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "Trigger: the payments webhook handler (v2, v3 and the expiry path) produces an "
+          },
+          {
+           "type": "text",
+           "text": "InventorySyncCommand",
+           "marks": [
+            {
+             "type": "code"
+            }
+           ]
+          },
+          {
+           "type": "text",
+           "text": " on Kafka once the payment is captured or the hold expires."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "listItem",
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "On capture: decrement the stock in Postgres in one transaction keyed by "
+          },
+          {
+           "type": "text",
+           "text": "order_id",
+           "marks": [
+            {
+             "type": "code"
+            }
+           ]
+          },
+          {
+           "type": "text",
+           "text": ", then emit "
+          },
+          {
+           "type": "text",
+           "text": "InventorySynced",
+           "marks": [
+            {
+             "type": "code"
+            }
+           ]
+          },
+          {
+           "type": "text",
+           "text": " and release the hold in Redis."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "listItem",
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "On expiry or refund before shipping: release the hold only; the stock count is never touched."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "listItem",
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "A nightly reconcile job lists holds older than 24 h with no matching order and releases them."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "listItem",
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "Guest carts that never reach checkout are never synced."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "heading",
+     "attrs": {
+      "level": 3
+     },
+     "content": [
+      {
+       "type": "text",
+       "text": "Dependencies"
+      }
+     ]
+    },
+    {
+     "type": "bulletList",
+     "content": [
+      {
+       "type": "listItem",
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "SHOP-3537 (reservation store) and SHOP-3543 (Kafka topics, Redis streams) must land first."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "listItem",
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "SHOP-3559 defines the InventorySyncCommand and InventorySynced messages."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "heading",
+     "attrs": {
+      "level": 3
+     },
+     "content": [
+      {
+       "type": "text",
+       "text": "Source"
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "content": [
+      {
+       "type": "text",
+       "text": "Requirement CHK2-P04 in "
+      },
+      {
+       "type": "text",
+       "text": "Checkout V2 :: Requirements",
+       "marks": [
+        {
+         "type": "link",
+         "attrs": {
+          "href": "https://acme.atlassian.net/wiki/spaces/SHOP/pages/7340021"
+         }
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "text": ", design in "
+      },
+      {
+       "type": "text",
+       "text": "Checkout V2 :: Architecture",
+       "marks": [
+        {
+         "type": "link",
+         "attrs": {
+          "href": "https://acme.atlassian.net/wiki/spaces/SHOP/pages/7340022"
+         }
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "text": " and "
+      },
+      {
+       "type": "text",
+       "text": "Checkout V2 :: Stock Reservations",
+       "marks": [
+        {
+         "type": "link",
+         "attrs": {
+          "href": "https://acme.atlassian.net/wiki/spaces/SHOP/pages/7340023"
+         }
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "text": "."
+      }
+     ]
+    }
+   ]
+  },
+  "summary": "[Checkout V2] Inventory Sync Worker: commit the stock reservation after payment capture, then release the hold (P04)",
+  "creator": {
+   "accountId": "acc-1",
+   "displayName": "Quinn Bauer",
+   "active": true,
+   "accountType": "atlassian"
+  },
+  "reporter": {
+   "accountId": "acc-1",
+   "displayName": "Quinn Bauer",
+   "active": true,
+   "accountType": "atlassian"
+  },
+  "customfield_10521": [
+   {
+    "id": 33774,
+    "name": "SHOP Sprint 52",
+    "state": "active",
+    "boardId": 600,
+    "goal": "Release Manager: Morgan Diaz",
+    "startDate": "2026-10-07T10:56:40.477Z",
+    "endDate": "2026-11-11T11:50:00.000Z"
+   }
+  ]
+ },
+ "names": {
+  "parent": "Parent",
+  "customfield_17460": "Design",
+  "customfield_17581": "Impact",
+  "issuetype": "Issue Type",
+  "project": "Project",
+  "fixVersions": "Fix versions",
+  "customfield_16728": "Acceptance criteria",
+  "customfield_16727": "Solution",
+  "customfield_21870": "Customer Name",
+  "customfield_16486": "Story point estimate",
+  "created": "Created",
+  "priority": "Priority",
+  "labels": "Labels",
+  "issuelinks": "Linked work items",
+  "assignee": "Assignee",
+  "updated": "Updated",
+  "status": "Status",
+  "customfield_17282": "QA Assignee",
+  "customfield_17564": "Reviewer",
+  "customfield_17563": "Vulnerability",
+  "customfield_13320": "Development",
+  "description": "Description",
+  "attachment": "Attachment",
+  "summary": "Summary",
+  "creator": "Creator",
+  "reporter": "Reporter",
+  "customfield_10000": "Flagged",
+  "customfield_10521": "Sprint",
+  "environment": "Environment",
+  "comment": "Comment",
+  "customfield_29369": "QA Story point estimate",
+  "customfield_21369": "Dev Self-Testing Quality"
+ },
+ "schema": {
+  "parent": {
+   "type": "array",
+   "items": "issuelinks",
+   "system": "parent"
+  },
+  "customfield_17460": {
+   "type": "array",
+   "items": "design.field.name",
+   "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:designcf"
+  },
+  "customfield_17581": {
+   "type": "string",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea"
+  },
+  "issuetype": {
+   "type": "issuetype",
+   "system": "issuetype"
+  },
+  "project": {
+   "type": "project",
+   "system": "project"
+  },
+  "fixVersions": {
+   "type": "array",
+   "items": "version",
+   "system": "fixVersions"
+  },
+  "customfield_16728": {
+   "type": "string",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea"
+  },
+  "customfield_16727": {
+   "type": "string",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea"
+  },
+  "customfield_21870": {
+   "type": "string",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield"
+  },
+  "customfield_16486": {
+   "type": "number",
+   "custom": "com.pyxis.greenhopper.jira:jsw-story-points"
+  },
+  "created": {
+   "type": "datetime",
+   "system": "created"
+  },
+  "priority": {
+   "type": "priority",
+   "system": "priority"
+  },
+  "labels": {
+   "type": "array",
+   "items": "string",
+   "system": "labels"
+  },
+  "issuelinks": {
+   "type": "array",
+   "items": "issuelinks",
+   "system": "issuelinks"
+  },
+  "assignee": {
+   "type": "user",
+   "system": "assignee"
+  },
+  "updated": {
+   "type": "datetime",
+   "system": "updated"
+  },
+  "status": {
+   "type": "status",
+   "system": "status"
+  },
+  "customfield_17282": {
+   "type": "array",
+   "items": "user",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:people"
+  },
+  "customfield_17564": {
+   "type": "array",
+   "items": "user",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:people"
+  },
+  "customfield_17563": {
+   "type": "any",
+   "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:vulnerabilitycf"
+  },
+  "customfield_13320": {
+   "type": "any",
+   "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:devsummarycf"
+  },
+  "description": {
+   "type": "string",
+   "system": "description"
+  },
+  "attachment": {
+   "type": "array",
+   "items": "attachment",
+   "system": "attachment"
+  },
+  "summary": {
+   "type": "string",
+   "system": "summary"
+  },
+  "creator": {
+   "type": "user",
+   "system": "creator"
+  },
+  "reporter": {
+   "type": "user",
+   "system": "reporter"
+  },
+  "customfield_10000": {
+   "type": "array",
+   "items": "option",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:multicheckboxes"
+  },
+  "customfield_10521": {
+   "type": "array",
+   "items": "json",
+   "custom": "com.pyxis.greenhopper.jira:gh-sprint"
+  },
+  "environment": {
+   "type": "string",
+   "system": "environment"
+  },
+  "comment": {
+   "type": "comments-page",
+   "system": "comment"
+  },
+  "customfield_29369": {
+   "type": "number",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:float"
+  },
+  "customfield_21369": {
+   "type": "option",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select"
+  }
+ },
+ "editmeta": {
+  "issuetype": {
+   "required": false,
+   "operations": [],
+   "allowedValues": [
+    {
+     "id": "14532",
+     "name": "Story"
+    },
+    {
+     "id": "14533",
+     "name": "Task"
+    }
+   ]
+  },
+  "customfield_17581": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "parent": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "customfield_17460": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "customfield_17282": {
+   "required": false,
+   "operations": [
+    "add",
+    "set",
+    "remove"
+   ]
+  },
+  "customfield_17564": {
+   "required": false,
+   "operations": [
+    "add",
+    "set",
+    "remove"
+   ]
+  },
+  "customfield_17563": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "customfield_13320": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "description": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "fixVersions": {
+   "required": false,
+   "operations": [
+    "set",
+    "add",
+    "remove"
+   ],
+   "allowedValues": [
+    {
+     "id": "73172",
+     "name": "2.17.1"
+    },
+    {
+     "id": "73205",
+     "name": "2.18.0"
+    },
+    {
+     "id": "73768",
+     "name": "2.17.2"
+    },
+    {
+     "id": "75320",
+     "name": "2.18.1"
+    },
+    {
+     "id": "75522",
+     "name": "2.19.0"
+    },
+    {
+     "id": "76400",
+     "name": "2.18.2"
+    },
+    {
+     "id": "78355",
+     "name": "2.19.1"
+    },
+    {
+     "id": "78658",
+     "name": "2.19.2"
+    },
+    {
+     "id": "79194",
+     "name": "2.20.0"
+    },
+    {
+     "id": "80046",
+     "name": "2.21.0"
+    },
+    {
+     "id": "80249",
+     "name": "2.22.0"
+    },
+    {
+     "id": "80325",
+     "name": "2.21.1"
+    }
+   ]
+  },
+  "customfield_16728": {
+   "required": true,
+   "operations": [
+    "set"
+   ]
+  },
+  "customfield_16727": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "attachment": {
+   "required": false,
+   "operations": [
+    "set",
+    "copy"
+   ]
+  },
+  "summary": {
+   "required": true,
+   "operations": [
+    "set"
+   ]
+  },
+  "customfield_21870": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "customfield_16486": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "customfield_10000": {
+   "required": false,
+   "operations": [
+    "add",
+    "set",
+    "remove"
+   ],
+   "allowedValues": [
+    {
+     "id": "10000",
+     "value": "Impediment"
+    }
+   ]
+  },
+  "priority": {
+   "required": false,
+   "operations": [
+    "set"
+   ],
+   "allowedValues": [
+    {
+     "id": "1",
+     "name": "Blocker"
+    },
+    {
+     "id": "2",
+     "name": "Critical"
+    },
+    {
+     "id": "3",
+     "name": "Major"
+    },
+    {
+     "id": "4",
+     "name": "Minor"
+    },
+    {
+     "id": "10000",
+     "name": "IFFEasy"
+    },
+    {
+     "id": "5",
+     "name": "Trivial"
+    }
+   ]
+  },
+  "customfield_10521": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "labels": {
+   "required": false,
+   "operations": [
+    "add",
+    "set",
+    "remove"
+   ]
+  },
+  "environment": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "comment": {
+   "required": false,
+   "operations": [
+    "add",
+    "edit",
+    "remove"
+   ]
+  },
+  "issuelinks": {
+   "required": false,
+   "operations": [
+    "add",
+    "copy"
+   ]
+  },
+  "customfield_29369": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "assignee": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "customfield_21369": {
+   "required": false,
+   "operations": [
+    "set"
+   ],
+   "allowedValues": [
+    {
+     "id": "23379",
+     "value": "Passed"
+    },
+    {
+     "id": "23380",
+     "value": "Failed"
+    }
+   ]
+  }
+ },
+ "comments": [],
+ "history": [
+  {
+   "id": "15856671",
+   "author": {
+    "accountId": "acc-1",
+    "displayName": "Quinn Bauer"
+   },
+   "created": "2026-10-07T21:31:17.578-0700",
+   "items": [
+    {
+     "field": "Link",
+     "from": null,
+     "fromString": null,
+     "to": "SHOP-3536",
+     "toString": "This work item is blocked by SHOP-3536"
+    }
+   ]
+  },
+  {
+   "id": "15856679",
+   "author": {
+    "accountId": "acc-1",
+    "displayName": "Quinn Bauer"
+   },
+   "created": "2026-10-07T21:31:20.659-0700",
+   "items": [
+    {
+     "field": "Link",
+     "from": null,
+     "fromString": null,
+     "to": "SHOP-3543",
+     "toString": "This work item is blocked by SHOP-3543"
+    }
+   ]
+  },
+  {
+   "id": "15856685",
+   "author": {
+    "accountId": "acc-1",
+    "displayName": "Quinn Bauer"
+   },
+   "created": "2026-10-07T21:31:22.870-0700",
+   "items": [
+    {
+     "field": "Link",
+     "from": null,
+     "fromString": null,
+     "to": "SHOP-3537",
+     "toString": "This work item is blocked by SHOP-3537"
+    }
+   ]
+  },
+  {
+   "id": "15856688",
+   "author": {
+    "accountId": "acc-1",
+    "displayName": "Quinn Bauer"
+   },
+   "created": "2026-10-07T21:31:24.230-0700",
+   "items": [
+    {
+     "field": "Link",
+     "from": null,
+     "fromString": null,
+     "to": "CORE-18632",
+     "toString": "This work item Relates CORE-18632"
+    }
+   ]
+  },
+  {
+   "id": "15856721",
+   "author": {
+    "accountId": "acc-1",
+    "displayName": "Quinn Bauer"
+   },
+   "created": "2026-10-07T21:31:36.690-0700",
+   "items": [
+    {
+     "field": "description",
+     "fieldId": "description",
+     "from": null,
+     "fromString": "h3. Why\n\nWith holds now placed in the reservation store at add-to-cart (CORE-18632), the stock count in the inventory database is only decremented after payment capture. Losing that commit is the hardest failure of Checkout V2: the order ships, the shelf count stays high, and the next customer buys an item that is not there.\n\nh3. Scope\n\n* New worker {{shop-worker/src/inventory_sync}} (TypeScript, Node 24, Vitest).\n* Trigger: the payments webhook handler (v2, v3 and the expiry path) produces an {{InventorySyncCommand}} on Kafka once the payment is captured or the hold expires.\n* On capture: decrement the stock in Postgres in one transaction keyed by {{order_id}}, then emit {{InventorySynced}} and release the hold in Redis.\n* On expiry or refund before shipping: release the hold only; the stock count is never touched.\n* A nightly reconcile job lists holds older than 24 h with no matching order and releases them.\n* Guest carts that never reach checkout are never synced.\n\nh3. Dependencies\n\n* SHOP-3537 (reservation store) and SHOP-3543 (Kafka topics, Redis streams) must land first.\n* SHOP-3559 defines the InventorySyncCommand and InventorySynced messages.\n\nh3. Source",
+     "to": null,
+     "toString": "h3. Why\n\nWith holds now placed in the reservation store at add-to-cart (CORE-18632), the stock count in the inventory database is only decremented after payment capture. Losing that commit is the hardest failure of Checkout V2: the order ships, the shelf count stays high, and the next customer buys an item that is not there.\n\nh3. Scope\n\n* New worker {{shop-worker/src/inventory_sync}} (TypeScript, Node 24, Vitest).\n* Trigger: the payments webhook handler (v2, v3 and the expiry path) produces an {{InventorySyncCommand}} on Kafka once the payment is captured or the hold expires.\n* On capture: decrement the stock in Postgres in one transaction keyed by {{order_id}}, then emit {{InventorySynced}} and release the hold in Redis.\n* On expiry or refund before shipping: release the hold only; the stock count is never touched.\n* A nightly reconcile job lists holds older than 24 h with no matching order and releases them.\n* Guest carts that never reach checkout are never synced.\n\nh3. Dependencies\n\n* SHOP-3537 (reservation store) and SHOP-3543 (Kafka topics, Redis streams) must land first.\n* SHOP-3559 defines the InventorySyncCommand and InventorySynced messages.\n\nh3. Source\n\nRequirement CHK2-P04 in Checkout V2 :: Requirements, design in Checkout V2 :: Architecture and Checkout V2 :: Stock Reservations."
+    }
+   ]
+  },
+  {
+   "id": "15856746",
+   "author": {
+    "accountId": "acc-1",
+    "displayName": "Quinn Bauer"
+   },
+   "created": "2026-10-07T21:32:12.694-0700",
+   "items": [
+    {
+     "field": "RemoteWorkItemLink",
+     "from": null,
+     "fromString": null,
+     "to": "470994",
+     "toString": "This work item links to \"Page (Confluence)\""
+    }
+   ]
+  },
+  {
+   "id": "15858202",
+   "author": {
+    "accountId": "acc-1",
+    "displayName": "Quinn Bauer"
+   },
+   "created": "2026-10-07T22:26:44.861-0700",
+   "items": [
+    {
+     "field": "Sprint",
+     "fieldId": "customfield_10521",
+     "from": "",
+     "fromString": "",
+     "to": "33774",
+     "toString": "SHOP Sprint 52"
+    }
+   ]
+  },
+  {
+   "id": "15861203",
+   "author": {
+    "accountId": "acc-2",
+    "displayName": "Drew Kim"
+   },
+   "created": "2026-10-08T00:42:58.988-0700",
+   "items": [
+    {
+     "field": "priority",
+     "fieldId": "priority",
+     "from": "4",
+     "fromString": "Minor",
+     "to": "1",
+     "toString": "Blocker"
+    }
+   ]
+  },
+  {
+   "id": "15861233",
+   "author": {
+    "accountId": "acc-2",
+    "displayName": "Drew Kim"
+   },
+   "created": "2026-10-08T00:43:27.984-0700",
+   "items": [
+    {
+     "field": "Rank",
+     "fieldId": "customfield_11220",
+     "from": "",
+     "fromString": "",
+     "to": "",
+     "toString": "Ranked higher"
+    }
+   ]
+  },
+  {
+   "id": "15861309",
+   "author": {
+    "accountId": "acc-2",
+    "displayName": "Drew Kim"
+   },
+   "created": "2026-10-08T00:44:53.199-0700",
+   "items": [
+    {
+     "field": "Rank",
+     "fieldId": "customfield_11220",
+     "from": "",
+     "fromString": "",
+     "to": "",
+     "toString": "Ranked lower"
+    }
+   ]
+  },
+  {
+   "id": "15861369",
+   "author": {
+    "accountId": "acc-2",
+    "displayName": "Drew Kim"
+   },
+   "created": "2026-10-08T00:46:03.471-0700",
+   "items": [
+    {
+     "field": "Rank",
+     "fieldId": "customfield_11220",
+     "from": "",
+     "fromString": "",
+     "to": "",
+     "toString": "Ranked higher"
+    }
+   ]
+  },
+  {
+   "id": "15865362",
+   "author": {
+    "accountId": "acc-1",
+    "displayName": "Quinn Bauer"
+   },
+   "created": "2026-10-08T03:23:14.820-0700",
+   "items": [
+    {
+     "field": "Link",
+     "from": null,
+     "fromString": null,
+     "to": "SHOP-3559",
+     "toString": "This work item Relates SHOP-3559"
+    }
+   ]
+  },
+  {
+   "id": "15865381",
+   "author": {
+    "accountId": "acc-1",
+    "displayName": "Quinn Bauer"
+   },
+   "created": "2026-10-08T03:23:35.746-0700",
+   "items": [
+    {
+     "field": "description",
+     "fieldId": "description",
+     "from": null,
+     "fromString": "h3. Why\n\nWith holds now placed in the reservation store at add-to-cart (CORE-18632), the stock count in the inventory database is only decremented after payment capture. Losing that commit is the hardest failure of Checkout V2: the order ships, the shelf count stays high, and the next customer buys an item that is not there.\n\nh3. Scope\n\n* New worker {{shop-worker/src/inventory_sync}} (TypeScript, Node 24, Vitest).\n* Trigger: the payments webhook handler (v2, v3 and the expiry path) produces an {{InventorySyncCommand}} on Kafka once the payment is captured or the hold expires.\n* On capture: decrement the stock in Postgres in one transaction keyed by {{order_id}}, then emit {{InventorySynced}} and release the hold in Redis.\n* On expiry or refund before shipping: release the hold only; the stock count is never touched.\n* A nightly reconcile job lists holds older than 24 h with no matching order and releases them.\n* Guest carts that never reach checkout are never synced.\n\nh3. Dependencies\n\n* SHOP-3537 (reservation store) and SHOP-3543 (Kafka topics, Redis streams) must land first.\n* SHOP-3559 defines the InventorySyncCommand and InventorySynced messages.\n\nh3. Source",
+     "to": null,
+     "toString": "h3. Why\n\nWith holds now placed in the reservation store at add-to-cart (CORE-18632), the stock count in the inventory database is only decremented after payment capture. Losing that commit is the hardest failure of Checkout V2: the order ships, the shelf count stays high, and the next customer buys an item that is not there.\n\nh3. Scope\n\n* New worker {{shop-worker/src/inventory_sync}} (TypeScript, Node 24, Vitest).\n* Trigger: the payments webhook handler (v2, v3 and the expiry path) produces an {{InventorySyncCommand}} on Kafka once the payment is captured or the hold expires.\n* On capture: decrement the stock in Postgres in one transaction keyed by {{order_id}}, then emit {{InventorySynced}} and release the hold in Redis.\n* On expiry or refund before shipping: release the hold only; the stock count is never touched.\n* A nightly reconcile job lists holds older than 24 h with no matching order and releases them.\n* Guest carts that never reach checkout are never synced.\n\nh3. Dependencies\n\n* SHOP-3537 (reservation store) and SHOP-3543 (Kafka topics, Redis streams) must land first.\n* SHOP-3559 defines the InventorySyncCommand and InventorySynced messages.\n\nh3. Source\n\nRequirement CHK2-P04 in Checkout V2 :: Requirements, design in Checkout V2 :: Architecture and Checkout V2 :: Stock Reservations."
+    }
+   ]
+  },
+  {
+   "id": "15865763",
+   "author": {
+    "accountId": "acc-1",
+    "displayName": "Quinn Bauer"
+   },
+   "created": "2026-10-08T03:33:22.450-0700",
+   "items": [
+    {
+     "field": "Story point estimate",
+     "fieldId": "customfield_16486",
+     "from": null,
+     "fromString": null,
+     "to": null,
+     "toString": "8"
+    }
+   ]
+  },
+  {
+   "id": "15875406",
+   "author": {
+    "accountId": "acc-1",
+    "displayName": "Quinn Bauer"
+   },
+   "created": "2026-10-08T21:20:04.036-0700",
+   "items": [
+    {
+     "field": "assignee",
+     "fieldId": "assignee",
+     "from": "acc-2",
+     "fromString": "Drew Kim",
+     "to": "acc-1",
+     "toString": "Quinn Bauer"
+    }
+   ]
+  },
+  {
+   "id": "15875408",
+   "author": {
+    "accountId": "acc-1",
+    "displayName": "Quinn Bauer"
+   },
+   "created": "2026-10-08T21:20:06.648-0700",
+   "items": [
+    {
+     "field": "assignee",
+     "fieldId": "assignee",
+     "from": "acc-1",
+     "fromString": "Quinn Bauer",
+     "to": null,
+     "toString": null
+    }
+   ]
+  },
+  {
+   "id": "15899738",
+   "author": {
+    "accountId": "acc-1",
+    "displayName": "Quinn Bauer"
+   },
+   "created": "2026-10-11T19:01:25.426-0700",
+   "items": [
+    {
+     "field": "assignee",
+     "fieldId": "assignee",
+     "from": null,
+     "fromString": null,
+     "to": "acc-me",
+     "toString": "Alex Rivera"
+    }
+   ]
+  }
+ ],
+ "remoteLinks": [
+  {
+   "id": "470994",
+   "url": "https://acme.atlassian.net/wiki/pages/viewpage.action?pageId=7340024",
+   "title": "Checkout V2 :: Planning",
+   "application": "com.atlassian.confluence",
+   "relationship": "mentioned in"
+  }
+ ],
+ "locked": [],
+ "updated": "2026-10-11T19:01:25.426-0700",
+ "fetchedAt": "2026-10-14T07:00:00.000Z",
+ "confluence": {
+  "7340021": "Checkout V2 :: Requirements",
+  "7340022": "Checkout V2 :: Architecture",
+  "7340023": "Checkout V2 :: Stock Reservations"
+ }
+}

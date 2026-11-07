@@ -1,0 +1,3735 @@
+{
+ "issue": {
+  "id": "892440",
+  "key": "SHOP-2430",
+  "names": {
+   "statuscategorychangedate": "Status category changed",
+   "customfield_17460": "Design",
+   "issuetype": "Issue Type",
+   "timespent": "Time Spent",
+   "customfield_16698": "End date",
+   "project": "Project",
+   "fixVersions": "Fix versions",
+   "customfield_17543": "Regression",
+   "aggregatetimespent": "Σ Time Spent",
+   "statusCategory": "Status category",
+   "resolution": "Resolution",
+   "customfield_17703": "Circle Time Recorded",
+   "customfield_17702": "End Ticket Timestamp",
+   "customfield_16459": "Start date",
+   "customfield_17701": "Start Ticket Timestamp",
+   "customfield_16728": "Acceptance criteria",
+   "customfield_16727": "Solution",
+   "resolutiondate": "Resolved",
+   "workratio": "Work Ratio",
+   "customfield_17691": "Checklist Progress %",
+   "issuerestriction": "Restrict to",
+   "lastViewed": "Last Viewed",
+   "customfield_17690": "Checklist Progress",
+   "customfield_21870": "Customer Name",
+   "customfield_16486": "Story point estimate",
+   "created": "Created",
+   "customfield_17693": "Checklist Text (view-only)",
+   "customfield_10021": "First Response",
+   "priority": "Priority",
+   "labels": "Labels",
+   "timeestimate": "Remaining Estimate",
+   "aggregatetimeoriginalestimate": "Σ Original Estimate",
+   "versions": "Affects versions",
+   "issuelinks": "Linked work items",
+   "assignee": "Assignee",
+   "updated": "Updated",
+   "status": "Status",
+   "components": "Components",
+   "customfield_17282": "QA Assignee",
+   "customfield_17564": "Reviewer",
+   "customfield_16595": "Root cause description",
+   "customfield_17563": "Vulnerability",
+   "customfield_16594": "Root cause",
+   "timeoriginalestimate": "Original estimate",
+   "customfield_13320": "Development",
+   "description": "Description",
+   "customfield_11220": "Rank",
+   "customfield_17566": "Failed Acceptance Criteria",
+   "customfield_17407": "Resolution",
+   "timetracking": "Time tracking",
+   "security": "Security Level",
+   "customfield_31871": "Agent Sessions",
+   "attachment": "Attachment",
+   "aggregatetimeestimate": "Σ Remaining Estimate",
+   "customfield_17274": "Entered in progress",
+   "summary": "Summary",
+   "creator": "Creator",
+   "customfield_17277": "Entered QA",
+   "subtasks": "Sub-tasks",
+   "customfield_17276": "Entered peer review",
+   "reporter": "Reporter",
+   "aggregateprogress": "Σ Progress",
+   "customfield_10000": "Flagged",
+   "customfield_16747": "Checklist Text",
+   "customfield_16746": "Checklist Content YAML",
+   "customfield_16745": "Checklist Completed",
+   "customfield_10521": "Sprint",
+   "environment": "Environment",
+   "duedate": "Due date",
+   "progress": "Progress",
+   "comment": "Comment",
+   "worklog": "Log Work",
+   "customfield_21369": "Dev Self-Testing Quality"
+  },
+  "schema": {
+   "statuscategorychangedate": {
+    "type": "datetime",
+    "system": "statuscategorychangedate"
+   },
+   "customfield_17460": {
+    "type": "array",
+    "items": "design.field.name",
+    "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:designcf",
+    "customId": 17460
+   },
+   "issuetype": {
+    "type": "issuetype",
+    "system": "issuetype"
+   },
+   "timespent": {
+    "type": "number",
+    "system": "timespent"
+   },
+   "customfield_16698": {
+    "type": "date",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datepicker",
+    "customId": 16698
+   },
+   "project": {
+    "type": "project",
+    "system": "project"
+   },
+   "fixVersions": {
+    "type": "array",
+    "items": "version",
+    "system": "fixVersions"
+   },
+   "customfield_17543": {
+    "type": "option",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+    "customId": 17543
+   },
+   "aggregatetimespent": {
+    "type": "number",
+    "system": "aggregatetimespent"
+   },
+   "statusCategory": {
+    "type": "statusCategory",
+    "system": "statusCategory"
+   },
+   "resolution": {
+    "type": "resolution",
+    "system": "resolution"
+   },
+   "customfield_17703": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+    "customId": 17703
+   },
+   "customfield_17702": {
+    "type": "datetime",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datetime",
+    "customId": 17702
+   },
+   "customfield_16459": {
+    "type": "date",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datepicker",
+    "customId": 16459
+   },
+   "customfield_17701": {
+    "type": "datetime",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datetime",
+    "customId": 17701
+   },
+   "customfield_16728": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+    "customId": 16728
+   },
+   "customfield_16727": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+    "customId": 16727
+   },
+   "resolutiondate": {
+    "type": "datetime",
+    "system": "resolutiondate"
+   },
+   "workratio": {
+    "type": "number",
+    "system": "workratio"
+   },
+   "customfield_17691": {
+    "type": "number",
+    "custom": "ari:cloud:ecosystem::extension/3b4920b4-90b9-4cc9-8a22-acd6fbb80aa8/7bebf23e-b876-4077-817b-d47855989c5c/static/issue-checklist-progress-percent-field",
+    "customId": 17691,
+    "configuration": {
+     "customRenderer": false,
+     "readOnly": false,
+     "environment": "PRODUCTION"
+    }
+   },
+   "issuerestriction": {
+    "type": "issuerestriction",
+    "system": "issuerestriction"
+   },
+   "lastViewed": {
+    "type": "datetime",
+    "system": "lastViewed"
+   },
+   "customfield_17690": {
+    "type": "string",
+    "custom": "ari:cloud:ecosystem::extension/3b4920b4-90b9-4cc9-8a22-acd6fbb80aa8/7bebf23e-b876-4077-817b-d47855989c5c/static/issue-checklist-progress-field",
+    "customId": 17690,
+    "configuration": {
+     "customRenderer": false,
+     "readOnly": false,
+     "environment": "PRODUCTION"
+    }
+   },
+   "customfield_21870": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+    "customId": 21870
+   },
+   "customfield_16486": {
+    "type": "number",
+    "custom": "com.pyxis.greenhopper.jira:jsw-story-points",
+    "customId": 16486
+   },
+   "created": {
+    "type": "datetime",
+    "system": "created"
+   },
+   "customfield_17693": {
+    "type": "string",
+    "custom": "ari:cloud:ecosystem::extension/3b4920b4-90b9-4cc9-8a22-acd6fbb80aa8/7bebf23e-b876-4077-817b-d47855989c5c/static/checklist-text-view-only",
+    "customId": 17693,
+    "configuration": {
+     "customRenderer": false,
+     "readOnly": false,
+     "environment": "PRODUCTION"
+    }
+   },
+   "customfield_10021": {
+    "type": "datetime",
+    "custom": "com.atlassian.jira.ext.charting:firstresponsedate",
+    "customId": 10021
+   },
+   "priority": {
+    "type": "priority",
+    "system": "priority"
+   },
+   "labels": {
+    "type": "array",
+    "items": "string",
+    "system": "labels"
+   },
+   "timeestimate": {
+    "type": "number",
+    "system": "timeestimate"
+   },
+   "aggregatetimeoriginalestimate": {
+    "type": "number",
+    "system": "aggregatetimeoriginalestimate"
+   },
+   "versions": {
+    "type": "array",
+    "items": "version",
+    "system": "versions"
+   },
+   "issuelinks": {
+    "type": "array",
+    "items": "issuelinks",
+    "system": "issuelinks"
+   },
+   "assignee": {
+    "type": "user",
+    "system": "assignee"
+   },
+   "updated": {
+    "type": "datetime",
+    "system": "updated"
+   },
+   "status": {
+    "type": "status",
+    "system": "status"
+   },
+   "components": {
+    "type": "array",
+    "items": "component",
+    "system": "components"
+   },
+   "customfield_17282": {
+    "type": "array",
+    "items": "user",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:people",
+    "customId": 17282,
+    "configuration": {
+     "isMulti": true
+    }
+   },
+   "customfield_17564": {
+    "type": "array",
+    "items": "user",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:people",
+    "customId": 17564,
+    "configuration": {
+     "isMulti": true
+    }
+   },
+   "customfield_16595": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+    "customId": 16595
+   },
+   "customfield_17563": {
+    "type": "any",
+    "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:vulnerabilitycf",
+    "customId": 17563
+   },
+   "customfield_16594": {
+    "type": "option",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+    "customId": 16594
+   },
+   "timeoriginalestimate": {
+    "type": "number",
+    "system": "timeoriginalestimate"
+   },
+   "customfield_13320": {
+    "type": "any",
+    "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:devsummarycf",
+    "customId": 13320
+   },
+   "description": {
+    "type": "string",
+    "system": "description"
+   },
+   "customfield_11220": {
+    "type": "any",
+    "custom": "com.pyxis.greenhopper.jira:gh-lexo-rank",
+    "customId": 11220
+   },
+   "customfield_17566": {
+    "type": "option",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+    "customId": 17566
+   },
+   "customfield_17407": {
+    "type": "option",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+    "customId": 17407
+   },
+   "timetracking": {
+    "type": "timetracking",
+    "system": "timetracking"
+   },
+   "security": {
+    "type": "securitylevel",
+    "system": "security"
+   },
+   "customfield_31871": {
+    "type": "array",
+    "items": "admin.customfield.type.agent.sessions.name",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:agent-sessions",
+    "customId": 31871
+   },
+   "attachment": {
+    "type": "array",
+    "items": "attachment",
+    "system": "attachment"
+   },
+   "aggregatetimeestimate": {
+    "type": "number",
+    "system": "aggregatetimeestimate"
+   },
+   "customfield_17274": {
+    "type": "datetime",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datetime",
+    "customId": 17274
+   },
+   "summary": {
+    "type": "string",
+    "system": "summary"
+   },
+   "creator": {
+    "type": "user",
+    "system": "creator"
+   },
+   "customfield_17277": {
+    "type": "datetime",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datetime",
+    "customId": 17277
+   },
+   "subtasks": {
+    "type": "array",
+    "items": "issuelinks",
+    "system": "subtasks"
+   },
+   "customfield_17276": {
+    "type": "datetime",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datetime",
+    "customId": 17276
+   },
+   "reporter": {
+    "type": "user",
+    "system": "reporter"
+   },
+   "aggregateprogress": {
+    "type": "progress",
+    "system": "aggregateprogress"
+   },
+   "customfield_10000": {
+    "type": "array",
+    "items": "option",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:multicheckboxes",
+    "customId": 10000
+   },
+   "customfield_16747": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+    "customId": 16747
+   },
+   "customfield_16746": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+    "customId": 16746
+   },
+   "customfield_16745": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+    "customId": 16745
+   },
+   "customfield_10521": {
+    "type": "array",
+    "items": "json",
+    "custom": "com.pyxis.greenhopper.jira:gh-sprint",
+    "customId": 10521
+   },
+   "environment": {
+    "type": "string",
+    "system": "environment"
+   },
+   "duedate": {
+    "type": "date",
+    "system": "duedate"
+   },
+   "progress": {
+    "type": "progress",
+    "system": "progress"
+   },
+   "comment": {
+    "type": "comments-page",
+    "system": "comment"
+   },
+   "worklog": {
+    "type": "array",
+    "items": "worklog",
+    "system": "worklog"
+   },
+   "customfield_21369": {
+    "type": "option",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+    "customId": 21369
+   }
+  },
+  "editmeta": {
+   "fields": {
+    "issuetype": {
+     "required": false,
+     "schema": {
+      "type": "issuetype",
+      "system": "issuetype"
+     },
+     "name": "Issue Type",
+     "key": "issuetype",
+     "operations": [],
+     "allowedValues": [
+      {
+       "id": "14534",
+       "description": "Bugs track problems or errors.",
+       "name": "Bug",
+       "subtask": false,
+       "entityId": "3d6b0cdc-76f7-4cfa-a67b-b342d464d49d",
+       "hierarchyLevel": 0
+      }
+     ]
+    },
+    "parent": {
+     "required": false,
+     "schema": {
+      "type": "issuelink",
+      "system": "parent"
+     },
+     "name": "Parent",
+     "key": "parent",
+     "hasDefaultValue": false,
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_17460": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "design.field.name",
+      "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:designcf",
+      "customId": 17460
+     },
+     "name": "Design",
+     "key": "customfield_17460",
+     "autoCompleteUrl": "",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_17282": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "user",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:people",
+      "customId": 17282,
+      "configuration": {
+       "isMulti": true
+      }
+     },
+     "name": "QA Assignee",
+     "key": "customfield_17282",
+     "autoCompleteUrl": "https://acme.atlassian.net/rest/api/1.0/users/picker?fieldName=customfield_17282&showAvatar=true&query=",
+     "operations": [
+      "add",
+      "set",
+      "remove"
+     ]
+    },
+    "customfield_17564": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "user",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:people",
+      "customId": 17564,
+      "configuration": {
+       "isMulti": true
+      }
+     },
+     "name": "Reviewer",
+     "key": "customfield_17564",
+     "autoCompleteUrl": "https://acme.atlassian.net/rest/api/1.0/users/picker?fieldName=customfield_17564&showAvatar=true&query=",
+     "operations": [
+      "add",
+      "set",
+      "remove"
+     ]
+    },
+    "customfield_17563": {
+     "required": false,
+     "schema": {
+      "type": "any",
+      "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:vulnerabilitycf",
+      "customId": 17563
+     },
+     "name": "Vulnerability",
+     "key": "customfield_17563",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_16595": {
+     "required": false,
+     "schema": {
+      "type": "string",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+      "customId": 16595
+     },
+     "name": "Root cause description",
+     "key": "customfield_16595",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_16594": {
+     "required": false,
+     "schema": {
+      "type": "option",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+      "customId": 16594
+     },
+     "name": "Root cause",
+     "key": "customfield_16594",
+     "operations": [
+      "set"
+     ],
+     "allowedValues": [
+      {
+       "value": "Enhancement request",
+       "id": "15159"
+      },
+      {
+       "value": "Environment specific",
+       "id": "15164"
+      },
+      {
+       "value": "Improper use of software",
+       "id": "15160"
+      },
+      {
+       "value": "Incompatible product version",
+       "id": "18508"
+      },
+      {
+       "value": "Known issue",
+       "id": "15628"
+      },
+      {
+       "value": "Lack of self-testing",
+       "id": "24501"
+      },
+      {
+       "value": "Lack of test cases",
+       "id": "15161"
+      },
+      {
+       "value": "Lack of testing",
+       "id": "15162"
+      },
+      {
+       "value": "Missing/Incorrect configuration",
+       "id": "24502"
+      },
+      {
+       "value": "Non-standard file format",
+       "id": "15529"
+      },
+      {
+       "value": "Release issue",
+       "id": "15267"
+      },
+      {
+       "value": "Requirement issue",
+       "id": "15163"
+      },
+      {
+       "value": "Third-party issue",
+       "id": "15498"
+      },
+      {
+       "value": "User guide issue",
+       "id": "15314"
+      },
+      {
+       "value": "Others",
+       "id": "15258"
+      }
+     ]
+    },
+    "customfield_13320": {
+     "required": false,
+     "schema": {
+      "type": "any",
+      "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:devsummarycf",
+      "customId": 13320
+     },
+     "name": "Development",
+     "key": "customfield_13320",
+     "operations": [
+      "set"
+     ]
+    },
+    "description": {
+     "required": false,
+     "schema": {
+      "type": "string",
+      "system": "description"
+     },
+     "name": "Description",
+     "key": "description",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_11220": {
+     "required": false,
+     "schema": {
+      "type": "any",
+      "custom": "com.pyxis.greenhopper.jira:gh-lexo-rank",
+      "customId": 11220
+     },
+     "name": "Rank",
+     "key": "customfield_11220",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_17543": {
+     "required": false,
+     "schema": {
+      "type": "option",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+      "customId": 17543
+     },
+     "name": "Regression",
+     "key": "customfield_17543",
+     "operations": [
+      "set"
+     ],
+     "allowedValues": [
+      {
+       "value": "Yes",
+       "id": "18115"
+      },
+      {
+       "value": "No",
+       "id": "18116"
+      }
+     ]
+    },
+    "fixVersions": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "version",
+      "system": "fixVersions"
+     },
+     "name": "Fix versions",
+     "key": "fixVersions",
+     "operations": [
+      "set",
+      "add",
+      "remove"
+     ],
+     "allowedValues": [
+      {
+       "id": "73172",
+       "name": "2.17.1",
+       "archived": false,
+       "released": true,
+       "releaseDate": "2026-05-20",
+       "userReleaseDate": "19/May/26",
+       "projectId": 15624
+      },
+      {
+       "id": "73205",
+       "name": "2.18.0",
+       "archived": false,
+       "released": true,
+       "startDate": "2026-05-18",
+       "releaseDate": "2026-06-11",
+       "userStartDate": "17/May/26",
+       "userReleaseDate": "10/Jun/26",
+       "projectId": 15624
+      },
+      {
+       "id": "73768",
+       "name": "2.17.2",
+       "archived": false,
+       "released": true,
+       "startDate": "2026-05-27",
+       "releaseDate": "2026-06-01",
+       "userStartDate": "26/May/26",
+       "userReleaseDate": "31/May/26",
+       "projectId": 15624
+      },
+      {
+       "id": "75320",
+       "name": "2.18.1",
+       "archived": false,
+       "released": true,
+       "startDate": "2026-06-16",
+       "releaseDate": "2026-06-17",
+       "userStartDate": "15/Jun/26",
+       "userReleaseDate": "16/Jun/26",
+       "projectId": 15624
+      },
+      {
+       "id": "75522",
+       "name": "2.19.0",
+       "archived": false,
+       "released": true,
+       "releaseDate": "2026-07-08",
+       "userReleaseDate": "07/Jul/26",
+       "projectId": 15624
+      },
+      {
+       "id": "76400",
+       "name": "2.18.2",
+       "archived": false,
+       "released": true,
+       "startDate": "2026-07-01",
+       "releaseDate": "2026-07-08",
+       "userStartDate": "30/Jun/26",
+       "userReleaseDate": "07/Jul/26",
+       "projectId": 15624
+      },
+      {
+       "id": "78355",
+       "name": "2.19.1",
+       "archived": false,
+       "released": true,
+       "releaseDate": "2026-07-20",
+       "userReleaseDate": "19/Jul/26",
+       "projectId": 15624
+      },
+      {
+       "id": "78658",
+       "name": "2.19.2",
+       "archived": false,
+       "released": true,
+       "startDate": "2026-07-31",
+       "releaseDate": "2026-07-31",
+       "userStartDate": "30/Jul/26",
+       "userReleaseDate": "30/Jul/26",
+       "projectId": 15624
+      },
+      {
+       "id": "79194",
+       "name": "2.20.0",
+       "archived": false,
+       "released": true,
+       "startDate": "2026-07-15",
+       "releaseDate": "2026-08-12",
+       "userStartDate": "14/Jul/26",
+       "userReleaseDate": "11/Aug/26",
+       "projectId": 15624
+      },
+      {
+       "id": "80046",
+       "name": "2.21.0",
+       "archived": false,
+       "released": true,
+       "startDate": "2026-08-25",
+       "releaseDate": "2026-09-09",
+       "userStartDate": "24/Aug/26",
+       "userReleaseDate": "08/Sep/26",
+       "projectId": 15624
+      },
+      {
+       "id": "80249",
+       "name": "2.22.0",
+       "archived": false,
+       "released": false,
+       "startDate": "2026-09-10",
+       "releaseDate": "2026-10-08",
+       "overdue": true,
+       "userStartDate": "09/Sep/26",
+       "userReleaseDate": "07/Oct/26",
+       "projectId": 15624
+      },
+      {
+       "id": "80325",
+       "name": "2.21.1",
+       "archived": false,
+       "released": false,
+       "startDate": "2026-10-09",
+       "releaseDate": "2026-10-14",
+       "overdue": false,
+       "userStartDate": "08/Oct/26",
+       "userReleaseDate": "13/Oct/26",
+       "projectId": 15624
+      }
+     ]
+    },
+    "customfield_17407": {
+     "required": false,
+     "schema": {
+      "type": "option",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+      "customId": 17407
+     },
+     "name": "Resolution",
+     "key": "customfield_17407",
+     "operations": [
+      "set"
+     ],
+     "allowedValues": [
+      {
+       "value": "Done",
+       "id": "18180"
+      },
+      {
+       "value": "Fixed",
+       "id": "18181"
+      },
+      {
+       "value": "Won't Fix",
+       "id": "18182"
+      },
+      {
+       "value": "Duplicate",
+       "id": "18183"
+      },
+      {
+       "value": "Cannot Reproduce",
+       "id": "18184"
+      },
+      {
+       "value": "Answered",
+       "id": "18185"
+      },
+      {
+       "value": "Deffered",
+       "id": "18186"
+      },
+      {
+       "value": "Delivered",
+       "id": "18187"
+      },
+      {
+       "value": "No Response From Reporter",
+       "id": "18188"
+      },
+      {
+       "value": "Cancelled",
+       "id": "18189"
+      },
+      {
+       "value": "Won't Do",
+       "id": "18190"
+      },
+      {
+       "value": "Declined",
+       "id": "18191"
+      },
+      {
+       "value": "Invalid",
+       "id": "17794"
+      },
+      {
+       "value": "Fix",
+       "id": "17793"
+      },
+      {
+       "value": "Can't Fix",
+       "id": "17795"
+      }
+     ]
+    },
+    "customfield_17703": {
+     "required": false,
+     "schema": {
+      "type": "string",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+      "customId": 17703
+     },
+     "name": "Circle Time Recorded",
+     "key": "customfield_17703",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_17702": {
+     "required": false,
+     "schema": {
+      "type": "datetime",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datetime",
+      "customId": 17702
+     },
+     "name": "End Ticket Timestamp",
+     "key": "customfield_17702",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_17701": {
+     "required": false,
+     "schema": {
+      "type": "datetime",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datetime",
+      "customId": 17701
+     },
+     "name": "Start Ticket Timestamp",
+     "key": "customfield_17701",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_16728": {
+     "required": false,
+     "schema": {
+      "type": "string",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+      "customId": 16728
+     },
+     "name": "Acceptance criteria",
+     "key": "customfield_16728",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_16727": {
+     "required": false,
+     "schema": {
+      "type": "string",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+      "customId": 16727
+     },
+     "name": "Solution",
+     "key": "customfield_16727",
+     "operations": [
+      "set"
+     ]
+    },
+    "attachment": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "attachment",
+      "system": "attachment"
+     },
+     "name": "Attachment",
+     "key": "attachment",
+     "operations": [
+      "set",
+      "copy"
+     ]
+    },
+    "summary": {
+     "required": true,
+     "schema": {
+      "type": "string",
+      "system": "summary"
+     },
+     "name": "Summary",
+     "key": "summary",
+     "operations": [
+      "set"
+     ]
+    },
+    "issuerestriction": {
+     "required": false,
+     "schema": {
+      "type": "issuerestriction",
+      "system": "issuerestriction"
+     },
+     "name": "Restrict to",
+     "key": "issuerestriction",
+     "operations": [
+      "set"
+     ],
+     "allowedValues": []
+    },
+    "customfield_21870": {
+     "required": false,
+     "schema": {
+      "type": "string",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+      "customId": 21870
+     },
+     "name": "Customer Name",
+     "key": "customfield_21870",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_16486": {
+     "required": false,
+     "schema": {
+      "type": "number",
+      "custom": "com.pyxis.greenhopper.jira:jsw-story-points",
+      "customId": 16486
+     },
+     "name": "Story point estimate",
+     "key": "customfield_16486",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_10021": {
+     "required": false,
+     "schema": {
+      "type": "datetime",
+      "custom": "com.atlassian.jira.ext.charting:firstresponsedate",
+      "customId": 10021
+     },
+     "name": "First Response",
+     "key": "customfield_10021",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_10000": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "option",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:multicheckboxes",
+      "customId": 10000
+     },
+     "name": "Flagged",
+     "key": "customfield_10000",
+     "operations": [
+      "add",
+      "set",
+      "remove"
+     ],
+     "allowedValues": [
+      {
+       "value": "Impediment",
+       "id": "10000"
+      }
+     ]
+    },
+    "priority": {
+     "required": false,
+     "schema": {
+      "type": "priority",
+      "system": "priority"
+     },
+     "name": "Priority",
+     "key": "priority",
+     "operations": [
+      "set"
+     ],
+     "allowedValues": [
+      {
+       "name": "Blocker",
+       "id": "1"
+      },
+      {
+       "name": "Critical",
+       "id": "2"
+      },
+      {
+       "name": "Major",
+       "id": "3"
+      },
+      {
+       "name": "Minor",
+       "id": "4"
+      },
+      {
+       "name": "IFFEasy",
+       "id": "10000"
+      },
+      {
+       "name": "Trivial",
+       "id": "5"
+      }
+     ]
+    },
+    "customfield_10521": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "json",
+      "custom": "com.pyxis.greenhopper.jira:gh-sprint",
+      "customId": 10521
+     },
+     "name": "Sprint",
+     "key": "customfield_10521",
+     "operations": [
+      "set"
+     ]
+    },
+    "labels": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "string",
+      "system": "labels"
+     },
+     "name": "Labels",
+     "key": "labels",
+     "autoCompleteUrl": "https://acme.atlassian.net/rest/api/1.0/labels/892440/suggest?query=",
+     "operations": [
+      "add",
+      "set",
+      "remove"
+     ]
+    },
+    "environment": {
+     "required": false,
+     "schema": {
+      "type": "string",
+      "system": "environment"
+     },
+     "name": "Environment",
+     "key": "environment",
+     "operations": [
+      "set"
+     ]
+    },
+    "comment": {
+     "required": false,
+     "schema": {
+      "type": "comments-page",
+      "system": "comment"
+     },
+     "name": "Comment",
+     "key": "comment",
+     "operations": [
+      "add",
+      "edit",
+      "remove"
+     ]
+    },
+    "issuelinks": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "issuelinks",
+      "system": "issuelinks"
+     },
+     "name": "Linked work items",
+     "key": "issuelinks",
+     "autoCompleteUrl": "https://acme.atlassian.net/rest/api/3/issue/picker?currentProjectId=&showSubTaskParent=true&showSubTasks=true&currentIssueKey=SHOP-2430&query=",
+     "operations": [
+      "add",
+      "copy"
+     ]
+    },
+    "assignee": {
+     "required": false,
+     "schema": {
+      "type": "user",
+      "system": "assignee"
+     },
+     "name": "Assignee",
+     "key": "assignee",
+     "autoCompleteUrl": "https://acme.atlassian.[redacted secret]?issueKey=SHOP-2430&query=",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_21369": {
+     "required": false,
+     "schema": {
+      "type": "option",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+      "customId": 21369
+     },
+     "name": "Dev Self-Testing Quality",
+     "key": "customfield_21369",
+     "operations": [
+      "set"
+     ],
+     "allowedValues": [
+      {
+       "value": "Passed",
+       "id": "23379"
+      },
+      {
+       "value": "Failed",
+       "id": "23380"
+      }
+     ]
+    }
+   }
+  },
+  "changelog": {
+   "startAt": 0,
+   "maxResults": 48,
+   "total": 48,
+   "histories": [
+    {
+     "id": "15845728",
+     "author": {
+      "accountId": "acc-3",
+      "displayName": "Automation for Jira",
+      "active": true,
+      "accountType": "app"
+     },
+     "created": "2026-10-07T02:53:49.463-0700",
+     "items": [
+      {
+       "field": "Resolution",
+       "fieldtype": "custom",
+       "fieldId": "customfield_17407",
+       "from": null,
+       "fromString": null,
+       "to": "18180",
+       "toString": "Done"
+      }
+     ],
+     "historyMetadata": {}
+    },
+    {
+     "id": "15845726",
+     "author": {
+      "accountId": "acc-3",
+      "displayName": "Automation for Jira",
+      "active": true,
+      "accountType": "app"
+     },
+     "created": "2026-10-07T02:53:48.551-0700",
+     "items": [
+      {
+       "field": "Dev Self-Testing Quality",
+       "fieldtype": "custom",
+       "fieldId": "customfield_21369",
+       "from": null,
+       "fromString": null,
+       "to": "23379",
+       "toString": "Passed"
+      }
+     ],
+     "historyMetadata": {}
+    },
+    {
+     "id": "15845725",
+     "author": {
+      "accountId": "acc-3",
+      "displayName": "Automation for Jira",
+      "active": true,
+      "accountType": "app"
+     },
+     "created": "2026-10-07T02:53:48.456-0700",
+     "items": [
+      {
+       "field": "End Ticket Timestamp",
+       "fieldtype": "custom",
+       "fieldId": "customfield_17702",
+       "from": null,
+       "fromString": null,
+       "to": "2026-10-07T02:53:00-0700",
+       "toString": "07/Oct/26 2:53 AM"
+      }
+     ],
+     "historyMetadata": {}
+    },
+    {
+     "id": "15845723",
+     "author": {
+      "accountId": "acc-4",
+      "displayName": "Avery Stone",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-07T02:53:46.427-0700",
+     "items": [
+      {
+       "field": "resolution",
+       "fieldtype": "jira",
+       "fieldId": "resolution",
+       "from": null,
+       "fromString": null,
+       "to": "10002",
+       "toString": "Done"
+      },
+      {
+       "field": "status",
+       "fieldtype": "jira",
+       "fieldId": "status",
+       "from": "14373",
+       "fromString": "IN TEST",
+       "to": "14374",
+       "toString": "WORK-DONE"
+      }
+     ]
+    },
+    {
+     "id": "15845718",
+     "author": {
+      "accountId": "acc-4",
+      "displayName": "Avery Stone",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-07T02:53:40.070-0700",
+     "items": [
+      {
+       "field": "status",
+       "fieldtype": "jira",
+       "fieldId": "status",
+       "from": "14372",
+       "fromString": "WAITING FOR TESTING",
+       "to": "14373",
+       "toString": "IN TEST"
+      }
+     ]
+    },
+    {
+     "id": "15823119",
+     "author": {
+      "accountId": "acc-me",
+      "displayName": "Alex Rivera",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-06T03:09:21.314-0700",
+     "items": [
+      {
+       "field": "Attachment",
+       "fieldtype": "jira",
+       "fieldId": "attachment",
+       "from": null,
+       "fromString": null,
+       "to": "1156732",
+       "toString": "shop-2430-testing-notes (33bbbd14-bcf4-4b5d-b8ed-01b302b14626).html"
+      }
+     ]
+    },
+    {
+     "id": "15822352",
+     "author": {
+      "accountId": "acc-me",
+      "displayName": "Alex Rivera",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-06T02:58:06.732-0700",
+     "items": [
+      {
+       "field": "Attachment",
+       "fieldtype": "jira",
+       "fieldId": "attachment",
+       "from": null,
+       "fromString": null,
+       "to": "1156714",
+       "toString": "shop-2430-dev-selftest-3779010b.html"
+      }
+     ]
+    },
+    {
+     "id": "15821234",
+     "author": {
+      "accountId": "acc-5",
+      "displayName": "Riley Chen",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-06T02:21:43.103-0700",
+     "items": [
+      {
+       "field": "RemoteWorkItemLink",
+       "fieldtype": "jira",
+       "from": null,
+       "fromString": null,
+       "to": "470332",
+       "toString": "This work item links to \"Page (Confluence)\""
+      }
+     ]
+    },
+    {
+     "id": "15820963",
+     "author": {
+      "accountId": "acc-6",
+      "displayName": "Jordan Park",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-06T02:13:36.474-0700",
+     "items": [
+      {
+       "field": "Reviewer",
+       "fieldtype": "custom",
+       "fieldId": "customfield_17564",
+       "from": "[acc-6]",
+       "fromString": "[Jordan Park]",
+       "to": "[]",
+       "toString": "[]"
+      }
+     ]
+    },
+    {
+     "id": "15820957",
+     "author": {
+      "accountId": "acc-6",
+      "displayName": "Jordan Park",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-06T02:13:15.813-0700",
+     "items": [
+      {
+       "field": "Reviewer",
+       "fieldtype": "custom",
+       "fieldId": "customfield_17564",
+       "from": null,
+       "fromString": null,
+       "to": "[acc-6]",
+       "toString": "[Jordan Park]"
+      }
+     ]
+    },
+    {
+     "id": "15788631",
+     "author": {
+      "accountId": "acc-3",
+      "displayName": "Automation for Jira",
+      "active": true,
+      "accountType": "app"
+     },
+     "created": "2026-10-04T20:04:23.847-0700",
+     "items": [
+      {
+       "field": "status",
+       "fieldtype": "jira",
+       "fieldId": "status",
+       "from": "14371",
+       "fromString": "IN-REVIEW",
+       "to": "14372",
+       "toString": "WAITING FOR TESTING"
+      }
+     ],
+     "historyMetadata": {}
+    },
+    {
+     "id": "15696683",
+     "author": {
+      "accountId": "acc-7",
+      "displayName": "Sam Lee",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-09-28T00:03:09.715-0700",
+     "items": [
+      {
+       "field": "RemoteWorkItemLink",
+       "fieldtype": "jira",
+       "from": null,
+       "fromString": null,
+       "to": "468126",
+       "toString": "This work item links to \"Page (Confluence)\""
+      }
+     ]
+    },
+    {
+     "id": "15691914",
+     "author": {
+      "accountId": "acc-7",
+      "displayName": "Sam Lee",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-09-27T20:19:53.642-0700",
+     "items": [
+      {
+       "field": "Fix Version",
+       "fieldtype": "jira",
+       "fieldId": "fixVersions",
+       "from": null,
+       "fromString": null,
+       "to": "80249",
+       "toString": "2.22.0"
+      }
+     ]
+    },
+    {
+     "id": "15685101",
+     "author": {
+      "accountId": "acc-me",
+      "displayName": "Alex Rivera",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-09-25T07:46:54.515-0700",
+     "items": [
+      {
+       "field": "Attachment",
+       "fieldtype": "jira",
+       "fieldId": "attachment",
+       "from": null,
+       "fromString": null,
+       "to": "1144667",
+       "toString": "integration-test-2430.png"
+      },
+      {
+       "field": "Attachment",
+       "fieldtype": "jira",
+       "fieldId": "attachment",
+       "from": null,
+       "fromString": null,
+       "to": "1144668",
+       "toString": "shop-api-integration-report-2026-09-25-2430.html"
+      }
+     ]
+    },
+    {
+     "id": "15675842",
+     "author": {
+      "accountId": "acc-me",
+      "displayName": "Alex Rivera",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-09-24T20:57:37.286-0700",
+     "items": [
+      {
+       "field": "priority",
+       "fieldtype": "jira",
+       "fieldId": "priority",
+       "from": "4",
+       "fromString": "Minor",
+       "to": "3",
+       "toString": "Major"
+      }
+     ]
+    },
+    {
+     "id": "15664007",
+     "author": {
+      "accountId": "acc-me",
+      "displayName": "Alex Rivera",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-09-23T23:40:27.837-0700",
+     "items": [
+      {
+       "field": "Attachment",
+       "fieldtype": "jira",
+       "fieldId": "attachment",
+       "from": null,
+       "fromString": null,
+       "to": "1142773",
+       "toString": "shop-2430-testing-notes.html"
+      }
+     ]
+    },
+    {
+     "id": "15663594",
+     "author": {
+      "accountId": "acc-me",
+      "displayName": "Alex Rivera",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-09-23T23:20:47.741-0700",
+     "items": [
+      {
+       "field": "Attachment",
+       "fieldtype": "jira",
+       "fieldId": "attachment",
+       "from": null,
+       "fromString": null,
+       "to": "1142733",
+       "toString": "shop-2430-testing-notes (b53e1b51-8c6d-4b3a-8f75-bbc3ae324d8c).html"
+      }
+     ]
+    },
+    {
+     "id": "15651898",
+     "author": {
+      "accountId": "acc-me",
+      "displayName": "Alex Rivera",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-09-23T02:49:58.407-0700",
+     "items": [
+      {
+       "field": "Attachment",
+       "fieldtype": "jira",
+       "fieldId": "attachment",
+       "from": null,
+       "fromString": null,
+       "to": "1141721",
+       "toString": "shop-2430-testing-notes.html"
+      }
+     ]
+    },
+    {
+     "id": "15572393",
+     "author": {
+      "accountId": "acc-me",
+      "displayName": "Alex Rivera",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-09-16T02:41:16.542-0700",
+     "items": [
+      {
+       "field": "status",
+       "fieldtype": "jira",
+       "fieldId": "status",
+       "from": "14366",
+       "fromString": "IN PROGRESS",
+       "to": "14371",
+       "toString": "IN-REVIEW"
+      }
+     ]
+    },
+    {
+     "id": "15570112",
+     "author": {
+      "accountId": "acc-me",
+      "displayName": "Alex Rivera",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-09-16T00:52:44.806-0700",
+     "items": [
+      {
+       "field": "Attachment",
+       "fieldtype": "jira",
+       "fieldId": "attachment",
+       "from": null,
+       "fromString": null,
+       "to": "1135458",
+       "toString": "shop-2430-dev-selftest.html"
+      }
+     ]
+    },
+    {
+     "id": "15567218",
+     "author": {
+      "accountId": "acc-me",
+      "displayName": "Alex Rivera",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-09-15T21:48:08.160-0700",
+     "items": [
+      {
+       "field": "status",
+       "fieldtype": "jira",
+       "fieldId": "status",
+       "from": "14368",
+       "fromString": "READY FOR DEV",
+       "to": "14366",
+       "toString": "IN PROGRESS"
+      }
+     ]
+    },
+    {
+     "id": "15567217",
+     "author": {
+      "accountId": "acc-me",
+      "displayName": "Alex Rivera",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-09-15T21:48:05.351-0700",
+     "items": [
+      {
+       "field": "status",
+       "fieldtype": "jira",
+       "fieldId": "status",
+       "from": "20407",
+       "fromString": "IN REVIEW SOLUTON",
+       "to": "14368",
+       "toString": "READY FOR DEV"
+      }
+     ]
+    },
+    {
+     "id": "15567138",
+     "author": {
+      "accountId": "acc-me",
+      "displayName": "Alex Rivera",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-09-15T21:43:34.257-0700",
+     "items": [
+      {
+       "field": "description",
+       "fieldtype": "jira",
+       "fieldId": "description",
+       "from": null,
+       "fromString": "*Context*\n\nEach saved cart line keeps the catalog schema version of its product (attribute_schema_version). When the catalog team publishes a new schema for a product type, shop-api does not rewrite existing carts. Instead, GET /cart/{id} migrates lazily: if the cart has no line on the current version, the attributes that no longer exist are dropped and the cart is returned on the current version.\n\n*Bug*\n\nPUT /cart/{id} does not apply that migration to the client's input. The input is validated against the current schema as-is, so an attribute the storefront legitimately knows from the previous schema is rejected as an unknown key.\n\n*Steps to reproduce*\n\n# A storefront saves a cart line under schema v1 = {size, colour, engraving}, e.g. {size: \"M\", colour: \"blue\", engraving: \"AR\"}.\n# The catalog upgrades; the current schema becomes v2 = {size, colour}. No GET is made in between.\n# The storefront sends PUT /cart/{id} with {engraving: \"JP\"}.\n\n*Actual result*\n\n400 CART_4002 Invalid attributes: Unrecognized key(s) in object: 'engraving'. Nothing is saved. To the storefront an attribute it has been sending for months is suddenly unknown, with no way to know why.\n\n*Expected result*\n\nPUT behaves like GET for the migration: while the cart has no line on the current version, attributes that existed in the previous version but not in the current one are dropped silently, the rest of the input is validated against the current schema, and the cart is saved on the current version.\n\nOnce the cart is on the current version (by that PUT or by a GET), sending a removed attribute again returns the normal 400, like any unknown key.\n\n*Not in scope*",
+       "to": null,
+       "toString": "*Context*\n\nEach saved cart line keeps the catalog schema version of its product (attribute_schema_version). When the catalog team publishes a new schema for a product type, shop-api does not rewrite existing carts. Instead, GET /cart/{id} migrates lazily: if the cart has no line on the current version, the attributes that no longer exist are dropped and the cart is returned on the current version.\n\n*Bug*\n\nPUT /cart/{id} does not apply that migration to the client's input. The input is validated against the current schema as-is, so an attribute the storefront legitimately knows from the previous schema is rejected as an unknown key.\n\n*Steps to reproduce*\n\n# A storefront saves a cart line under schema v1 = {size, colour, engraving}, e.g. {size: \"M\", colour: \"blue\", engraving: \"AR\"}.\n# The catalog upgrades; the current schema becomes v2 = {size, colour}. No GET is made in between.\n# The storefront sends PUT /cart/{id} with {engraving: \"JP\"}.\n\n*Actual result*\n\n400 CART_4002 Invalid attributes: Unrecognized key(s) in object: 'engraving'. Nothing is saved. To the storefront an attribute it has been sending for months is suddenly unknown, with no way to know why.\n\n*Expected result*\n\nPUT behaves like GET for the migration: while the cart has no line on the current version, attributes that existed in the previous version but not in the current one are dropped silently, the rest of the input is validated against the current schema, and the cart is saved on the current version.\n\nOnce the cart is on the current version (by that PUT or by a GET), sending a removed attribute again returns the normal 400, like any unknown key.\n\n*Not in scope*\n\n* Attributes that never existed in the previous version nor in the current one: still 400.\n* Attributes whose type or constraints changed between versions: validated against the current schema.\n* Pods validating against a stale in-memory copy of the schema: [https://acme.atlassian.net/browse/SHOP-3389#icft=SHOP-3389|https://acme.atlassian.net/browse/SHOP-3389#icft=SHOP-3389|smart-link] ."
+      }
+     ]
+    },
+    {
+     "id": "15566759",
+     "author": {
+      "accountId": "acc-me",
+      "displayName": "Alex Rivera",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-09-15T21:20:01.666-0700",
+     "items": [
+      {
+       "field": "Solution",
+       "fieldtype": "custom",
+       "fieldId": "customfield_16727",
+       "from": "",
+       "fromString": "Before validating a PUT, migrate the input the same way GET migrates the stored cart, but only while the cart's latest saved version is not the current schema version: drop attributes that existed in that previous version and no longer exist in the current schema, then validate and save on the current version. The migration lives in @acme/shop-shared so GET and PUT share one implementation.",
+       "to": "",
+       "toString": "Before validating a PUT, migrate the input the same way GET migrates the stored cart, but only while the cart's latest saved version is not the current schema version: drop attributes that existed in that previous version and no longer exist in the current schema, then validate and save on the current version. The migration lives in @acme/shop-shared so GET and PUT share one implementation."
+      },
+      {
+       "field": "Acceptance criteria",
+       "fieldtype": "custom",
+       "fieldId": "customfield_16728",
+       "from": "",
+       "fromString": "# Cart saved under schema v1 = {size, colour, engraving}; catalog upgrades to v2 = {size, colour}; the first PUT /cart/{id} after the upgrade with {engraving: \"JP\"} returns 200; the response and the stored cart (now on v2) contain size and colour only.\n# After the cart is on v2 (from that PUT or from a GET), a PUT with {engraving: \"JP\"} returns 400 CART_4002 Unrecognized key, like any unknown key.\n# Cart saved under schema v1 = {size, colour}; catalog upgrades to v2 = {size, colour, gift_wrap} with default gift_wrap = false; PUT /cart/{id} with {size: \"L\"} returns 200 and the line is {size: \"L\", colour: \"blue\", gift_wrap: false}.\n# PUT with an attribute that never existed in the cart's previous schema nor in the current one returns 400 CART_4002 with the same error format as today.\n# PUT with valid attributes of the current schema behaves as before (values applied, constraints enforced).\n# The PUT response does not contain attributes that were not saved.\n# GET /cart/{id} after such a PUT returns the same cart as the PUT response.",
+       "to": "",
+       "toString": "# Cart saved under schema v1 = {size, colour, engraving}; catalog upgrades to v2 = {size, colour}; the first PUT /cart/{id} after the upgrade with {engraving: \"JP\"} returns 200; the response and the stored cart (now on v2) contain size and colour only.\n# After the cart is on v2 (from that PUT or from a GET), a PUT with {engraving: \"JP\"} returns 400 CART_4002 Unrecognized key, like any unknown key.\n# Cart saved under schema v1 = {size, colour}; catalog upgrades to v2 = {size, colour, gift_wrap} with default gift_wrap = false; PUT /cart/{id} with {size: \"L\"} returns 200 and the line is {size: \"L\", colour: \"blue\", gift_wrap: false}.\n# PUT with an attribute that never existed in the cart's previous schema nor in the current one returns 400 CART_4002 with the same error format as today.\n# PUT with valid attributes of the current schema behaves as before (values applied, constraints enforced).\n# The PUT response does not contain attributes that were not saved.\n# GET /cart/{id} after such a PUT returns the same cart as the PUT response."
+      }
+     ]
+    },
+    {
+     "id": "15566297",
+     "author": {
+      "accountId": "acc-me",
+      "displayName": "Alex Rivera",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-09-15T20:53:44.431-0700",
+     "items": [
+      {
+       "field": "summary",
+       "fieldtype": "jira",
+       "fieldId": "summary",
+       "from": null,
+       "fromString": "Fix validation flow for API PUT /cart/{id}",
+       "to": null,
+       "toString": "[Cart] PUT /cart/{id} rejects attributes removed by a catalog schema upgrade instead of migrating the input like GET"
+      }
+     ]
+    },
+    {
+     "id": "15565897",
+     "author": {
+      "accountId": "acc-me",
+      "displayName": "Alex Rivera",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-09-15T20:31:13.330-0700",
+     "items": [
+      {
+       "field": "Acceptance criteria",
+       "fieldtype": "custom",
+       "fieldId": "customfield_16728",
+       "from": "",
+       "fromString": "# Cart saved under schema v1 = {size, colour, engraving}; catalog upgrades to v2 = {size, colour}; the first PUT /cart/{id} after the upgrade with {engraving: \"JP\"} returns 200; the response and the stored cart (now on v2) contain size and colour only.\n# After the cart is on v2 (from that PUT or from a GET), a PUT with {engraving: \"JP\"} returns 400 CART_4002 Unrecognized key, like any unknown key.\n# Cart saved under schema v1 = {size, colour}; catalog upgrades to v2 = {size, colour, gift_wrap} with default gift_wrap = false; PUT /cart/{id} with {size: \"L\"} returns 200 and the line is {size: \"L\", colour: \"blue\", gift_wrap: false}.\n# PUT with an attribute that never existed in the cart's previous schema nor in the current one returns 400 CART_4002 with the same error format as today.\n# PUT with valid attributes of the current schema behaves as before (values applied, constraints enforced).\n# The PUT response does not contain attributes that were not saved.\n# GET /cart/{id} after such a PUT returns the same cart as the PUT response.",
+       "to": "",
+       "toString": "# Cart saved under schema v1 = {size, colour, engraving}; catalog upgrades to v2 = {size, colour}; the first PUT /cart/{id} after the upgrade with {engraving: \"JP\"} returns 200; the response and the stored cart (now on v2) contain size and colour only.\n# After the cart is on v2 (from that PUT or from a GET), a PUT with {engraving: \"JP\"} returns 400 CART_4002 Unrecognized key, like any unknown key.\n# Cart saved under schema v1 = {size, colour}; catalog upgrades to v2 = {size, colour, gift_wrap} with default gift_wrap = false; PUT /cart/{id} with {size: \"L\"} returns 200 and the line is {size: \"L\", colour: \"blue\", gift_wrap: false}.\n# PUT with an attribute that never existed in the cart's previous schema nor in the current one returns 400 CART_4002 with the same error format as today.\n# PUT with valid attributes of the current schema behaves as before (values applied, constraints enforced).\n# The PUT response does not contain attributes that were not saved.\n# GET /cart/{id} after such a PUT returns the same cart as the PUT response."
+      }
+     ]
+    },
+    {
+     "id": "15565834",
+     "author": {
+      "accountId": "acc-me",
+      "displayName": "Alex Rivera",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-09-15T20:27:37.645-0700",
+     "items": [
+      {
+       "field": "Root cause description",
+       "fieldtype": "custom",
+       "fieldId": "customfield_16595",
+       "from": null,
+       "fromString": null,
+       "to": "",
+       "toString": "PUT /cart/{id} validates the client's input against the current catalog schema before anything knows which schema version the cart was saved under. Attributes that were valid in the previous version but were removed by a catalog upgrade are therefore rejected, while GET on the same cart quietly migrates them away."
+      },
+      {
+       "field": "Solution",
+       "fieldtype": "custom",
+       "fieldId": "customfield_16727",
+       "from": null,
+       "fromString": null,
+       "to": "",
+       "toString": "Before validating a PUT, migrate the input the same way GET migrates the stored cart, but only while the cart's latest saved version is not the current schema version: drop attributes that existed in that previous version and no longer exist in the current schema, then validate and save on the current version. The migration lives in @acme/shop-shared so GET and PUT share one implementation."
+      },
+      {
+       "field": "Acceptance criteria",
+       "fieldtype": "custom",
+       "fieldId": "customfield_16728",
+       "from": null,
+       "fromString": null,
+       "to": "",
+       "toString": "# Cart saved under schema v1 = {size, colour, engraving}; catalog upgrades to v2 = {size, colour}; the first PUT /cart/{id} after the upgrade with {engraving: \"JP\"} returns 200; the response and the stored cart (now on v2) contain size and colour only.\n# After the cart is on v2 (from that PUT or from a GET), a PUT with {engraving: \"JP\"} returns 400 CART_4002 Unrecognized key, like any unknown key.\n# Cart saved under schema v1 = {size, colour}; catalog upgrades to v2 = {size, colour, gift_wrap} with default gift_wrap = false; PUT /cart/{id} with {size: \"L\"} returns 200 and the line is {size: \"L\", colour: \"blue\", gift_wrap: false}.\n# PUT with an attribute that never existed in the cart's previous schema nor in the current one returns 400 CART_4002 with the same error format as today.\n# PUT with valid attributes of the current schema behaves as before (values applied, constraints enforced).\n# The PUT response does not contain attributes that were not saved.\n# GET /cart/{id} after such a PUT returns the same cart as the PUT response."
+      }
+     ]
+    },
+    {
+     "id": "15565769",
+     "author": {
+      "accountId": "acc-me",
+      "displayName": "Alex Rivera",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-09-15T20:24:53.188-0700",
+     "items": [
+      {
+       "field": "description",
+       "fieldtype": "jira",
+       "fieldId": "description",
+       "from": null,
+       "fromString": "*Context*\n\nEach saved cart line keeps the catalog schema version of its product (attribute_schema_version). When the catalog team publishes a new schema for a product type, shop-api does not rewrite existing carts. Instead, GET /cart/{id} migrates lazily: if the cart has no line on the current version, the attributes that no longer exist are dropped and the cart is returned on the current version.\n\n*Bug*\n\nPUT /cart/{id} does not apply that migration to the client's input. The input is validated against the current schema as-is, so an attribute the storefront legitimately knows from the previous schema is rejected as an unknown key.\n\n*Steps to reproduce*\n\n# A storefront saves a cart line under schema v1 = {size, colour, engraving}, e.g. {size: \"M\", colour: \"blue\", engraving: \"AR\"}.\n# The catalog upgrades; the current schema becomes v2 = {size, colour}. No GET is made in between.\n# The storefront sends PUT /cart/{id} with {engraving: \"JP\"}.\n\n*Actual result*\n\n400 CART_4002 Invalid attributes: Unrecognized key(s) in object: 'engraving'. Nothing is saved. To the storefront an attribute it has been sending for months is suddenly unknown, with no way to know why.\n\n*Expected result*\n\nPUT behaves like GET for the migration: while the cart has no line on the current version, attributes that existed in the previous version but not in the current one are dropped silently, the rest of the input is validated against the current schema, and the cart is saved on the current version.\n\nOnce the cart is on the current version (by that PUT or by a GET), sending a removed attribute again returns the normal 400, like any unknown key.\n\n*Not in scope*",
+       "to": null,
+       "toString": "*Context*\n\nEach saved cart line keeps the catalog schema version of its product (attribute_schema_version). When the catalog team publishes a new schema for a product type, shop-api does not rewrite existing carts. Instead, GET /cart/{id} migrates lazily: if the cart has no line on the current version, the attributes that no longer exist are dropped and the cart is returned on the current version.\n\n*Bug*\n\nPUT /cart/{id} does not apply that migration to the client's input. The input is validated against the current schema as-is, so an attribute the storefront legitimately knows from the previous schema is rejected as an unknown key.\n\n*Steps to reproduce*\n\n# A storefront saves a cart line under schema v1 = {size, colour, engraving}, e.g. {size: \"M\", colour: \"blue\", engraving: \"AR\"}.\n# The catalog upgrades; the current schema becomes v2 = {size, colour}. No GET is made in between.\n# The storefront sends PUT /cart/{id} with {engraving: \"JP\"}.\n\n*Actual result*\n\n400 CART_4002 Invalid attributes: Unrecognized key(s) in object: 'engraving'. Nothing is saved. To the storefront an attribute it has been sending for months is suddenly unknown, with no way to know why.\n\n*Expected result*\n\nPUT behaves like GET for the migration: while the cart has no line on the current version, attributes that existed in the previous version but not in the current one are dropped silently, the rest of the input is validated against the current schema, and the cart is saved on the current version.\n\nOnce the cart is on the current version (by that PUT or by a GET), sending a removed attribute again returns the normal 400, like any unknown key.\n\n*Not in scope*\n\n* Attributes that never existed in the previous version nor in the current one: still 400.\n* Attributes whose type or constraints changed between versions: validated against the current schema.\n* Pods validating against a stale in-memory copy of the schema: [https://acme.atlassian.net/browse/SHOP-3389#icft=SHOP-3389|https://acme.atlassian.net/browse/SHOP-3389#icft=SHOP-3389|smart-link] ."
+      }
+     ]
+    },
+    {
+     "id": "15550290",
+     "author": {
+      "accountId": "acc-4",
+      "displayName": "Avery Stone",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-09-14T20:10:42.345-0700",
+     "items": [
+      {
+       "field": "QA Assignee",
+       "fieldtype": "custom",
+       "fieldId": "customfield_17282",
+       "from": null,
+       "fromString": null,
+       "to": "[acc-4]",
+       "toString": "[Avery Stone]"
+      }
+     ]
+    },
+    {
+     "id": "15540692",
+     "author": {
+      "accountId": "acc-me",
+      "displayName": "Alex Rivera",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-09-14T01:23:58.958-0700",
+     "items": [
+      {
+       "field": "Root cause description",
+       "fieldtype": "custom",
+       "fieldId": "customfield_16595",
+       "from": "",
+       "fromString": "PUT /cart/{id} validates the client's input against the current catalog schema before anything knows which schema version the cart was saved under. Attributes that were valid in the previous version but were removed by a catalog upgrade are therefore rejected, while GET on the same cart quietly migrates them away.",
+       "to": "",
+       "toString": ""
+      },
+      {
+       "field": "Solution",
+       "fieldtype": "custom",
+       "fieldId": "customfield_16727",
+       "from": "",
+       "fromString": "Before validating a PUT, migrate the input the same way GET migrates the stored cart, but only while the cart's latest saved version is not the current schema version: drop attributes that existed in that previous version and no longer exist in the current schema, then validate and save on the current version. The migration lives in @acme/shop-shared so GET and PUT share one implementation.",
+       "to": "",
+       "toString": ""
+      },
+      {
+       "field": "Acceptance criteria",
+       "fieldtype": "custom",
+       "fieldId": "customfield_16728",
+       "from": "",
+       "fromString": "# Cart saved under schema v1 = {size, colour, engraving}; catalog upgrades to v2 = {size, colour}; the first PUT /cart/{id} after the upgrade with {engraving: \"JP\"} returns 200; the response and the stored cart (now on v2) contain size and colour only.\n# After the cart is on v2 (from that PUT or from a GET), a PUT with {engraving: \"JP\"} returns 400 CART_4002 Unrecognized key, like any unknown key.\n# Cart saved under schema v1 = {size, colour}; catalog upgrades to v2 = {size, colour, gift_wrap} with default gift_wrap = false; PUT /cart/{id} with {size: \"L\"} returns 200 and the line is {size: \"L\", colour: \"blue\", gift_wrap: false}.\n# PUT with an attribute that never existed in the cart's previous schema nor in the current one returns 400 CART_4002 with the same error format as today.\n# PUT with valid attributes of the current schema behaves as before (values applied, constraints enforced).\n# The PUT response does not contain attributes that were not saved.\n# GET /cart/{id} after such a PUT returns the same cart as the PUT response.",
+       "to": "",
+       "toString": ""
+      }
+     ]
+    },
+    {
+     "id": "15540686",
+     "author": {
+      "accountId": "acc-me",
+      "displayName": "Alex Rivera",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-09-14T01:23:27.466-0700",
+     "items": [
+      {
+       "field": "Link",
+       "fieldtype": "jira",
+       "from": null,
+       "fromString": null,
+       "to": "SHOP-3389",
+       "toString": "This work item Relates SHOP-3389"
+      }
+     ]
+    },
+    {
+     "id": "15537956",
+     "author": {
+      "accountId": "acc-me",
+      "displayName": "Alex Rivera",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-09-13T23:54:14.347-0700",
+     "items": [
+      {
+       "field": "Acceptance criteria",
+       "fieldtype": "custom",
+       "fieldId": "customfield_16728",
+       "from": "",
+       "fromString": "# Cart saved under schema v1 = {size, colour, engraving}; catalog upgrades to v2 = {size, colour}; the first PUT /cart/{id} after the upgrade with {engraving: \"JP\"} returns 200; the response and the stored cart (now on v2) contain size and colour only.\n# After the cart is on v2 (from that PUT or from a GET), a PUT with {engraving: \"JP\"} returns 400 CART_4002 Unrecognized key, like any unknown key.\n# Cart saved under schema v1 = {size, colour}; catalog upgrades to v2 = {size, colour, gift_wrap} with default gift_wrap = false; PUT /cart/{id} with {size: \"L\"} returns 200 and the line is {size: \"L\", colour: \"blue\", gift_wrap: false}.\n# PUT with an attribute that never existed in the cart's previous schema nor in the current one returns 400 CART_4002 with the same error format as today.\n# PUT with valid attributes of the current schema behaves as before (values applied, constraints enforced).\n# The PUT response does not contain attributes that were not saved.\n# GET /cart/{id} after such a PUT returns the same cart as the PUT response.",
+       "to": "",
+       "toString": "# Cart saved under schema v1 = {size, colour, engraving}; catalog upgrades to v2 = {size, colour}; the first PUT /cart/{id} after the upgrade with {engraving: \"JP\"} returns 200; the response and the stored cart (now on v2) contain size and colour only.\n# After the cart is on v2 (from that PUT or from a GET), a PUT with {engraving: \"JP\"} returns 400 CART_4002 Unrecognized key, like any unknown key.\n# Cart saved under schema v1 = {size, colour}; catalog upgrades to v2 = {size, colour, gift_wrap} with default gift_wrap = false; PUT /cart/{id} with {size: \"L\"} returns 200 and the line is {size: \"L\", colour: \"blue\", gift_wrap: false}.\n# PUT with an attribute that never existed in the cart's previous schema nor in the current one returns 400 CART_4002 with the same error format as today.\n# PUT with valid attributes of the current schema behaves as before (values applied, constraints enforced).\n# The PUT response does not contain attributes that were not saved.\n# GET /cart/{id} after such a PUT returns the same cart as the PUT response."
+      }
+     ]
+    },
+    {
+     "id": "15537897",
+     "author": {
+      "accountId": "acc-me",
+      "displayName": "Alex Rivera",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-09-13T23:50:25.031-0700",
+     "items": [
+      {
+       "field": "status",
+       "fieldtype": "jira",
+       "fieldId": "status",
+       "from": "14369",
+       "fromString": "IN ANALYZE",
+       "to": "20407",
+       "toString": "IN REVIEW SOLUTON"
+      }
+     ]
+    },
+    {
+     "id": "15537895",
+     "author": {
+      "accountId": "acc-me",
+      "displayName": "Alex Rivera",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-09-13T23:50:22.309-0700",
+     "items": [
+      {
+       "field": "status",
+       "fieldtype": "jira",
+       "fieldId": "status",
+       "from": "14365",
+       "fromString": "OPEN",
+       "to": "14369",
+       "toString": "IN ANALYZE"
+      }
+     ]
+    },
+    {
+     "id": "15537894",
+     "author": {
+      "accountId": "acc-me",
+      "displayName": "Alex Rivera",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-09-13T23:50:19.579-0700",
+     "items": [
+      {
+       "field": "Root cause description",
+       "fieldtype": "custom",
+       "fieldId": "customfield_16595",
+       "from": null,
+       "fromString": null,
+       "to": "",
+       "toString": "PUT /cart/{id} validates the client's input against the current catalog schema before anything knows which schema version the cart was saved under. Attributes that were valid in the previous version but were removed by a catalog upgrade are therefore rejected, while GET on the same cart quietly migrates them away."
+      },
+      {
+       "field": "Solution",
+       "fieldtype": "custom",
+       "fieldId": "customfield_16727",
+       "from": null,
+       "fromString": null,
+       "to": "",
+       "toString": "Before validating a PUT, migrate the input the same way GET migrates the stored cart, but only while the cart's latest saved version is not the current schema version: drop attributes that existed in that previous version and no longer exist in the current schema, then validate and save on the current version. The migration lives in @acme/shop-shared so GET and PUT share one implementation."
+      },
+      {
+       "field": "Acceptance criteria",
+       "fieldtype": "custom",
+       "fieldId": "customfield_16728",
+       "from": null,
+       "fromString": null,
+       "to": "",
+       "toString": "# Cart saved under schema v1 = {size, colour, engraving}; catalog upgrades to v2 = {size, colour}; the first PUT /cart/{id} after the upgrade with {engraving: \"JP\"} returns 200; the response and the stored cart (now on v2) contain size and colour only.\n# After the cart is on v2 (from that PUT or from a GET), a PUT with {engraving: \"JP\"} returns 400 CART_4002 Unrecognized key, like any unknown key.\n# Cart saved under schema v1 = {size, colour}; catalog upgrades to v2 = {size, colour, gift_wrap} with default gift_wrap = false; PUT /cart/{id} with {size: \"L\"} returns 200 and the line is {size: \"L\", colour: \"blue\", gift_wrap: false}.\n# PUT with an attribute that never existed in the cart's previous schema nor in the current one returns 400 CART_4002 with the same error format as today.\n# PUT with valid attributes of the current schema behaves as before (values applied, constraints enforced).\n# The PUT response does not contain attributes that were not saved.\n# GET /cart/{id} after such a PUT returns the same cart as the PUT response."
+      }
+     ]
+    },
+    {
+     "id": "15493792",
+     "author": {
+      "accountId": "acc-me",
+      "displayName": "Alex Rivera",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-09-09T01:28:23.237-0700",
+     "items": [
+      {
+       "field": "Sprint",
+       "fieldtype": "custom",
+       "fieldId": "customfield_10521",
+       "from": "19571, 20756, 22661, 25477, 27400, 28957, 31395, 33013",
+       "fromString": "SHOP Sprint 43, SHOP Sprint 44, SHOP Sprint 45, SHOP Sprint 46, SHOP Sprint 47, SHOP Sprint 48, SHOP Sprint 49, SHOP Sprint 50",
+       "to": "19571, 20756, 22661, 25477, 27400, 28957, 31395, 33607",
+       "toString": "SHOP Sprint 43, SHOP Sprint 44, SHOP Sprint 45, SHOP Sprint 46, SHOP Sprint 47, SHOP Sprint 48, SHOP Sprint 49, SHOP Sprint 51"
+      }
+     ]
+    },
+    {
+     "id": "15212472",
+     "author": {
+      "accountId": "acc-me",
+      "displayName": "Alex Rivera",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-08-12T09:49:38.078-0700",
+     "items": [
+      {
+       "field": "assignee",
+       "fieldtype": "jira",
+       "fieldId": "assignee",
+       "from": "acc-2",
+       "fromString": "Drew Kim",
+       "to": "acc-me",
+       "toString": "Alex Rivera",
+       "tmpFromAccountId": null,
+       "tmpToAccountId": "acc-me"
+      }
+     ]
+    },
+    {
+     "id": "15191562",
+     "author": {
+      "accountId": "acc-2",
+      "displayName": "Drew Kim",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-08-11T01:50:22.359-0700",
+     "items": [
+      {
+       "field": "Sprint",
+       "fieldtype": "custom",
+       "fieldId": "customfield_10521",
+       "from": "19571, 20756, 22661, 25477, 27400, 28957, 31395",
+       "fromString": "SHOP Sprint 43, SHOP Sprint 44, SHOP Sprint 45, SHOP Sprint 46, SHOP Sprint 47, SHOP Sprint 48, SHOP Sprint 49",
+       "to": "19571, 20756, 22661, 25477, 27400, 28957, 31395, 33013",
+       "toString": "SHOP Sprint 43, SHOP Sprint 44, SHOP Sprint 45, SHOP Sprint 46, SHOP Sprint 47, SHOP Sprint 48, SHOP Sprint 49, SHOP Sprint 50"
+      }
+     ]
+    },
+    {
+     "id": "14934936",
+     "author": {
+      "accountId": "acc-7",
+      "displayName": "Sam Lee",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-07-19T23:34:50.458-0700",
+     "items": [
+      {
+       "field": "Rank",
+       "fieldtype": "custom",
+       "fieldId": "customfield_11220",
+       "from": "",
+       "fromString": "",
+       "to": "",
+       "toString": "Ranked higher"
+      }
+     ]
+    },
+    {
+     "id": "14874072",
+     "author": {
+      "accountId": "acc-2",
+      "displayName": "Drew Kim",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-06-12T02:58:53.213-0700",
+     "items": [
+      {
+       "field": "Sprint",
+       "fieldtype": "custom",
+       "fieldId": "customfield_10521",
+       "from": "19571, 20756, 22661, 25477, 27400, 28957",
+       "fromString": "SHOP Sprint 43, SHOP Sprint 44, SHOP Sprint 45, SHOP Sprint 46, SHOP Sprint 47, SHOP Sprint 48",
+       "to": "19571, 20756, 22661, 25477, 27400, 28957, 31395",
+       "toString": "SHOP Sprint 43, SHOP Sprint 44, SHOP Sprint 45, SHOP Sprint 46, SHOP Sprint 47, SHOP Sprint 48, SHOP Sprint 49"
+      }
+     ]
+    },
+    {
+     "id": "14465594",
+     "author": {
+      "accountId": "acc-2",
+      "displayName": "Drew Kim",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-06-12T02:58:53.213-0700",
+     "items": [
+      {
+       "field": "Sprint",
+       "fieldtype": "custom",
+       "fieldId": "customfield_10521",
+       "from": "19571, 20756, 22661, 25477, 27400",
+       "fromString": "SHOP Sprint 43, SHOP Sprint 44, SHOP Sprint 45, SHOP Sprint 46, SHOP Sprint 47",
+       "to": "19571, 20756, 22661, 25477, 27400, 28957",
+       "toString": "SHOP Sprint 43, SHOP Sprint 44, SHOP Sprint 45, SHOP Sprint 46, SHOP Sprint 47, SHOP Sprint 48"
+      }
+     ]
+    },
+    {
+     "id": "14084927",
+     "author": {
+      "accountId": "acc-7",
+      "displayName": "Sam Lee",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-05-17T21:04:58.635-0700",
+     "items": [
+      {
+       "field": "Rank",
+       "fieldtype": "custom",
+       "fieldId": "customfield_11220",
+       "from": "",
+       "fromString": "",
+       "to": "",
+       "toString": "Ranked higher"
+      }
+     ]
+    },
+    {
+     "id": "14060167",
+     "author": {
+      "accountId": "acc-2",
+      "displayName": "Drew Kim",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-05-15T02:47:53.488-0700",
+     "items": [
+      {
+       "field": "Sprint",
+       "fieldtype": "custom",
+       "fieldId": "customfield_10521",
+       "from": "19571, 20756, 22661, 25477",
+       "fromString": "SHOP Sprint 43, SHOP Sprint 44, SHOP Sprint 45, SHOP Sprint 46",
+       "to": "19571, 20756, 22661, 25477, 27400",
+       "toString": "SHOP Sprint 43, SHOP Sprint 44, SHOP Sprint 45, SHOP Sprint 46, SHOP Sprint 47"
+      }
+     ]
+    },
+    {
+     "id": "13403023",
+     "author": {
+      "accountId": "acc-2",
+      "displayName": "Drew Kim",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-04-09T05:01:34.114-0700",
+     "items": [
+      {
+       "field": "Sprint",
+       "fieldtype": "custom",
+       "fieldId": "customfield_10521",
+       "from": "19571, 20756, 22661",
+       "fromString": "SHOP Sprint 43, SHOP Sprint 44, SHOP Sprint 45",
+       "to": "19571, 20756, 22661, 25477",
+       "toString": "SHOP Sprint 43, SHOP Sprint 44, SHOP Sprint 45, SHOP Sprint 46"
+      }
+     ]
+    },
+    {
+     "id": "13080680",
+     "author": {
+      "accountId": "acc-2",
+      "displayName": "Drew Kim",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-03-11T08:41:29.501-0700",
+     "items": [
+      {
+       "field": "Sprint",
+       "fieldtype": "custom",
+       "fieldId": "customfield_10521",
+       "from": "19571, 20756",
+       "fromString": "SHOP Sprint 43, SHOP Sprint 44",
+       "to": "19571, 20756, 22661",
+       "toString": "SHOP Sprint 43, SHOP Sprint 44, SHOP Sprint 45"
+      }
+     ]
+    },
+    {
+     "id": "12650172",
+     "author": {
+      "accountId": "acc-2",
+      "displayName": "Drew Kim",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-01-20T03:29:10.880-0800",
+     "items": [
+      {
+       "field": "Sprint",
+       "fieldtype": "custom",
+       "fieldId": "customfield_10521",
+       "from": "19571",
+       "fromString": "SHOP Sprint 43",
+       "to": "19571, 20756",
+       "toString": "SHOP Sprint 43, SHOP Sprint 44"
+      }
+     ]
+    },
+    {
+     "id": "12234628",
+     "author": {
+      "accountId": "acc-2",
+      "displayName": "Drew Kim",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2025-12-17T02:37:06.881-0800",
+     "items": [
+      {
+       "field": "Story point estimate",
+       "fieldtype": "custom",
+       "fieldId": "customfield_16486",
+       "from": null,
+       "fromString": null,
+       "to": null,
+       "toString": "5"
+      }
+     ]
+    },
+    {
+     "id": "12234102",
+     "author": {
+      "accountId": "acc-3",
+      "displayName": "Automation for Jira",
+      "active": true,
+      "accountType": "app"
+     },
+     "created": "2025-12-17T02:13:09.606-0800",
+     "items": [
+      {
+       "field": "Link",
+       "fieldtype": "jira",
+       "from": null,
+       "fromString": null,
+       "to": "SHOP-2431",
+       "toString": "This work item covered by SHOP-2431"
+      }
+     ]
+    }
+   ]
+  },
+  "fields": {
+   "statuscategorychangedate": "2026-10-07T02:53:46.428-0700",
+   "customfield_17460": null,
+   "issuetype": {
+    "id": "14534",
+    "description": "Bugs track problems or errors.",
+    "name": "Bug",
+    "subtask": false,
+    "entityId": "3d6b0cdc-76f7-4cfa-a67b-b342d464d49d",
+    "hierarchyLevel": 0
+   },
+   "timespent": null,
+   "customfield_16698": null,
+   "project": {
+    "id": "15624",
+    "key": "SHOP",
+    "name": "Acme Shop",
+    "projectTypeKey": "software",
+    "simplified": true,
+    "projectCategory": {
+     "id": "10100",
+     "description": "All Engineering Projects",
+     "name": "Engineering"
+    }
+   },
+   "fixVersions": [
+    {
+     "id": "80249",
+     "description": "",
+     "name": "2.22.0",
+     "archived": false,
+     "released": false,
+     "releaseDate": "2026-10-08"
+    }
+   ],
+   "customfield_17543": null,
+   "aggregatetimespent": null,
+   "statusCategory": {
+    "id": 3,
+    "key": "done",
+    "colorName": "green",
+    "name": "Done"
+   },
+   "resolution": {
+    "id": "10002",
+    "description": "",
+    "name": "Done"
+   },
+   "customfield_17703": null,
+   "customfield_17702": "2026-10-07T02:53:00.000-0700",
+   "customfield_16459": null,
+   "customfield_17701": null,
+   "customfield_16728": {
+    "type": "doc",
+    "version": 1,
+    "content": [
+     {
+      "type": "orderedList",
+      "content": [
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "Cart saved under schema v1 = {size, colour, engraving}; catalog upgrades to v2 = {size, colour}; the first PUT /cart/{id} after the upgrade with {engraving: \"JP\"} returns 200; the response and the stored cart (now on v2) contain size and colour only."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "After the cart is on v2 (from that PUT or from a GET), a PUT with {engraving: \"JP\"} returns 400 CART_4002 Unrecognized key, like any unknown key."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "Cart saved under schema v1 = {size, colour}; catalog upgrades to v2 = {size, colour, gift_wrap} with default gift_wrap = false; PUT /cart/{id} with {size: \"L\"} returns 200 and the line is {size: \"L\", colour: \"blue\", gift_wrap: false}."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "PUT with an attribute that never existed in the cart's previous schema nor in the current one returns 400 CART_4002 with the same error format as today."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "PUT with valid attributes of the current schema behaves as before (values applied, constraints enforced)."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "The PUT response does not contain attributes that were not saved."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "GET /cart/{id} after such a PUT returns the same cart as the PUT response."
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "customfield_16727": {
+    "type": "doc",
+    "version": 1,
+    "content": [
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "Before validating a PUT, migrate the input the same way GET migrates the stored cart, but only while the cart's latest saved version is not the current schema version: drop attributes that existed in that previous version and no longer exist in the current schema, then validate and save on the current version. The migration lives in @acme/shop-shared so GET and PUT share one implementation."
+       }
+      ]
+     }
+    ]
+   },
+   "resolutiondate": "2026-10-07T02:53:46.400-0700",
+   "workratio": -1,
+   "customfield_17691": null,
+   "issuerestriction": {
+    "issuerestrictions": {},
+    "shouldDisplay": true
+   },
+   "lastViewed": null,
+   "customfield_17690": null,
+   "customfield_21870": null,
+   "customfield_16486": 5,
+   "created": "2025-12-17T02:13:06.001-0800",
+   "customfield_17693": null,
+   "customfield_10021": "2026-09-16T00:52:44.865-0700",
+   "priority": {
+    "name": "Major",
+    "id": "3"
+   },
+   "labels": [],
+   "timeestimate": null,
+   "aggregatetimeoriginalestimate": null,
+   "versions": [],
+   "issuelinks": [
+    {
+     "id": "574489",
+     "type": {
+      "id": "10400",
+      "name": "Test Zephyr",
+      "inward": "covered by",
+      "outward": "covers"
+     },
+     "inwardIssue": {
+      "id": "892441",
+      "key": "SHOP-2431",
+      "fields": {
+       "summary": "Fix validation flow for API PUT /cart/{id}",
+       "status": {
+        "description": "",
+        "name": "DONE",
+        "id": "16637",
+        "statusCategory": {
+         "id": 3,
+         "key": "done",
+         "colorName": "green",
+         "name": "Done"
+        }
+       },
+       "priority": {
+        "name": "Minor",
+        "id": "4"
+       },
+       "issuetype": {
+        "id": "14648",
+        "description": "",
+        "name": "Test",
+        "subtask": false,
+        "entityId": "09f17a65-98cb-406b-931e-54070acda05e",
+        "hierarchyLevel": 0
+       }
+      }
+     }
+    },
+    {
+     "id": "689026",
+     "type": {
+      "id": "10404",
+      "name": "Relates",
+      "inward": "Relates",
+      "outward": "Relates"
+     },
+     "inwardIssue": {
+      "id": "2641373",
+      "key": "SHOP-3389",
+      "fields": {
+       "summary": "[Cart] PUT/POST /cart/{id} validate against a stale in-memory catalog schema after a schema update",
+       "status": {
+        "description": "",
+        "name": "WORK-DONE",
+        "id": "14374",
+        "statusCategory": {
+         "id": 3,
+         "key": "done",
+         "colorName": "green",
+         "name": "Done"
+        }
+       },
+       "priority": {
+        "name": "Major",
+        "id": "3"
+       },
+       "issuetype": {
+        "id": "14534",
+        "description": "Bugs track problems or errors.",
+        "name": "Bug",
+        "subtask": false,
+        "entityId": "3d6b0cdc-76f7-4cfa-a67b-b342d464d49d",
+        "hierarchyLevel": 0
+       }
+      }
+     }
+    }
+   ],
+   "assignee": {
+    "accountId": "acc-me",
+    "displayName": "Alex Rivera",
+    "active": true,
+    "accountType": "atlassian"
+   },
+   "updated": "2026-10-07T02:54:11.710-0700",
+   "status": {
+    "description": "",
+    "name": "WORK-DONE",
+    "id": "14374",
+    "statusCategory": {
+     "id": 3,
+     "key": "done",
+     "colorName": "green",
+     "name": "Done"
+    }
+   },
+   "components": [],
+   "customfield_17282": [
+    {
+     "accountId": "acc-4",
+     "displayName": "Avery Stone",
+     "active": true,
+     "accountType": "atlassian"
+    }
+   ],
+   "customfield_17564": null,
+   "customfield_16595": {
+    "type": "doc",
+    "version": 1,
+    "content": [
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "PUT /cart/{id} validates the client's input against the current catalog schema before anything knows which schema version the cart was saved under. Attributes that were valid in the previous version but were removed by a catalog upgrade are therefore rejected, while GET on the same cart quietly migrates them away."
+       }
+      ]
+     }
+    ]
+   },
+   "customfield_17563": null,
+   "customfield_16594": null,
+   "timeoriginalestimate": null,
+   "customfield_13320": "{repository={count=20, dataType=repository}, build={count=8, dataType=build, failedBuildCount=0, successfulBuildCount=7, unknownBuildCount=1}, json={\"cachedValue\":{\"errors\":[],\"summary\":{\"build\":{\"overall\":{\"count\":8,\"lastUpdated\":\"2026-10-06T20:47:38.000-0700\",\"failedBuildCount\":0,\"successfulBuildCount\":7,\"unknownBuildCount\":1,\"dataType\":\"build\"},\"byInstanceType\":{\"cloud-providers\":{\"count\":8,\"name\":\"Other providers\"}}},\"repository\":{\"overall\":{\"count\":20,\"lastUpdated\":\"2026-10-07T20:53:08.000-0700\",\"dataType\":\"repository\"},\"byInstanceType\":{\"oAuth-com.github.integration.production\":{\"count\":20,\"name\":\"GitHub\"}}}}},\"isStale\":true}}",
+   "description": {
+    "type": "doc",
+    "version": 1,
+    "content": [
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "Context",
+        "marks": [
+         {
+          "type": "strong"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "Each saved cart line keeps the catalog schema version of its product (attribute_schema_version). When the catalog team publishes a new schema for a product type, shop-api does not rewrite existing carts. Instead, GET /cart/{id} migrates lazily: if the cart has no line on the current version, the attributes that no longer exist are dropped and the cart is returned on the current version."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "Bug",
+        "marks": [
+         {
+          "type": "strong"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "PUT /cart/{id} does not apply that migration to the client's input. The input is validated against the current schema as-is, so an attribute the storefront legitimately knows from the previous schema is rejected as an unknown key."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "Steps to reproduce",
+        "marks": [
+         {
+          "type": "strong"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "orderedList",
+      "content": [
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "A storefront saves a cart line under schema v1 = {size, colour, engraving}, e.g. {size: \"M\", colour: \"blue\", engraving: \"AR\"}."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "The catalog upgrades; the current schema becomes v2 = {size, colour}. No GET is made in between."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "The storefront sends PUT /cart/{id} with {engraving: \"JP\"}."
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "Actual result",
+        "marks": [
+         {
+          "type": "strong"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "400 CART_4002 Invalid attributes: Unrecognized key(s) in object: 'engraving'. Nothing is saved. To the storefront an attribute it has been sending for months is suddenly unknown, with no way to know why."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "Expected result",
+        "marks": [
+         {
+          "type": "strong"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "PUT behaves like GET for the migration: while the cart has no line on the current version, attributes that existed in the previous version but not in the current one are dropped silently, the rest of the input is validated against the current schema, and the cart is saved on the current version."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "Once the cart is on the current version (by that PUT or by a GET), sending a removed attribute again returns the normal 400, like any unknown key."
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "Not in scope",
+        "marks": [
+         {
+          "type": "strong"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bulletList",
+      "content": [
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "Attributes that never existed in the previous version nor in the current one: still 400."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "Attributes whose type or constraints changed between versions: validated against the current schema."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "Pods validating against a stale in-memory copy of the schema: "
+           },
+           {
+            "type": "inlineCard",
+            "attrs": {
+             "url": "https://acme.atlassian.net/browse/SHOP-3389#icft=SHOP-3389"
+            }
+           },
+           {
+            "type": "text",
+            "text": " ."
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "customfield_11220": "0|i01ejz:00hhzzzzzzzzyhzzzzzzzzzzzy",
+   "customfield_17566": null,
+   "customfield_17407": {
+    "value": "Done",
+    "id": "18180"
+   },
+   "timetracking": {},
+   "security": null,
+   "customfield_31871": null,
+   "attachment": [
+    {
+     "id": "1144667",
+     "filename": "integration-test-2430.png",
+     "author": {
+      "accountId": "acc-me",
+      "displayName": "Alex Rivera",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-09-25T07:46:53.991-0700",
+     "size": 80545,
+     "mimeType": "image/png",
+     "content": "https://acme.atlassian.net/rest/api/3/attachment/content/1144667",
+     "thumbnail": "https://acme.atlassian.net/rest/api/3/attachment/thumbnail/1144667"
+    },
+    {
+     "id": "1144668",
+     "filename": "shop-api-integration-report-2026-09-25-2430.html",
+     "author": {
+      "accountId": "acc-me",
+      "displayName": "Alex Rivera",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-09-25T07:46:54.251-0700",
+     "size": 23007908,
+     "mimeType": "text/html",
+     "content": "https://acme.atlassian.net/rest/api/3/attachment/content/1144668"
+    },
+    {
+     "id": "1135458",
+     "filename": "shop-2430-dev-selftest.html",
+     "author": {
+      "accountId": "acc-me",
+      "displayName": "Alex Rivera",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-09-16T00:52:44.553-0700",
+     "size": 37238,
+     "mimeType": "text/html",
+     "content": "https://acme.atlassian.net/rest/api/3/attachment/content/1135458"
+    },
+    {
+     "id": "1156714",
+     "filename": "shop-2430-dev-selftest-3779010b.html",
+     "author": {
+      "accountId": "acc-me",
+      "displayName": "Alex Rivera",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-06T02:58:06.561-0700",
+     "size": 36787,
+     "mimeType": "text/html",
+     "content": "https://acme.atlassian.net/rest/api/3/attachment/content/1156714",
+     "thumbnail": "https://acme.atlassian.net/rest/api/3/attachment/thumbnail/1156714"
+    },
+    {
+     "id": "1142773",
+     "filename": "shop-2430-testing-notes.html",
+     "author": {
+      "accountId": "acc-me",
+      "displayName": "Alex Rivera",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-09-23T23:40:27.455-0700",
+     "size": 8876,
+     "mimeType": "text/html",
+     "content": "https://acme.atlassian.net/rest/api/3/attachment/content/1142773"
+    },
+    {
+     "id": "1156732",
+     "filename": "shop-2430-testing-notes (33bbbd14-bcf4-4b5d-b8ed-01b302b14626).html",
+     "author": {
+      "accountId": "acc-me",
+      "displayName": "Alex Rivera",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-06T03:09:21.195-0700",
+     "size": 12084,
+     "mimeType": "text/html",
+     "content": "https://acme.atlassian.net/rest/api/3/attachment/content/1156732",
+     "thumbnail": "https://acme.atlassian.net/rest/api/3/attachment/thumbnail/1156732"
+    }
+   ],
+   "aggregatetimeestimate": null,
+   "customfield_17274": null,
+   "summary": "[Cart] PUT /cart/{id} rejects attributes removed by a catalog schema upgrade instead of migrating the input like GET",
+   "creator": {
+    "accountId": "acc-1",
+    "displayName": "Quinn Bauer",
+    "active": true,
+    "accountType": "atlassian"
+   },
+   "customfield_17277": null,
+   "subtasks": [],
+   "customfield_17276": null,
+   "reporter": {
+    "accountId": "acc-1",
+    "displayName": "Quinn Bauer",
+    "active": true,
+    "accountType": "atlassian"
+   },
+   "aggregateprogress": {
+    "progress": 0,
+    "total": 0
+   },
+   "customfield_10000": null,
+   "customfield_16747": null,
+   "customfield_16746": null,
+   "customfield_16745": null,
+   "customfield_10521": [
+    {
+     "id": 31395,
+     "name": "SHOP Sprint 49",
+     "state": "closed",
+     "boardId": 600,
+     "goal": "",
+     "startDate": "2026-07-08T06:17:52.158Z",
+     "endDate": "2026-08-05T06:17:00.000Z",
+     "completeDate": "2026-08-11T08:50:17.211Z"
+    },
+    {
+     "id": 27400,
+     "name": "SHOP Sprint 47",
+     "state": "closed",
+     "boardId": 600,
+     "goal": "",
+     "startDate": "2026-05-15T13:08:54.117Z",
+     "endDate": "2026-06-12T13:08:43.000Z",
+     "completeDate": "2026-06-12T09:58:41.514Z"
+    },
+    {
+     "id": 25477,
+     "name": "SHOP Sprint 46",
+     "state": "closed",
+     "boardId": 600,
+     "goal": "",
+     "startDate": "2026-04-09T11:38:08.991Z",
+     "endDate": "2026-05-07T11:38:00.000Z",
+     "completeDate": "2026-05-15T09:47:15.713Z"
+    },
+    {
+     "id": 22661,
+     "name": "SHOP Sprint 45",
+     "state": "closed",
+     "boardId": 600,
+     "goal": "",
+     "startDate": "2026-03-12T03:27:46.684Z",
+     "endDate": "2026-04-09T03:27:00.000Z",
+     "completeDate": "2026-04-09T12:00:59.372Z"
+    },
+    {
+     "id": 19571,
+     "name": "SHOP Sprint 43",
+     "state": "closed",
+     "boardId": 600,
+     "goal": "",
+     "startDate": "2025-12-10T10:47:03.555Z",
+     "endDate": "2026-01-07T10:47:00.000Z",
+     "completeDate": "2026-01-20T11:28:45.785Z"
+    },
+    {
+     "id": 33607,
+     "name": "SHOP Sprint 51",
+     "state": "closed",
+     "boardId": 600,
+     "goal": "",
+     "startDate": "2026-09-09T16:06:12.953Z",
+     "endDate": "2026-10-06T17:00:00.000Z",
+     "completeDate": "2026-10-08T04:57:47.955Z"
+    },
+    {
+     "id": 20756,
+     "name": "SHOP Sprint 44",
+     "state": "closed",
+     "boardId": 600,
+     "goal": "",
+     "startDate": "2026-01-21T09:16:11.687Z",
+     "endDate": "2026-03-11T09:16:00.000Z",
+     "completeDate": "2026-03-11T15:40:44.630Z"
+    },
+    {
+     "id": 28957,
+     "name": "SHOP Sprint 48",
+     "state": "closed",
+     "boardId": 600,
+     "goal": "Release Manager: Jordan Park",
+     "startDate": "2026-06-10T11:30:52.760Z",
+     "endDate": "2026-07-08T11:30:00.000Z",
+     "completeDate": "2026-07-14T09:33:57.352Z"
+    }
+   ],
+   "environment": null,
+   "duedate": null,
+   "progress": {
+    "progress": 0,
+    "total": 0
+   },
+   "comment": {
+    "comments": [
+     {
+      "id": "2692636",
+      "author": {
+       "accountId": "acc-me",
+       "displayName": "Alex Rivera",
+       "active": true,
+       "accountType": "atlassian"
+      },
+      "body": {
+       "type": "doc",
+       "version": 1,
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "Hi team,"
+          }
+         ]
+        },
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "Here is my dev self-test report before Review and QA: "
+          },
+          {
+           "type": "mediaInline",
+           "attrs": {
+            "id": "00000000-0000-4000-8000-000002430011",
+            "collection": "",
+            "type": "file"
+           }
+          },
+          {
+           "type": "text",
+           "text": " . Ping me if anything is unclear after reading it. "
+          },
+          {
+           "type": "emoji",
+           "attrs": {
+            "shortName": ":kiss:",
+            "id": "atlassian-kiss",
+            "text": ":kiss:"
+           }
+          },
+          {
+           "type": "text",
+           "text": " "
+          }
+         ]
+        }
+       ]
+      },
+      "updateAuthor": {
+       "accountId": "acc-me",
+       "displayName": "Alex Rivera",
+       "active": true,
+       "accountType": "atlassian"
+      },
+      "created": "2026-09-16T00:52:44.865-0700",
+      "updated": "2026-09-16T00:52:44.865-0700",
+      "jsdPublic": true
+     },
+     {
+      "id": "2708559",
+      "author": {
+       "accountId": "acc-me",
+       "displayName": "Alex Rivera",
+       "active": true,
+       "accountType": "atlassian"
+      },
+      "body": {
+       "type": "doc",
+       "version": 1,
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "Hi team, "
+          }
+         ]
+        },
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "SHOP-2430 testing notes: "
+          },
+          {
+           "type": "mediaInline",
+           "attrs": {
+            "id": "00000000-0000-4000-8000-000002430012",
+            "collection": "",
+            "type": "file"
+           }
+          },
+          {
+           "type": "text",
+           "text": " "
+          }
+         ]
+        },
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "CC: "
+          },
+          {
+           "type": "mention",
+           "attrs": {
+            "id": "acc-4",
+            "text": "@Avery Stone",
+            "accessLevel": ""
+           }
+          },
+          {
+           "type": "text",
+           "text": ", "
+          },
+          {
+           "type": "mention",
+           "attrs": {
+            "id": "acc-7",
+            "text": "@Sam Lee",
+            "accessLevel": ""
+           }
+          },
+          {
+           "type": "text",
+           "text": " "
+          }
+         ]
+        }
+       ]
+      },
+      "updateAuthor": {
+       "accountId": "acc-me",
+       "displayName": "Alex Rivera",
+       "active": true,
+       "accountType": "atlassian"
+      },
+      "created": "2026-09-23T02:49:58.469-0700",
+      "updated": "2026-09-23T23:40:27.446-0700",
+      "jsdPublic": true
+     },
+     {
+      "id": "2712740",
+      "author": {
+       "accountId": "acc-me",
+       "displayName": "Alex Rivera",
+       "active": true,
+       "accountType": "atlassian"
+      },
+      "body": {
+       "type": "doc",
+       "version": 1,
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "SHOP-2430 solution page: "
+          },
+          {
+           "type": "inlineCard",
+           "attrs": {
+            "url": "https://acme.atlassian.net/wiki/spaces/SHOP/pages/7340036"
+           }
+          },
+          {
+           "type": "text",
+           "text": " "
+          }
+         ]
+        }
+       ]
+      },
+      "updateAuthor": {
+       "accountId": "acc-me",
+       "displayName": "Alex Rivera",
+       "active": true,
+       "accountType": "atlassian"
+      },
+      "created": "2026-09-24T20:05:48.917-0700",
+      "updated": "2026-09-24T20:07:18.543-0700",
+      "jsdPublic": true
+     },
+     {
+      "id": "2714654",
+      "author": {
+       "accountId": "acc-me",
+       "displayName": "Alex Rivera",
+       "active": true,
+       "accountType": "atlassian"
+      },
+      "body": {
+       "type": "doc",
+       "version": 1,
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "Integration test v2 report: "
+          },
+          {
+           "type": "mediaInline",
+           "attrs": {
+            "id": "00000000-0000-4000-8000-000002430013",
+            "collection": "",
+            "type": "file"
+           }
+          },
+          {
+           "type": "text",
+           "text": " "
+          }
+         ]
+        },
+        {
+         "type": "mediaSingle",
+         "attrs": {
+          "width": 800,
+          "widthType": "pixel",
+          "layout": "center"
+         },
+         "content": [
+          {
+           "type": "media",
+           "attrs": {
+            "type": "file",
+            "id": "00000000-0000-4000-8000-000002430001",
+            "alt": "integration-test-2430.png",
+            "collection": "",
+            "height": 474,
+            "width": 1297
+           }
+          }
+         ]
+        },
+        {
+         "type": "paragraph",
+         "content": []
+        },
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "Same failed cases as in "
+          },
+          {
+           "type": "inlineCard",
+           "attrs": {
+            "url": "https://acme.atlassian.net/wiki/spaces/SHOP/pages/7340037/2026-09-09+Acme+Shop+Integration+Test+release+2.21.0"
+           }
+          },
+          {
+           "type": "text",
+           "text": ", so nothing new from this change. "
+          }
+         ]
+        }
+       ]
+      },
+      "updateAuthor": {
+       "accountId": "acc-me",
+       "displayName": "Alex Rivera",
+       "active": true,
+       "accountType": "atlassian"
+      },
+      "created": "2026-09-25T07:46:54.592-0700",
+      "updated": "2026-09-25T07:46:54.592-0700",
+      "jsdPublic": true
+     },
+     {
+      "id": "2738649",
+      "author": {
+       "accountId": "acc-me",
+       "displayName": "Alex Rivera",
+       "active": true,
+       "accountType": "atlassian"
+      },
+      "body": {
+       "type": "doc",
+       "version": 1,
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "Updated self-test report: "
+          },
+          {
+           "type": "mediaInline",
+           "attrs": {
+            "id": "00000000-0000-4000-8000-000002430014",
+            "collection": "",
+            "type": "file"
+           }
+          },
+          {
+           "type": "text",
+           "text": " "
+          }
+         ]
+        }
+       ]
+      },
+      "updateAuthor": {
+       "accountId": "acc-me",
+       "displayName": "Alex Rivera",
+       "active": true,
+       "accountType": "atlassian"
+      },
+      "created": "2026-10-06T02:58:06.794-0700",
+      "updated": "2026-10-06T02:58:06.794-0700",
+      "jsdPublic": true
+     },
+     {
+      "id": "2738860",
+      "author": {
+       "accountId": "acc-me",
+       "displayName": "Alex Rivera",
+       "active": true,
+       "accountType": "atlassian"
+      },
+      "body": {
+       "type": "doc",
+       "version": 1,
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "Updated the testing notes as well, since the acceptance criteria grew: "
+          },
+          {
+           "type": "mediaInline",
+           "attrs": {
+            "id": "00000000-0000-4000-8000-000002430015",
+            "collection": "",
+            "type": "file"
+           }
+          },
+          {
+           "type": "text",
+           "text": " "
+          }
+         ]
+        }
+       ]
+      },
+      "updateAuthor": {
+       "accountId": "acc-me",
+       "displayName": "Alex Rivera",
+       "active": true,
+       "accountType": "atlassian"
+      },
+      "created": "2026-10-06T03:09:21.387-0700",
+      "updated": "2026-10-06T03:09:21.387-0700",
+      "jsdPublic": true
+     },
+     {
+      "id": "2742738",
+      "author": {
+       "accountId": "acc-4",
+       "displayName": "Avery Stone",
+       "active": true,
+       "accountType": "atlassian"
+      },
+      "body": {
+       "type": "doc",
+       "version": 1,
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "QA verified "
+          },
+          {
+           "type": "text",
+           "text": "PASSED",
+           "marks": [
+            {
+             "type": "strong"
+            },
+            {
+             "type": "textColor",
+             "attrs": {
+              "color": "#36b37e"
+             }
+            }
+           ]
+          },
+          {
+           "type": "text",
+           "text": " ",
+           "marks": [
+            {
+             "type": "textColor",
+             "attrs": {
+              "color": "#36b37e"
+             }
+            }
+           ]
+          },
+          {
+           "type": "text",
+           "text": "on the "
+          },
+          {
+           "type": "text",
+           "text": "Integration",
+           "marks": [
+            {
+             "type": "strong"
+            }
+           ]
+          },
+          {
+           "type": "text",
+           "text": " environment, and the cart API validation runs stably on the "
+          },
+          {
+           "type": "text",
+           "text": "Staging",
+           "marks": [
+            {
+             "type": "strong"
+            }
+           ]
+          },
+          {
+           "type": "text",
+           "text": " environment"
+          }
+         ]
+        }
+       ]
+      },
+      "updateAuthor": {
+       "accountId": "acc-4",
+       "displayName": "Avery Stone",
+       "active": true,
+       "accountType": "atlassian"
+      },
+      "created": "2026-10-07T02:54:11.710-0700",
+      "updated": "2026-10-07T02:54:11.710-0700",
+      "jsdPublic": true
+     }
+    ],
+    "maxResults": 7,
+    "total": 7,
+    "startAt": 0
+   },
+   "worklog": {
+    "startAt": 0,
+    "maxResults": 20,
+    "total": 0,
+    "worklogs": []
+   },
+   "customfield_21369": {
+    "value": "Passed",
+    "id": "23379"
+   }
+  }
+ },
+ "remoteLinks": [
+  {
+   "id": 468126,
+   "globalId": "appId=8427b8f3-7430-32e1-8c8f-fe808b68f4ca&pageId=7340031",
+   "application": {
+    "type": "com.atlassian.confluence",
+    "name": "Confluence"
+   },
+   "relationship": "mentioned in",
+   "object": {
+    "url": "https://acme.atlassian.net/wiki/pages/viewpage.action?pageId=7340031",
+    "title": "Test Plan for release Acme Shop 2.22.0",
+    "icon": {},
+    "status": {
+     "icon": {}
+    }
+   }
+  },
+  {
+   "id": 470332,
+   "globalId": "appId=8427b8f3-7430-32e1-8c8f-fe808b68f4ca&pageId=7340032",
+   "application": {
+    "type": "com.atlassian.confluence",
+    "name": "Confluence"
+   },
+   "relationship": "mentioned in",
+   "object": {
+    "url": "https://acme.atlassian.net/wiki/pages/viewpage.action?pageId=7340032",
+    "title": "Acme Shop 2.22.0 - QA Release Report",
+    "icon": {},
+    "status": {
+     "icon": {}
+    }
+   }
+  }
+ ],
+ "transitions": {
+  "transitions": [
+   {
+    "id": "5",
+    "name": "CLOSE - CANCELLED",
+    "to": {
+     "description": "",
+     "name": "CLOSE - CANCELLED",
+     "id": "14370",
+     "statusCategory": {
+      "id": 3,
+      "key": "done",
+      "colorName": "green",
+      "name": "Done"
+     }
+    },
+    "hasScreen": false,
+    "isGlobal": true,
+    "isInitial": false,
+    "isAvailable": true,
+    "isConditional": false,
+    "fields": {},
+    "isLooped": false
+   },
+   {
+    "id": "11",
+    "name": "To Do",
+    "to": {
+     "description": "",
+     "name": "OPEN",
+     "id": "14365",
+     "statusCategory": {
+      "id": 2,
+      "key": "new",
+      "colorName": "blue-gray",
+      "name": "To Do"
+     }
+    },
+    "hasScreen": false,
+    "isGlobal": true,
+    "isInitial": false,
+    "isAvailable": true,
+    "isConditional": false,
+    "fields": {},
+    "isLooped": false
+   },
+   {
+    "id": "15",
+    "name": "Deployed to Pre-production",
+    "to": {
+     "description": "",
+     "name": "IN PRE-PRODUCTION",
+     "id": "14375",
+     "statusCategory": {
+      "id": 3,
+      "key": "done",
+      "colorName": "green",
+      "name": "Done"
+     }
+    },
+    "hasScreen": false,
+    "isGlobal": false,
+    "isInitial": false,
+    "isAvailable": true,
+    "isConditional": false,
+    "fields": {},
+    "isLooped": false
+   },
+   {
+    "id": "19",
+    "name": "Re-open",
+    "to": {
+     "description": "",
+     "name": "READY FOR DEV",
+     "id": "14368",
+     "statusCategory": {
+      "id": 2,
+      "key": "new",
+      "colorName": "blue-gray",
+      "name": "To Do"
+     }
+    },
+    "hasScreen": false,
+    "isGlobal": false,
+    "isInitial": false,
+    "isAvailable": true,
+    "isConditional": false,
+    "fields": {},
+    "isLooped": false
+   },
+   {
+    "id": "25",
+    "name": "Need to re-test",
+    "to": {
+     "description": "",
+     "name": "IN TEST",
+     "id": "14373",
+     "statusCategory": {
+      "id": 4,
+      "key": "indeterminate",
+      "colorName": "yellow",
+      "name": "In Progress"
+     }
+    },
+    "hasScreen": false,
+    "isGlobal": false,
+    "isInitial": false,
+    "isAvailable": true,
+    "isConditional": false,
+    "fields": {},
+    "isLooped": false
+   }
+  ]
+ }
+}

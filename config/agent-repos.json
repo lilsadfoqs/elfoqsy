@@ -1,0 +1,92 @@
+{
+  "_note": "Per-repository setup and test scope for ticket agents. needs are sibling repos the setup expects next to this one; they are cloned read-only and never pushed. Every test inside the run folder runs without asking (tier 0); unitTests are what the run prompt names, and allowedTestCommands record each repository's unit tests. The demo company's repos: replace them with yours.",
+  "repos": {
+    "acme/shop-worker": {
+      "needs": [
+        "acme/shop-shared",
+        "acme/shop-protocol"
+      ],
+      "setup": [
+        "npm ci --no-audit --no-fund"
+      ],
+      "unitTests": [
+        "npm run test:fast",
+        "npx jest --no-coverage <spec paths>"
+      ],
+      "allowedTestCommands": [
+        "npm run test:fast",
+        "npm test",
+        "npx jest",
+        "jest",
+        "./node_modules/.bin/jest",
+        "node --max-old-space-size=8192 ./node_modules/.bin/jest"
+      ],
+      "testsIn": "ci",
+      "notes": "The queue consumers are tested with an in-memory broker; the end-to-end suite runs in CI."
+    },
+    "acme/shop-shared": {
+      "needs": [],
+      "setup": [
+        "npm ci --no-audit --no-fund"
+      ],
+      "unitTests": [
+        "npm run test:fast",
+        "npx jest --no-coverage <spec paths>"
+      ],
+      "allowedTestCommands": [
+        "npm run test:fast",
+        "npm test",
+        "npx jest",
+        "jest",
+        "./node_modules/.bin/jest",
+        "node --max-old-space-size=4096 ./node_modules/.bin/jest"
+      ],
+      "notes": "A library: CI runs this jest suite with no service containers; the Redis and Kafka specs use mocks."
+    },
+    "acme/shop-api": {
+      "needs": [
+        "acme/shop-worker",
+        "acme/shop-shared",
+        "acme/shop-protocol"
+      ],
+      "setup": [
+        "npm ci --no-audit --no-fund"
+      ],
+      "unitTests": [
+        "npm run test:unit",
+        "JEST_TIERS=unit npx jest <spec paths>"
+      ],
+      "allowedTestCommands": [
+        "npm run test:unit",
+        "JEST_TIERS=unit npx jest",
+        "JEST_TIERS=unit jest",
+        "JEST_TIERS=unit ./node_modules/.bin/jest"
+      ],
+      "notes": "Only the unit tier runs in-process. The integration and soak tiers need Postgres and Redis: slower, and some may not work in the sandbox."
+    },
+    "acme/shop-infra": {
+      "needs": [],
+      "setup": [],
+      "unitTests": [],
+      "allowedTestCommands": [],
+      "notes": "No unit test suite: this repo builds Docker images and docs. Docker is not available to agents yet."
+    },
+    "acme/shop-local-deploy": {
+      "needs": [],
+      "setup": [
+        "npm ci --no-audit --no-fund"
+      ],
+      "unitTests": [
+        "npm test"
+      ],
+      "allowedTestCommands": [
+        "npm test",
+        "npx vitest run",
+        "vitest run",
+        "npx jest",
+        "jest"
+      ],
+      "notes": "Local tooling with no CI. shop.sh, docker and kubectl drive real environments: agents use the kube and aws tools instead. This repo has no branch protection, so the tiers are its only check."
+    }
+  }
+}

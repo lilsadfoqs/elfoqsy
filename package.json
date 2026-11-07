@@ -1,0 +1,16 @@
+{
+  "name": "elfoqsy",
+  "description": "A local-first orchestrator that runs one coding agent per ticket, with an approval gate and full replay.",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.19"
+  },
+  "scripts": {
+    "dev": "pnpm --parallel --filter @elfoqsy/daemon --filter @elfoqsy/web run dev",
+    "dev:sim": "pnpm --parallel --filter @elfoqsy/daemon --filter @elfoqsy/web run dev:sim",
+    "typecheck": "pnpm -r run typecheck",
+    "test": "pnpm -r --workspace-concurrency=1 run test"
+  }
+}

@@ -1,0 +1,2250 @@
+{
+ "issue": {
+  "id": "2668210",
+  "key": "SHOP-3538",
+  "names": {
+   "statuscategorychangedate": "Status category changed",
+   "parent": "Parent",
+   "customfield_17460": "Design",
+   "customfield_17581": "Impact",
+   "issuetype": "Issue Type",
+   "timespent": "Time Spent",
+   "customfield_16698": "End date",
+   "project": "Project",
+   "customfield_17269": "Time taken at In Progress",
+   "fixVersions": "Fix versions",
+   "aggregatetimespent": "Σ Time Spent",
+   "statusCategory": "Status category",
+   "resolution": "Resolution",
+   "customfield_17703": "Circle Time Recorded",
+   "customfield_17702": "End Ticket Timestamp",
+   "customfield_16459": "Start date",
+   "customfield_17701": "Start Ticket Timestamp",
+   "customfield_16728": "Acceptance criteria",
+   "customfield_16727": "Solution",
+   "resolutiondate": "Resolved",
+   "workratio": "Work Ratio",
+   "customfield_17691": "Checklist Progress %",
+   "issuerestriction": "Restrict to",
+   "lastViewed": "Last Viewed",
+   "customfield_17690": "Checklist Progress",
+   "customfield_21870": "Customer Name",
+   "customfield_16486": "Story point estimate",
+   "created": "Created",
+   "customfield_17693": "Checklist Text (view-only)",
+   "customfield_10021": "First Response",
+   "priority": "Priority",
+   "labels": "Labels",
+   "customfield_16517": "Event End Date",
+   "timeestimate": "Remaining Estimate",
+   "aggregatetimeoriginalestimate": "Σ Original Estimate",
+   "versions": "Affects versions",
+   "issuelinks": "Linked work items",
+   "assignee": "Assignee",
+   "updated": "Updated",
+   "status": "Status",
+   "components": "Components",
+   "customfield_17282": "QA Assignee",
+   "customfield_17564": "Reviewer",
+   "customfield_17563": "Vulnerability",
+   "timeoriginalestimate": "Original estimate",
+   "customfield_13320": "Development",
+   "description": "Description",
+   "customfield_11220": "Rank",
+   "customfield_17566": "Failed Acceptance Criteria",
+   "customfield_16516": "Event Start Date",
+   "timetracking": "Time tracking",
+   "security": "Security Level",
+   "customfield_31871": "Agent Sessions",
+   "attachment": "Attachment",
+   "aggregatetimeestimate": "Σ Remaining Estimate",
+   "customfield_17274": "Entered in progress",
+   "summary": "Summary",
+   "customfield_17272": "Time taken at QA",
+   "creator": "Creator",
+   "customfield_17271": "Time taken at Peer Review",
+   "customfield_17278": "Entered ready to merge",
+   "customfield_17277": "Entered QA",
+   "subtasks": "Sub-tasks",
+   "customfield_17276": "Entered peer review",
+   "reporter": "Reporter",
+   "aggregateprogress": "Σ Progress",
+   "customfield_10000": "Flagged",
+   "customfield_16747": "Checklist Text",
+   "customfield_16746": "Checklist Content YAML",
+   "customfield_16745": "Checklist Completed",
+   "customfield_10521": "Sprint",
+   "environment": "Environment",
+   "duedate": "Due date",
+   "progress": "Progress",
+   "comment": "Comment",
+   "worklog": "Log Work",
+   "customfield_29369": "QA Story point estimate",
+   "customfield_21369": "Dev Self-Testing Quality"
+  },
+  "schema": {
+   "statuscategorychangedate": {
+    "type": "datetime",
+    "system": "statuscategorychangedate"
+   },
+   "parent": {
+    "type": "array",
+    "items": "issuelinks",
+    "system": "parent"
+   },
+   "customfield_17460": {
+    "type": "array",
+    "items": "design.field.name",
+    "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:designcf",
+    "customId": 17460
+   },
+   "customfield_17581": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+    "customId": 17581
+   },
+   "issuetype": {
+    "type": "issuetype",
+    "system": "issuetype"
+   },
+   "timespent": {
+    "type": "number",
+    "system": "timespent"
+   },
+   "customfield_16698": {
+    "type": "date",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datepicker",
+    "customId": 16698
+   },
+   "project": {
+    "type": "project",
+    "system": "project"
+   },
+   "customfield_17269": {
+    "type": "number",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:float",
+    "customId": 17269
+   },
+   "fixVersions": {
+    "type": "array",
+    "items": "version",
+    "system": "fixVersions"
+   },
+   "aggregatetimespent": {
+    "type": "number",
+    "system": "aggregatetimespent"
+   },
+   "statusCategory": {
+    "type": "statusCategory",
+    "system": "statusCategory"
+   },
+   "resolution": {
+    "type": "resolution",
+    "system": "resolution"
+   },
+   "customfield_17703": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+    "customId": 17703
+   },
+   "customfield_17702": {
+    "type": "datetime",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datetime",
+    "customId": 17702
+   },
+   "customfield_16459": {
+    "type": "date",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datepicker",
+    "customId": 16459
+   },
+   "customfield_17701": {
+    "type": "datetime",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datetime",
+    "customId": 17701
+   },
+   "customfield_16728": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+    "customId": 16728
+   },
+   "customfield_16727": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+    "customId": 16727
+   },
+   "resolutiondate": {
+    "type": "datetime",
+    "system": "resolutiondate"
+   },
+   "workratio": {
+    "type": "number",
+    "system": "workratio"
+   },
+   "customfield_17691": {
+    "type": "number",
+    "custom": "ari:cloud:ecosystem::extension/3b4920b4-90b9-4cc9-8a22-acd6fbb80aa8/7bebf23e-b876-4077-817b-d47855989c5c/static/issue-checklist-progress-percent-field",
+    "customId": 17691,
+    "configuration": {
+     "customRenderer": false,
+     "readOnly": false,
+     "environment": "PRODUCTION"
+    }
+   },
+   "issuerestriction": {
+    "type": "issuerestriction",
+    "system": "issuerestriction"
+   },
+   "lastViewed": {
+    "type": "datetime",
+    "system": "lastViewed"
+   },
+   "customfield_17690": {
+    "type": "string",
+    "custom": "ari:cloud:ecosystem::extension/3b4920b4-90b9-4cc9-8a22-acd6fbb80aa8/7bebf23e-b876-4077-817b-d47855989c5c/static/issue-checklist-progress-field",
+    "customId": 17690,
+    "configuration": {
+     "customRenderer": false,
+     "readOnly": false,
+     "environment": "PRODUCTION"
+    }
+   },
+   "customfield_21870": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+    "customId": 21870
+   },
+   "customfield_16486": {
+    "type": "number",
+    "custom": "com.pyxis.greenhopper.jira:jsw-story-points",
+    "customId": 16486
+   },
+   "created": {
+    "type": "datetime",
+    "system": "created"
+   },
+   "customfield_17693": {
+    "type": "string",
+    "custom": "ari:cloud:ecosystem::extension/3b4920b4-90b9-4cc9-8a22-acd6fbb80aa8/7bebf23e-b876-4077-817b-d47855989c5c/static/checklist-text-view-only",
+    "customId": 17693,
+    "configuration": {
+     "customRenderer": false,
+     "readOnly": false,
+     "environment": "PRODUCTION"
+    }
+   },
+   "customfield_10021": {
+    "type": "datetime",
+    "custom": "com.atlassian.jira.ext.charting:firstresponsedate",
+    "customId": 10021
+   },
+   "priority": {
+    "type": "priority",
+    "system": "priority"
+   },
+   "labels": {
+    "type": "array",
+    "items": "string",
+    "system": "labels"
+   },
+   "customfield_16517": {
+    "type": "date",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datepicker",
+    "customId": 16517
+   },
+   "timeestimate": {
+    "type": "number",
+    "system": "timeestimate"
+   },
+   "aggregatetimeoriginalestimate": {
+    "type": "number",
+    "system": "aggregatetimeoriginalestimate"
+   },
+   "versions": {
+    "type": "array",
+    "items": "version",
+    "system": "versions"
+   },
+   "issuelinks": {
+    "type": "array",
+    "items": "issuelinks",
+    "system": "issuelinks"
+   },
+   "assignee": {
+    "type": "user",
+    "system": "assignee"
+   },
+   "updated": {
+    "type": "datetime",
+    "system": "updated"
+   },
+   "status": {
+    "type": "status",
+    "system": "status"
+   },
+   "components": {
+    "type": "array",
+    "items": "component",
+    "system": "components"
+   },
+   "customfield_17282": {
+    "type": "array",
+    "items": "user",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:people",
+    "customId": 17282,
+    "configuration": {
+     "isMulti": true
+    }
+   },
+   "customfield_17564": {
+    "type": "array",
+    "items": "user",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:people",
+    "customId": 17564,
+    "configuration": {
+     "isMulti": true
+    }
+   },
+   "customfield_17563": {
+    "type": "any",
+    "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:vulnerabilitycf",
+    "customId": 17563
+   },
+   "timeoriginalestimate": {
+    "type": "number",
+    "system": "timeoriginalestimate"
+   },
+   "customfield_13320": {
+    "type": "any",
+    "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:devsummarycf",
+    "customId": 13320
+   },
+   "description": {
+    "type": "string",
+    "system": "description"
+   },
+   "customfield_11220": {
+    "type": "any",
+    "custom": "com.pyxis.greenhopper.jira:gh-lexo-rank",
+    "customId": 11220
+   },
+   "customfield_17566": {
+    "type": "option",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+    "customId": 17566
+   },
+   "customfield_16516": {
+    "type": "date",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datepicker",
+    "customId": 16516
+   },
+   "timetracking": {
+    "type": "timetracking",
+    "system": "timetracking"
+   },
+   "security": {
+    "type": "securitylevel",
+    "system": "security"
+   },
+   "customfield_31871": {
+    "type": "array",
+    "items": "admin.customfield.type.agent.sessions.name",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:agent-sessions",
+    "customId": 31871
+   },
+   "attachment": {
+    "type": "array",
+    "items": "attachment",
+    "system": "attachment"
+   },
+   "aggregatetimeestimate": {
+    "type": "number",
+    "system": "aggregatetimeestimate"
+   },
+   "customfield_17274": {
+    "type": "datetime",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datetime",
+    "customId": 17274
+   },
+   "summary": {
+    "type": "string",
+    "system": "summary"
+   },
+   "customfield_17272": {
+    "type": "number",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:float",
+    "customId": 17272
+   },
+   "creator": {
+    "type": "user",
+    "system": "creator"
+   },
+   "customfield_17271": {
+    "type": "number",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:float",
+    "customId": 17271
+   },
+   "customfield_17278": {
+    "type": "datetime",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datetime",
+    "customId": 17278
+   },
+   "customfield_17277": {
+    "type": "datetime",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datetime",
+    "customId": 17277
+   },
+   "subtasks": {
+    "type": "array",
+    "items": "issuelinks",
+    "system": "subtasks"
+   },
+   "customfield_17276": {
+    "type": "datetime",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datetime",
+    "customId": 17276
+   },
+   "reporter": {
+    "type": "user",
+    "system": "reporter"
+   },
+   "aggregateprogress": {
+    "type": "progress",
+    "system": "aggregateprogress"
+   },
+   "customfield_10000": {
+    "type": "array",
+    "items": "option",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:multicheckboxes",
+    "customId": 10000
+   },
+   "customfield_16747": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+    "customId": 16747
+   },
+   "customfield_16746": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+    "customId": 16746
+   },
+   "customfield_16745": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+    "customId": 16745
+   },
+   "customfield_10521": {
+    "type": "array",
+    "items": "json",
+    "custom": "com.pyxis.greenhopper.jira:gh-sprint",
+    "customId": 10521
+   },
+   "environment": {
+    "type": "string",
+    "system": "environment"
+   },
+   "duedate": {
+    "type": "date",
+    "system": "duedate"
+   },
+   "progress": {
+    "type": "progress",
+    "system": "progress"
+   },
+   "comment": {
+    "type": "comments-page",
+    "system": "comment"
+   },
+   "worklog": {
+    "type": "array",
+    "items": "worklog",
+    "system": "worklog"
+   },
+   "customfield_29369": {
+    "type": "number",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:float",
+    "customId": 29369
+   },
+   "customfield_21369": {
+    "type": "option",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+    "customId": 21369
+   }
+  },
+  "editmeta": {
+   "fields": {
+    "issuetype": {
+     "required": false,
+     "schema": {
+      "type": "issuetype",
+      "system": "issuetype"
+     },
+     "name": "Issue Type",
+     "key": "issuetype",
+     "operations": [],
+     "allowedValues": [
+      {
+       "id": "14532",
+       "description": "Stories track functionality or features expressed as user goals.",
+       "name": "Story",
+       "subtask": false,
+       "entityId": "89386fcb-7b79-4a8c-9772-f662d8cf0c2e",
+       "hierarchyLevel": 0
+      },
+      {
+       "id": "14533",
+       "description": "Tasks track small, distinct pieces of work.",
+       "name": "Task",
+       "subtask": false,
+       "entityId": "1888db5e-400f-482f-aebf-ee1a68436fe5",
+       "hierarchyLevel": 0
+      }
+     ]
+    },
+    "customfield_17581": {
+     "required": false,
+     "schema": {
+      "type": "string",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+      "customId": 17581
+     },
+     "name": "Impact",
+     "key": "customfield_17581",
+     "operations": [
+      "set"
+     ]
+    },
+    "parent": {
+     "required": false,
+     "schema": {
+      "type": "issuelink",
+      "system": "parent"
+     },
+     "name": "Parent",
+     "key": "parent",
+     "hasDefaultValue": false,
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_17460": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "design.field.name",
+      "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:designcf",
+      "customId": 17460
+     },
+     "name": "Design",
+     "key": "customfield_17460",
+     "autoCompleteUrl": "",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_17282": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "user",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:people",
+      "customId": 17282,
+      "configuration": {
+       "isMulti": true
+      }
+     },
+     "name": "QA Assignee",
+     "key": "customfield_17282",
+     "autoCompleteUrl": "https://acme.atlassian.net/rest/api/1.0/users/picker?fieldName=customfield_17282&showAvatar=true&query=",
+     "operations": [
+      "add",
+      "set",
+      "remove"
+     ]
+    },
+    "customfield_17564": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "user",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:people",
+      "customId": 17564,
+      "configuration": {
+       "isMulti": true
+      }
+     },
+     "name": "Reviewer",
+     "key": "customfield_17564",
+     "autoCompleteUrl": "https://acme.atlassian.net/rest/api/1.0/users/picker?fieldName=customfield_17564&showAvatar=true&query=",
+     "operations": [
+      "add",
+      "set",
+      "remove"
+     ]
+    },
+    "customfield_17563": {
+     "required": false,
+     "schema": {
+      "type": "any",
+      "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:vulnerabilitycf",
+      "customId": 17563
+     },
+     "name": "Vulnerability",
+     "key": "customfield_17563",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_13320": {
+     "required": false,
+     "schema": {
+      "type": "any",
+      "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:devsummarycf",
+      "customId": 13320
+     },
+     "name": "Development",
+     "key": "customfield_13320",
+     "operations": [
+      "set"
+     ]
+    },
+    "description": {
+     "required": false,
+     "schema": {
+      "type": "string",
+      "system": "description"
+     },
+     "name": "Description",
+     "key": "description",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_11220": {
+     "required": false,
+     "schema": {
+      "type": "any",
+      "custom": "com.pyxis.greenhopper.jira:gh-lexo-rank",
+      "customId": 11220
+     },
+     "name": "Rank",
+     "key": "customfield_11220",
+     "operations": [
+      "set"
+     ]
+    },
+    "fixVersions": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "version",
+      "system": "fixVersions"
+     },
+     "name": "Fix versions",
+     "key": "fixVersions",
+     "operations": [
+      "set",
+      "add",
+      "remove"
+     ],
+     "allowedValues": [
+      {
+       "id": "73172",
+       "name": "2.17.1",
+       "archived": false,
+       "released": true,
+       "releaseDate": "2026-05-20",
+       "userReleaseDate": "19/May/26",
+       "projectId": 15624
+      },
+      {
+       "id": "73205",
+       "name": "2.18.0",
+       "archived": false,
+       "released": true,
+       "startDate": "2026-05-18",
+       "releaseDate": "2026-06-11",
+       "userStartDate": "17/May/26",
+       "userReleaseDate": "10/Jun/26",
+       "projectId": 15624
+      },
+      {
+       "id": "73768",
+       "name": "2.17.2",
+       "archived": false,
+       "released": true,
+       "startDate": "2026-05-27",
+       "releaseDate": "2026-06-01",
+       "userStartDate": "26/May/26",
+       "userReleaseDate": "31/May/26",
+       "projectId": 15624
+      },
+      {
+       "id": "75320",
+       "name": "2.18.1",
+       "archived": false,
+       "released": true,
+       "startDate": "2026-06-16",
+       "releaseDate": "2026-06-17",
+       "userStartDate": "15/Jun/26",
+       "userReleaseDate": "16/Jun/26",
+       "projectId": 15624
+      },
+      {
+       "id": "75522",
+       "name": "2.19.0",
+       "archived": false,
+       "released": true,
+       "releaseDate": "2026-07-08",
+       "userReleaseDate": "07/Jul/26",
+       "projectId": 15624
+      },
+      {
+       "id": "76400",
+       "name": "2.18.2",
+       "archived": false,
+       "released": true,
+       "startDate": "2026-07-01",
+       "releaseDate": "2026-07-08",
+       "userStartDate": "30/Jun/26",
+       "userReleaseDate": "07/Jul/26",
+       "projectId": 15624
+      },
+      {
+       "id": "78355",
+       "name": "2.19.1",
+       "archived": false,
+       "released": true,
+       "releaseDate": "2026-07-20",
+       "userReleaseDate": "19/Jul/26",
+       "projectId": 15624
+      },
+      {
+       "id": "78658",
+       "name": "2.19.2",
+       "archived": false,
+       "released": true,
+       "startDate": "2026-07-31",
+       "releaseDate": "2026-07-31",
+       "userStartDate": "30/Jul/26",
+       "userReleaseDate": "30/Jul/26",
+       "projectId": 15624
+      },
+      {
+       "id": "79194",
+       "name": "2.20.0",
+       "archived": false,
+       "released": true,
+       "startDate": "2026-07-15",
+       "releaseDate": "2026-08-12",
+       "userStartDate": "14/Jul/26",
+       "userReleaseDate": "11/Aug/26",
+       "projectId": 15624
+      },
+      {
+       "id": "80046",
+       "name": "2.21.0",
+       "archived": false,
+       "released": true,
+       "startDate": "2026-08-25",
+       "releaseDate": "2026-09-09",
+       "userStartDate": "24/Aug/26",
+       "userReleaseDate": "08/Sep/26",
+       "projectId": 15624
+      },
+      {
+       "id": "80249",
+       "name": "2.22.0",
+       "archived": false,
+       "released": false,
+       "startDate": "2026-09-10",
+       "releaseDate": "2026-10-08",
+       "overdue": true,
+       "userStartDate": "09/Sep/26",
+       "userReleaseDate": "07/Oct/26",
+       "projectId": 15624
+      },
+      {
+       "id": "80325",
+       "name": "2.21.1",
+       "archived": false,
+       "released": false,
+       "startDate": "2026-10-09",
+       "releaseDate": "2026-10-14",
+       "overdue": false,
+       "userStartDate": "08/Oct/26",
+       "userReleaseDate": "13/Oct/26",
+       "projectId": 15624
+      }
+     ]
+    },
+    "customfield_17703": {
+     "required": false,
+     "schema": {
+      "type": "string",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+      "customId": 17703
+     },
+     "name": "Circle Time Recorded",
+     "key": "customfield_17703",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_17702": {
+     "required": false,
+     "schema": {
+      "type": "datetime",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datetime",
+      "customId": 17702
+     },
+     "name": "End Ticket Timestamp",
+     "key": "customfield_17702",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_17701": {
+     "required": false,
+     "schema": {
+      "type": "datetime",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datetime",
+      "customId": 17701
+     },
+     "name": "Start Ticket Timestamp",
+     "key": "customfield_17701",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_16728": {
+     "required": true,
+     "schema": {
+      "type": "string",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+      "customId": 16728
+     },
+     "name": "Acceptance criteria",
+     "key": "customfield_16728",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_16727": {
+     "required": false,
+     "schema": {
+      "type": "string",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+      "customId": 16727
+     },
+     "name": "Solution",
+     "key": "customfield_16727",
+     "operations": [
+      "set"
+     ]
+    },
+    "attachment": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "attachment",
+      "system": "attachment"
+     },
+     "name": "Attachment",
+     "key": "attachment",
+     "operations": [
+      "set",
+      "copy"
+     ]
+    },
+    "summary": {
+     "required": true,
+     "schema": {
+      "type": "string",
+      "system": "summary"
+     },
+     "name": "Summary",
+     "key": "summary",
+     "operations": [
+      "set"
+     ]
+    },
+    "issuerestriction": {
+     "required": false,
+     "schema": {
+      "type": "issuerestriction",
+      "system": "issuerestriction"
+     },
+     "name": "Restrict to",
+     "key": "issuerestriction",
+     "operations": [
+      "set"
+     ],
+     "allowedValues": []
+    },
+    "customfield_21870": {
+     "required": false,
+     "schema": {
+      "type": "string",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+      "customId": 21870
+     },
+     "name": "Customer Name",
+     "key": "customfield_21870",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_16486": {
+     "required": false,
+     "schema": {
+      "type": "number",
+      "custom": "com.pyxis.greenhopper.jira:jsw-story-points",
+      "customId": 16486
+     },
+     "name": "Story point estimate",
+     "key": "customfield_16486",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_10000": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "option",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:multicheckboxes",
+      "customId": 10000
+     },
+     "name": "Flagged",
+     "key": "customfield_10000",
+     "operations": [
+      "add",
+      "set",
+      "remove"
+     ],
+     "allowedValues": [
+      {
+       "value": "Impediment",
+       "id": "10000"
+      }
+     ]
+    },
+    "priority": {
+     "required": false,
+     "schema": {
+      "type": "priority",
+      "system": "priority"
+     },
+     "name": "Priority",
+     "key": "priority",
+     "operations": [
+      "set"
+     ],
+     "allowedValues": [
+      {
+       "name": "Blocker",
+       "id": "1"
+      },
+      {
+       "name": "Critical",
+       "id": "2"
+      },
+      {
+       "name": "Major",
+       "id": "3"
+      },
+      {
+       "name": "Minor",
+       "id": "4"
+      },
+      {
+       "name": "IFFEasy",
+       "id": "10000"
+      },
+      {
+       "name": "Trivial",
+       "id": "5"
+      }
+     ]
+    },
+    "customfield_10521": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "json",
+      "custom": "com.pyxis.greenhopper.jira:gh-sprint",
+      "customId": 10521
+     },
+     "name": "Sprint",
+     "key": "customfield_10521",
+     "operations": [
+      "set"
+     ]
+    },
+    "labels": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "string",
+      "system": "labels"
+     },
+     "name": "Labels",
+     "key": "labels",
+     "autoCompleteUrl": "https://acme.atlassian.net/rest/api/1.0/labels/2668210/suggest?query=",
+     "operations": [
+      "add",
+      "set",
+      "remove"
+     ]
+    },
+    "environment": {
+     "required": false,
+     "schema": {
+      "type": "string",
+      "system": "environment"
+     },
+     "name": "Environment",
+     "key": "environment",
+     "operations": [
+      "set"
+     ]
+    },
+    "comment": {
+     "required": false,
+     "schema": {
+      "type": "comments-page",
+      "system": "comment"
+     },
+     "name": "Comment",
+     "key": "comment",
+     "operations": [
+      "add",
+      "edit",
+      "remove"
+     ]
+    },
+    "issuelinks": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "issuelinks",
+      "system": "issuelinks"
+     },
+     "name": "Linked work items",
+     "key": "issuelinks",
+     "autoCompleteUrl": "https://acme.atlassian.net/rest/api/3/issue/picker?currentProjectId=&showSubTaskParent=true&showSubTasks=true&currentIssueKey=SHOP-3538&query=",
+     "operations": [
+      "add",
+      "copy"
+     ]
+    },
+    "customfield_29369": {
+     "required": false,
+     "schema": {
+      "type": "number",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:float",
+      "customId": 29369
+     },
+     "name": "QA Story point estimate",
+     "key": "customfield_29369",
+     "operations": [
+      "set"
+     ]
+    },
+    "assignee": {
+     "required": false,
+     "schema": {
+      "type": "user",
+      "system": "assignee"
+     },
+     "name": "Assignee",
+     "key": "assignee",
+     "autoCompleteUrl": "https://acme.atlassian.[redacted secret]?issueKey=SHOP-3538&query=",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_21369": {
+     "required": false,
+     "schema": {
+      "type": "option",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+      "customId": 21369
+     },
+     "name": "Dev Self-Testing Quality",
+     "key": "customfield_21369",
+     "operations": [
+      "set"
+     ],
+     "allowedValues": [
+      {
+       "value": "Passed",
+       "id": "23379"
+      },
+      {
+       "value": "Failed",
+       "id": "23380"
+      }
+     ]
+    }
+   }
+  },
+  "changelog": {
+   "startAt": 0,
+   "maxResults": 17,
+   "total": 17,
+   "histories": [
+    {
+     "id": "15899738",
+     "author": {
+      "accountId": "acc-1",
+      "displayName": "Quinn Bauer",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-11T19:01:25.426-0700",
+     "items": [
+      {
+       "field": "assignee",
+       "fieldtype": "jira",
+       "fieldId": "assignee",
+       "from": null,
+       "fromString": null,
+       "to": "acc-me",
+       "toString": "Alex Rivera",
+       "tmpFromAccountId": null,
+       "tmpToAccountId": "acc-me"
+      }
+     ]
+    },
+    {
+     "id": "15875408",
+     "author": {
+      "accountId": "acc-1",
+      "displayName": "Quinn Bauer",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-08T21:20:06.648-0700",
+     "items": [
+      {
+       "field": "assignee",
+       "fieldtype": "jira",
+       "fieldId": "assignee",
+       "from": "acc-1",
+       "fromString": "Quinn Bauer",
+       "to": null,
+       "toString": null
+      }
+     ]
+    },
+    {
+     "id": "15875406",
+     "author": {
+      "accountId": "acc-1",
+      "displayName": "Quinn Bauer",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-08T21:20:04.036-0700",
+     "items": [
+      {
+       "field": "assignee",
+       "fieldtype": "jira",
+       "fieldId": "assignee",
+       "from": "acc-2",
+       "fromString": "Drew Kim",
+       "to": "acc-1",
+       "toString": "Quinn Bauer",
+       "tmpFromAccountId": null,
+       "tmpToAccountId": "acc-1"
+      }
+     ]
+    },
+    {
+     "id": "15865763",
+     "author": {
+      "accountId": "acc-1",
+      "displayName": "Quinn Bauer",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-08T03:33:22.450-0700",
+     "items": [
+      {
+       "field": "Story point estimate",
+       "fieldtype": "custom",
+       "fieldId": "customfield_16486",
+       "from": null,
+       "fromString": null,
+       "to": null,
+       "toString": "8"
+      }
+     ]
+    },
+    {
+     "id": "15865381",
+     "author": {
+      "accountId": "acc-1",
+      "displayName": "Quinn Bauer",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-08T03:23:35.746-0700",
+     "items": [
+      {
+       "field": "description",
+       "fieldtype": "jira",
+       "fieldId": "description",
+       "from": null,
+       "fromString": "h3. Why\n\nWith holds now placed in the reservation store at add-to-cart (CORE-18632), the stock count in the inventory database is only decremented after payment capture. Losing that commit is the hardest failure of Checkout V2: the order ships, the shelf count stays high, and the next customer buys an item that is not there.\n\nh3. Scope\n\n* New worker {{shop-worker/src/inventory_sync}} (TypeScript, Node 24, Vitest).\n* Trigger: the payments webhook handler (v2, v3 and the expiry path) produces an {{InventorySyncCommand}} on Kafka once the payment is captured or the hold expires.\n* On capture: decrement the stock in Postgres in one transaction keyed by {{order_id}}, then emit {{InventorySynced}} and release the hold in Redis.\n* On expiry or refund before shipping: release the hold only; the stock count is never touched.\n* A nightly reconcile job lists holds older than 24 h with no matching order and releases them.\n* Guest carts that never reach checkout are never synced.\n\nh3. Dependencies\n\n* SHOP-3537 (reservation store) and SHOP-3543 (Kafka topics, Redis streams) must land first.\n* SHOP-3559 defines the InventorySyncCommand and InventorySynced messages.\n\nh3. Source",
+       "to": null,
+       "toString": "h3. Why\n\nWith holds now placed in the reservation store at add-to-cart (CORE-18632), the stock count in the inventory database is only decremented after payment capture. Losing that commit is the hardest failure of Checkout V2: the order ships, the shelf count stays high, and the next customer buys an item that is not there.\n\nh3. Scope\n\n* New worker {{shop-worker/src/inventory_sync}} (TypeScript, Node 24, Vitest).\n* Trigger: the payments webhook handler (v2, v3 and the expiry path) produces an {{InventorySyncCommand}} on Kafka once the payment is captured or the hold expires.\n* On capture: decrement the stock in Postgres in one transaction keyed by {{order_id}}, then emit {{InventorySynced}} and release the hold in Redis.\n* On expiry or refund before shipping: release the hold only; the stock count is never touched.\n* A nightly reconcile job lists holds older than 24 h with no matching order and releases them.\n* Guest carts that never reach checkout are never synced.\n\nh3. Dependencies\n\n* SHOP-3537 (reservation store) and SHOP-3543 (Kafka topics, Redis streams) must land first.\n* SHOP-3559 defines the InventorySyncCommand and InventorySynced messages.\n\nh3. Source\n\nRequirement CHK2-P04 in Checkout V2 :: Requirements, design in Checkout V2 :: Architecture and Checkout V2 :: Stock Reservations."
+      }
+     ]
+    },
+    {
+     "id": "15865362",
+     "author": {
+      "accountId": "acc-1",
+      "displayName": "Quinn Bauer",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-08T03:23:14.820-0700",
+     "items": [
+      {
+       "field": "Link",
+       "fieldtype": "jira",
+       "from": null,
+       "fromString": null,
+       "to": "SHOP-3559",
+       "toString": "This work item Relates SHOP-3559"
+      }
+     ]
+    },
+    {
+     "id": "15861369",
+     "author": {
+      "accountId": "acc-2",
+      "displayName": "Drew Kim",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-08T00:46:03.471-0700",
+     "items": [
+      {
+       "field": "Rank",
+       "fieldtype": "custom",
+       "fieldId": "customfield_11220",
+       "from": "",
+       "fromString": "",
+       "to": "",
+       "toString": "Ranked higher"
+      }
+     ]
+    },
+    {
+     "id": "15861309",
+     "author": {
+      "accountId": "acc-2",
+      "displayName": "Drew Kim",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-08T00:44:53.199-0700",
+     "items": [
+      {
+       "field": "Rank",
+       "fieldtype": "custom",
+       "fieldId": "customfield_11220",
+       "from": "",
+       "fromString": "",
+       "to": "",
+       "toString": "Ranked lower"
+      }
+     ]
+    },
+    {
+     "id": "15861233",
+     "author": {
+      "accountId": "acc-2",
+      "displayName": "Drew Kim",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-08T00:43:27.984-0700",
+     "items": [
+      {
+       "field": "Rank",
+       "fieldtype": "custom",
+       "fieldId": "customfield_11220",
+       "from": "",
+       "fromString": "",
+       "to": "",
+       "toString": "Ranked higher"
+      }
+     ]
+    },
+    {
+     "id": "15861203",
+     "author": {
+      "accountId": "acc-2",
+      "displayName": "Drew Kim",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-08T00:42:58.988-0700",
+     "items": [
+      {
+       "field": "priority",
+       "fieldtype": "jira",
+       "fieldId": "priority",
+       "from": "4",
+       "fromString": "Minor",
+       "to": "1",
+       "toString": "Blocker"
+      }
+     ]
+    },
+    {
+     "id": "15858202",
+     "author": {
+      "accountId": "acc-1",
+      "displayName": "Quinn Bauer",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-07T22:26:44.861-0700",
+     "items": [
+      {
+       "field": "Sprint",
+       "fieldtype": "custom",
+       "fieldId": "customfield_10521",
+       "from": "",
+       "fromString": "",
+       "to": "33774",
+       "toString": "SHOP Sprint 52"
+      }
+     ]
+    },
+    {
+     "id": "15856746",
+     "author": {
+      "accountId": "acc-1",
+      "displayName": "Quinn Bauer",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-07T21:32:12.694-0700",
+     "items": [
+      {
+       "field": "RemoteWorkItemLink",
+       "fieldtype": "jira",
+       "from": null,
+       "fromString": null,
+       "to": "470994",
+       "toString": "This work item links to \"Page (Confluence)\""
+      }
+     ]
+    },
+    {
+     "id": "15856721",
+     "author": {
+      "accountId": "acc-1",
+      "displayName": "Quinn Bauer",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-07T21:31:36.690-0700",
+     "items": [
+      {
+       "field": "description",
+       "fieldtype": "jira",
+       "fieldId": "description",
+       "from": null,
+       "fromString": "h3. Why\n\nWith holds now placed in the reservation store at add-to-cart (CORE-18632), the stock count in the inventory database is only decremented after payment capture. Losing that commit is the hardest failure of Checkout V2: the order ships, the shelf count stays high, and the next customer buys an item that is not there.\n\nh3. Scope\n\n* New worker {{shop-worker/src/inventory_sync}} (TypeScript, Node 24, Vitest).\n* Trigger: the payments webhook handler (v2, v3 and the expiry path) produces an {{InventorySyncCommand}} on Kafka once the payment is captured or the hold expires.\n* On capture: decrement the stock in Postgres in one transaction keyed by {{order_id}}, then emit {{InventorySynced}} and release the hold in Redis.\n* On expiry or refund before shipping: release the hold only; the stock count is never touched.\n* A nightly reconcile job lists holds older than 24 h with no matching order and releases them.\n* Guest carts that never reach checkout are never synced.\n\nh3. Dependencies\n\n* SHOP-3537 (reservation store) and SHOP-3543 (Kafka topics, Redis streams) must land first.\n* SHOP-3559 defines the InventorySyncCommand and InventorySynced messages.\n\nh3. Source",
+       "to": null,
+       "toString": "h3. Why\n\nWith holds now placed in the reservation store at add-to-cart (CORE-18632), the stock count in the inventory database is only decremented after payment capture. Losing that commit is the hardest failure of Checkout V2: the order ships, the shelf count stays high, and the next customer buys an item that is not there.\n\nh3. Scope\n\n* New worker {{shop-worker/src/inventory_sync}} (TypeScript, Node 24, Vitest).\n* Trigger: the payments webhook handler (v2, v3 and the expiry path) produces an {{InventorySyncCommand}} on Kafka once the payment is captured or the hold expires.\n* On capture: decrement the stock in Postgres in one transaction keyed by {{order_id}}, then emit {{InventorySynced}} and release the hold in Redis.\n* On expiry or refund before shipping: release the hold only; the stock count is never touched.\n* A nightly reconcile job lists holds older than 24 h with no matching order and releases them.\n* Guest carts that never reach checkout are never synced.\n\nh3. Dependencies\n\n* SHOP-3537 (reservation store) and SHOP-3543 (Kafka topics, Redis streams) must land first.\n* SHOP-3559 defines the InventorySyncCommand and InventorySynced messages.\n\nh3. Source\n\nRequirement CHK2-P04 in Checkout V2 :: Requirements, design in Checkout V2 :: Architecture and Checkout V2 :: Stock Reservations."
+      }
+     ]
+    },
+    {
+     "id": "15856688",
+     "author": {
+      "accountId": "acc-1",
+      "displayName": "Quinn Bauer",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-07T21:31:24.230-0700",
+     "items": [
+      {
+       "field": "Link",
+       "fieldtype": "jira",
+       "from": null,
+       "fromString": null,
+       "to": "CORE-18632",
+       "toString": "This work item Relates CORE-18632"
+      }
+     ]
+    },
+    {
+     "id": "15856685",
+     "author": {
+      "accountId": "acc-1",
+      "displayName": "Quinn Bauer",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-07T21:31:22.870-0700",
+     "items": [
+      {
+       "field": "Link",
+       "fieldtype": "jira",
+       "from": null,
+       "fromString": null,
+       "to": "SHOP-3537",
+       "toString": "This work item is blocked by SHOP-3537"
+      }
+     ]
+    },
+    {
+     "id": "15856679",
+     "author": {
+      "accountId": "acc-1",
+      "displayName": "Quinn Bauer",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-07T21:31:20.659-0700",
+     "items": [
+      {
+       "field": "Link",
+       "fieldtype": "jira",
+       "from": null,
+       "fromString": null,
+       "to": "SHOP-3543",
+       "toString": "This work item is blocked by SHOP-3543"
+      }
+     ]
+    },
+    {
+     "id": "15856671",
+     "author": {
+      "accountId": "acc-1",
+      "displayName": "Quinn Bauer",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-07T21:31:17.578-0700",
+     "items": [
+      {
+       "field": "Link",
+       "fieldtype": "jira",
+       "from": null,
+       "fromString": null,
+       "to": "SHOP-3536",
+       "toString": "This work item is blocked by SHOP-3536"
+      }
+     ]
+    }
+   ]
+  },
+  "fields": {
+   "statuscategorychangedate": "2026-10-07T21:30:41.738-0700",
+   "customfield_17460": null,
+   "customfield_17581": null,
+   "issuetype": {
+    "id": "14532",
+    "description": "Stories track functionality or features expressed as user goals.",
+    "name": "Story",
+    "subtask": false,
+    "entityId": "89386fcb-7b79-4a8c-9772-f662d8cf0c2e",
+    "hierarchyLevel": 0
+   },
+   "parent": {
+    "id": "2668206",
+    "key": "SHOP-3534",
+    "fields": {
+     "summary": "[Checkout V2] Checkout Performance (Phase 1): shop-api work for checkout P90 under 800 ms",
+     "status": {
+      "description": "",
+      "name": "BACKLOG",
+      "id": "14377",
+      "statusCategory": {
+       "id": 2,
+       "key": "new",
+       "colorName": "blue-gray",
+       "name": "To Do"
+      }
+     },
+     "priority": {
+      "name": "Major",
+      "id": "3"
+     },
+     "issuetype": {
+      "id": "14535",
+      "description": "Epics track collections of related bugs, stories, and tasks.",
+      "name": "Epic",
+      "subtask": false,
+      "entityId": "bfdde146-f097-442b-872a-f161bf66fcca",
+      "hierarchyLevel": 1
+     }
+    }
+   },
+   "timespent": null,
+   "customfield_16698": null,
+   "project": {
+    "id": "15624",
+    "key": "SHOP",
+    "name": "Acme Shop",
+    "projectTypeKey": "software",
+    "simplified": true,
+    "projectCategory": {
+     "id": "10100",
+     "description": "All Engineering Projects",
+     "name": "Engineering"
+    }
+   },
+   "customfield_17269": null,
+   "fixVersions": [],
+   "aggregatetimespent": null,
+   "statusCategory": {
+    "id": 2,
+    "key": "new",
+    "colorName": "blue-gray",
+    "name": "To Do"
+   },
+   "resolution": null,
+   "customfield_17703": null,
+   "customfield_17702": null,
+   "customfield_16459": null,
+   "customfield_17701": null,
+   "customfield_16728": {
+    "type": "doc",
+    "version": 1,
+    "content": [
+     {
+      "type": "orderedList",
+      "content": [
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "Fault injection (worker killed mid-commit, InventorySynced lost, Postgres unavailable for 10 minutes) loses no stock update and decrements no item twice."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "A hold is released only after the stock commit is confirmed, or when the payment expires or is refunded."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "Guest carts that never reach checkout are never synced."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "The reconcile job reports and releases holds left over for more than 24 hours."
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "customfield_16727": null,
+   "resolutiondate": null,
+   "workratio": -1,
+   "customfield_17691": null,
+   "issuerestriction": {
+    "issuerestrictions": {},
+    "shouldDisplay": true
+   },
+   "lastViewed": "2026-10-13T20:52:16.913-0700",
+   "customfield_17690": null,
+   "customfield_21870": null,
+   "customfield_16486": 8,
+   "created": "2026-10-07T21:30:41.316-0700",
+   "customfield_17693": null,
+   "customfield_10021": null,
+   "priority": {
+    "name": "Blocker",
+    "id": "1"
+   },
+   "labels": [
+    "checkout-v2"
+   ],
+   "customfield_16517": null,
+   "timeestimate": null,
+   "aggregatetimeoriginalestimate": null,
+   "versions": [],
+   "issuelinks": [
+    {
+     "id": "699052",
+     "type": {
+      "id": "10402",
+      "name": "Blocks",
+      "inward": "is blocked by",
+      "outward": "blocks"
+     },
+     "inwardIssue": {
+      "id": "2668219",
+      "key": "SHOP-3543",
+      "fields": {
+       "summary": "[Checkout V2] Phase 1 infrastructure: reservation store, workflow cluster, Kafka topics, Redis streams, Postgres",
+       "status": {
+        "description": "",
+        "name": "OPEN",
+        "id": "14365",
+        "statusCategory": {
+         "id": 2,
+         "key": "new",
+         "colorName": "blue-gray",
+         "name": "To Do"
+        }
+       },
+       "priority": {
+        "name": "Blocker",
+        "id": "1"
+       },
+       "issuetype": {
+        "id": "14533",
+        "description": "Tasks track small, distinct pieces of work.",
+        "name": "Task",
+        "subtask": false,
+        "entityId": "1888db5e-400f-482f-aebf-ee1a68436fe5",
+        "hierarchyLevel": 0
+       }
+      }
+     }
+    },
+    {
+     "id": "699055",
+     "type": {
+      "id": "10402",
+      "name": "Blocks",
+      "inward": "is blocked by",
+      "outward": "blocks"
+     },
+     "inwardIssue": {
+      "id": "2668209",
+      "key": "SHOP-3537",
+      "fields": {
+       "summary": "[Checkout V2] Initialize the reservation store and the hold by cart id (P04, shop-api side)",
+       "status": {
+        "description": "",
+        "name": "OPEN",
+        "id": "14365",
+        "statusCategory": {
+         "id": 2,
+         "key": "new",
+         "colorName": "blue-gray",
+         "name": "To Do"
+        }
+       },
+       "priority": {
+        "name": "Blocker",
+        "id": "1"
+       },
+       "issuetype": {
+        "id": "14532",
+        "description": "Stories track functionality or features expressed as user goals.",
+        "name": "Story",
+        "subtask": false,
+        "entityId": "89386fcb-7b79-4a8c-9772-f662d8cf0c2e",
+        "hierarchyLevel": 0
+       }
+      }
+     }
+    },
+    {
+     "id": "699057",
+     "type": {
+      "id": "10404",
+      "name": "Relates",
+      "inward": "Relates",
+      "outward": "Relates"
+     },
+     "outwardIssue": {
+      "id": "2656550",
+      "key": "CORE-18632",
+      "fields": {
+       "summary": "[Checkout V2] Stream order events into the reservation store and track the stock commit",
+       "status": {
+        "description": "",
+        "name": "Open",
+        "id": "1",
+        "statusCategory": {
+         "id": 2,
+         "key": "new",
+         "colorName": "blue-gray",
+         "name": "To Do"
+        }
+       },
+       "priority": {
+        "name": "Minor",
+        "id": "4"
+       },
+       "issuetype": {
+        "id": "6",
+        "description": "A user story. Created by JIRA Software - do not edit or delete.",
+        "name": "Story",
+        "subtask": false,
+        "hierarchyLevel": 0
+       }
+      }
+     }
+    },
+    {
+     "id": "699378",
+     "type": {
+      "id": "10404",
+      "name": "Relates",
+      "inward": "Relates",
+      "outward": "Relates"
+     },
+     "inwardIssue": {
+      "id": "2668615",
+      "key": "SHOP-3559",
+      "fields": {
+       "summary": "[Checkout V2] Phase 1 contract: schema gate and the shared message types (cart context, order_events, stock event, Inventory Sync)",
+       "status": {
+        "description": "",
+        "name": "OPEN",
+        "id": "14365",
+        "statusCategory": {
+         "id": 2,
+         "key": "new",
+         "colorName": "blue-gray",
+         "name": "To Do"
+        }
+       },
+       "priority": {
+        "name": "Blocker",
+        "id": "1"
+       },
+       "issuetype": {
+        "id": "14532",
+        "description": "Stories track functionality or features expressed as user goals.",
+        "name": "Story",
+        "subtask": false,
+        "entityId": "89386fcb-7b79-4a8c-9772-f662d8cf0c2e",
+        "hierarchyLevel": 0
+       }
+      }
+     }
+    }
+   ],
+   "assignee": {
+    "accountId": "acc-me",
+    "displayName": "Alex Rivera",
+    "active": true,
+    "accountType": "atlassian"
+   },
+   "updated": "2026-10-11T19:01:25.426-0700",
+   "status": {
+    "description": "",
+    "name": "OPEN",
+    "id": "14365",
+    "statusCategory": {
+     "id": 2,
+     "key": "new",
+     "colorName": "blue-gray",
+     "name": "To Do"
+    }
+   },
+   "components": [],
+   "customfield_17282": null,
+   "customfield_17564": null,
+   "customfield_17563": null,
+   "timeoriginalestimate": null,
+   "customfield_13320": "{}",
+   "description": {
+    "type": "doc",
+    "version": 1,
+    "content": [
+     {
+      "type": "heading",
+      "attrs": {
+       "level": 3
+      },
+      "content": [
+       {
+        "type": "text",
+        "text": "Why"
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "With holds now placed in the reservation store at add-to-cart (CORE-18632), the stock count in the inventory database is only decremented after payment capture. Losing that commit is the hardest failure of Checkout V2: the order ships, the shelf count stays high, and the next customer buys an item that is not there."
+       }
+      ]
+     },
+     {
+      "type": "heading",
+      "attrs": {
+       "level": 3
+      },
+      "content": [
+       {
+        "type": "text",
+        "text": "Scope"
+       }
+      ]
+     },
+     {
+      "type": "bulletList",
+      "content": [
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "New worker "
+           },
+           {
+            "type": "text",
+            "text": "shop-worker/src/inventory_sync",
+            "marks": [
+             {
+              "type": "code"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "text": " (TypeScript, Node 24, Vitest)."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "Trigger: the payments webhook handler (v2, v3 and the expiry path) produces an "
+           },
+           {
+            "type": "text",
+            "text": "InventorySyncCommand",
+            "marks": [
+             {
+              "type": "code"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "text": " on Kafka once the payment is captured or the hold expires."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "On capture: decrement the stock in Postgres in one transaction keyed by "
+           },
+           {
+            "type": "text",
+            "text": "order_id",
+            "marks": [
+             {
+              "type": "code"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "text": ", then emit "
+           },
+           {
+            "type": "text",
+            "text": "InventorySynced",
+            "marks": [
+             {
+              "type": "code"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "text": " and release the hold in Redis."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "On expiry or refund before shipping: release the hold only; the stock count is never touched."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "A nightly reconcile job lists holds older than 24 h with no matching order and releases them."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "Guest carts that never reach checkout are never synced."
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "heading",
+      "attrs": {
+       "level": 3
+      },
+      "content": [
+       {
+        "type": "text",
+        "text": "Dependencies"
+       }
+      ]
+     },
+     {
+      "type": "bulletList",
+      "content": [
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "SHOP-3537 (reservation store) and SHOP-3543 (Kafka topics, Redis streams) must land first."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "SHOP-3559 defines the InventorySyncCommand and InventorySynced messages."
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "heading",
+      "attrs": {
+       "level": 3
+      },
+      "content": [
+       {
+        "type": "text",
+        "text": "Source"
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "Requirement CHK2-P04 in "
+       },
+       {
+        "type": "text",
+        "text": "Checkout V2 :: Requirements",
+        "marks": [
+         {
+          "type": "link",
+          "attrs": {
+           "href": "https://acme.atlassian.net/wiki/spaces/SHOP/pages/7340021"
+          }
+         }
+        ]
+       },
+       {
+        "type": "text",
+        "text": ", design in "
+       },
+       {
+        "type": "text",
+        "text": "Checkout V2 :: Architecture",
+        "marks": [
+         {
+          "type": "link",
+          "attrs": {
+           "href": "https://acme.atlassian.net/wiki/spaces/SHOP/pages/7340022"
+          }
+         }
+        ]
+       },
+       {
+        "type": "text",
+        "text": " and "
+       },
+       {
+        "type": "text",
+        "text": "Checkout V2 :: Stock Reservations",
+        "marks": [
+         {
+          "type": "link",
+          "attrs": {
+           "href": "https://acme.atlassian.net/wiki/spaces/SHOP/pages/7340023"
+          }
+         }
+        ]
+       },
+       {
+        "type": "text",
+        "text": "."
+       }
+      ]
+     }
+    ]
+   },
+   "customfield_11220": "0|i01ejz:00hhzzzzzzzzyh7x",
+   "customfield_17566": null,
+   "customfield_16516": null,
+   "timetracking": {},
+   "security": null,
+   "customfield_31871": null,
+   "attachment": [],
+   "aggregatetimeestimate": null,
+   "customfield_17274": null,
+   "summary": "[Checkout V2] Inventory Sync Worker: commit the stock reservation after payment capture, then release the hold (P04)",
+   "customfield_17272": null,
+   "creator": {
+    "accountId": "acc-1",
+    "displayName": "Quinn Bauer",
+    "active": true,
+    "accountType": "atlassian"
+   },
+   "customfield_17271": null,
+   "customfield_17278": null,
+   "customfield_17277": null,
+   "subtasks": [],
+   "customfield_17276": null,
+   "reporter": {
+    "accountId": "acc-1",
+    "displayName": "Quinn Bauer",
+    "active": true,
+    "accountType": "atlassian"
+   },
+   "aggregateprogress": {
+    "progress": 0,
+    "total": 0
+   },
+   "customfield_10000": null,
+   "customfield_16747": null,
+   "customfield_16746": null,
+   "customfield_16745": null,
+   "customfield_10521": [
+    {
+     "id": 33774,
+     "name": "SHOP Sprint 52",
+     "state": "active",
+     "boardId": 600,
+     "goal": "Release Manager: Morgan Diaz",
+     "startDate": "2026-10-07T10:56:40.477Z",
+     "endDate": "2026-11-11T11:50:00.000Z"
+    }
+   ],
+   "environment": null,
+   "duedate": null,
+   "progress": {
+    "progress": 0,
+    "total": 0
+   },
+   "comment": {
+    "comments": [],
+    "maxResults": 0,
+    "total": 0,
+    "startAt": 0
+   },
+   "worklog": {
+    "startAt": 0,
+    "maxResults": 20,
+    "total": 0,
+    "worklogs": []
+   },
+   "customfield_29369": null,
+   "customfield_21369": null
+  }
+ },
+ "remoteLinks": [
+  {
+   "id": 470994,
+   "globalId": "appId=8427b8f3-7430-32e1-8c8f-fe808b68f4ca&pageId=7340024",
+   "application": {
+    "type": "com.atlassian.confluence",
+    "name": "Confluence"
+   },
+   "relationship": "mentioned in",
+   "object": {
+    "url": "https://acme.atlassian.net/wiki/pages/viewpage.action?pageId=7340024",
+    "title": "Checkout V2 :: Planning",
+    "icon": {},
+    "status": {
+     "icon": {}
+    }
+   }
+  }
+ ],
+ "transitions": {
+  "transitions": [
+   {
+    "id": "5",
+    "name": "CLOSE - CANCELLED",
+    "to": {
+     "description": "",
+     "name": "CLOSE - CANCELLED",
+     "id": "14370",
+     "statusCategory": {
+      "id": 3,
+      "key": "done",
+      "colorName": "green",
+      "name": "Done"
+     }
+    },
+    "hasScreen": false,
+    "isGlobal": true,
+    "isInitial": false,
+    "isAvailable": true,
+    "isConditional": false,
+    "fields": {},
+    "isLooped": false
+   },
+   {
+    "id": "11",
+    "name": "To Do",
+    "to": {
+     "description": "",
+     "name": "OPEN",
+     "id": "14365",
+     "statusCategory": {
+      "id": 2,
+      "key": "new",
+      "colorName": "blue-gray",
+      "name": "To Do"
+     }
+    },
+    "hasScreen": false,
+    "isGlobal": true,
+    "isInitial": false,
+    "isAvailable": true,
+    "isConditional": false,
+    "fields": {},
+    "isLooped": false
+   },
+   {
+    "id": "4",
+    "name": "Need to Clarify",
+    "to": {
+     "description": "",
+     "name": "IN ANALYZE",
+     "id": "14369",
+     "statusCategory": {
+      "id": 4,
+      "key": "indeterminate",
+      "colorName": "yellow",
+      "name": "In Progress"
+     }
+    },
+    "hasScreen": false,
+    "isGlobal": false,
+    "isInitial": false,
+    "isAvailable": true,
+    "isConditional": false,
+    "fields": {},
+    "isLooped": false
+   }
+  ]
+ }
+}

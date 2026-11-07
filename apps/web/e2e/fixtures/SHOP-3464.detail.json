@@ -1,0 +1,1306 @@
+{
+ "key": "SHOP-3464",
+ "id": "2656554",
+ "full": true,
+ "fields": {
+  "issuetype": {
+   "id": "14532",
+   "description": "Stories track functionality or features expressed as user goals.",
+   "name": "Story",
+   "subtask": false,
+   "entityId": "89386fcb-7b79-4a8c-9772-f662d8cf0c2e",
+   "hierarchyLevel": 0
+  },
+  "project": {
+   "id": "15624",
+   "key": "SHOP",
+   "name": "Acme Shop",
+   "projectTypeKey": "software",
+   "simplified": true,
+   "projectCategory": {
+    "id": "10100",
+    "description": "All Engineering Projects",
+    "name": "Engineering"
+   }
+  },
+  "customfield_16728": {
+   "type": "doc",
+   "version": 1,
+   "content": [
+    {
+     "type": "bulletList",
+     "content": [
+      {
+       "type": "listItem",
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "With the flag at 100% in staging, 10 000 synthetic checkouts end with no captured payment that lacks an order."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "listItem",
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "Killing any activity worker mid-checkout resumes the checkout from its last completed step."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "listItem",
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "A payment declined after the stock was reserved releases the stock within 5 seconds."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "listItem",
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "Checkout P90 on the new path is no worse than on the saga path."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "listItem",
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "Replay tests run in CI on every pull request that touches the workflow."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "created": "2026-09-30T15:02:38.261-0700",
+  "priority": {
+   "name": "Minor",
+   "id": "4"
+  },
+  "labels": [
+   "checkout-v2"
+  ],
+  "issuelinks": [
+   {
+    "id": "695388",
+    "type": {
+     "id": "10404",
+     "name": "Relates",
+     "inward": "Relates",
+     "outward": "Relates"
+    },
+    "outwardIssue": {
+     "id": "2652748",
+     "key": "SHOP-3446",
+     "fields": {
+      "summary": "[Checkout V2] [Spike] Evaluate a durable workflow engine as the replacement for the queue-based checkout saga",
+      "status": {
+       "description": "",
+       "name": "IN ANALYZE",
+       "id": "14369",
+       "statusCategory": {
+        "id": 4,
+        "key": "indeterminate",
+        "colorName": "yellow",
+        "name": "In Progress"
+       }
+      },
+      "priority": {
+       "name": "Minor",
+       "id": "4"
+      },
+      "issuetype": {
+       "id": "17328",
+       "description": "A spike is a time-boxed investigation or research task used to gain knowledge and reduce uncertainty about complex user stories or technical challenges before committing to building the actual feature.",
+       "name": "Spike",
+       "subtask": false,
+       "entityId": "b27cf2f5-2a70-4d42-9412-883fc24dc285",
+       "hierarchyLevel": 0
+      },
+      "assignee": null
+     }
+    }
+   },
+   {
+    "id": "695390",
+    "type": {
+     "id": "10404",
+     "name": "Relates",
+     "inward": "Relates",
+     "outward": "Relates"
+    },
+    "inwardIssue": {
+     "id": "2656553",
+     "key": "SHOP-3463",
+     "fields": {
+      "summary": "[Checkout V2] Move cart storage from MongoDB to PostgreSQL",
+      "status": {
+       "description": "",
+       "name": "OPEN",
+       "id": "14365",
+       "statusCategory": {
+        "id": 2,
+        "key": "new",
+        "colorName": "blue-gray",
+        "name": "To Do"
+       }
+      },
+      "priority": {
+       "name": "Minor",
+       "id": "4"
+      },
+      "issuetype": {
+       "id": "14532",
+       "description": "Stories track functionality or features expressed as user goals.",
+       "name": "Story",
+       "subtask": false,
+       "entityId": "89386fcb-7b79-4a8c-9772-f662d8cf0c2e",
+       "hierarchyLevel": 0
+      },
+      "assignee": null
+     }
+    }
+   }
+  ],
+  "assignee": {
+   "accountId": "acc-2",
+   "displayName": "Drew Kim",
+   "active": true,
+   "accountType": "atlassian"
+  },
+  "updated": "2026-10-07T20:58:27.412-0700",
+  "status": {
+   "description": "",
+   "name": "OPEN",
+   "id": "14365",
+   "statusCategory": {
+    "id": 2,
+    "key": "new",
+    "colorName": "blue-gray",
+    "name": "To Do"
+   }
+  },
+  "description": {
+   "type": "doc",
+   "version": 1,
+   "content": [
+    {
+     "type": "heading",
+     "attrs": {
+      "level": 3
+     },
+     "content": [
+      {
+       "type": "text",
+       "text": "Why"
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "content": [
+      {
+       "type": "text",
+       "text": "Checkout today is a saga of queue messages between shop-api and shop-worker: reserve stock, authorize the card, create the order, send the confirmation. Each step retries on its own, and when one step gives up the compensations are best effort. Support sees about 40 orders a week with a captured payment and no order, or an order with released stock."
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "content": [
+      {
+       "type": "text",
+       "text": "A durable workflow engine keeps the state of each checkout, retries each activity with its own policy, and runs the compensations in order when a step fails for good."
+      }
+     ]
+    },
+    {
+     "type": "heading",
+     "attrs": {
+      "level": 3
+     },
+     "content": [
+      {
+       "type": "text",
+       "text": "Scope"
+      }
+     ]
+    },
+    {
+     "type": "bulletList",
+     "content": [
+      {
+       "type": "listItem",
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "A pure workflow function "
+          },
+          {
+           "type": "text",
+           "text": "checkoutWorkflow(cart)",
+           "marks": [
+            {
+             "type": "code"
+            }
+           ]
+          },
+          {
+           "type": "text",
+           "text": " in "
+          },
+          {
+           "type": "text",
+           "text": "@acme/shop-shared",
+           "marks": [
+            {
+             "type": "code"
+            }
+           ]
+          },
+          {
+           "type": "text",
+           "text": ", with no I/O of its own."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "listItem",
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "Activities in shop-worker: "
+          },
+          {
+           "type": "text",
+           "text": "reserveStock",
+           "marks": [
+            {
+             "type": "code"
+            }
+           ]
+          },
+          {
+           "type": "text",
+           "text": ", "
+          },
+          {
+           "type": "text",
+           "text": "authorizePayment",
+           "marks": [
+            {
+             "type": "code"
+            }
+           ]
+          },
+          {
+           "type": "text",
+           "text": ", "
+          },
+          {
+           "type": "text",
+           "text": "createOrder",
+           "marks": [
+            {
+             "type": "code"
+            }
+           ]
+          },
+          {
+           "type": "text",
+           "text": ", "
+          },
+          {
+           "type": "text",
+           "text": "sendConfirmation",
+           "marks": [
+            {
+             "type": "code"
+            }
+           ]
+          },
+          {
+           "type": "text",
+           "text": " and their compensations."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "listItem",
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "A gate in "
+          },
+          {
+           "type": "text",
+           "text": "POST /checkout",
+           "marks": [
+            {
+             "type": "code"
+            }
+           ]
+          },
+          {
+           "type": "text",
+           "text": " that sends a share of carts to the new path, by the "
+          },
+          {
+           "type": "text",
+           "text": "checkout_v2_percent",
+           "marks": [
+            {
+             "type": "code"
+            }
+           ]
+          },
+          {
+           "type": "text",
+           "text": " flag."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "listItem",
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "Replay tests that run recorded histories against every new build of the workflow."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "heading",
+     "attrs": {
+      "level": 3
+     },
+     "content": [
+      {
+       "type": "text",
+       "text": "Out of scope"
+      }
+     ]
+    },
+    {
+     "type": "bulletList",
+     "content": [
+      {
+       "type": "listItem",
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "Moving cart storage to PostgreSQL (SHOP-3463)."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "listItem",
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "Changes to the payments provider or its webhooks."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "heading",
+     "attrs": {
+      "level": 3
+     },
+     "content": [
+      {
+       "type": "text",
+       "text": "Source"
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "content": [
+      {
+       "type": "text",
+       "text": "Spike results in SHOP-3446, design in "
+      },
+      {
+       "type": "text",
+       "text": "Checkout V2 :: Architecture",
+       "marks": [
+        {
+         "type": "link",
+         "attrs": {
+          "href": "https://acme.atlassian.net/wiki/spaces/SHOP/pages/7340022"
+         }
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "text": "."
+      }
+     ]
+    }
+   ]
+  },
+  "summary": "[Checkout V2] Adopt a durable workflow engine as the checkout orchestrator",
+  "creator": {
+   "accountId": "acc-1",
+   "displayName": "Quinn Bauer",
+   "active": true,
+   "accountType": "atlassian"
+  },
+  "subtasks": [
+   {
+    "id": "2668146",
+    "key": "SHOP-3527",
+    "fields": {
+     "summary": "[Checkout V2][Workflow] Pure checkout workflow entry point in @acme/shop-shared",
+     "status": {
+      "description": "",
+      "name": "OPEN",
+      "id": "14365",
+      "statusCategory": {
+       "id": 2,
+       "key": "new",
+       "colorName": "blue-gray",
+       "name": "To Do"
+      }
+     },
+     "priority": {
+      "name": "Minor",
+      "id": "4"
+     },
+     "issuetype": {
+      "id": "14536",
+      "description": "Subtasks track small pieces of work that are part of a larger task.",
+      "name": "Subtask",
+      "subtask": true,
+      "entityId": "408ada04-4bea-4504-8ddb-fcd152f8bda5",
+      "hierarchyLevel": -1
+     },
+     "assignee": null
+    }
+   },
+   {
+    "id": "2668147",
+    "key": "SHOP-3528",
+    "fields": {
+     "summary": "[Checkout V2][Workflow] Activity host in shop-worker for payment, stock and email steps",
+     "status": {
+      "description": "",
+      "name": "OPEN",
+      "id": "14365",
+      "statusCategory": {
+       "id": 2,
+       "key": "new",
+       "colorName": "blue-gray",
+       "name": "To Do"
+      }
+     },
+     "priority": {
+      "name": "Minor",
+      "id": "4"
+     },
+     "issuetype": {
+      "id": "14536",
+      "description": "Subtasks track small pieces of work that are part of a larger task.",
+      "name": "Subtask",
+      "subtask": true,
+      "entityId": "408ada04-4bea-4504-8ddb-fcd152f8bda5",
+      "hierarchyLevel": -1
+     },
+     "assignee": null
+    }
+   },
+   {
+    "id": "2668148",
+    "key": "SHOP-3529",
+    "fields": {
+     "summary": "[Checkout V2][Workflow] Orchestrator mode in the order service",
+     "status": {
+      "description": "",
+      "name": "OPEN",
+      "id": "14365",
+      "statusCategory": {
+       "id": 2,
+       "key": "new",
+       "colorName": "blue-gray",
+       "name": "To Do"
+      }
+     },
+     "priority": {
+      "name": "Minor",
+      "id": "4"
+     },
+     "issuetype": {
+      "id": "14536",
+      "description": "Subtasks track small pieces of work that are part of a larger task.",
+      "name": "Subtask",
+      "subtask": true,
+      "entityId": "408ada04-4bea-4504-8ddb-fcd152f8bda5",
+      "hierarchyLevel": -1
+     },
+     "assignee": null
+    }
+   },
+   {
+    "id": "2668149",
+    "key": "SHOP-3530",
+    "fields": {
+     "summary": "[Checkout V2][Workflow] Workflow gate in the POST /checkout endpoint",
+     "status": {
+      "description": "",
+      "name": "OPEN",
+      "id": "14365",
+      "statusCategory": {
+       "id": 2,
+       "key": "new",
+       "colorName": "blue-gray",
+       "name": "To Do"
+      }
+     },
+     "priority": {
+      "name": "Minor",
+      "id": "4"
+     },
+     "issuetype": {
+      "id": "14536",
+      "description": "Subtasks track small pieces of work that are part of a larger task.",
+      "name": "Subtask",
+      "subtask": true,
+      "entityId": "408ada04-4bea-4504-8ddb-fcd152f8bda5",
+      "hierarchyLevel": -1
+     },
+     "assignee": null
+    }
+   },
+   {
+    "id": "2668150",
+    "key": "SHOP-3531",
+    "fields": {
+     "summary": "[Checkout V2][Workflow] Parity harness and workflow replay tests for the new path",
+     "status": {
+      "description": "",
+      "name": "OPEN",
+      "id": "14365",
+      "statusCategory": {
+       "id": 2,
+       "key": "new",
+       "colorName": "blue-gray",
+       "name": "To Do"
+      }
+     },
+     "priority": {
+      "name": "Minor",
+      "id": "4"
+     },
+     "issuetype": {
+      "id": "14536",
+      "description": "Subtasks track small pieces of work that are part of a larger task.",
+      "name": "Subtask",
+      "subtask": true,
+      "entityId": "408ada04-4bea-4504-8ddb-fcd152f8bda5",
+      "hierarchyLevel": -1
+     },
+     "assignee": null
+    }
+   },
+   {
+    "id": "2668151",
+    "key": "SHOP-3532",
+    "fields": {
+     "summary": "[Checkout V2][Workflow] Deploy the orchestrator and the activity workers",
+     "status": {
+      "description": "",
+      "name": "OPEN",
+      "id": "14365",
+      "statusCategory": {
+       "id": 2,
+       "key": "new",
+       "colorName": "blue-gray",
+       "name": "To Do"
+      }
+     },
+     "priority": {
+      "name": "Minor",
+      "id": "4"
+     },
+     "issuetype": {
+      "id": "14536",
+      "description": "Subtasks track small pieces of work that are part of a larger task.",
+      "name": "Subtask",
+      "subtask": true,
+      "entityId": "408ada04-4bea-4504-8ddb-fcd152f8bda5",
+      "hierarchyLevel": -1
+     },
+     "assignee": null
+    }
+   }
+  ],
+  "reporter": {
+   "accountId": "acc-1",
+   "displayName": "Quinn Bauer",
+   "active": true,
+   "accountType": "atlassian"
+  }
+ },
+ "names": {
+  "customfield_17460": "Design",
+  "customfield_17581": "Impact",
+  "issuetype": "Issue Type",
+  "project": "Project",
+  "fixVersions": "Fix versions",
+  "customfield_16728": "Acceptance criteria",
+  "customfield_16727": "Solution",
+  "customfield_21870": "Customer Name",
+  "customfield_16486": "Story point estimate",
+  "created": "Created",
+  "priority": "Priority",
+  "labels": "Labels",
+  "issuelinks": "Linked work items",
+  "assignee": "Assignee",
+  "updated": "Updated",
+  "status": "Status",
+  "customfield_17282": "QA Assignee",
+  "customfield_17564": "Reviewer",
+  "customfield_17563": "Vulnerability",
+  "description": "Description",
+  "attachment": "Attachment",
+  "summary": "Summary",
+  "creator": "Creator",
+  "subtasks": "Sub-tasks",
+  "reporter": "Reporter",
+  "customfield_10000": "Flagged",
+  "customfield_10521": "Sprint",
+  "environment": "Environment",
+  "comment": "Comment",
+  "customfield_29369": "QA Story point estimate",
+  "customfield_21369": "Dev Self-Testing Quality"
+ },
+ "schema": {
+  "customfield_17460": {
+   "type": "array",
+   "items": "design.field.name",
+   "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:designcf"
+  },
+  "customfield_17581": {
+   "type": "string",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea"
+  },
+  "issuetype": {
+   "type": "issuetype",
+   "system": "issuetype"
+  },
+  "project": {
+   "type": "project",
+   "system": "project"
+  },
+  "fixVersions": {
+   "type": "array",
+   "items": "version",
+   "system": "fixVersions"
+  },
+  "customfield_16728": {
+   "type": "string",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea"
+  },
+  "customfield_16727": {
+   "type": "string",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea"
+  },
+  "customfield_21870": {
+   "type": "string",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield"
+  },
+  "customfield_16486": {
+   "type": "number",
+   "custom": "com.pyxis.greenhopper.jira:jsw-story-points"
+  },
+  "created": {
+   "type": "datetime",
+   "system": "created"
+  },
+  "priority": {
+   "type": "priority",
+   "system": "priority"
+  },
+  "labels": {
+   "type": "array",
+   "items": "string",
+   "system": "labels"
+  },
+  "issuelinks": {
+   "type": "array",
+   "items": "issuelinks",
+   "system": "issuelinks"
+  },
+  "assignee": {
+   "type": "user",
+   "system": "assignee"
+  },
+  "updated": {
+   "type": "datetime",
+   "system": "updated"
+  },
+  "status": {
+   "type": "status",
+   "system": "status"
+  },
+  "customfield_17282": {
+   "type": "array",
+   "items": "user",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:people"
+  },
+  "customfield_17564": {
+   "type": "array",
+   "items": "user",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:people"
+  },
+  "customfield_17563": {
+   "type": "any",
+   "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:vulnerabilitycf"
+  },
+  "description": {
+   "type": "string",
+   "system": "description"
+  },
+  "attachment": {
+   "type": "array",
+   "items": "attachment",
+   "system": "attachment"
+  },
+  "summary": {
+   "type": "string",
+   "system": "summary"
+  },
+  "creator": {
+   "type": "user",
+   "system": "creator"
+  },
+  "subtasks": {
+   "type": "array",
+   "items": "issuelinks",
+   "system": "subtasks"
+  },
+  "reporter": {
+   "type": "user",
+   "system": "reporter"
+  },
+  "customfield_10000": {
+   "type": "array",
+   "items": "option",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:multicheckboxes"
+  },
+  "customfield_10521": {
+   "type": "array",
+   "items": "json",
+   "custom": "com.pyxis.greenhopper.jira:gh-sprint"
+  },
+  "environment": {
+   "type": "string",
+   "system": "environment"
+  },
+  "comment": {
+   "type": "comments-page",
+   "system": "comment"
+  },
+  "customfield_29369": {
+   "type": "number",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:float"
+  },
+  "customfield_21369": {
+   "type": "option",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select"
+  }
+ },
+ "editmeta": {
+  "issuetype": {
+   "required": false,
+   "operations": [],
+   "allowedValues": [
+    {
+     "id": "14532",
+     "name": "Story"
+    },
+    {
+     "id": "14533",
+     "name": "Task"
+    }
+   ]
+  },
+  "customfield_17581": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "parent": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "customfield_17460": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "customfield_17282": {
+   "required": false,
+   "operations": [
+    "add",
+    "set",
+    "remove"
+   ]
+  },
+  "customfield_17564": {
+   "required": false,
+   "operations": [
+    "add",
+    "set",
+    "remove"
+   ]
+  },
+  "customfield_17563": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "customfield_13320": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "description": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "fixVersions": {
+   "required": false,
+   "operations": [
+    "set",
+    "add",
+    "remove"
+   ],
+   "allowedValues": [
+    {
+     "id": "73172",
+     "name": "2.17.1"
+    },
+    {
+     "id": "73205",
+     "name": "2.18.0"
+    },
+    {
+     "id": "73768",
+     "name": "2.17.2"
+    },
+    {
+     "id": "75320",
+     "name": "2.18.1"
+    },
+    {
+     "id": "75522",
+     "name": "2.19.0"
+    },
+    {
+     "id": "76400",
+     "name": "2.18.2"
+    },
+    {
+     "id": "78355",
+     "name": "2.19.1"
+    },
+    {
+     "id": "78658",
+     "name": "2.19.2"
+    },
+    {
+     "id": "79194",
+     "name": "2.20.0"
+    },
+    {
+     "id": "80046",
+     "name": "2.21.0"
+    },
+    {
+     "id": "80249",
+     "name": "2.22.0"
+    },
+    {
+     "id": "80325",
+     "name": "2.21.1"
+    }
+   ]
+  },
+  "customfield_16728": {
+   "required": true,
+   "operations": [
+    "set"
+   ]
+  },
+  "customfield_16727": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "attachment": {
+   "required": false,
+   "operations": [
+    "set",
+    "copy"
+   ]
+  },
+  "summary": {
+   "required": true,
+   "operations": [
+    "set"
+   ]
+  },
+  "customfield_21870": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "customfield_16486": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "customfield_10000": {
+   "required": false,
+   "operations": [
+    "add",
+    "set",
+    "remove"
+   ],
+   "allowedValues": [
+    {
+     "id": "10000",
+     "value": "Impediment"
+    }
+   ]
+  },
+  "priority": {
+   "required": false,
+   "operations": [
+    "set"
+   ],
+   "allowedValues": [
+    {
+     "id": "1",
+     "name": "Blocker"
+    },
+    {
+     "id": "2",
+     "name": "Critical"
+    },
+    {
+     "id": "3",
+     "name": "Major"
+    },
+    {
+     "id": "4",
+     "name": "Minor"
+    },
+    {
+     "id": "10000",
+     "name": "IFFEasy"
+    },
+    {
+     "id": "5",
+     "name": "Trivial"
+    }
+   ]
+  },
+  "customfield_10521": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "labels": {
+   "required": false,
+   "operations": [
+    "add",
+    "set",
+    "remove"
+   ]
+  },
+  "environment": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "comment": {
+   "required": false,
+   "operations": [
+    "add",
+    "edit",
+    "remove"
+   ]
+  },
+  "issuelinks": {
+   "required": false,
+   "operations": [
+    "add",
+    "copy"
+   ]
+  },
+  "customfield_29369": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "assignee": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "customfield_21369": {
+   "required": false,
+   "operations": [
+    "set"
+   ],
+   "allowedValues": [
+    {
+     "id": "23379",
+     "value": "Passed"
+    },
+    {
+     "id": "23380",
+     "value": "Failed"
+    }
+   ]
+  }
+ },
+ "comments": [],
+ "history": [
+  {
+   "id": "15744047",
+   "author": {
+    "accountId": "acc-1",
+    "displayName": "Quinn Bauer"
+   },
+   "created": "2026-09-30T15:02:51.080-0700",
+   "items": [
+    {
+     "field": "Link",
+     "from": null,
+     "fromString": null,
+     "to": "SHOP-3446",
+     "toString": "This work item Relates SHOP-3446"
+    }
+   ]
+  },
+  {
+   "id": "15744052",
+   "author": {
+    "accountId": "acc-1",
+    "displayName": "Quinn Bauer"
+   },
+   "created": "2026-09-30T15:02:52.710-0700",
+   "items": [
+    {
+     "field": "Link",
+     "from": null,
+     "fromString": null,
+     "to": "SHOP-3463",
+     "toString": "This work item Relates SHOP-3463"
+    }
+   ]
+  },
+  {
+   "id": "15790150",
+   "author": {
+    "accountId": "acc-1",
+    "displayName": "Quinn Bauer"
+   },
+   "created": "2026-10-04T21:05:14.532-0700",
+   "items": [
+    {
+     "field": "RemoteWorkItemLink",
+     "from": null,
+     "fromString": null,
+     "to": "469772",
+     "toString": "This work item links to \"Page (Confluence)\""
+    }
+   ]
+  },
+  {
+   "id": "15812915",
+   "author": {
+    "accountId": "acc-1",
+    "displayName": "Quinn Bauer"
+   },
+   "created": "2026-10-05T21:54:59.037-0700",
+   "items": [
+    {
+     "field": "RemoteWorkItemLink",
+     "from": null,
+     "fromString": null,
+     "to": "470218",
+     "toString": "This work item links to \"Page (Confluence)\""
+    }
+   ]
+  },
+  {
+   "id": "15834252",
+   "author": {
+    "accountId": "acc-1",
+    "displayName": "Quinn Bauer"
+   },
+   "created": "2026-10-06T22:36:31.565-0700",
+   "items": [
+    {
+     "field": "description",
+     "fieldId": "description",
+     "from": null,
+     "fromString": "h3. Why\n\nCheckout today is a saga of queue messages between shop-api and shop-worker: reserve stock, authorize the card, create the order, send the confirmation. Each step retries on its own, and when one step gives up the compensations are best effort. Support sees about 40 orders a week with a captured payment and no order, or an order with released stock.\n\nA durable workflow engine keeps the state of each checkout, retries each activity with its own policy, and runs the compensations in order when a step fails for good.\n\nh3. Scope\n\n* A pure workflow function {{checkoutWorkflow(cart)}} in {{@acme/shop-shared}}, with no I/O of its own.\n* Activities in shop-worker: {{reserveStock}}, {{authorizePayment}}, {{createOrder}}, {{sendConfirmation}} and their compensations.\n* A gate in {{POST /checkout}} that sends a share of carts to the new path, by the {{checkout_v2_percent}} flag.\n* Replay tests that run recorded histories against every new build of the workflow.\n\nh3. Out of scope\n\n* Moving cart storage to PostgreSQL (SHOP-3463).\n* Changes to the payments provider or its webhooks.\n\nh3. Source",
+     "to": null,
+     "toString": "h3. Why\n\nCheckout today is a saga of queue messages between shop-api and shop-worker: reserve stock, authorize the card, create the order, send the confirmation. Each step retries on its own, and when one step gives up the compensations are best effort. Support sees about 40 orders a week with a captured payment and no order, or an order with released stock.\n\nA durable workflow engine keeps the state of each checkout, retries each activity with its own policy, and runs the compensations in order when a step fails for good.\n\nh3. Scope\n\n* A pure workflow function {{checkoutWorkflow(cart)}} in {{@acme/shop-shared}}, with no I/O of its own.\n* Activities in shop-worker: {{reserveStock}}, {{authorizePayment}}, {{createOrder}}, {{sendConfirmation}} and their compensations.\n* A gate in {{POST /checkout}} that sends a share of carts to the new path, by the {{checkout_v2_percent}} flag.\n* Replay tests that run recorded histories against every new build of the workflow.\n\nh3. Out of scope\n\n* Moving cart storage to PostgreSQL (SHOP-3463).\n* Changes to the payments provider or its webhooks.\n\nh3. Source\n\nSpike results in SHOP-3446, design in Checkout V2 :: Architecture."
+    }
+   ]
+  },
+  {
+   "id": "15839743",
+   "author": {
+    "accountId": "acc-1",
+    "displayName": "Quinn Bauer"
+   },
+   "created": "2026-10-07T00:30:44.355-0700",
+   "items": [
+    {
+     "field": "RemoteWorkItemLink",
+     "from": null,
+     "fromString": null,
+     "to": "470634",
+     "toString": "This work item links to \"Page (Confluence)\""
+    }
+   ]
+  },
+  {
+   "id": "15855812",
+   "author": {
+    "accountId": "acc-1",
+    "displayName": "Quinn Bauer"
+   },
+   "created": "2026-10-07T20:58:27.412-0700",
+   "items": [
+    {
+     "field": "description",
+     "fieldId": "description",
+     "from": null,
+     "fromString": "h3. Why\n\nCheckout today is a saga of queue messages between shop-api and shop-worker: reserve stock, authorize the card, create the order, send the confirmation. Each step retries on its own, and when one step gives up the compensations are best effort. Support sees about 40 orders a week with a captured payment and no order, or an order with released stock.\n\nA durable workflow engine keeps the state of each checkout, retries each activity with its own policy, and runs the compensations in order when a step fails for good.\n\nh3. Scope\n\n* A pure workflow function {{checkoutWorkflow(cart)}} in {{@acme/shop-shared}}, with no I/O of its own.\n* Activities in shop-worker: {{reserveStock}}, {{authorizePayment}}, {{createOrder}}, {{sendConfirmation}} and their compensations.\n* A gate in {{POST /checkout}} that sends a share of carts to the new path, by the {{checkout_v2_percent}} flag.\n* Replay tests that run recorded histories against every new build of the workflow.\n\nh3. Out of scope\n\n* Moving cart storage to PostgreSQL (SHOP-3463).\n* Changes to the payments provider or its webhooks.\n\nh3. Source",
+     "to": null,
+     "toString": "h3. Why\n\nCheckout today is a saga of queue messages between shop-api and shop-worker: reserve stock, authorize the card, create the order, send the confirmation. Each step retries on its own, and when one step gives up the compensations are best effort. Support sees about 40 orders a week with a captured payment and no order, or an order with released stock.\n\nA durable workflow engine keeps the state of each checkout, retries each activity with its own policy, and runs the compensations in order when a step fails for good.\n\nh3. Scope\n\n* A pure workflow function {{checkoutWorkflow(cart)}} in {{@acme/shop-shared}}, with no I/O of its own.\n* Activities in shop-worker: {{reserveStock}}, {{authorizePayment}}, {{createOrder}}, {{sendConfirmation}} and their compensations.\n* A gate in {{POST /checkout}} that sends a share of carts to the new path, by the {{checkout_v2_percent}} flag.\n* Replay tests that run recorded histories against every new build of the workflow.\n\nh3. Out of scope\n\n* Moving cart storage to PostgreSQL (SHOP-3463).\n* Changes to the payments provider or its webhooks.\n\nh3. Source\n\nSpike results in SHOP-3446, design in Checkout V2 :: Architecture."
+    }
+   ]
+  }
+ ],
+ "remoteLinks": [
+  {
+   "id": "469772",
+   "url": "https://acme.atlassian.net/wiki/pages/viewpage.action?pageId=7340033",
+   "title": "Page",
+   "application": "com.atlassian.confluence",
+   "relationship": "mentioned in"
+  },
+  {
+   "id": "470218",
+   "url": "https://acme.atlassian.net/wiki/pages/viewpage.action?pageId=7340034",
+   "title": "Page",
+   "application": "com.atlassian.confluence",
+   "relationship": "mentioned in"
+  },
+  {
+   "id": "470634",
+   "url": "https://acme.atlassian.net/wiki/pages/viewpage.action?pageId=7340024",
+   "title": "Checkout V2 :: Planning",
+   "application": "com.atlassian.confluence",
+   "relationship": "mentioned in"
+  }
+ ],
+ "locked": [],
+ "updated": "2026-10-07T20:58:27.412-0700",
+ "fetchedAt": "2026-10-14T07:00:00.000Z",
+ "confluence": {
+  "7340022": "Checkout V2 :: Architecture"
+ }
+}

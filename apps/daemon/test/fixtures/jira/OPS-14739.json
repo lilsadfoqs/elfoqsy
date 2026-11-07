@@ -1,0 +1,2768 @@
+{
+ "issue": {
+  "id": "2672356",
+  "key": "OPS-14739",
+  "names": {
+   "statuscategorychangedate": "Status category changed",
+   "customfield_17460": "Design",
+   "customfield_17581": "Impact",
+   "issuetype": "Issue Type",
+   "timespent": "Time Spent",
+   "customfield_16776": "Reviewers",
+   "project": "Project",
+   "fixVersions": "Fix versions",
+   "aggregatetimespent": "Σ Time Spent",
+   "statusCategory": "Status category",
+   "resolution": "Resolution",
+   "customfield_16933": "Resolution",
+   "customfield_16459": "Start date",
+   "customfield_16777": "Developers",
+   "customfield_16728": "Acceptance criteria",
+   "customfield_16727": "Solution",
+   "resolutiondate": "Resolved",
+   "workratio": "Work Ratio",
+   "customfield_17691": "Checklist Progress %",
+   "issuerestriction": "Restrict to",
+   "lastViewed": "Last Viewed",
+   "customfield_17690": "Checklist Progress",
+   "customfield_16486": "Story point estimate",
+   "customfield_17299": "QA Issue Type",
+   "created": "Created",
+   "customfield_17298": "Original Issue Type",
+   "customfield_17693": "Checklist Text (view-only)",
+   "priority": "Priority",
+   "labels": "Labels",
+   "customfield_32279": "Product Drivers",
+   "timeestimate": "Remaining Estimate",
+   "aggregatetimeoriginalestimate": "Σ Original Estimate",
+   "versions": "Affects versions",
+   "customfield_16917": "Automation status",
+   "issuelinks": "Linked work items",
+   "assignee": "Assignee",
+   "updated": "Updated",
+   "status": "Status",
+   "components": "Components",
+   "customfield_16595": "Root cause description",
+   "customfield_17563": "Vulnerability",
+   "timeoriginalestimate": "Original estimate",
+   "customfield_13320": "Development",
+   "customfield_17204": "Team",
+   "description": "Description",
+   "customfield_11220": "Rank",
+   "customfield_17566": "Failed Acceptance Criteria",
+   "customfield_17048": "Driver",
+   "timetracking": "Time tracking",
+   "security": "Security Level",
+   "customfield_31871": "Agent Sessions",
+   "attachment": "Attachment",
+   "aggregatetimeestimate": "Σ Remaining Estimate",
+   "customfield_16906": "Regression",
+   "customfield_22623": "UI/UX",
+   "summary": "Summary",
+   "creator": "Creator",
+   "subtasks": "Sub-tasks",
+   "customfield_16781": "Root cause",
+   "reporter": "Reporter",
+   "customfield_17312": "Bug Category",
+   "aggregateprogress": "Σ Progress",
+   "customfield_10000": "Flagged",
+   "customfield_16747": "Checklist Text",
+   "customfield_16746": "Checklist Content YAML",
+   "customfield_16745": "Checklist Completed",
+   "customfield_10521": "Sprint",
+   "customfield_16817": "Salesforce Case Owner",
+   "duedate": "Due date",
+   "customfield_16819": "Customer Name",
+   "customfield_16818": "SugarCRM Oppty",
+   "progress": "Progress",
+   "comment": "Comment",
+   "worklog": "Log Work",
+   "customfield_19294": "GTM Value",
+   "customfield_20950": "QA",
+   "customfield_21369": "Dev Self-Testing Quality"
+  },
+  "schema": {
+   "statuscategorychangedate": {
+    "type": "datetime",
+    "system": "statuscategorychangedate"
+   },
+   "customfield_17460": {
+    "type": "array",
+    "items": "design.field.name",
+    "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:designcf",
+    "customId": 17460
+   },
+   "customfield_17581": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+    "customId": 17581
+   },
+   "issuetype": {
+    "type": "issuetype",
+    "system": "issuetype"
+   },
+   "timespent": {
+    "type": "number",
+    "system": "timespent"
+   },
+   "customfield_16776": {
+    "type": "array",
+    "items": "user",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:people",
+    "customId": 16776,
+    "configuration": {
+     "isMulti": true
+    }
+   },
+   "project": {
+    "type": "project",
+    "system": "project"
+   },
+   "fixVersions": {
+    "type": "array",
+    "items": "version",
+    "system": "fixVersions"
+   },
+   "aggregatetimespent": {
+    "type": "number",
+    "system": "aggregatetimespent"
+   },
+   "statusCategory": {
+    "type": "statusCategory",
+    "system": "statusCategory"
+   },
+   "resolution": {
+    "type": "resolution",
+    "system": "resolution"
+   },
+   "customfield_16933": {
+    "type": "option",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+    "customId": 16933
+   },
+   "customfield_16459": {
+    "type": "date",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datepicker",
+    "customId": 16459
+   },
+   "customfield_16777": {
+    "type": "array",
+    "items": "user",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:people",
+    "customId": 16777,
+    "configuration": {
+     "isMulti": true
+    }
+   },
+   "customfield_16728": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+    "customId": 16728
+   },
+   "customfield_16727": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+    "customId": 16727
+   },
+   "resolutiondate": {
+    "type": "datetime",
+    "system": "resolutiondate"
+   },
+   "workratio": {
+    "type": "number",
+    "system": "workratio"
+   },
+   "customfield_17691": {
+    "type": "number",
+    "custom": "ari:cloud:ecosystem::extension/3b4920b4-90b9-4cc9-8a22-acd6fbb80aa8/7bebf23e-b876-4077-817b-d47855989c5c/static/issue-checklist-progress-percent-field",
+    "customId": 17691,
+    "configuration": {
+     "customRenderer": false,
+     "readOnly": false,
+     "environment": "PRODUCTION"
+    }
+   },
+   "issuerestriction": {
+    "type": "issuerestriction",
+    "system": "issuerestriction"
+   },
+   "lastViewed": {
+    "type": "datetime",
+    "system": "lastViewed"
+   },
+   "customfield_17690": {
+    "type": "string",
+    "custom": "ari:cloud:ecosystem::extension/3b4920b4-90b9-4cc9-8a22-acd6fbb80aa8/7bebf23e-b876-4077-817b-d47855989c5c/static/issue-checklist-progress-field",
+    "customId": 17690,
+    "configuration": {
+     "customRenderer": false,
+     "readOnly": false,
+     "environment": "PRODUCTION"
+    }
+   },
+   "customfield_16486": {
+    "type": "number",
+    "custom": "com.pyxis.greenhopper.jira:jsw-story-points",
+    "customId": 16486
+   },
+   "customfield_17299": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+    "customId": 17299
+   },
+   "created": {
+    "type": "datetime",
+    "system": "created"
+   },
+   "customfield_17298": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+    "customId": 17298
+   },
+   "customfield_17693": {
+    "type": "string",
+    "custom": "ari:cloud:ecosystem::extension/3b4920b4-90b9-4cc9-8a22-acd6fbb80aa8/7bebf23e-b876-4077-817b-d47855989c5c/static/checklist-text-view-only",
+    "customId": 17693,
+    "configuration": {
+     "customRenderer": false,
+     "readOnly": false,
+     "environment": "PRODUCTION"
+    }
+   },
+   "priority": {
+    "type": "priority",
+    "system": "priority"
+   },
+   "labels": {
+    "type": "array",
+    "items": "string",
+    "system": "labels"
+   },
+   "customfield_32279": {
+    "type": "array",
+    "items": "option",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:multiselect",
+    "customId": 32279
+   },
+   "timeestimate": {
+    "type": "number",
+    "system": "timeestimate"
+   },
+   "aggregatetimeoriginalestimate": {
+    "type": "number",
+    "system": "aggregatetimeoriginalestimate"
+   },
+   "versions": {
+    "type": "array",
+    "items": "version",
+    "system": "versions"
+   },
+   "customfield_16917": {
+    "type": "option",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+    "customId": 16917
+   },
+   "issuelinks": {
+    "type": "array",
+    "items": "issuelinks",
+    "system": "issuelinks"
+   },
+   "assignee": {
+    "type": "user",
+    "system": "assignee"
+   },
+   "updated": {
+    "type": "datetime",
+    "system": "updated"
+   },
+   "status": {
+    "type": "status",
+    "system": "status"
+   },
+   "components": {
+    "type": "array",
+    "items": "component",
+    "system": "components"
+   },
+   "customfield_16595": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+    "customId": 16595
+   },
+   "customfield_17563": {
+    "type": "any",
+    "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:vulnerabilitycf",
+    "customId": 17563
+   },
+   "timeoriginalestimate": {
+    "type": "number",
+    "system": "timeoriginalestimate"
+   },
+   "customfield_13320": {
+    "type": "any",
+    "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:devsummarycf",
+    "customId": 13320
+   },
+   "customfield_17204": {
+    "type": "option",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+    "customId": 17204
+   },
+   "description": {
+    "type": "string",
+    "system": "description"
+   },
+   "customfield_11220": {
+    "type": "any",
+    "custom": "com.pyxis.greenhopper.jira:gh-lexo-rank",
+    "customId": 11220
+   },
+   "customfield_17566": {
+    "type": "option",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+    "customId": 17566
+   },
+   "customfield_17048": {
+    "type": "option",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+    "customId": 17048
+   },
+   "timetracking": {
+    "type": "timetracking",
+    "system": "timetracking"
+   },
+   "security": {
+    "type": "securitylevel",
+    "system": "security"
+   },
+   "customfield_31871": {
+    "type": "array",
+    "items": "admin.customfield.type.agent.sessions.name",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:agent-sessions",
+    "customId": 31871
+   },
+   "attachment": {
+    "type": "array",
+    "items": "attachment",
+    "system": "attachment"
+   },
+   "aggregatetimeestimate": {
+    "type": "number",
+    "system": "aggregatetimeestimate"
+   },
+   "customfield_16906": {
+    "type": "option",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+    "customId": 16906
+   },
+   "customfield_22623": {
+    "type": "option",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+    "customId": 22623
+   },
+   "summary": {
+    "type": "string",
+    "system": "summary"
+   },
+   "creator": {
+    "type": "user",
+    "system": "creator"
+   },
+   "subtasks": {
+    "type": "array",
+    "items": "issuelinks",
+    "system": "subtasks"
+   },
+   "customfield_16781": {
+    "type": "option",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+    "customId": 16781
+   },
+   "reporter": {
+    "type": "user",
+    "system": "reporter"
+   },
+   "customfield_17312": {
+    "type": "array",
+    "items": "option",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:multiselect",
+    "customId": 17312
+   },
+   "aggregateprogress": {
+    "type": "progress",
+    "system": "aggregateprogress"
+   },
+   "customfield_10000": {
+    "type": "array",
+    "items": "option",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:multicheckboxes",
+    "customId": 10000
+   },
+   "customfield_16747": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+    "customId": 16747
+   },
+   "customfield_16746": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+    "customId": 16746
+   },
+   "customfield_16745": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+    "customId": 16745
+   },
+   "customfield_10521": {
+    "type": "array",
+    "items": "json",
+    "custom": "com.pyxis.greenhopper.jira:gh-sprint",
+    "customId": 10521
+   },
+   "customfield_16817": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+    "customId": 16817
+   },
+   "duedate": {
+    "type": "date",
+    "system": "duedate"
+   },
+   "customfield_16819": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+    "customId": 16819
+   },
+   "customfield_16818": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+    "customId": 16818
+   },
+   "progress": {
+    "type": "progress",
+    "system": "progress"
+   },
+   "comment": {
+    "type": "comments-page",
+    "system": "comment"
+   },
+   "worklog": {
+    "type": "array",
+    "items": "worklog",
+    "system": "worklog"
+   },
+   "customfield_19294": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+    "customId": 19294
+   },
+   "customfield_20950": {
+    "type": "array",
+    "items": "user",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:people",
+    "customId": 20950,
+    "configuration": {
+     "isMulti": true
+    }
+   },
+   "customfield_21369": {
+    "type": "option",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+    "customId": 21369
+   }
+  },
+  "editmeta": {
+   "fields": {
+    "issuetype": {
+     "required": true,
+     "schema": {
+      "type": "issuetype",
+      "system": "issuetype"
+     },
+     "name": "Issue Type",
+     "key": "issuetype",
+     "operations": [],
+     "allowedValues": [
+      {
+       "id": "13692",
+       "description": "Stories track functionality or features expressed as user goals.",
+       "name": "Story",
+       "subtask": false,
+       "entityId": "273d0cd8-b51b-4211-b78d-ffe4eb3b2d91",
+       "hierarchyLevel": 0
+      },
+      {
+       "id": "13748",
+       "description": "Bugs track problems or errors.",
+       "name": "Bug",
+       "subtask": false,
+       "entityId": "c493888e-5946-4972-b0b6-07408ccb1189",
+       "hierarchyLevel": 0
+      },
+      {
+       "id": "13780",
+       "description": "Tasks track small, distinct pieces of work.",
+       "name": "Task",
+       "subtask": false,
+       "entityId": "0fb74c5c-6cdb-4e21-a54e-bbf0c1114ea7",
+       "hierarchyLevel": 0
+      }
+     ]
+    },
+    "customfield_17581": {
+     "required": false,
+     "schema": {
+      "type": "string",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+      "customId": 17581
+     },
+     "name": "Impact",
+     "key": "customfield_17581",
+     "operations": [
+      "set"
+     ]
+    },
+    "parent": {
+     "required": false,
+     "schema": {
+      "type": "issuelink",
+      "system": "parent"
+     },
+     "name": "Parent",
+     "key": "parent",
+     "hasDefaultValue": false,
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_17460": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "design.field.name",
+      "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:designcf",
+      "customId": 17460
+     },
+     "name": "Design",
+     "key": "customfield_17460",
+     "autoCompleteUrl": "",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_17563": {
+     "required": false,
+     "schema": {
+      "type": "any",
+      "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:vulnerabilitycf",
+      "customId": 17563
+     },
+     "name": "Vulnerability",
+     "key": "customfield_17563",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_16595": {
+     "required": false,
+     "schema": {
+      "type": "string",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+      "customId": 16595
+     },
+     "name": "Root cause description",
+     "key": "customfield_16595",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_13320": {
+     "required": false,
+     "schema": {
+      "type": "any",
+      "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:devsummarycf",
+      "customId": 13320
+     },
+     "name": "Development",
+     "key": "customfield_13320",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_16776": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "user",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:people",
+      "customId": 16776,
+      "configuration": {
+       "isMulti": true
+      }
+     },
+     "name": "Reviewers",
+     "key": "customfield_16776",
+     "autoCompleteUrl": "https://acme.atlassian.net/rest/api/1.0/users/picker?fieldName=customfield_16776&showAvatar=true&query=",
+     "operations": [
+      "add",
+      "set",
+      "remove"
+     ]
+    },
+    "description": {
+     "required": false,
+     "schema": {
+      "type": "string",
+      "system": "description"
+     },
+     "name": "Description",
+     "key": "description",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_11220": {
+     "required": false,
+     "schema": {
+      "type": "any",
+      "custom": "com.pyxis.greenhopper.jira:gh-lexo-rank",
+      "customId": 11220
+     },
+     "name": "Rank",
+     "key": "customfield_11220",
+     "operations": [
+      "set"
+     ]
+    },
+    "fixVersions": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "version",
+      "system": "fixVersions"
+     },
+     "name": "Fix versions",
+     "key": "fixVersions",
+     "operations": [
+      "set",
+      "add",
+      "remove"
+     ],
+     "allowedValues": [
+      {
+       "id": "65710",
+       "description": "Release Manager: Morgan Diaz",
+       "name": "OPS-4.4.0",
+       "archived": false,
+       "released": true,
+       "startDate": "2026-02-24",
+       "releaseDate": "2026-05-14",
+       "userStartDate": "23/Feb/26",
+       "userReleaseDate": "13/May/26",
+       "projectId": 15346
+      },
+      {
+       "id": "60060",
+       "description": "Release Manager: Morgan Diaz",
+       "name": "OPS-4.3.0",
+       "archived": false,
+       "released": true,
+       "startDate": "2025-11-18",
+       "releaseDate": "2026-02-27",
+       "userStartDate": "17/Nov/25",
+       "userReleaseDate": "26/Feb/26",
+       "projectId": 15346
+      },
+      {
+       "id": "68830",
+       "description": "Release Manager: Morgan Diaz",
+       "name": "OPS-4.3.2",
+       "archived": false,
+       "released": true,
+       "startDate": "2026-03-26",
+       "releaseDate": "2026-04-03",
+       "userStartDate": "25/Mar/26",
+       "userReleaseDate": "02/Apr/26",
+       "projectId": 15346
+      },
+      {
+       "id": "73037",
+       "description": "Release Manager: Morgan Diaz",
+       "name": "OPS-4.4.1",
+       "archived": false,
+       "released": true,
+       "startDate": "2026-05-15",
+       "releaseDate": "2026-05-15",
+       "userStartDate": "14/May/26",
+       "userReleaseDate": "14/May/26",
+       "projectId": 15346
+      },
+      {
+       "id": "73437",
+       "description": "Release Manager: Morgan Diaz",
+       "name": "OPS-4.4.2",
+       "archived": false,
+       "released": true,
+       "startDate": "2026-05-19",
+       "releaseDate": "2026-05-20",
+       "userStartDate": "18/May/26",
+       "userReleaseDate": "19/May/26",
+       "projectId": 15346
+      },
+      {
+       "id": "67729",
+       "description": "Release Manager: Morgan Diaz",
+       "name": "OPS-4.5.0",
+       "archived": false,
+       "released": true,
+       "startDate": "2026-05-18",
+       "releaseDate": "2026-07-22",
+       "userStartDate": "17/May/26",
+       "userReleaseDate": "21/Jul/26",
+       "projectId": 15346
+      },
+      {
+       "id": "77785",
+       "description": "Release Manager: Morgan Diaz",
+       "name": "OPS-4.5.1",
+       "archived": false,
+       "released": true,
+       "startDate": "2026-07-23",
+       "releaseDate": "2026-07-30",
+       "userStartDate": "22/Jul/26",
+       "userReleaseDate": "29/Jul/26",
+       "projectId": 15346
+      },
+      {
+       "id": "78289",
+       "description": "Release Manager: Morgan Diaz",
+       "name": "OPS-4.5.2",
+       "archived": false,
+       "released": true,
+       "startDate": "2026-07-29",
+       "releaseDate": "2026-08-18",
+       "userStartDate": "28/Jul/26",
+       "userReleaseDate": "17/Aug/26",
+       "projectId": 15346
+      },
+      {
+       "id": "71712",
+       "description": "Release Manager: Morgan Diaz",
+       "name": "OPS-4.6.0",
+       "archived": false,
+       "released": true,
+       "startDate": "2026-07-08",
+       "releaseDate": "2026-10-05",
+       "userStartDate": "07/Jul/26",
+       "userReleaseDate": "04/Oct/26",
+       "projectId": 15346
+      },
+      {
+       "id": "80310",
+       "name": "OPS-4.6.1",
+       "archived": false,
+       "released": false,
+       "startDate": "2026-10-06",
+       "releaseDate": "2026-10-14",
+       "overdue": false,
+       "userStartDate": "05/Oct/26",
+       "userReleaseDate": "13/Oct/26",
+       "projectId": 15346
+      },
+      {
+       "id": "78322",
+       "description": "Release Manager: Morgan Diaz",
+       "name": "OPS-4.7.0",
+       "archived": false,
+       "released": false,
+       "startDate": "2026-10-15",
+       "releaseDate": "2026-11-24",
+       "overdue": false,
+       "userStartDate": "14/Oct/26",
+       "userReleaseDate": "23/Nov/26",
+       "projectId": 15346
+      },
+      {
+       "id": "80330",
+       "description": "Release Manager: Morgan Diaz",
+       "name": "OPS-4.8.0",
+       "archived": false,
+       "released": false,
+       "startDate": "2026-12-02",
+       "releaseDate": "2027-01-14",
+       "overdue": false,
+       "userStartDate": "01/Dec/26",
+       "userReleaseDate": "13/Jan/27",
+       "projectId": 15346
+      }
+     ]
+    },
+    "customfield_16933": {
+     "required": false,
+     "schema": {
+      "type": "option",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+      "customId": 16933
+     },
+     "name": "Resolution",
+     "key": "customfield_16933",
+     "operations": [
+      "set"
+     ],
+     "allowedValues": [
+      {
+       "value": "Fixed",
+       "id": "15790"
+      },
+      {
+       "value": "Answered",
+       "id": "15791"
+      },
+      {
+       "value": "Invalid",
+       "id": "15792"
+      },
+      {
+       "value": "Duplicate",
+       "id": "15793"
+      },
+      {
+       "value": "Cannot Reproduce",
+       "id": "15794"
+      },
+      {
+       "value": "Declined",
+       "id": "15795"
+      },
+      {
+       "value": "No Response From Reporter",
+       "id": "15796"
+      }
+     ]
+    },
+    "timetracking": {
+     "required": false,
+     "schema": {
+      "type": "timetracking",
+      "system": "timetracking"
+     },
+     "name": "Time tracking",
+     "key": "timetracking",
+     "operations": [
+      "set",
+      "edit"
+     ]
+    },
+    "customfield_16777": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "user",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:people",
+      "customId": 16777,
+      "configuration": {
+       "isMulti": true
+      }
+     },
+     "name": "Developers",
+     "key": "customfield_16777",
+     "autoCompleteUrl": "https://acme.atlassian.net/rest/api/1.0/users/picker?fieldName=customfield_16777&showAvatar=true&query=",
+     "operations": [
+      "add",
+      "set",
+      "remove"
+     ]
+    },
+    "customfield_16728": {
+     "required": false,
+     "schema": {
+      "type": "string",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+      "customId": 16728
+     },
+     "name": "Acceptance criteria",
+     "key": "customfield_16728",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_16727": {
+     "required": false,
+     "schema": {
+      "type": "string",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+      "customId": 16727
+     },
+     "name": "Solution",
+     "key": "customfield_16727",
+     "operations": [
+      "set"
+     ]
+    },
+    "attachment": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "attachment",
+      "system": "attachment"
+     },
+     "name": "Attachment",
+     "key": "attachment",
+     "operations": [
+      "set",
+      "copy"
+     ]
+    },
+    "customfield_16906": {
+     "required": false,
+     "schema": {
+      "type": "option",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+      "customId": 16906
+     },
+     "name": "Regression",
+     "key": "customfield_16906",
+     "operations": [
+      "set"
+     ],
+     "allowedValues": [
+      {
+       "value": "Yes",
+       "id": "15745"
+      },
+      {
+       "value": "No",
+       "id": "15746"
+      }
+     ]
+    },
+    "summary": {
+     "required": true,
+     "schema": {
+      "type": "string",
+      "system": "summary"
+     },
+     "name": "Summary",
+     "key": "summary",
+     "operations": [
+      "set"
+     ]
+    },
+    "issuerestriction": {
+     "required": false,
+     "schema": {
+      "type": "issuerestriction",
+      "system": "issuerestriction"
+     },
+     "name": "Restrict to",
+     "key": "issuerestriction",
+     "operations": [
+      "set"
+     ],
+     "allowedValues": []
+    },
+    "customfield_16486": {
+     "required": false,
+     "schema": {
+      "type": "number",
+      "custom": "com.pyxis.greenhopper.jira:jsw-story-points",
+      "customId": 16486
+     },
+     "name": "Story point estimate",
+     "key": "customfield_16486",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_17299": {
+     "required": false,
+     "schema": {
+      "type": "string",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+      "customId": 17299
+     },
+     "name": "QA Issue Type",
+     "key": "customfield_17299",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_16781": {
+     "required": false,
+     "schema": {
+      "type": "option",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+      "customId": 16781
+     },
+     "name": "Root cause",
+     "key": "customfield_16781",
+     "operations": [
+      "set"
+     ],
+     "allowedValues": [
+      {
+       "value": "Configuration / environment specific",
+       "id": "25001",
+       "color": "MAGENTA_DARKER"
+      },
+      {
+       "value": "Logic / algorithm error",
+       "id": "45123",
+       "color": "YELLOW_DARKER"
+      },
+      {
+       "value": "Edge case not anticipated",
+       "id": "25002",
+       "color": "ORANGE_DARKER"
+      },
+      {
+       "value": "Upgrade / migration",
+       "id": "45124",
+       "color": "GREY_DARKEST"
+      },
+      {
+       "value": "Race condition / concurrency",
+       "id": "45125",
+       "color": "GREEN_DARKER"
+      },
+      {
+       "value": "Performance / scalability",
+       "id": "45126",
+       "color": "GREEN_DARKER"
+      },
+      {
+       "value": "Missing input validation",
+       "id": "25003",
+       "color": "MAGENTA_DARKER"
+      },
+      {
+       "value": "3rd party SDK / API behavior",
+       "id": "25004",
+       "color": "RED_DARKER"
+      },
+      {
+       "value": "Race condition / Concurrency issue",
+       "id": "25005",
+       "color": "YELLOW_DARKER"
+      },
+      {
+       "value": "Security defect",
+       "id": "45127",
+       "color": "RED_DARKER"
+      },
+      {
+       "value": "UI / UX defect",
+       "id": "45128",
+       "color": "ORANGE_DARKER"
+      },
+      {
+       "value": "Others",
+       "id": "15591"
+      }
+     ]
+    },
+    "customfield_17298": {
+     "required": false,
+     "schema": {
+      "type": "string",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+      "customId": 17298
+     },
+     "name": "Original Issue Type",
+     "key": "customfield_17298",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_10000": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "option",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:multicheckboxes",
+      "customId": 10000
+     },
+     "name": "Flagged",
+     "key": "customfield_10000",
+     "operations": [
+      "add",
+      "set",
+      "remove"
+     ],
+     "allowedValues": [
+      {
+       "value": "Impediment",
+       "id": "10000"
+      }
+     ]
+    },
+    "customfield_17312": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "option",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:multiselect",
+      "customId": 17312
+     },
+     "name": "Bug Category",
+     "key": "customfield_17312",
+     "operations": [
+      "add",
+      "set",
+      "remove"
+     ],
+     "allowedValues": [
+      {
+       "value": "Functionality",
+       "id": "17502"
+      },
+      {
+       "value": "Usability",
+       "id": "17503"
+      },
+      {
+       "value": "Performance",
+       "id": "17504"
+      },
+      {
+       "value": "Reliability",
+       "id": "17505"
+      },
+      {
+       "value": "Maintainability",
+       "id": "17506"
+      },
+      {
+       "value": "Portability",
+       "id": "17507"
+      },
+      {
+       "value": "Security",
+       "id": "17508"
+      },
+      {
+       "value": "Compatibility",
+       "id": "17509"
+      }
+     ]
+    },
+    "priority": {
+     "required": false,
+     "schema": {
+      "type": "priority",
+      "system": "priority"
+     },
+     "name": "Priority",
+     "key": "priority",
+     "operations": [
+      "set"
+     ],
+     "allowedValues": [
+      {
+       "name": "Blocker",
+       "id": "1"
+      },
+      {
+       "name": "Critical",
+       "id": "2"
+      },
+      {
+       "name": "Major",
+       "id": "3"
+      },
+      {
+       "name": "Minor",
+       "id": "4"
+      },
+      {
+       "name": "IFFEasy",
+       "id": "10000"
+      },
+      {
+       "name": "Trivial",
+       "id": "5"
+      }
+     ]
+    },
+    "customfield_10521": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "json",
+      "custom": "com.pyxis.greenhopper.jira:gh-sprint",
+      "customId": 10521
+     },
+     "name": "Sprint",
+     "key": "customfield_10521",
+     "operations": [
+      "set"
+     ]
+    },
+    "labels": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "string",
+      "system": "labels"
+     },
+     "name": "Labels",
+     "key": "labels",
+     "autoCompleteUrl": "https://acme.atlassian.net/rest/api/1.0/labels/2672356/suggest?query=",
+     "operations": [
+      "add",
+      "set",
+      "remove"
+     ]
+    },
+    "customfield_16817": {
+     "required": false,
+     "schema": {
+      "type": "string",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+      "customId": 16817
+     },
+     "name": "Salesforce Case Owner",
+     "key": "customfield_16817",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_16819": {
+     "required": false,
+     "schema": {
+      "type": "string",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+      "customId": 16819
+     },
+     "name": "Customer Name",
+     "key": "customfield_16819",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_16818": {
+     "required": false,
+     "schema": {
+      "type": "string",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+      "customId": 16818
+     },
+     "name": "SugarCRM Oppty",
+     "key": "customfield_16818",
+     "operations": [
+      "set"
+     ]
+    },
+    "comment": {
+     "required": false,
+     "schema": {
+      "type": "comments-page",
+      "system": "comment"
+     },
+     "name": "Comment",
+     "key": "comment",
+     "operations": [
+      "add",
+      "edit",
+      "remove"
+     ]
+    },
+    "issuelinks": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "issuelinks",
+      "system": "issuelinks"
+     },
+     "name": "Linked work items",
+     "key": "issuelinks",
+     "autoCompleteUrl": "https://acme.atlassian.net/rest/api/3/issue/picker?currentProjectId=&showSubTaskParent=true&showSubTasks=true&currentIssueKey=OPS-14739&query=",
+     "operations": [
+      "add",
+      "copy"
+     ]
+    },
+    "assignee": {
+     "required": false,
+     "schema": {
+      "type": "user",
+      "system": "assignee"
+     },
+     "name": "Assignee",
+     "key": "assignee",
+     "autoCompleteUrl": "https://acme.atlassian.[redacted secret]?issueKey=OPS-14739&query=",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_21369": {
+     "required": false,
+     "schema": {
+      "type": "option",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+      "customId": 21369
+     },
+     "name": "Dev Self-Testing Quality",
+     "key": "customfield_21369",
+     "operations": [
+      "set"
+     ],
+     "allowedValues": [
+      {
+       "value": "Passed",
+       "id": "23379"
+      },
+      {
+       "value": "Failed",
+       "id": "23380"
+      }
+     ]
+    },
+    "customfield_20950": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "user",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:people",
+      "customId": 20950,
+      "configuration": {
+       "isMulti": true
+      }
+     },
+     "name": "QA",
+     "key": "customfield_20950",
+     "autoCompleteUrl": "https://acme.atlassian.net/rest/api/1.0/users/picker?fieldName=customfield_20950&showAvatar=true&query=",
+     "operations": [
+      "add",
+      "set",
+      "remove"
+     ]
+    }
+   }
+  },
+  "changelog": {
+   "startAt": 0,
+   "maxResults": 17,
+   "total": 17,
+   "histories": [
+    {
+     "id": "15943695",
+     "author": {
+      "accountId": "acc-11",
+      "displayName": "Taylor Novak",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-13T23:17:39.161-0700",
+     "items": [
+      {
+       "field": "Root cause",
+       "fieldtype": "custom",
+       "fieldId": "customfield_16781",
+       "from": null,
+       "fromString": null,
+       "to": "25003",
+       "toString": "Missing input validation"
+      }
+     ]
+    },
+    {
+     "id": "15935394",
+     "author": {
+      "accountId": "acc-11",
+      "displayName": "Taylor Novak",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-13T06:06:54.944-0700",
+     "items": [
+      {
+       "field": "assignee",
+       "fieldtype": "jira",
+       "fieldId": "assignee",
+       "from": "acc-11",
+       "fromString": "Taylor Novak",
+       "to": null,
+       "toString": null
+      },
+      {
+       "field": "status",
+       "fieldtype": "jira",
+       "fieldId": "status",
+       "from": "13353",
+       "fromString": "In Progress",
+       "to": "13411",
+       "toString": "Review"
+      }
+     ]
+    },
+    {
+     "id": "15935392",
+     "author": {
+      "accountId": "acc-11",
+      "displayName": "Taylor Novak",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-13T06:06:47.361-0700",
+     "items": [
+      {
+       "field": "status",
+       "fieldtype": "jira",
+       "fieldId": "status",
+       "from": "22878",
+       "fromString": "Ready",
+       "to": "13353",
+       "toString": "In Progress"
+      }
+     ]
+    },
+    {
+     "id": "15935389",
+     "author": {
+      "accountId": "acc-11",
+      "displayName": "Taylor Novak",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-13T06:06:37.698-0700",
+     "items": [
+      {
+       "field": "timeestimate",
+       "fieldtype": "jira",
+       "fieldId": "timeestimate",
+       "from": null,
+       "fromString": null,
+       "to": "0",
+       "toString": "0"
+      },
+      {
+       "field": "timespent",
+       "fieldtype": "jira",
+       "fieldId": "timespent",
+       "from": null,
+       "fromString": null,
+       "to": "1800",
+       "toString": "1800"
+      },
+      {
+       "field": "WorklogId",
+       "fieldtype": "jira",
+       "from": null,
+       "fromString": null,
+       "to": "288386",
+       "toString": "288386"
+      }
+     ]
+    },
+    {
+     "id": "15933742",
+     "author": {
+      "accountId": "acc-11",
+      "displayName": "Taylor Novak",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-13T04:53:48.635-0700",
+     "items": [
+      {
+       "field": "Root cause description",
+       "fieldtype": "custom",
+       "fieldId": "customfield_16595",
+       "from": null,
+       "fromString": null,
+       "to": "",
+       "toString": "The drawer computes {{canSave}} from the fields it validates on blur. The Excluded postcodes chip input validates on Enter and keeps its error in local state, so the form never learns about it."
+      },
+      {
+       "field": "Solution",
+       "fieldtype": "custom",
+       "fieldId": "customfield_16727",
+       "from": null,
+       "fromString": null,
+       "to": "",
+       "toString": "Move the chip input error into the form state with {{setFieldError}}, and derive {{canSave}} from every field error of the drawer."
+      },
+      {
+       "field": "Acceptance criteria",
+       "fieldtype": "custom",
+       "fieldId": "customfield_16728",
+       "from": "",
+       "fromString": "* With an invalid postcode in Excluded postcodes, Save Changes is disabled.\n* Removing the invalid chip enables Save Changes again.\n* Weight from and Weight to keep their current behaviour.\n* A valid list of postcodes saves as before.",
+       "to": "",
+       "toString": "* With an invalid postcode in Excluded postcodes, Save Changes is disabled.\n* Removing the invalid chip enables Save Changes again.\n* Weight from and Weight to keep their current behaviour.\n* A valid list of postcodes saves as before."
+      },
+      {
+       "field": "Impact",
+       "fieldtype": "custom",
+       "fieldId": "customfield_17581",
+       "from": null,
+       "fromString": null,
+       "to": "",
+       "toString": "Frontend: Admin, Shipping rules drawer (Excluded postcodes field). No backend or API change."
+      }
+     ]
+    },
+    {
+     "id": "15921538",
+     "author": {
+      "accountId": "acc-12",
+      "displayName": "Casey Wu",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-12T23:33:08.281-0700",
+     "items": [
+      {
+       "field": "RemoteWorkItemLink",
+       "fieldtype": "jira",
+       "from": null,
+       "fromString": null,
+       "to": "472012",
+       "toString": "This work item links to \"Page (Confluence)\""
+      }
+     ]
+    },
+    {
+     "id": "15912008",
+     "author": {
+      "accountId": "acc-11",
+      "displayName": "Taylor Novak",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-12T04:33:39.738-0700",
+     "items": [
+      {
+       "field": "Rank",
+       "fieldtype": "custom",
+       "fieldId": "customfield_11220",
+       "from": "",
+       "fromString": "",
+       "to": "",
+       "toString": "Ranked lower"
+      }
+     ]
+    },
+    {
+     "id": "15912005",
+     "author": {
+      "accountId": "acc-11",
+      "displayName": "Taylor Novak",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-12T04:33:32.574-0700",
+     "items": [
+      {
+       "field": "status",
+       "fieldtype": "jira",
+       "fieldId": "status",
+       "from": "13352",
+       "fromString": "To Do",
+       "to": "22878",
+       "toString": "Ready"
+      }
+     ]
+    },
+    {
+     "id": "15912003",
+     "author": {
+      "accountId": "acc-11",
+      "displayName": "Taylor Novak",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-12T04:33:32.280-0700",
+     "items": [
+      {
+       "field": "Rank",
+       "fieldtype": "custom",
+       "fieldId": "customfield_11220",
+       "from": "",
+       "fromString": "",
+       "to": "",
+       "toString": "Ranked higher"
+      }
+     ]
+    },
+    {
+     "id": "15911577",
+     "author": {
+      "accountId": "acc-11",
+      "displayName": "Taylor Novak",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-12T04:19:09.029-0700",
+     "items": [
+      {
+       "field": "Fix Version",
+       "fieldtype": "jira",
+       "fieldId": "fixVersions",
+       "from": null,
+       "fromString": null,
+       "to": "78322",
+       "toString": "OPS-4.7.0"
+      }
+     ]
+    },
+    {
+     "id": "15911532",
+     "author": {
+      "accountId": "acc-11",
+      "displayName": "Taylor Novak",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-12T04:17:59.669-0700",
+     "items": [
+      {
+       "field": "Developers",
+       "fieldtype": "custom",
+       "fieldId": "customfield_16777",
+       "from": null,
+       "fromString": null,
+       "to": "[acc-11]",
+       "toString": "[Taylor Novak]"
+      }
+     ]
+    },
+    {
+     "id": "15911525",
+     "author": {
+      "accountId": "acc-11",
+      "displayName": "Taylor Novak",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-12T04:17:53.089-0700",
+     "items": [
+      {
+       "field": "assignee",
+       "fieldtype": "jira",
+       "fieldId": "assignee",
+       "from": "acc-6",
+       "fromString": "Jordan Park",
+       "to": "acc-11",
+       "toString": "Taylor Novak",
+       "tmpFromAccountId": null,
+       "tmpToAccountId": "acc-11"
+      }
+     ]
+    },
+    {
+     "id": "15900986",
+     "author": {
+      "accountId": "acc-12",
+      "displayName": "Casey Wu",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-11T20:07:55.665-0700",
+     "items": [
+      {
+       "field": "Link",
+       "fieldtype": "jira",
+       "from": "OPS-14549",
+       "fromString": "This work item Relates OPS-14549",
+       "to": null,
+       "toString": null
+      }
+     ]
+    },
+    {
+     "id": "15900985",
+     "author": {
+      "accountId": "acc-12",
+      "displayName": "Casey Wu",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-11T20:07:54.024-0700",
+     "items": [
+      {
+       "field": "Link",
+       "fieldtype": "jira",
+       "from": null,
+       "fromString": null,
+       "to": "OPS-14549",
+       "toString": "This work item is caused by OPS-14549"
+      }
+     ]
+    },
+    {
+     "id": "15900810",
+     "author": {
+      "accountId": "acc-12",
+      "displayName": "Casey Wu",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-11T20:04:33.995-0700",
+     "items": [
+      {
+       "field": "Attachment",
+       "fieldtype": "jira",
+       "fieldId": "attachment",
+       "from": null,
+       "fromString": null,
+       "to": "1162985",
+       "toString": "save-enabled-invalid-postcode.png"
+      }
+     ]
+    },
+    {
+     "id": "15900785",
+     "author": {
+      "accountId": "acc-12",
+      "displayName": "Casey Wu",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-11T20:04:08.101-0700",
+     "items": [
+      {
+       "field": "Link",
+       "fieldtype": "jira",
+       "from": null,
+       "fromString": null,
+       "to": "OPS-14549",
+       "toString": "This work item Relates OPS-14549"
+      }
+     ]
+    },
+    {
+     "id": "15900777",
+     "author": {
+      "accountId": "acc-3",
+      "displayName": "Automation for Jira",
+      "active": true,
+      "accountType": "app"
+     },
+     "created": "2026-10-11T20:03:57.817-0700",
+     "items": [
+      {
+       "field": "Original Issue Type",
+       "fieldtype": "custom",
+       "fieldId": "customfield_17298",
+       "from": null,
+       "fromString": null,
+       "to": null,
+       "toString": "Bug"
+      }
+     ],
+     "historyMetadata": {}
+    }
+   ]
+  },
+  "fields": {
+   "statuscategorychangedate": "2026-10-13T06:06:47.361-0700",
+   "customfield_17460": null,
+   "customfield_17581": {
+    "type": "doc",
+    "version": 1,
+    "content": [
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "Frontend: Admin, Shipping rules drawer (Excluded postcodes field). No backend or API change."
+       }
+      ]
+     }
+    ]
+   },
+   "issuetype": {
+    "id": "13748",
+    "description": "Bugs track problems or errors.",
+    "name": "Bug",
+    "subtask": false,
+    "entityId": "c493888e-5946-4972-b0b6-07408ccb1189",
+    "hierarchyLevel": 0
+   },
+   "timespent": 1800,
+   "customfield_16776": null,
+   "project": {
+    "id": "15346",
+    "key": "OPS",
+    "name": "Acme Ops Console",
+    "projectTypeKey": "software",
+    "simplified": true,
+    "projectCategory": {
+     "id": "10100",
+     "description": "All Engineering Projects",
+     "name": "Engineering"
+    }
+   },
+   "fixVersions": [
+    {
+     "id": "78322",
+     "description": "Shipping rules v2 + role-based access phase 2 + order export to CSV",
+     "name": "OPS-4.7.0",
+     "archived": false,
+     "released": false,
+     "releaseDate": "2026-11-24"
+    }
+   ],
+   "aggregatetimespent": 1800,
+   "statusCategory": {
+    "id": 4,
+    "key": "indeterminate",
+    "colorName": "yellow",
+    "name": "In Progress"
+   },
+   "resolution": null,
+   "customfield_16933": null,
+   "customfield_16459": null,
+   "customfield_16777": [
+    {
+     "accountId": "acc-11",
+     "displayName": "Taylor Novak",
+     "active": true,
+     "accountType": "atlassian"
+    }
+   ],
+   "customfield_16728": {
+    "type": "doc",
+    "version": 1,
+    "content": [
+     {
+      "type": "bulletList",
+      "content": [
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "With an invalid postcode in Excluded postcodes, Save Changes is disabled."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "Removing the invalid chip enables Save Changes again."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "Weight from and Weight to keep their current behaviour."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "A valid list of postcodes saves as before."
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "customfield_16727": {
+    "type": "doc",
+    "version": 1,
+    "content": [
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "Move the chip input error into the form state with "
+       },
+       {
+        "type": "text",
+        "text": "setFieldError",
+        "marks": [
+         {
+          "type": "code"
+         }
+        ]
+       },
+       {
+        "type": "text",
+        "text": ", and derive "
+       },
+       {
+        "type": "text",
+        "text": "canSave",
+        "marks": [
+         {
+          "type": "code"
+         }
+        ]
+       },
+       {
+        "type": "text",
+        "text": " from every field error of the drawer."
+       }
+      ]
+     }
+    ]
+   },
+   "resolutiondate": null,
+   "workratio": -1,
+   "customfield_17691": null,
+   "issuerestriction": {
+    "issuerestrictions": {},
+    "shouldDisplay": true
+   },
+   "lastViewed": null,
+   "customfield_17690": null,
+   "customfield_16486": null,
+   "customfield_17299": null,
+   "created": "2026-10-11T20:03:55.780-0700",
+   "customfield_17298": "Bug",
+   "customfield_17693": null,
+   "priority": {
+    "name": "Minor",
+    "id": "4"
+   },
+   "labels": [
+    "ai-created",
+    "frontend"
+   ],
+   "customfield_32279": null,
+   "timeestimate": 0,
+   "aggregatetimeoriginalestimate": null,
+   "versions": [],
+   "customfield_16917": null,
+   "issuelinks": [
+    {
+     "id": "701367",
+     "type": {
+      "id": "10230",
+      "name": "Problem/Incident",
+      "inward": "is caused by",
+      "outward": "causes"
+     },
+     "inwardIssue": {
+      "id": "2660166",
+      "key": "OPS-14549",
+      "fields": {
+       "summary": "[Frontend] [Admin] [Shipping rules] Configure shipping rules (region, weight, postcode) in the admin UI",
+       "status": {
+        "description": "",
+        "name": "Done",
+        "id": "13354",
+        "statusCategory": {
+         "id": 3,
+         "key": "done",
+         "colorName": "green",
+         "name": "Done"
+        }
+       },
+       "priority": {
+        "name": "Minor",
+        "id": "4"
+       },
+       "issuetype": {
+        "id": "13692",
+        "description": "Stories track functionality or features expressed as user goals.",
+        "name": "Story",
+        "subtask": false,
+        "entityId": "273d0cd8-b51b-4211-b78d-ffe4eb3b2d91",
+        "hierarchyLevel": 0
+       }
+      }
+     }
+    }
+   ],
+   "assignee": null,
+   "updated": "2026-10-13T23:17:39.161-0700",
+   "status": {
+    "description": "",
+    "name": "Review",
+    "id": "13411",
+    "statusCategory": {
+     "id": 4,
+     "key": "indeterminate",
+     "colorName": "yellow",
+     "name": "In Progress"
+    }
+   },
+   "components": [],
+   "customfield_16595": {
+    "type": "doc",
+    "version": 1,
+    "content": [
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "The drawer computes "
+       },
+       {
+        "type": "text",
+        "text": "canSave",
+        "marks": [
+         {
+          "type": "code"
+         }
+        ]
+       },
+       {
+        "type": "text",
+        "text": " from the fields it validates on blur. The Excluded postcodes chip input validates on Enter and keeps its error in local state, so the form never learns about it."
+       }
+      ]
+     }
+    ]
+   },
+   "customfield_17563": null,
+   "timeoriginalestimate": null,
+   "customfield_13320": "{pullrequest={dataType=pullrequest, state=OPEN, stateCount=1}, build={count=4, dataType=build, failedBuildCount=0, successfulBuildCount=4, unknownBuildCount=0}, json={\"cachedValue\":{\"errors\":[],\"summary\":{\"pullrequest\":{\"overall\":{\"count\":1,\"lastUpdated\":\"2026-10-13T06:32:23.000-0700\",\"stateCount\":1,\"state\":\"OPEN\",\"dataType\":\"pullrequest\",\"open\":true},\"byInstanceType\":{\"oAuth-com.github.integration.production\":{\"count\":1,\"name\":\"GitHub\"}}},\"build\":{\"overall\":{\"count\":4,\"lastUpdated\":\"2026-10-13T06:38:02.000-0700\",\"failedBuildCount\":0,\"successfulBuildCount\":4,\"unknownBuildCount\":0,\"dataType\":\"build\"},\"byInstanceType\":{\"cloud-providers\":{\"count\":4,\"name\":\"Other providers\"}}}}},\"isStale\":true}}",
+   "customfield_17204": null,
+   "description": {
+    "type": "doc",
+    "version": 1,
+    "content": [
+     {
+      "type": "panel",
+      "attrs": {
+       "panelType": "info"
+      },
+      "content": [
+       {
+        "type": "paragraph",
+        "content": [
+         {
+          "type": "text",
+          "text": "Found while testing ",
+          "marks": [
+           {
+            "type": "strong"
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "text": "OPS-14549",
+          "marks": [
+           {
+            "type": "link",
+            "attrs": {
+             "href": "https://acme.atlassian.net/browse/OPS-14549"
+            }
+           }
+          ]
+         },
+         {
+          "type": "text",
+          "text": ". Screenshot attached."
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "heading",
+      "attrs": {
+       "level": 3
+      },
+      "content": [
+       {
+        "type": "text",
+        "text": "Steps to reproduce"
+       }
+      ]
+     },
+     {
+      "type": "orderedList",
+      "content": [
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "Open Admin → Shipping rules and edit any rule."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "In "
+           },
+           {
+            "type": "text",
+            "text": "Excluded postcodes",
+            "marks": [
+             {
+              "type": "strong"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "text": ", type "
+           },
+           {
+            "type": "text",
+            "text": "12AB",
+            "marks": [
+             {
+              "type": "code"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "text": " and press Enter."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "The field shows \"Invalid postcode\" under the input."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "Look at the Save Changes button."
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "heading",
+      "attrs": {
+       "level": 3
+      },
+      "content": [
+       {
+        "type": "text",
+        "text": "Actual result"
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "Save Changes stays enabled. Clicking it sends the rule with the invalid postcode, and the API answers 400 with a generic \"Something went wrong\" toast."
+       }
+      ]
+     },
+     {
+      "type": "heading",
+      "attrs": {
+       "level": 3
+      },
+      "content": [
+       {
+        "type": "text",
+        "text": "Expected result"
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "Save Changes is disabled while any field of the drawer shows a validation error, as it already is for the Weight from and Weight to fields."
+       }
+      ]
+     },
+     {
+      "type": "heading",
+      "attrs": {
+       "level": 3
+      },
+      "content": [
+       {
+        "type": "text",
+        "text": "Environment"
+       }
+      ]
+     },
+     {
+      "type": "table",
+      "attrs": {
+       "isNumberColumnEnabled": false,
+       "layout": "default"
+      },
+      "content": [
+       {
+        "type": "tableRow",
+        "content": [
+         {
+          "type": "tableHeader",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Environment"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableHeader",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Build"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableHeader",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Browser"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableHeader",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Result"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableRow",
+        "content": [
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Dev"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "ops-console 4.7.0-rc.2"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Chrome 141"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Reproduced"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableRow",
+        "content": [
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "QA"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "ops-console 4.7.0-rc.2"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Firefox 143"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Reproduced"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableRow",
+        "content": [
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Staging"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "ops-console 4.6.1"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Chrome 141"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Reproduced"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "customfield_11220": "0|i43clh:wv",
+   "customfield_17566": null,
+   "customfield_17048": null,
+   "timetracking": {
+    "remainingEstimate": "0m",
+    "timeSpent": "30m",
+    "remainingEstimateSeconds": 0,
+    "timeSpentSeconds": 1800
+   },
+   "security": null,
+   "customfield_31871": null,
+   "attachment": [
+    {
+     "id": "1162985",
+     "filename": "save-enabled-invalid-postcode.png",
+     "author": {
+      "accountId": "acc-12",
+      "displayName": "Casey Wu",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-11T20:04:33.665-0700",
+     "size": 190157,
+     "mimeType": "image/png",
+     "content": "https://acme.atlassian.net/rest/api/3/attachment/content/1162985",
+     "thumbnail": "https://acme.atlassian.net/rest/api/3/attachment/thumbnail/1162985"
+    }
+   ],
+   "aggregatetimeestimate": 0,
+   "customfield_16906": {
+    "value": "No",
+    "id": "15746"
+   },
+   "customfield_22623": null,
+   "summary": "[Frontend] [Admin] [Shipping rules] Save Changes stays enabled while the Excluded postcodes field shows an invalid postcode",
+   "creator": {
+    "accountId": "acc-12",
+    "displayName": "Casey Wu",
+    "active": true,
+    "accountType": "atlassian"
+   },
+   "subtasks": [],
+   "customfield_16781": {
+    "value": "Missing input validation",
+    "id": "25003",
+    "color": "MAGENTA_DARKER"
+   },
+   "reporter": {
+    "accountId": "acc-12",
+    "displayName": "Casey Wu",
+    "active": true,
+    "accountType": "atlassian"
+   },
+   "customfield_17312": [
+    {
+     "value": "Functionality",
+     "id": "17502"
+    }
+   ],
+   "aggregateprogress": {
+    "progress": 1800,
+    "total": 1800,
+    "percent": 100
+   },
+   "customfield_10000": null,
+   "customfield_16747": null,
+   "customfield_16746": null,
+   "customfield_16745": null,
+   "customfield_10521": null,
+   "customfield_16817": null,
+   "duedate": null,
+   "customfield_16819": null,
+   "customfield_16818": null,
+   "progress": {
+    "progress": 1800,
+    "total": 1800,
+    "percent": 100
+   },
+   "comment": {
+    "comments": [
+     {
+      "id": "2754362",
+      "author": {
+       "accountId": "acc-11",
+       "displayName": "Taylor Novak",
+       "active": true,
+       "accountType": "atlassian"
+      },
+      "body": {
+       "type": "doc",
+       "version": 1,
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "Fixed in the PR: the chip input now reports its error to the form, and "
+          },
+          {
+           "type": "text",
+           "text": "canSave",
+           "marks": [
+            {
+             "type": "code"
+            }
+           ]
+          },
+          {
+           "type": "text",
+           "text": " reads every field error of the drawer."
+          }
+         ]
+        }
+       ]
+      },
+      "updateAuthor": {
+       "accountId": "acc-11",
+       "displayName": "Taylor Novak",
+       "active": true,
+       "accountType": "atlassian"
+      },
+      "created": "2026-10-12T04:19:05.367-0700",
+      "updated": "2026-10-12T04:19:05.367-0700",
+      "jsdPublic": true
+     }
+    ],
+    "maxResults": 1,
+    "total": 1,
+    "startAt": 0
+   },
+   "worklog": {
+    "startAt": 0,
+    "maxResults": 20,
+    "total": 1,
+    "worklogs": [
+     {
+      "author": {
+       "accountId": "acc-11",
+       "displayName": "Taylor Novak",
+       "active": true,
+       "accountType": "atlassian"
+      },
+      "updateAuthor": {
+       "accountId": "acc-11",
+       "displayName": "Taylor Novak",
+       "active": true,
+       "accountType": "atlassian"
+      },
+      "created": "2026-10-13T06:06:37.683-0700",
+      "updated": "2026-10-13T06:06:37.683-0700",
+      "started": "2026-10-13T06:06:37.644-0700",
+      "timeSpent": "30m",
+      "timeSpentSeconds": 1800,
+      "id": "288386",
+      "issueId": "2672356"
+     }
+    ]
+   },
+   "customfield_19294": null,
+   "customfield_20950": null,
+   "customfield_21369": null
+  }
+ },
+ "remoteLinks": [
+  {
+   "id": 472012,
+   "globalId": "appId=8427b8f3-7430-32e1-8c8f-fe808b68f4ca&pageId=7340035",
+   "application": {
+    "type": "com.atlassian.confluence",
+    "name": "Confluence"
+   },
+   "relationship": "mentioned in",
+   "object": {
+    "url": "https://acme.atlassian.net/wiki/pages/viewpage.action?pageId=7340035",
+    "title": "QA-OPS 4.6.1 Hotfix",
+    "icon": {},
+    "status": {
+     "icon": {}
+    }
+   }
+  }
+ ],
+ "transitions": {
+  "transitions": [
+   {
+    "id": "4",
+    "name": "CANCELLED",
+    "to": {
+     "description": "",
+     "name": "CANCELLED",
+     "id": "14593",
+     "statusCategory": {
+      "id": 3,
+      "key": "done",
+      "colorName": "green",
+      "name": "Done"
+     }
+    },
+    "hasScreen": false,
+    "isGlobal": true,
+    "isInitial": false,
+    "isAvailable": true,
+    "isConditional": false,
+    "fields": {},
+    "isLooped": false
+   },
+   {
+    "id": "6",
+    "name": "QA",
+    "to": {
+     "description": "",
+     "name": "QA",
+     "id": "17134",
+     "statusCategory": {
+      "id": 4,
+      "key": "indeterminate",
+      "colorName": "yellow",
+      "name": "In Progress"
+     }
+    },
+    "hasScreen": false,
+    "isGlobal": true,
+    "isInitial": false,
+    "isAvailable": true,
+    "isConditional": false,
+    "fields": {},
+    "isLooped": false
+   },
+   {
+    "id": "11",
+    "name": "To Do",
+    "to": {
+     "description": "",
+     "name": "To Do",
+     "id": "13352",
+     "statusCategory": {
+      "id": 2,
+      "key": "new",
+      "colorName": "blue-gray",
+      "name": "To Do"
+     }
+    },
+    "hasScreen": false,
+    "isGlobal": true,
+    "isInitial": false,
+    "isAvailable": true,
+    "isConditional": false,
+    "fields": {},
+    "isLooped": false
+   }
+  ]
+ }
+}

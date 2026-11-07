@@ -1,0 +1,11 @@
+node_modules/
+dist/
+data/
+.env
+.env.*
+*.log
+.vite/
+coverage/
+# The sandbox proof's made-up machines (apps/daemon/test/sandbox-proof.test.ts); short, because of the sandbox's sockets.
+.sandbox-proof/
+!.env.example

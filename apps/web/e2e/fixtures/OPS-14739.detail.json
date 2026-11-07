@@ -1,0 +1,1865 @@
+{
+ "key": "OPS-14739",
+ "id": "2672356",
+ "full": true,
+ "fields": {
+  "customfield_17581": {
+   "type": "doc",
+   "version": 1,
+   "content": [
+    {
+     "type": "paragraph",
+     "content": [
+      {
+       "type": "text",
+       "text": "Frontend: Admin, Shipping rules drawer (Excluded postcodes field). No backend or API change."
+      }
+     ]
+    }
+   ]
+  },
+  "issuetype": {
+   "id": "13748",
+   "description": "Bugs track problems or errors.",
+   "name": "Bug",
+   "subtask": false,
+   "entityId": "c493888e-5946-4972-b0b6-07408ccb1189",
+   "hierarchyLevel": 0
+  },
+  "timespent": 1800,
+  "project": {
+   "id": "15346",
+   "key": "OPS",
+   "name": "Acme Ops Console",
+   "projectTypeKey": "software",
+   "simplified": true,
+   "projectCategory": {
+    "id": "10100",
+    "description": "All Engineering Projects",
+    "name": "Engineering"
+   }
+  },
+  "fixVersions": [
+   {
+    "id": "78322",
+    "description": "Shipping rules v2 + role-based access phase 2 + order export to CSV",
+    "name": "OPS-4.7.0",
+    "archived": false,
+    "released": false,
+    "releaseDate": "2026-11-24"
+   }
+  ],
+  "customfield_16777": [
+   {
+    "accountId": "acc-11",
+    "displayName": "Taylor Novak",
+    "active": true,
+    "accountType": "atlassian"
+   }
+  ],
+  "customfield_16728": {
+   "type": "doc",
+   "version": 1,
+   "content": [
+    {
+     "type": "bulletList",
+     "content": [
+      {
+       "type": "listItem",
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "With an invalid postcode in Excluded postcodes, Save Changes is disabled."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "listItem",
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "Removing the invalid chip enables Save Changes again."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "listItem",
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "Weight from and Weight to keep their current behaviour."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "listItem",
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "A valid list of postcodes saves as before."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "customfield_16727": {
+   "type": "doc",
+   "version": 1,
+   "content": [
+    {
+     "type": "paragraph",
+     "content": [
+      {
+       "type": "text",
+       "text": "Move the chip input error into the form state with "
+      },
+      {
+       "type": "text",
+       "text": "setFieldError",
+       "marks": [
+        {
+         "type": "code"
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "text": ", and derive "
+      },
+      {
+       "type": "text",
+       "text": "canSave",
+       "marks": [
+        {
+         "type": "code"
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "text": " from every field error of the drawer."
+      }
+     ]
+    }
+   ]
+  },
+  "created": "2026-10-11T20:03:55.780-0700",
+  "customfield_17298": "Bug",
+  "priority": {
+   "name": "Minor",
+   "id": "4"
+  },
+  "labels": [
+   "ai-created",
+   "frontend"
+  ],
+  "timeestimate": 0,
+  "issuelinks": [
+   {
+    "id": "701367",
+    "type": {
+     "id": "10230",
+     "name": "Problem/Incident",
+     "inward": "is caused by",
+     "outward": "causes"
+    },
+    "inwardIssue": {
+     "id": "2660166",
+     "key": "OPS-14549",
+     "fields": {
+      "summary": "[Frontend] [Admin] [Shipping rules] Configure shipping rules (region, weight, postcode) in the admin UI",
+      "status": {
+       "description": "",
+       "name": "Done",
+       "id": "13354",
+       "statusCategory": {
+        "id": 3,
+        "key": "done",
+        "colorName": "green",
+        "name": "Done"
+       }
+      },
+      "priority": {
+       "name": "Minor",
+       "id": "4"
+      },
+      "issuetype": {
+       "id": "13692",
+       "description": "Stories track functionality or features expressed as user goals.",
+       "name": "Story",
+       "subtask": false,
+       "entityId": "273d0cd8-b51b-4211-b78d-ffe4eb3b2d91",
+       "hierarchyLevel": 0
+      },
+      "assignee": null
+     }
+    }
+   }
+  ],
+  "updated": "2026-10-13T23:17:39.161-0700",
+  "status": {
+   "description": "",
+   "name": "Review",
+   "id": "13411",
+   "statusCategory": {
+    "id": 4,
+    "key": "indeterminate",
+    "colorName": "yellow",
+    "name": "In Progress"
+   }
+  },
+  "customfield_16595": {
+   "type": "doc",
+   "version": 1,
+   "content": [
+    {
+     "type": "paragraph",
+     "content": [
+      {
+       "type": "text",
+       "text": "The drawer computes "
+      },
+      {
+       "type": "text",
+       "text": "canSave",
+       "marks": [
+        {
+         "type": "code"
+        }
+       ]
+      },
+      {
+       "type": "text",
+       "text": " from the fields it validates on blur. The Excluded postcodes chip input validates on Enter and keeps its error in local state, so the form never learns about it."
+      }
+     ]
+    }
+   ]
+  },
+  "description": {
+   "type": "doc",
+   "version": 1,
+   "content": [
+    {
+     "type": "panel",
+     "attrs": {
+      "panelType": "info"
+     },
+     "content": [
+      {
+       "type": "paragraph",
+       "content": [
+        {
+         "type": "text",
+         "text": "Found while testing ",
+         "marks": [
+          {
+           "type": "strong"
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "text": "OPS-14549",
+         "marks": [
+          {
+           "type": "link",
+           "attrs": {
+            "href": "https://acme.atlassian.net/browse/OPS-14549"
+           }
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "text": ". Screenshot attached."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "heading",
+     "attrs": {
+      "level": 3
+     },
+     "content": [
+      {
+       "type": "text",
+       "text": "Steps to reproduce"
+      }
+     ]
+    },
+    {
+     "type": "orderedList",
+     "content": [
+      {
+       "type": "listItem",
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "Open Admin → Shipping rules and edit any rule."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "listItem",
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "In "
+          },
+          {
+           "type": "text",
+           "text": "Excluded postcodes",
+           "marks": [
+            {
+             "type": "strong"
+            }
+           ]
+          },
+          {
+           "type": "text",
+           "text": ", type "
+          },
+          {
+           "type": "text",
+           "text": "12AB",
+           "marks": [
+            {
+             "type": "code"
+            }
+           ]
+          },
+          {
+           "type": "text",
+           "text": " and press Enter."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "listItem",
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "The field shows \"Invalid postcode\" under the input."
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "listItem",
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "Look at the Save Changes button."
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "heading",
+     "attrs": {
+      "level": 3
+     },
+     "content": [
+      {
+       "type": "text",
+       "text": "Actual result"
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "content": [
+      {
+       "type": "text",
+       "text": "Save Changes stays enabled. Clicking it sends the rule with the invalid postcode, and the API answers 400 with a generic \"Something went wrong\" toast."
+      }
+     ]
+    },
+    {
+     "type": "heading",
+     "attrs": {
+      "level": 3
+     },
+     "content": [
+      {
+       "type": "text",
+       "text": "Expected result"
+      }
+     ]
+    },
+    {
+     "type": "paragraph",
+     "content": [
+      {
+       "type": "text",
+       "text": "Save Changes is disabled while any field of the drawer shows a validation error, as it already is for the Weight from and Weight to fields."
+      }
+     ]
+    },
+    {
+     "type": "heading",
+     "attrs": {
+      "level": 3
+     },
+     "content": [
+      {
+       "type": "text",
+       "text": "Environment"
+      }
+     ]
+    },
+    {
+     "type": "table",
+     "attrs": {
+      "isNumberColumnEnabled": false,
+      "layout": "default"
+     },
+     "content": [
+      {
+       "type": "tableRow",
+       "content": [
+        {
+         "type": "tableHeader",
+         "attrs": {},
+         "content": [
+          {
+           "type": "paragraph",
+           "content": [
+            {
+             "type": "text",
+             "text": "Environment"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "tableHeader",
+         "attrs": {},
+         "content": [
+          {
+           "type": "paragraph",
+           "content": [
+            {
+             "type": "text",
+             "text": "Build"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "tableHeader",
+         "attrs": {},
+         "content": [
+          {
+           "type": "paragraph",
+           "content": [
+            {
+             "type": "text",
+             "text": "Browser"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "tableHeader",
+         "attrs": {},
+         "content": [
+          {
+           "type": "paragraph",
+           "content": [
+            {
+             "type": "text",
+             "text": "Result"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "tableRow",
+       "content": [
+        {
+         "type": "tableCell",
+         "attrs": {},
+         "content": [
+          {
+           "type": "paragraph",
+           "content": [
+            {
+             "type": "text",
+             "text": "Dev"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "tableCell",
+         "attrs": {},
+         "content": [
+          {
+           "type": "paragraph",
+           "content": [
+            {
+             "type": "text",
+             "text": "ops-console 4.7.0-rc.2"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "tableCell",
+         "attrs": {},
+         "content": [
+          {
+           "type": "paragraph",
+           "content": [
+            {
+             "type": "text",
+             "text": "Chrome 141"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "tableCell",
+         "attrs": {},
+         "content": [
+          {
+           "type": "paragraph",
+           "content": [
+            {
+             "type": "text",
+             "text": "Reproduced"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "tableRow",
+       "content": [
+        {
+         "type": "tableCell",
+         "attrs": {},
+         "content": [
+          {
+           "type": "paragraph",
+           "content": [
+            {
+             "type": "text",
+             "text": "QA"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "tableCell",
+         "attrs": {},
+         "content": [
+          {
+           "type": "paragraph",
+           "content": [
+            {
+             "type": "text",
+             "text": "ops-console 4.7.0-rc.2"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "tableCell",
+         "attrs": {},
+         "content": [
+          {
+           "type": "paragraph",
+           "content": [
+            {
+             "type": "text",
+             "text": "Firefox 143"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "tableCell",
+         "attrs": {},
+         "content": [
+          {
+           "type": "paragraph",
+           "content": [
+            {
+             "type": "text",
+             "text": "Reproduced"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "type": "tableRow",
+       "content": [
+        {
+         "type": "tableCell",
+         "attrs": {},
+         "content": [
+          {
+           "type": "paragraph",
+           "content": [
+            {
+             "type": "text",
+             "text": "Staging"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "tableCell",
+         "attrs": {},
+         "content": [
+          {
+           "type": "paragraph",
+           "content": [
+            {
+             "type": "text",
+             "text": "ops-console 4.6.1"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "tableCell",
+         "attrs": {},
+         "content": [
+          {
+           "type": "paragraph",
+           "content": [
+            {
+             "type": "text",
+             "text": "Chrome 141"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "tableCell",
+         "attrs": {},
+         "content": [
+          {
+           "type": "paragraph",
+           "content": [
+            {
+             "type": "text",
+             "text": "Reproduced"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "timetracking": {
+   "remainingEstimate": "0m",
+   "timeSpent": "30m",
+   "remainingEstimateSeconds": 0,
+   "timeSpentSeconds": 1800
+  },
+  "attachment": [
+   {
+    "id": "1162985",
+    "filename": "save-enabled-invalid-postcode.png",
+    "author": {
+     "accountId": "acc-12",
+     "displayName": "Casey Wu",
+     "active": true,
+     "accountType": "atlassian"
+    },
+    "created": "2026-10-11T20:04:33.665-0700",
+    "size": 190157,
+    "mimeType": "image/png",
+    "content": "https://acme.atlassian.net/rest/api/3/attachment/content/1162985",
+    "thumbnail": "https://acme.atlassian.net/rest/api/3/attachment/thumbnail/1162985"
+   }
+  ],
+  "customfield_16906": {
+   "value": "No",
+   "id": "15746"
+  },
+  "summary": "[Frontend] [Admin] [Shipping rules] Save Changes stays enabled while the Excluded postcodes field shows an invalid postcode",
+  "creator": {
+   "accountId": "acc-12",
+   "displayName": "Casey Wu",
+   "active": true,
+   "accountType": "atlassian"
+  },
+  "customfield_16781": {
+   "value": "Missing input validation",
+   "id": "25003",
+   "color": "MAGENTA_DARKER"
+  },
+  "reporter": {
+   "accountId": "acc-12",
+   "displayName": "Casey Wu",
+   "active": true,
+   "accountType": "atlassian"
+  },
+  "customfield_17312": [
+   {
+    "value": "Functionality",
+    "id": "17502"
+   }
+  ]
+ },
+ "names": {
+  "customfield_17460": "Design",
+  "customfield_17581": "Impact",
+  "issuetype": "Issue Type",
+  "timespent": "Time Spent",
+  "customfield_16776": "Reviewers",
+  "project": "Project",
+  "fixVersions": "Fix versions",
+  "customfield_16933": "Resolution",
+  "customfield_16777": "Developers",
+  "customfield_16728": "Acceptance criteria",
+  "customfield_16727": "Solution",
+  "customfield_16486": "Story point estimate",
+  "customfield_17299": "QA Issue Type",
+  "created": "Created",
+  "customfield_17298": "Original Issue Type",
+  "priority": "Priority",
+  "labels": "Labels",
+  "timeestimate": "Remaining Estimate",
+  "issuelinks": "Linked work items",
+  "assignee": "Assignee",
+  "updated": "Updated",
+  "status": "Status",
+  "customfield_16595": "Root cause description",
+  "customfield_17563": "Vulnerability",
+  "customfield_13320": "Development",
+  "description": "Description",
+  "timetracking": "Time tracking",
+  "attachment": "Attachment",
+  "customfield_16906": "Regression",
+  "summary": "Summary",
+  "creator": "Creator",
+  "customfield_16781": "Root cause",
+  "reporter": "Reporter",
+  "customfield_17312": "Bug Category",
+  "customfield_10000": "Flagged",
+  "customfield_10521": "Sprint",
+  "customfield_16817": "Salesforce Case Owner",
+  "customfield_16819": "Customer Name",
+  "customfield_16818": "SugarCRM Oppty",
+  "comment": "Comment",
+  "customfield_20950": "QA",
+  "customfield_21369": "Dev Self-Testing Quality"
+ },
+ "schema": {
+  "customfield_17460": {
+   "type": "array",
+   "items": "design.field.name",
+   "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:designcf"
+  },
+  "customfield_17581": {
+   "type": "string",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea"
+  },
+  "issuetype": {
+   "type": "issuetype",
+   "system": "issuetype"
+  },
+  "timespent": {
+   "type": "number",
+   "system": "timespent"
+  },
+  "customfield_16776": {
+   "type": "array",
+   "items": "user",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:people"
+  },
+  "project": {
+   "type": "project",
+   "system": "project"
+  },
+  "fixVersions": {
+   "type": "array",
+   "items": "version",
+   "system": "fixVersions"
+  },
+  "customfield_16933": {
+   "type": "option",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select"
+  },
+  "customfield_16777": {
+   "type": "array",
+   "items": "user",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:people"
+  },
+  "customfield_16728": {
+   "type": "string",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea"
+  },
+  "customfield_16727": {
+   "type": "string",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea"
+  },
+  "customfield_16486": {
+   "type": "number",
+   "custom": "com.pyxis.greenhopper.jira:jsw-story-points"
+  },
+  "customfield_17299": {
+   "type": "string",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield"
+  },
+  "created": {
+   "type": "datetime",
+   "system": "created"
+  },
+  "customfield_17298": {
+   "type": "string",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield"
+  },
+  "priority": {
+   "type": "priority",
+   "system": "priority"
+  },
+  "labels": {
+   "type": "array",
+   "items": "string",
+   "system": "labels"
+  },
+  "timeestimate": {
+   "type": "number",
+   "system": "timeestimate"
+  },
+  "issuelinks": {
+   "type": "array",
+   "items": "issuelinks",
+   "system": "issuelinks"
+  },
+  "assignee": {
+   "type": "user",
+   "system": "assignee"
+  },
+  "updated": {
+   "type": "datetime",
+   "system": "updated"
+  },
+  "status": {
+   "type": "status",
+   "system": "status"
+  },
+  "customfield_16595": {
+   "type": "string",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea"
+  },
+  "customfield_17563": {
+   "type": "any",
+   "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:vulnerabilitycf"
+  },
+  "customfield_13320": {
+   "type": "any",
+   "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:devsummarycf"
+  },
+  "description": {
+   "type": "string",
+   "system": "description"
+  },
+  "timetracking": {
+   "type": "timetracking",
+   "system": "timetracking"
+  },
+  "attachment": {
+   "type": "array",
+   "items": "attachment",
+   "system": "attachment"
+  },
+  "customfield_16906": {
+   "type": "option",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select"
+  },
+  "summary": {
+   "type": "string",
+   "system": "summary"
+  },
+  "creator": {
+   "type": "user",
+   "system": "creator"
+  },
+  "customfield_16781": {
+   "type": "option",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select"
+  },
+  "reporter": {
+   "type": "user",
+   "system": "reporter"
+  },
+  "customfield_17312": {
+   "type": "array",
+   "items": "option",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:multiselect"
+  },
+  "customfield_10000": {
+   "type": "array",
+   "items": "option",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:multicheckboxes"
+  },
+  "customfield_10521": {
+   "type": "array",
+   "items": "json",
+   "custom": "com.pyxis.greenhopper.jira:gh-sprint"
+  },
+  "customfield_16817": {
+   "type": "string",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield"
+  },
+  "customfield_16819": {
+   "type": "string",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield"
+  },
+  "customfield_16818": {
+   "type": "string",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield"
+  },
+  "comment": {
+   "type": "comments-page",
+   "system": "comment"
+  },
+  "customfield_20950": {
+   "type": "array",
+   "items": "user",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:people"
+  },
+  "customfield_21369": {
+   "type": "option",
+   "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select"
+  }
+ },
+ "editmeta": {
+  "issuetype": {
+   "required": true,
+   "operations": [],
+   "allowedValues": [
+    {
+     "id": "13692",
+     "name": "Story"
+    },
+    {
+     "id": "13748",
+     "name": "Bug"
+    },
+    {
+     "id": "13780",
+     "name": "Task"
+    }
+   ]
+  },
+  "customfield_17581": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "parent": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "customfield_17460": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "customfield_17563": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "customfield_16595": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "customfield_13320": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "customfield_16776": {
+   "required": false,
+   "operations": [
+    "add",
+    "set",
+    "remove"
+   ]
+  },
+  "description": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "fixVersions": {
+   "required": false,
+   "operations": [
+    "set",
+    "add",
+    "remove"
+   ],
+   "allowedValues": [
+    {
+     "id": "65710",
+     "name": "OPS-4.4.0"
+    },
+    {
+     "id": "60060",
+     "name": "OPS-4.3.0"
+    },
+    {
+     "id": "68830",
+     "name": "OPS-4.3.2"
+    },
+    {
+     "id": "73037",
+     "name": "OPS-4.4.1"
+    },
+    {
+     "id": "73437",
+     "name": "OPS-4.4.2"
+    },
+    {
+     "id": "67729",
+     "name": "OPS-4.5.0"
+    },
+    {
+     "id": "77785",
+     "name": "OPS-4.5.1"
+    },
+    {
+     "id": "78289",
+     "name": "OPS-4.5.2"
+    },
+    {
+     "id": "71712",
+     "name": "OPS-4.6.0"
+    },
+    {
+     "id": "80310",
+     "name": "OPS-4.6.1"
+    },
+    {
+     "id": "78322",
+     "name": "OPS-4.7.0"
+    },
+    {
+     "id": "80330",
+     "name": "OPS-4.8.0"
+    }
+   ]
+  },
+  "customfield_16933": {
+   "required": false,
+   "operations": [
+    "set"
+   ],
+   "allowedValues": [
+    {
+     "id": "15790",
+     "value": "Fixed"
+    },
+    {
+     "id": "15791",
+     "value": "Answered"
+    },
+    {
+     "id": "15792",
+     "value": "Invalid"
+    },
+    {
+     "id": "15793",
+     "value": "Duplicate"
+    },
+    {
+     "id": "15794",
+     "value": "Cannot Reproduce"
+    },
+    {
+     "id": "15795",
+     "value": "Declined"
+    },
+    {
+     "id": "15796",
+     "value": "No Response From Reporter"
+    }
+   ]
+  },
+  "timetracking": {
+   "required": false,
+   "operations": [
+    "set",
+    "edit"
+   ]
+  },
+  "customfield_16777": {
+   "required": false,
+   "operations": [
+    "add",
+    "set",
+    "remove"
+   ]
+  },
+  "customfield_16728": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "customfield_16727": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "attachment": {
+   "required": false,
+   "operations": [
+    "set",
+    "copy"
+   ]
+  },
+  "customfield_16906": {
+   "required": false,
+   "operations": [
+    "set"
+   ],
+   "allowedValues": [
+    {
+     "id": "15745",
+     "value": "Yes"
+    },
+    {
+     "id": "15746",
+     "value": "No"
+    }
+   ]
+  },
+  "summary": {
+   "required": true,
+   "operations": [
+    "set"
+   ]
+  },
+  "customfield_16486": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "customfield_17299": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "customfield_16781": {
+   "required": false,
+   "operations": [
+    "set"
+   ],
+   "allowedValues": [
+    {
+     "id": "25001",
+     "value": "Configuration / environment specific"
+    },
+    {
+     "id": "45123",
+     "value": "Logic / algorithm error"
+    },
+    {
+     "id": "25002",
+     "value": "Edge case not anticipated"
+    },
+    {
+     "id": "45124",
+     "value": "Upgrade / migration"
+    },
+    {
+     "id": "45125",
+     "value": "Race condition / concurrency"
+    },
+    {
+     "id": "45126",
+     "value": "Performance / scalability"
+    },
+    {
+     "id": "25003",
+     "value": "Missing input validation"
+    },
+    {
+     "id": "25004",
+     "value": "3rd party SDK / API behavior"
+    },
+    {
+     "id": "25005",
+     "value": "Race condition / Concurrency issue"
+    },
+    {
+     "id": "45127",
+     "value": "Security defect"
+    },
+    {
+     "id": "45128",
+     "value": "UI / UX defect"
+    },
+    {
+     "id": "15591",
+     "value": "Others"
+    }
+   ]
+  },
+  "customfield_17298": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "customfield_10000": {
+   "required": false,
+   "operations": [
+    "add",
+    "set",
+    "remove"
+   ],
+   "allowedValues": [
+    {
+     "id": "10000",
+     "value": "Impediment"
+    }
+   ]
+  },
+  "customfield_17312": {
+   "required": false,
+   "operations": [
+    "add",
+    "set",
+    "remove"
+   ],
+   "allowedValues": [
+    {
+     "id": "17502",
+     "value": "Functionality"
+    },
+    {
+     "id": "17503",
+     "value": "Usability"
+    },
+    {
+     "id": "17504",
+     "value": "Performance"
+    },
+    {
+     "id": "17505",
+     "value": "Reliability"
+    },
+    {
+     "id": "17506",
+     "value": "Maintainability"
+    },
+    {
+     "id": "17507",
+     "value": "Portability"
+    },
+    {
+     "id": "17508",
+     "value": "Security"
+    },
+    {
+     "id": "17509",
+     "value": "Compatibility"
+    }
+   ]
+  },
+  "priority": {
+   "required": false,
+   "operations": [
+    "set"
+   ],
+   "allowedValues": [
+    {
+     "id": "1",
+     "name": "Blocker"
+    },
+    {
+     "id": "2",
+     "name": "Critical"
+    },
+    {
+     "id": "3",
+     "name": "Major"
+    },
+    {
+     "id": "4",
+     "name": "Minor"
+    },
+    {
+     "id": "10000",
+     "name": "IFFEasy"
+    },
+    {
+     "id": "5",
+     "name": "Trivial"
+    }
+   ]
+  },
+  "customfield_10521": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "labels": {
+   "required": false,
+   "operations": [
+    "add",
+    "set",
+    "remove"
+   ]
+  },
+  "customfield_16817": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "customfield_16819": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "customfield_16818": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "comment": {
+   "required": false,
+   "operations": [
+    "add",
+    "edit",
+    "remove"
+   ]
+  },
+  "issuelinks": {
+   "required": false,
+   "operations": [
+    "add",
+    "copy"
+   ]
+  },
+  "assignee": {
+   "required": false,
+   "operations": [
+    "set"
+   ]
+  },
+  "customfield_21369": {
+   "required": false,
+   "operations": [
+    "set"
+   ],
+   "allowedValues": [
+    {
+     "id": "23379",
+     "value": "Passed"
+    },
+    {
+     "id": "23380",
+     "value": "Failed"
+    }
+   ]
+  },
+  "customfield_20950": {
+   "required": false,
+   "operations": [
+    "add",
+    "set",
+    "remove"
+   ]
+  }
+ },
+ "comments": [
+  {
+   "id": "2754362",
+   "author": {
+    "accountId": "acc-11",
+    "displayName": "Taylor Novak"
+   },
+   "created": "2026-10-12T04:19:05.367-0700",
+   "body": {
+    "type": "doc",
+    "version": 1,
+    "content": [
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "Fixed in the PR: the chip input now reports its error to the form, and "
+       },
+       {
+        "type": "text",
+        "text": "canSave",
+        "marks": [
+         {
+          "type": "code"
+         }
+        ]
+       },
+       {
+        "type": "text",
+        "text": " reads every field error of the drawer."
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ],
+ "history": [
+  {
+   "id": "15900777",
+   "author": {
+    "accountId": "acc-3",
+    "displayName": "Automation for Jira"
+   },
+   "created": "2026-10-11T20:03:57.817-0700",
+   "items": [
+    {
+     "field": "Original Issue Type",
+     "fieldId": "customfield_17298",
+     "from": null,
+     "fromString": null,
+     "to": null,
+     "toString": "Bug"
+    }
+   ]
+  },
+  {
+   "id": "15900785",
+   "author": {
+    "accountId": "acc-12",
+    "displayName": "Casey Wu"
+   },
+   "created": "2026-10-11T20:04:08.101-0700",
+   "items": [
+    {
+     "field": "Link",
+     "from": null,
+     "fromString": null,
+     "to": "OPS-14549",
+     "toString": "This work item Relates OPS-14549"
+    }
+   ]
+  },
+  {
+   "id": "15900810",
+   "author": {
+    "accountId": "acc-12",
+    "displayName": "Casey Wu"
+   },
+   "created": "2026-10-11T20:04:33.995-0700",
+   "items": [
+    {
+     "field": "Attachment",
+     "fieldId": "attachment",
+     "from": null,
+     "fromString": null,
+     "to": "1162985",
+     "toString": "save-enabled-invalid-postcode.png"
+    }
+   ]
+  },
+  {
+   "id": "15900985",
+   "author": {
+    "accountId": "acc-12",
+    "displayName": "Casey Wu"
+   },
+   "created": "2026-10-11T20:07:54.024-0700",
+   "items": [
+    {
+     "field": "Link",
+     "from": null,
+     "fromString": null,
+     "to": "OPS-14549",
+     "toString": "This work item is caused by OPS-14549"
+    }
+   ]
+  },
+  {
+   "id": "15900986",
+   "author": {
+    "accountId": "acc-12",
+    "displayName": "Casey Wu"
+   },
+   "created": "2026-10-11T20:07:55.665-0700",
+   "items": [
+    {
+     "field": "Link",
+     "from": "OPS-14549",
+     "fromString": "This work item Relates OPS-14549",
+     "to": null,
+     "toString": null
+    }
+   ]
+  },
+  {
+   "id": "15911525",
+   "author": {
+    "accountId": "acc-11",
+    "displayName": "Taylor Novak"
+   },
+   "created": "2026-10-12T04:17:53.089-0700",
+   "items": [
+    {
+     "field": "assignee",
+     "fieldId": "assignee",
+     "from": "acc-6",
+     "fromString": "Jordan Park",
+     "to": "acc-11",
+     "toString": "Taylor Novak"
+    }
+   ]
+  },
+  {
+   "id": "15911532",
+   "author": {
+    "accountId": "acc-11",
+    "displayName": "Taylor Novak"
+   },
+   "created": "2026-10-12T04:17:59.669-0700",
+   "items": [
+    {
+     "field": "Developers",
+     "fieldId": "customfield_16777",
+     "from": null,
+     "fromString": null,
+     "to": "[acc-11]",
+     "toString": "[Taylor Novak]"
+    }
+   ]
+  },
+  {
+   "id": "15911577",
+   "author": {
+    "accountId": "acc-11",
+    "displayName": "Taylor Novak"
+   },
+   "created": "2026-10-12T04:19:09.029-0700",
+   "items": [
+    {
+     "field": "Fix Version",
+     "fieldId": "fixVersions",
+     "from": null,
+     "fromString": null,
+     "to": "78322",
+     "toString": "OPS-4.7.0"
+    }
+   ]
+  },
+  {
+   "id": "15912003",
+   "author": {
+    "accountId": "acc-11",
+    "displayName": "Taylor Novak"
+   },
+   "created": "2026-10-12T04:33:32.280-0700",
+   "items": [
+    {
+     "field": "Rank",
+     "fieldId": "customfield_11220",
+     "from": "",
+     "fromString": "",
+     "to": "",
+     "toString": "Ranked higher"
+    }
+   ]
+  },
+  {
+   "id": "15912005",
+   "author": {
+    "accountId": "acc-11",
+    "displayName": "Taylor Novak"
+   },
+   "created": "2026-10-12T04:33:32.574-0700",
+   "items": [
+    {
+     "field": "status",
+     "fieldId": "status",
+     "from": "13352",
+     "fromString": "To Do",
+     "to": "22878",
+     "toString": "Ready"
+    }
+   ]
+  },
+  {
+   "id": "15912008",
+   "author": {
+    "accountId": "acc-11",
+    "displayName": "Taylor Novak"
+   },
+   "created": "2026-10-12T04:33:39.738-0700",
+   "items": [
+    {
+     "field": "Rank",
+     "fieldId": "customfield_11220",
+     "from": "",
+     "fromString": "",
+     "to": "",
+     "toString": "Ranked lower"
+    }
+   ]
+  },
+  {
+   "id": "15921538",
+   "author": {
+    "accountId": "acc-12",
+    "displayName": "Casey Wu"
+   },
+   "created": "2026-10-12T23:33:08.281-0700",
+   "items": [
+    {
+     "field": "RemoteWorkItemLink",
+     "from": null,
+     "fromString": null,
+     "to": "472012",
+     "toString": "This work item links to \"Page (Confluence)\""
+    }
+   ]
+  },
+  {
+   "id": "15933742",
+   "author": {
+    "accountId": "acc-11",
+    "displayName": "Taylor Novak"
+   },
+   "created": "2026-10-13T04:53:48.635-0700",
+   "items": [
+    {
+     "field": "Root cause description",
+     "fieldId": "customfield_16595",
+     "from": null,
+     "fromString": null,
+     "to": "",
+     "toString": "The drawer computes {{canSave}} from the fields it validates on blur. The Excluded postcodes chip input validates on Enter and keeps its error in local state, so the form never learns about it."
+    },
+    {
+     "field": "Solution",
+     "fieldId": "customfield_16727",
+     "from": null,
+     "fromString": null,
+     "to": "",
+     "toString": "Move the chip input error into the form state with {{setFieldError}}, and derive {{canSave}} from every field error of the drawer."
+    },
+    {
+     "field": "Acceptance criteria",
+     "fieldId": "customfield_16728",
+     "from": "",
+     "fromString": "* With an invalid postcode in Excluded postcodes, Save Changes is disabled.\n* Removing the invalid chip enables Save Changes again.\n* Weight from and Weight to keep their current behaviour.\n* A valid list of postcodes saves as before.",
+     "to": "",
+     "toString": "* With an invalid postcode in Excluded postcodes, Save Changes is disabled.\n* Removing the invalid chip enables Save Changes again.\n* Weight from and Weight to keep their current behaviour.\n* A valid list of postcodes saves as before."
+    },
+    {
+     "field": "Impact",
+     "fieldId": "customfield_17581",
+     "from": null,
+     "fromString": null,
+     "to": "",
+     "toString": "Frontend: Admin, Shipping rules drawer (Excluded postcodes field). No backend or API change."
+    }
+   ]
+  },
+  {
+   "id": "15935389",
+   "author": {
+    "accountId": "acc-11",
+    "displayName": "Taylor Novak"
+   },
+   "created": "2026-10-13T06:06:37.698-0700",
+   "items": [
+    {
+     "field": "timeestimate",
+     "fieldId": "timeestimate",
+     "from": null,
+     "fromString": null,
+     "to": "0",
+     "toString": "0"
+    },
+    {
+     "field": "timespent",
+     "fieldId": "timespent",
+     "from": null,
+     "fromString": null,
+     "to": "1800",
+     "toString": "1800"
+    },
+    {
+     "field": "WorklogId",
+     "from": null,
+     "fromString": null,
+     "to": "288386",
+     "toString": "288386"
+    }
+   ]
+  },
+  {
+   "id": "15935392",
+   "author": {
+    "accountId": "acc-11",
+    "displayName": "Taylor Novak"
+   },
+   "created": "2026-10-13T06:06:47.361-0700",
+   "items": [
+    {
+     "field": "status",
+     "fieldId": "status",
+     "from": "22878",
+     "fromString": "Ready",
+     "to": "13353",
+     "toString": "In Progress"
+    }
+   ]
+  },
+  {
+   "id": "15935394",
+   "author": {
+    "accountId": "acc-11",
+    "displayName": "Taylor Novak"
+   },
+   "created": "2026-10-13T06:06:54.944-0700",
+   "items": [
+    {
+     "field": "assignee",
+     "fieldId": "assignee",
+     "from": "acc-11",
+     "fromString": "Taylor Novak",
+     "to": null,
+     "toString": null
+    },
+    {
+     "field": "status",
+     "fieldId": "status",
+     "from": "13353",
+     "fromString": "In Progress",
+     "to": "13411",
+     "toString": "Review"
+    }
+   ]
+  },
+  {
+   "id": "15943695",
+   "author": {
+    "accountId": "acc-11",
+    "displayName": "Taylor Novak"
+   },
+   "created": "2026-10-13T23:17:39.161-0700",
+   "items": [
+    {
+     "field": "Root cause",
+     "fieldId": "customfield_16781",
+     "from": null,
+     "fromString": null,
+     "to": "25003",
+     "toString": "Missing input validation"
+    }
+   ]
+  }
+ ],
+ "remoteLinks": [
+  {
+   "id": "472012",
+   "url": "https://acme.atlassian.net/wiki/pages/viewpage.action?pageId=7340035",
+   "title": "QA-OPS 4.6.1 Hotfix",
+   "application": "com.atlassian.confluence",
+   "relationship": "mentioned in"
+  }
+ ],
+ "locked": [],
+ "updated": "2026-10-13T23:17:39.161-0700",
+ "fetchedAt": "2026-10-14T07:00:00.000Z",
+ "confluence": {}
+}

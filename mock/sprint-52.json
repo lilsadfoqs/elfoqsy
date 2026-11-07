@@ -1,0 +1,241 @@
+{
+  "jira": {
+    "site": "https://acme.atlassian.net",
+    "storyPointsField": "customfield_16486",
+    "sprintField": "customfield_10521",
+    "sprints": [
+      {
+        "board": "SHOP",
+        "name": "SHOP Sprint 52",
+        "start": "2026-10-07",
+        "end": "2026-11-11",
+        "state": "active"
+      },
+      {
+        "board": "CORE",
+        "name": "Platform 2026-10",
+        "start": "2026-10-06",
+        "end": "2026-10-30",
+        "state": "active"
+      }
+    ]
+  },
+  "openTickets": [
+    {
+      "key": "SHOP-3049",
+      "board": "SHOP",
+      "summary": "Refund status cannot change from Approved to Rejected",
+      "type": "Bug",
+      "status": "Blocked",
+      "priority": "Critical",
+      "storyPoints": 5,
+      "sprintsCarried": 2,
+      "epic": null,
+      "sprint": "SHOP Sprint 52",
+      "reporter": "Sam Lee",
+      "created": "29 Jun 2026",
+      "updated": "8 Oct 2026",
+      "labels": [],
+      "linked": [],
+      "descriptionSummary": "Actual: setting \"approved\": false on a default auto-approved refund reason (Damaged item, Wrong size, Late delivery, Duplicate charge, Price adjustment) does not change the refund status to Rejected.\n\nExpected: add every refund reason that is not a rejected or failed reason to the default auto_approve_reasons; \"approved\": false forces a rejection for any reason; removing a default reason forces a rejection; the forced rejection returns the reason in rejected_reasons, for example refund:0. Recheck the list whenever a new refund reason is added.",
+      "elfoqsyNote": "Blocked and already carried over once. Want me to ask Sam Lee what it is waiting on?"
+    },
+    {
+      "key": "SHOP-3472",
+      "board": "SHOP",
+      "summary": "Update vulnerable dependencies flagged for release 2.22.0",
+      "type": "Story",
+      "status": "In progress",
+      "priority": "Major",
+      "storyPoints": 2,
+      "sprintsCarried": 1,
+      "epic": "Enhance Security Compliance (SHOP-805)",
+      "sprint": "SHOP Sprint 52",
+      "reporter": "Quinn Bauer",
+      "created": "1 Oct 2026",
+      "updated": "8 Oct 2026",
+      "labels": [
+        "skip_qa"
+      ],
+      "linked": [],
+      "descriptionSummary": "npm audit reports High-severity vulnerabilities in both 2.22.0 lockfiles: shop-worker 2.22.0 has 26 (16 High) and shop-shared 2.22.0 has 14 (10 High). The axios critical from 2.21.0 is already fixed by SHOP-3438.\n\nScope: all High findings across 8 packages, including adm-zip (replaced by the streaming CSV importer), js-yaml, form-data, grpc-js, nanoid and protobufjs. New code must pass the SonarQube quality gate.\n\nPull requests: shop-shared #159 (merge first), then shop-worker #212.\n\nValidation: local audit shows 0 High and 0 Critical, unit tests pass. Integration deployment is pending.",
+      "elfoqsyNote": "Merge shop-shared #159 first, then #212. The integration deploy is still pending."
+    },
+    {
+      "key": "SHOP-3546",
+      "board": "SHOP",
+      "summary": "[payments] Provider errors are dropped: checkout gets payment_info { retried: 0 } when the provider call fails (e.g. 429 throttle)",
+      "type": "Bug",
+      "status": "To do",
+      "priority": "Major",
+      "storyPoints": 2,
+      "sprintsCarried": 1,
+      "epic": null,
+      "sprint": "SHOP Sprint 52",
+      "reporter": "Quinn Bauer",
+      "created": "8 Oct 2026",
+      "updated": "8 Oct 2026",
+      "labels": [
+        "payments-webhook",
+        "payments"
+      ],
+      "linked": [
+        "CORE-18891",
+        "SHOP-3544"
+      ],
+      "descriptionSummary": "When shop-api cannot get an answer from the payment provider, the error never reaches checkout. Checkout receives payment_info { retried: 0 }, which looks the same as \"the provider had nothing to report\", and failure_reasons has no payment: entry.\n\nEvidence: the same order paid twice on integration on 7 Oct. The first call was throttled by the provider (429, 500 requests per minute) and the error was dropped; the second was declined by the provider.\n\nRoot cause: the payment client puts the error inside the details JSON instead of the top-level error_code and error_details, so the webhook handler records nothing.\n\nFix: lift error_code and error_details from details in PaymentClient, add the same fallback in the webhook handler, and add unit tests with the 429 payload.",
+      "elfoqsyNote": "Same root cause as CORE-18891. This one makes the 429 visible; that one raises the limit."
+    },
+    {
+      "key": "CORE-18891",
+      "board": "CORE",
+      "summary": "Raise the rate limit for the Acme Shop payment API keys in all environments (429 at 500/min)",
+      "type": "Task",
+      "status": "To do",
+      "priority": "Major",
+      "storyPoints": null,
+      "sprintsCarried": 1,
+      "epic": null,
+      "sprint": "Platform 2026-10",
+      "reporter": "Quinn Bauer",
+      "created": "8 Oct 2026",
+      "updated": "8 Oct 2026",
+      "labels": [
+        "shop",
+        "throttling",
+        "payments"
+      ],
+      "linked": [
+        "SHOP-3546",
+        "CORE-18161"
+      ],
+      "descriptionSummary": "shop-api calls the payment provider with its own API key, which falls back to the account default of 500 requests per minute. The same key is used by every Acme Shop environment, so non-prod traffic and test automation share the limit with prod.\n\nVolume on 7 to 8 Oct: integration peaks at 15 payment calls per minute, staging at 23. Prod checkouts peak at 614 per minute, so prod would be throttled as soon as the new checkout is enabled there.\n\nRequest: set the rate limit on the key to 2000 per minute in every environment and region; make sure no account-wide limit overrides it; check the refunds quota; and issue separate keys for non-prod environments.",
+      "elfoqsyNote": "Sits on the Platform board. Your 3546 only surfaces the error; this one raises the limit."
+    },
+    {
+      "key": "SHOP-1164",
+      "board": "SHOP",
+      "summary": "Order export never completes when the image resizer stalls",
+      "type": "Bug",
+      "status": "To do",
+      "priority": "Major",
+      "storyPoints": 1,
+      "sprintsCarried": 9,
+      "epic": null,
+      "sprint": "SHOP Sprint 52",
+      "reporter": "Morgan Diaz",
+      "created": "3 Oct 2024",
+      "updated": "8 Oct 2026",
+      "labels": [],
+      "linked": [],
+      "descriptionSummary": "Completed steps have already been written to the cache, so the Redis timeout is never triggered and the order export waits for product thumbnails that never come when the image resizer stalls.\n\nTo reproduce: delete export-step-timeout, then start an export with export_id exp_resizer_timeout.",
+      "elfoqsyNote": "Open since October 2024 and carried over 9 sprints. Close it, or move it out of the sprint?"
+    },
+    {
+      "key": "SHOP-3533",
+      "board": "SHOP",
+      "summary": "Checkout benchmark v2: publish results to Confluence, and approve baselines there",
+      "type": "Task",
+      "status": "To do",
+      "priority": "Minor",
+      "storyPoints": 3,
+      "sprintsCarried": 1,
+      "epic": "Checkout performance benchmark (SHOP-3133)",
+      "sprint": "SHOP Sprint 52",
+      "reporter": "Alex Rivera (you)",
+      "created": "7 Oct 2026",
+      "updated": "7 Oct 2026",
+      "labels": [
+        "skip_qa"
+      ],
+      "linked": [],
+      "descriptionSummary": "Every benchmarked build of shop-api gets its own [BENCH] page in Confluence, built from Checkout Benchmark v2 results. A new baseline is approved on that page instead of with shop-bench baseline approve.\n\nThe page shows the six checks, the outcome, the baseline it was compared with, and why a run is not comparable. A pass shows \"pending approval\"; approving it on the page rolls the baseline and records who approved it.\n\nStill to decide: where the pages live, which service account publishes, and a test on a scratch space first.\n\nDone when a night of runs updates their pages on its own and approving a pass updates the baseline.",
+      "elfoqsyNote": "You wrote this yesterday. Still open: where the pages live and which account publishes."
+    },
+    {
+      "key": "SHOP-2091",
+      "board": "SHOP",
+      "summary": "Bundle discount applied to the whole cart when cart.split_bundles = false",
+      "type": "Bug",
+      "status": "To do",
+      "priority": "Minor",
+      "storyPoints": 2,
+      "sprintsCarried": 12,
+      "epic": null,
+      "sprint": "SHOP Sprint 52",
+      "reporter": "Riley Chen",
+      "created": "28 Aug 2025",
+      "updated": "8 Oct 2026",
+      "labels": [],
+      "linked": [],
+      "descriptionSummary": "When a cart is priced with split_bundles: false, the bundle lines are correctly kept together, but the bundle discount is applied to every line of the cart instead of the bundle's own items.\n\nActual: a 10% bundle discount reduces the whole cart total.\nExpected: the 10% bundle discount reduces only the bundle's items.",
+      "elfoqsyNote": "Carried over 12 sprints. Is it still a bug, or a won't fix?"
+    }
+  ],
+  "closedTickets": [
+    {
+      "key": "SHOP-3490",
+      "summary": "Release 2.22.0",
+      "type": "Task",
+      "status": "Done",
+      "priority": "Blocker",
+      "storyPoints": 5
+    },
+    {
+      "key": "SHOP-2753",
+      "summary": "Enable skip_empty_cart_reminders",
+      "type": "Story",
+      "status": "Released",
+      "priority": "Critical",
+      "storyPoints": 2
+    },
+    {
+      "key": "SHOP-3134",
+      "summary": "Set up the benchmark environment and capture baseline checkout metrics per endpoint",
+      "type": "Story",
+      "status": "Cancelled",
+      "priority": "Minor",
+      "storyPoints": 8
+    },
+    {
+      "key": "SHOP-2302",
+      "summary": "Checkout failed with a gift card and a coupon",
+      "type": "Bug",
+      "status": "Cancelled",
+      "priority": "Minor",
+      "storyPoints": 3
+    },
+    {
+      "key": "SHOP-2121",
+      "summary": "Inventory sync returned error code 3",
+      "type": "Bug",
+      "status": "Cancelled",
+      "priority": "Minor",
+      "storyPoints": 2
+    },
+    {
+      "key": "SHOP-1615",
+      "summary": "Inconsistent currency when multi_currency is off",
+      "type": "Bug",
+      "status": "Cancelled",
+      "priority": "Minor",
+      "storyPoints": 1
+    }
+  ],
+  "pullRequests": [
+    {
+      "repo": "shop-shared",
+      "number": 159,
+      "state": "open",
+      "ticket": "SHOP-3472",
+      "note": "merge first"
+    },
+    {
+      "repo": "shop-worker",
+      "number": 212,
+      "state": "open",
+      "ticket": "SHOP-3472",
+      "note": "depends on #159"
+    }
+  ]
+}

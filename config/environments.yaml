@@ -1,0 +1,36 @@
+# Environments agents may reach through the orchestrator's proxies. The demo company's setup: replace it with yours.
+# Account ids, names and contexts only, never secrets.
+region: us-west-2
+environments:
+  dev:
+    aws_profile: dev-shop
+    aws_account: "111111111111"
+    kube_context: arn:aws:eks:us-west-2:111111111111:cluster/dev-shop
+    namespace: shop-dev
+    coralogix_application: shop-dev
+  staging:
+    aws_profile: staging-shop
+    aws_account: "222222222222"
+    kube_context: arn:aws:eks:us-west-2:222222222222:cluster/staging-shop
+    namespace: shop-staging
+    coralogix_application: shop-staging
+  integration:
+    aws_profile: integration-shop
+    aws_account: "333333333333"
+    kube_context: arn:aws:eks:us-west-2:333333333333:cluster/integration-shop
+    namespace: shop-integration
+    coralogix_application: shop-integration
+  # No minikube context exists yet, so local is unavailable. When one appears:
+  # local:
+  #   kube_context: minikube
+  #   namespace: shop-local
+# The test harness: the only deployments an agent may change (image, restart, scale). Product services are yours to
+# deploy.
+harness_deployments:
+  - shop-integration-test
+prod:
+  access: none        # anything resolving here is tier 3
+# Contexts that exist but are not ours: every call is asked (tier 2), reads included.
+unknown_contexts:
+  - automation-test   # not ours to use
+  - integration-usw2  # unknown

@@ -1,0 +1,4323 @@
+{
+ "issue": {
+  "id": "2668733",
+  "key": "SHOP-3561",
+  "names": {
+   "statuscategorychangedate": "Status category changed",
+   "customfield_17460": "Design",
+   "customfield_17581": "Impact",
+   "issuetype": "Issue Type",
+   "timespent": "Time Spent",
+   "customfield_16698": "End date",
+   "project": "Project",
+   "customfield_17269": "Time taken at In Progress",
+   "fixVersions": "Fix versions",
+   "aggregatetimespent": "Σ Time Spent",
+   "statusCategory": "Status category",
+   "resolution": "Resolution",
+   "customfield_17703": "Circle Time Recorded",
+   "customfield_17702": "End Ticket Timestamp",
+   "customfield_16459": "Start date",
+   "customfield_17701": "Start Ticket Timestamp",
+   "customfield_16728": "Acceptance criteria",
+   "customfield_16727": "Solution",
+   "resolutiondate": "Resolved",
+   "workratio": "Work Ratio",
+   "customfield_17691": "Checklist Progress %",
+   "issuerestriction": "Restrict to",
+   "lastViewed": "Last Viewed",
+   "customfield_17690": "Checklist Progress",
+   "customfield_21870": "Customer Name",
+   "customfield_16486": "Story point estimate",
+   "created": "Created",
+   "customfield_17693": "Checklist Text (view-only)",
+   "customfield_10021": "First Response",
+   "priority": "Priority",
+   "labels": "Labels",
+   "timeestimate": "Remaining Estimate",
+   "aggregatetimeoriginalestimate": "Σ Original Estimate",
+   "versions": "Affects versions",
+   "issuelinks": "Linked work items",
+   "assignee": "Assignee",
+   "updated": "Updated",
+   "status": "Status",
+   "components": "Components",
+   "customfield_17282": "QA Assignee",
+   "customfield_17564": "Reviewer",
+   "customfield_17563": "Vulnerability",
+   "timeoriginalestimate": "Original estimate",
+   "customfield_13320": "Development",
+   "description": "Description",
+   "customfield_11220": "Rank",
+   "customfield_17566": "Failed Acceptance Criteria",
+   "timetracking": "Time tracking",
+   "security": "Security Level",
+   "customfield_31871": "Agent Sessions",
+   "attachment": "Attachment",
+   "aggregatetimeestimate": "Σ Remaining Estimate",
+   "customfield_17274": "Entered in progress",
+   "summary": "Summary",
+   "customfield_17272": "Time taken at QA",
+   "creator": "Creator",
+   "customfield_17271": "Time taken at Peer Review",
+   "customfield_17278": "Entered ready to merge",
+   "customfield_17277": "Entered QA",
+   "subtasks": "Sub-tasks",
+   "customfield_17276": "Entered peer review",
+   "reporter": "Reporter",
+   "aggregateprogress": "Σ Progress",
+   "customfield_10000": "Flagged",
+   "customfield_16747": "Checklist Text",
+   "customfield_16746": "Checklist Content YAML",
+   "customfield_16745": "Checklist Completed",
+   "customfield_10521": "Sprint",
+   "environment": "Environment",
+   "duedate": "Due date",
+   "progress": "Progress",
+   "comment": "Comment",
+   "worklog": "Log Work",
+   "customfield_21369": "Dev Self-Testing Quality"
+  },
+  "schema": {
+   "statuscategorychangedate": {
+    "type": "datetime",
+    "system": "statuscategorychangedate"
+   },
+   "customfield_17460": {
+    "type": "array",
+    "items": "design.field.name",
+    "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:designcf",
+    "customId": 17460
+   },
+   "customfield_17581": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+    "customId": 17581
+   },
+   "issuetype": {
+    "type": "issuetype",
+    "system": "issuetype"
+   },
+   "timespent": {
+    "type": "number",
+    "system": "timespent"
+   },
+   "customfield_16698": {
+    "type": "date",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datepicker",
+    "customId": 16698
+   },
+   "project": {
+    "type": "project",
+    "system": "project"
+   },
+   "customfield_17269": {
+    "type": "number",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:float",
+    "customId": 17269
+   },
+   "fixVersions": {
+    "type": "array",
+    "items": "version",
+    "system": "fixVersions"
+   },
+   "aggregatetimespent": {
+    "type": "number",
+    "system": "aggregatetimespent"
+   },
+   "statusCategory": {
+    "type": "statusCategory",
+    "system": "statusCategory"
+   },
+   "resolution": {
+    "type": "resolution",
+    "system": "resolution"
+   },
+   "customfield_17703": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+    "customId": 17703
+   },
+   "customfield_17702": {
+    "type": "datetime",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datetime",
+    "customId": 17702
+   },
+   "customfield_16459": {
+    "type": "date",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datepicker",
+    "customId": 16459
+   },
+   "customfield_17701": {
+    "type": "datetime",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datetime",
+    "customId": 17701
+   },
+   "customfield_16728": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+    "customId": 16728
+   },
+   "customfield_16727": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+    "customId": 16727
+   },
+   "resolutiondate": {
+    "type": "datetime",
+    "system": "resolutiondate"
+   },
+   "workratio": {
+    "type": "number",
+    "system": "workratio"
+   },
+   "customfield_17691": {
+    "type": "number",
+    "custom": "ari:cloud:ecosystem::extension/3b4920b4-90b9-4cc9-8a22-acd6fbb80aa8/7bebf23e-b876-4077-817b-d47855989c5c/static/issue-checklist-progress-percent-field",
+    "customId": 17691,
+    "configuration": {
+     "customRenderer": false,
+     "readOnly": false,
+     "environment": "PRODUCTION"
+    }
+   },
+   "issuerestriction": {
+    "type": "issuerestriction",
+    "system": "issuerestriction"
+   },
+   "lastViewed": {
+    "type": "datetime",
+    "system": "lastViewed"
+   },
+   "customfield_17690": {
+    "type": "string",
+    "custom": "ari:cloud:ecosystem::extension/3b4920b4-90b9-4cc9-8a22-acd6fbb80aa8/7bebf23e-b876-4077-817b-d47855989c5c/static/issue-checklist-progress-field",
+    "customId": 17690,
+    "configuration": {
+     "customRenderer": false,
+     "readOnly": false,
+     "environment": "PRODUCTION"
+    }
+   },
+   "customfield_21870": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+    "customId": 21870
+   },
+   "customfield_16486": {
+    "type": "number",
+    "custom": "com.pyxis.greenhopper.jira:jsw-story-points",
+    "customId": 16486
+   },
+   "created": {
+    "type": "datetime",
+    "system": "created"
+   },
+   "customfield_17693": {
+    "type": "string",
+    "custom": "ari:cloud:ecosystem::extension/3b4920b4-90b9-4cc9-8a22-acd6fbb80aa8/7bebf23e-b876-4077-817b-d47855989c5c/static/checklist-text-view-only",
+    "customId": 17693,
+    "configuration": {
+     "customRenderer": false,
+     "readOnly": false,
+     "environment": "PRODUCTION"
+    }
+   },
+   "customfield_10021": {
+    "type": "datetime",
+    "custom": "com.atlassian.jira.ext.charting:firstresponsedate",
+    "customId": 10021
+   },
+   "priority": {
+    "type": "priority",
+    "system": "priority"
+   },
+   "labels": {
+    "type": "array",
+    "items": "string",
+    "system": "labels"
+   },
+   "timeestimate": {
+    "type": "number",
+    "system": "timeestimate"
+   },
+   "aggregatetimeoriginalestimate": {
+    "type": "number",
+    "system": "aggregatetimeoriginalestimate"
+   },
+   "versions": {
+    "type": "array",
+    "items": "version",
+    "system": "versions"
+   },
+   "issuelinks": {
+    "type": "array",
+    "items": "issuelinks",
+    "system": "issuelinks"
+   },
+   "assignee": {
+    "type": "user",
+    "system": "assignee"
+   },
+   "updated": {
+    "type": "datetime",
+    "system": "updated"
+   },
+   "status": {
+    "type": "status",
+    "system": "status"
+   },
+   "components": {
+    "type": "array",
+    "items": "component",
+    "system": "components"
+   },
+   "customfield_17282": {
+    "type": "array",
+    "items": "user",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:people",
+    "customId": 17282,
+    "configuration": {
+     "isMulti": true
+    }
+   },
+   "customfield_17564": {
+    "type": "array",
+    "items": "user",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:people",
+    "customId": 17564,
+    "configuration": {
+     "isMulti": true
+    }
+   },
+   "customfield_17563": {
+    "type": "any",
+    "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:vulnerabilitycf",
+    "customId": 17563
+   },
+   "timeoriginalestimate": {
+    "type": "number",
+    "system": "timeoriginalestimate"
+   },
+   "customfield_13320": {
+    "type": "any",
+    "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:devsummarycf",
+    "customId": 13320
+   },
+   "description": {
+    "type": "string",
+    "system": "description"
+   },
+   "customfield_11220": {
+    "type": "any",
+    "custom": "com.pyxis.greenhopper.jira:gh-lexo-rank",
+    "customId": 11220
+   },
+   "customfield_17566": {
+    "type": "option",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+    "customId": 17566
+   },
+   "timetracking": {
+    "type": "timetracking",
+    "system": "timetracking"
+   },
+   "security": {
+    "type": "securitylevel",
+    "system": "security"
+   },
+   "customfield_31871": {
+    "type": "array",
+    "items": "admin.customfield.type.agent.sessions.name",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:agent-sessions",
+    "customId": 31871
+   },
+   "attachment": {
+    "type": "array",
+    "items": "attachment",
+    "system": "attachment"
+   },
+   "aggregatetimeestimate": {
+    "type": "number",
+    "system": "aggregatetimeestimate"
+   },
+   "customfield_17274": {
+    "type": "datetime",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datetime",
+    "customId": 17274
+   },
+   "summary": {
+    "type": "string",
+    "system": "summary"
+   },
+   "customfield_17272": {
+    "type": "number",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:float",
+    "customId": 17272
+   },
+   "creator": {
+    "type": "user",
+    "system": "creator"
+   },
+   "customfield_17271": {
+    "type": "number",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:float",
+    "customId": 17271
+   },
+   "customfield_17278": {
+    "type": "datetime",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datetime",
+    "customId": 17278
+   },
+   "customfield_17277": {
+    "type": "datetime",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datetime",
+    "customId": 17277
+   },
+   "subtasks": {
+    "type": "array",
+    "items": "issuelinks",
+    "system": "subtasks"
+   },
+   "customfield_17276": {
+    "type": "datetime",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datetime",
+    "customId": 17276
+   },
+   "reporter": {
+    "type": "user",
+    "system": "reporter"
+   },
+   "aggregateprogress": {
+    "type": "progress",
+    "system": "aggregateprogress"
+   },
+   "customfield_10000": {
+    "type": "array",
+    "items": "option",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:multicheckboxes",
+    "customId": 10000
+   },
+   "customfield_16747": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+    "customId": 16747
+   },
+   "customfield_16746": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+    "customId": 16746
+   },
+   "customfield_16745": {
+    "type": "string",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+    "customId": 16745
+   },
+   "customfield_10521": {
+    "type": "array",
+    "items": "json",
+    "custom": "com.pyxis.greenhopper.jira:gh-sprint",
+    "customId": 10521
+   },
+   "environment": {
+    "type": "string",
+    "system": "environment"
+   },
+   "duedate": {
+    "type": "date",
+    "system": "duedate"
+   },
+   "progress": {
+    "type": "progress",
+    "system": "progress"
+   },
+   "comment": {
+    "type": "comments-page",
+    "system": "comment"
+   },
+   "worklog": {
+    "type": "array",
+    "items": "worklog",
+    "system": "worklog"
+   },
+   "customfield_21369": {
+    "type": "option",
+    "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+    "customId": 21369
+   }
+  },
+  "editmeta": {
+   "fields": {
+    "issuetype": {
+     "required": false,
+     "schema": {
+      "type": "issuetype",
+      "system": "issuetype"
+     },
+     "name": "Issue Type",
+     "key": "issuetype",
+     "operations": [],
+     "allowedValues": [
+      {
+       "id": "14533",
+       "description": "Tasks track small, distinct pieces of work.",
+       "name": "Task",
+       "subtask": false,
+       "entityId": "1888db5e-400f-482f-aebf-ee1a68436fe5",
+       "hierarchyLevel": 0
+      }
+     ]
+    },
+    "customfield_17581": {
+     "required": false,
+     "schema": {
+      "type": "string",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+      "customId": 17581
+     },
+     "name": "Impact",
+     "key": "customfield_17581",
+     "operations": [
+      "set"
+     ]
+    },
+    "parent": {
+     "required": false,
+     "schema": {
+      "type": "issuelink",
+      "system": "parent"
+     },
+     "name": "Parent",
+     "key": "parent",
+     "hasDefaultValue": false,
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_17460": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "design.field.name",
+      "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:designcf",
+      "customId": 17460
+     },
+     "name": "Design",
+     "key": "customfield_17460",
+     "autoCompleteUrl": "",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_17282": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "user",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:people",
+      "customId": 17282,
+      "configuration": {
+       "isMulti": true
+      }
+     },
+     "name": "QA Assignee",
+     "key": "customfield_17282",
+     "autoCompleteUrl": "https://acme.atlassian.net/rest/api/1.0/users/picker?fieldName=customfield_17282&showAvatar=true&query=",
+     "operations": [
+      "add",
+      "set",
+      "remove"
+     ]
+    },
+    "customfield_17564": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "user",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:people",
+      "customId": 17564,
+      "configuration": {
+       "isMulti": true
+      }
+     },
+     "name": "Reviewer",
+     "key": "customfield_17564",
+     "autoCompleteUrl": "https://acme.atlassian.net/rest/api/1.0/users/picker?fieldName=customfield_17564&showAvatar=true&query=",
+     "operations": [
+      "add",
+      "set",
+      "remove"
+     ]
+    },
+    "customfield_17563": {
+     "required": false,
+     "schema": {
+      "type": "any",
+      "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:vulnerabilitycf",
+      "customId": 17563
+     },
+     "name": "Vulnerability",
+     "key": "customfield_17563",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_13320": {
+     "required": false,
+     "schema": {
+      "type": "any",
+      "custom": "com.atlassian.jira.plugins.jira-development-integration-plugin:devsummarycf",
+      "customId": 13320
+     },
+     "name": "Development",
+     "key": "customfield_13320",
+     "operations": [
+      "set"
+     ]
+    },
+    "description": {
+     "required": false,
+     "schema": {
+      "type": "string",
+      "system": "description"
+     },
+     "name": "Description",
+     "key": "description",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_11220": {
+     "required": false,
+     "schema": {
+      "type": "any",
+      "custom": "com.pyxis.greenhopper.jira:gh-lexo-rank",
+      "customId": 11220
+     },
+     "name": "Rank",
+     "key": "customfield_11220",
+     "operations": [
+      "set"
+     ]
+    },
+    "fixVersions": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "version",
+      "system": "fixVersions"
+     },
+     "name": "Fix versions",
+     "key": "fixVersions",
+     "operations": [
+      "set",
+      "add",
+      "remove"
+     ],
+     "allowedValues": [
+      {
+       "id": "73172",
+       "name": "2.17.1",
+       "archived": false,
+       "released": true,
+       "releaseDate": "2026-05-20",
+       "userReleaseDate": "19/May/26",
+       "projectId": 15624
+      },
+      {
+       "id": "73205",
+       "name": "2.18.0",
+       "archived": false,
+       "released": true,
+       "startDate": "2026-05-18",
+       "releaseDate": "2026-06-11",
+       "userStartDate": "17/May/26",
+       "userReleaseDate": "10/Jun/26",
+       "projectId": 15624
+      },
+      {
+       "id": "73768",
+       "name": "2.17.2",
+       "archived": false,
+       "released": true,
+       "startDate": "2026-05-27",
+       "releaseDate": "2026-06-01",
+       "userStartDate": "26/May/26",
+       "userReleaseDate": "31/May/26",
+       "projectId": 15624
+      },
+      {
+       "id": "75320",
+       "name": "2.18.1",
+       "archived": false,
+       "released": true,
+       "startDate": "2026-06-16",
+       "releaseDate": "2026-06-17",
+       "userStartDate": "15/Jun/26",
+       "userReleaseDate": "16/Jun/26",
+       "projectId": 15624
+      },
+      {
+       "id": "75522",
+       "name": "2.19.0",
+       "archived": false,
+       "released": true,
+       "releaseDate": "2026-07-08",
+       "userReleaseDate": "07/Jul/26",
+       "projectId": 15624
+      },
+      {
+       "id": "76400",
+       "name": "2.18.2",
+       "archived": false,
+       "released": true,
+       "startDate": "2026-07-01",
+       "releaseDate": "2026-07-08",
+       "userStartDate": "30/Jun/26",
+       "userReleaseDate": "07/Jul/26",
+       "projectId": 15624
+      },
+      {
+       "id": "78355",
+       "name": "2.19.1",
+       "archived": false,
+       "released": true,
+       "releaseDate": "2026-07-20",
+       "userReleaseDate": "19/Jul/26",
+       "projectId": 15624
+      },
+      {
+       "id": "78658",
+       "name": "2.19.2",
+       "archived": false,
+       "released": true,
+       "startDate": "2026-07-31",
+       "releaseDate": "2026-07-31",
+       "userStartDate": "30/Jul/26",
+       "userReleaseDate": "30/Jul/26",
+       "projectId": 15624
+      },
+      {
+       "id": "79194",
+       "name": "2.20.0",
+       "archived": false,
+       "released": true,
+       "startDate": "2026-07-15",
+       "releaseDate": "2026-08-12",
+       "userStartDate": "14/Jul/26",
+       "userReleaseDate": "11/Aug/26",
+       "projectId": 15624
+      },
+      {
+       "id": "80046",
+       "name": "2.21.0",
+       "archived": false,
+       "released": true,
+       "startDate": "2026-08-25",
+       "releaseDate": "2026-09-09",
+       "userStartDate": "24/Aug/26",
+       "userReleaseDate": "08/Sep/26",
+       "projectId": 15624
+      },
+      {
+       "id": "80249",
+       "name": "2.22.0",
+       "archived": false,
+       "released": false,
+       "startDate": "2026-09-10",
+       "releaseDate": "2026-10-08",
+       "overdue": true,
+       "userStartDate": "09/Sep/26",
+       "userReleaseDate": "07/Oct/26",
+       "projectId": 15624
+      },
+      {
+       "id": "80325",
+       "name": "2.21.1",
+       "archived": false,
+       "released": false,
+       "startDate": "2026-10-09",
+       "releaseDate": "2026-10-14",
+       "overdue": false,
+       "userStartDate": "08/Oct/26",
+       "userReleaseDate": "13/Oct/26",
+       "projectId": 15624
+      }
+     ]
+    },
+    "customfield_17703": {
+     "required": false,
+     "schema": {
+      "type": "string",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+      "customId": 17703
+     },
+     "name": "Circle Time Recorded",
+     "key": "customfield_17703",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_17702": {
+     "required": false,
+     "schema": {
+      "type": "datetime",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datetime",
+      "customId": 17702
+     },
+     "name": "End Ticket Timestamp",
+     "key": "customfield_17702",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_17701": {
+     "required": false,
+     "schema": {
+      "type": "datetime",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:datetime",
+      "customId": 17701
+     },
+     "name": "Start Ticket Timestamp",
+     "key": "customfield_17701",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_16728": {
+     "required": false,
+     "schema": {
+      "type": "string",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+      "customId": 16728
+     },
+     "name": "Acceptance criteria",
+     "key": "customfield_16728",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_16727": {
+     "required": false,
+     "schema": {
+      "type": "string",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+      "customId": 16727
+     },
+     "name": "Solution",
+     "key": "customfield_16727",
+     "operations": [
+      "set"
+     ]
+    },
+    "attachment": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "attachment",
+      "system": "attachment"
+     },
+     "name": "Attachment",
+     "key": "attachment",
+     "operations": [
+      "set",
+      "copy"
+     ]
+    },
+    "summary": {
+     "required": true,
+     "schema": {
+      "type": "string",
+      "system": "summary"
+     },
+     "name": "Summary",
+     "key": "summary",
+     "operations": [
+      "set"
+     ]
+    },
+    "issuerestriction": {
+     "required": false,
+     "schema": {
+      "type": "issuerestriction",
+      "system": "issuerestriction"
+     },
+     "name": "Restrict to",
+     "key": "issuerestriction",
+     "operations": [
+      "set"
+     ],
+     "allowedValues": []
+    },
+    "customfield_21870": {
+     "required": false,
+     "schema": {
+      "type": "string",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+      "customId": 21870
+     },
+     "name": "Customer Name",
+     "key": "customfield_21870",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_16486": {
+     "required": false,
+     "schema": {
+      "type": "number",
+      "custom": "com.pyxis.greenhopper.jira:jsw-story-points",
+      "customId": 16486
+     },
+     "name": "Story point estimate",
+     "key": "customfield_16486",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_10000": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "option",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:multicheckboxes",
+      "customId": 10000
+     },
+     "name": "Flagged",
+     "key": "customfield_10000",
+     "operations": [
+      "add",
+      "set",
+      "remove"
+     ],
+     "allowedValues": [
+      {
+       "value": "Impediment",
+       "id": "10000"
+      }
+     ]
+    },
+    "priority": {
+     "required": false,
+     "schema": {
+      "type": "priority",
+      "system": "priority"
+     },
+     "name": "Priority",
+     "key": "priority",
+     "operations": [
+      "set"
+     ],
+     "allowedValues": [
+      {
+       "name": "Blocker",
+       "id": "1"
+      },
+      {
+       "name": "Critical",
+       "id": "2"
+      },
+      {
+       "name": "Major",
+       "id": "3"
+      },
+      {
+       "name": "Minor",
+       "id": "4"
+      },
+      {
+       "name": "IFFEasy",
+       "id": "10000"
+      },
+      {
+       "name": "Trivial",
+       "id": "5"
+      }
+     ]
+    },
+    "customfield_10521": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "json",
+      "custom": "com.pyxis.greenhopper.jira:gh-sprint",
+      "customId": 10521
+     },
+     "name": "Sprint",
+     "key": "customfield_10521",
+     "operations": [
+      "set"
+     ]
+    },
+    "labels": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "string",
+      "system": "labels"
+     },
+     "name": "Labels",
+     "key": "labels",
+     "autoCompleteUrl": "https://acme.atlassian.net/rest/api/1.0/labels/2668733/suggest?query=",
+     "operations": [
+      "add",
+      "set",
+      "remove"
+     ]
+    },
+    "environment": {
+     "required": false,
+     "schema": {
+      "type": "string",
+      "system": "environment"
+     },
+     "name": "Environment",
+     "key": "environment",
+     "operations": [
+      "set"
+     ]
+    },
+    "comment": {
+     "required": false,
+     "schema": {
+      "type": "comments-page",
+      "system": "comment"
+     },
+     "name": "Comment",
+     "key": "comment",
+     "operations": [
+      "add",
+      "edit",
+      "remove"
+     ]
+    },
+    "issuelinks": {
+     "required": false,
+     "schema": {
+      "type": "array",
+      "items": "issuelinks",
+      "system": "issuelinks"
+     },
+     "name": "Linked work items",
+     "key": "issuelinks",
+     "autoCompleteUrl": "https://acme.atlassian.net/rest/api/3/issue/picker?currentProjectId=&showSubTaskParent=true&showSubTasks=true&currentIssueKey=SHOP-3561&query=",
+     "operations": [
+      "add",
+      "copy"
+     ]
+    },
+    "assignee": {
+     "required": false,
+     "schema": {
+      "type": "user",
+      "system": "assignee"
+     },
+     "name": "Assignee",
+     "key": "assignee",
+     "autoCompleteUrl": "https://acme.atlassian.[redacted secret]?issueKey=SHOP-3561&query=",
+     "operations": [
+      "set"
+     ]
+    },
+    "customfield_21369": {
+     "required": false,
+     "schema": {
+      "type": "option",
+      "custom": "com.atlassian.jira.plugin.system.customfieldtypes:select",
+      "customId": 21369
+     },
+     "name": "Dev Self-Testing Quality",
+     "key": "customfield_21369",
+     "operations": [
+      "set"
+     ],
+     "allowedValues": [
+      {
+       "value": "Passed",
+       "id": "23379"
+      },
+      {
+       "value": "Failed",
+       "id": "23380"
+      }
+     ]
+    }
+   }
+  },
+  "changelog": {
+   "startAt": 0,
+   "maxResults": 22,
+   "total": 22,
+   "histories": [
+    {
+     "id": "15941649",
+     "author": {
+      "accountId": "acc-3",
+      "displayName": "Automation for Jira",
+      "active": true,
+      "accountType": "app"
+     },
+     "created": "2026-10-13T20:51:36.520-0700",
+     "items": [
+      {
+       "field": "Dev Self-Testing Quality",
+       "fieldtype": "custom",
+       "fieldId": "customfield_21369",
+       "from": null,
+       "fromString": null,
+       "to": "23379",
+       "toString": "Passed"
+      }
+     ],
+     "historyMetadata": {}
+    },
+    {
+     "id": "15941647",
+     "author": {
+      "accountId": "acc-3",
+      "displayName": "Automation for Jira",
+      "active": true,
+      "accountType": "app"
+     },
+     "created": "2026-10-13T20:51:36.222-0700",
+     "items": [
+      {
+       "field": "End Ticket Timestamp",
+       "fieldtype": "custom",
+       "fieldId": "customfield_17702",
+       "from": null,
+       "fromString": null,
+       "to": "2026-10-13T20:51:00-0700",
+       "toString": "13/Oct/26 8:51 PM"
+      }
+     ],
+     "historyMetadata": {}
+    },
+    {
+     "id": "15941646",
+     "author": {
+      "accountId": "acc-5",
+      "displayName": "Riley Chen",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-13T20:51:34.102-0700",
+     "items": [
+      {
+       "field": "resolution",
+       "fieldtype": "jira",
+       "fieldId": "resolution",
+       "from": null,
+       "fromString": null,
+       "to": "10002",
+       "toString": "Done"
+      },
+      {
+       "field": "status",
+       "fieldtype": "jira",
+       "fieldId": "status",
+       "from": "14373",
+       "fromString": "IN TEST",
+       "to": "14374",
+       "toString": "WORK-DONE"
+      }
+     ]
+    },
+    {
+     "id": "15941645",
+     "author": {
+      "accountId": "acc-5",
+      "displayName": "Riley Chen",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-13T20:51:27.255-0700",
+     "items": [
+      {
+       "field": "QA Assignee",
+       "fieldtype": "custom",
+       "fieldId": "customfield_17282",
+       "from": null,
+       "fromString": null,
+       "to": "[acc-5]",
+       "toString": "[Riley Chen]"
+      },
+      {
+       "field": "status",
+       "fieldtype": "jira",
+       "fieldId": "status",
+       "from": "14372",
+       "fromString": "WAITING FOR TESTING",
+       "to": "14373",
+       "toString": "IN TEST"
+      }
+     ]
+    },
+    {
+     "id": "15941641",
+     "author": {
+      "accountId": "acc-5",
+      "displayName": "Riley Chen",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-13T20:51:22.674-0700",
+     "items": [
+      {
+       "field": "status",
+       "fieldtype": "jira",
+       "fieldId": "status",
+       "from": "14371",
+       "fromString": "IN-REVIEW",
+       "to": "14372",
+       "toString": "WAITING FOR TESTING"
+      }
+     ]
+    },
+    {
+     "id": "15903998",
+     "author": {
+      "accountId": "acc-5",
+      "displayName": "Riley Chen",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-11T23:33:34.636-0700",
+     "items": [
+      {
+       "field": "status",
+       "fieldtype": "jira",
+       "fieldId": "status",
+       "from": "14366",
+       "fromString": "IN PROGRESS",
+       "to": "14371",
+       "toString": "IN-REVIEW"
+      }
+     ]
+    },
+    {
+     "id": "15903013",
+     "author": {
+      "accountId": "acc-5",
+      "displayName": "Riley Chen",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-11T21:55:53.692-0700",
+     "items": [
+      {
+       "field": "Solution",
+       "fieldtype": "custom",
+       "fieldId": "customfield_16727",
+       "from": null,
+       "fromString": null,
+       "to": "",
+       "toString": "* Keep the partner-standard policy (600 req/min, burst 300) and give Globex Retail a second API key for the catalog export.\n* Count bulk endpoints as one request per call (shop-api #412).\n* Return cursor pagination hints in the 429 body of /search.\n* Document the limits and headers in the partner API guide."
+      }
+     ]
+    },
+    {
+     "id": "15903012",
+     "author": {
+      "accountId": "acc-5",
+      "displayName": "Riley Chen",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-11T21:55:50.453-0700",
+     "items": [
+      {
+       "field": "Impact",
+       "fieldtype": "custom",
+       "fieldId": "customfield_17581",
+       "from": null,
+       "fromString": null,
+       "to": "",
+       "toString": "No impact on shop-api behaviour for other partners. Configuration and documentation only, tested on staging."
+      }
+     ]
+    },
+    {
+     "id": "15902572",
+     "author": {
+      "accountId": "acc-5",
+      "displayName": "Riley Chen",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-11T21:25:15.766-0700",
+     "items": [
+      {
+       "field": "status",
+       "fieldtype": "jira",
+       "fieldId": "status",
+       "from": "14368",
+       "fromString": "READY FOR DEV",
+       "to": "14366",
+       "toString": "IN PROGRESS"
+      }
+     ]
+    },
+    {
+     "id": "15902570",
+     "author": {
+      "accountId": "acc-5",
+      "displayName": "Riley Chen",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-11T21:25:12.882-0700",
+     "items": [
+      {
+       "field": "status",
+       "fieldtype": "jira",
+       "fieldId": "status",
+       "from": "20406",
+       "fromString": "IN PREVIEW SOLUTION",
+       "to": "14368",
+       "toString": "READY FOR DEV"
+      }
+     ]
+    },
+    {
+     "id": "15902568",
+     "author": {
+      "accountId": "acc-5",
+      "displayName": "Riley Chen",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-11T21:25:08.650-0700",
+     "items": [
+      {
+       "field": "status",
+       "fieldtype": "jira",
+       "fieldId": "status",
+       "from": "14369",
+       "fromString": "IN ANALYZE",
+       "to": "20406",
+       "toString": "IN PREVIEW SOLUTION"
+      }
+     ]
+    },
+    {
+     "id": "15902567",
+     "author": {
+      "accountId": "acc-5",
+      "displayName": "Riley Chen",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-11T21:25:00.154-0700",
+     "items": [
+      {
+       "field": "status",
+       "fieldtype": "jira",
+       "fieldId": "status",
+       "from": "14365",
+       "fromString": "OPEN",
+       "to": "14369",
+       "toString": "IN ANALYZE"
+      }
+     ]
+    },
+    {
+     "id": "15886158",
+     "author": {
+      "accountId": "acc-8",
+      "displayName": "Jamie Patel",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-09T01:46:27.585-0700",
+     "items": [
+      {
+       "field": "Attachment",
+       "fieldtype": "jira",
+       "fieldId": "attachment",
+       "from": null,
+       "fromString": null,
+       "to": "1161991",
+       "toString": "globex-load-test.zip"
+      }
+     ]
+    },
+    {
+     "id": "15880851",
+     "author": {
+      "accountId": "acc-7",
+      "displayName": "Sam Lee",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-09T00:06:47.332-0700",
+     "items": [
+      {
+       "field": "Story point estimate",
+       "fieldtype": "custom",
+       "fieldId": "customfield_16486",
+       "from": null,
+       "fromString": "2",
+       "to": null,
+       "toString": "3"
+      }
+     ]
+    },
+    {
+     "id": "15873853",
+     "author": {
+      "accountId": "acc-7",
+      "displayName": "Sam Lee",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-08T20:32:11.792-0700",
+     "items": [
+      {
+       "field": "labels",
+       "fieldtype": "jira",
+       "fieldId": "labels",
+       "from": null,
+       "fromString": "",
+       "to": null,
+       "toString": "skip_qa"
+      }
+     ]
+    },
+    {
+     "id": "15873848",
+     "author": {
+      "accountId": "acc-7",
+      "displayName": "Sam Lee",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-08T20:31:56.703-0700",
+     "items": [
+      {
+       "field": "Sprint",
+       "fieldtype": "custom",
+       "fieldId": "customfield_10521",
+       "from": "",
+       "fromString": "",
+       "to": "33774",
+       "toString": "SHOP Sprint 52"
+      }
+     ]
+    },
+    {
+     "id": "15873845",
+     "author": {
+      "accountId": "acc-7",
+      "displayName": "Sam Lee",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-08T20:31:49.783-0700",
+     "items": [
+      {
+       "field": "Story point estimate",
+       "fieldtype": "custom",
+       "fieldId": "customfield_16486",
+       "from": null,
+       "fromString": null,
+       "to": null,
+       "toString": "2"
+      }
+     ]
+    },
+    {
+     "id": "15872829",
+     "author": {
+      "accountId": "acc-7",
+      "displayName": "Sam Lee",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-08T19:46:05.890-0700",
+     "items": [
+      {
+       "field": "assignee",
+       "fieldtype": "jira",
+       "fieldId": "assignee",
+       "from": "acc-2",
+       "fromString": "Drew Kim",
+       "to": "acc-5",
+       "toString": "Riley Chen",
+       "tmpFromAccountId": null,
+       "tmpToAccountId": "acc-5"
+      }
+     ]
+    },
+    {
+     "id": "15867606",
+     "author": {
+      "accountId": "acc-2",
+      "displayName": "Drew Kim",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-08T05:14:21.114-0700",
+     "items": [
+      {
+       "field": "priority",
+       "fieldtype": "jira",
+       "fieldId": "priority",
+       "from": "4",
+       "fromString": "Minor",
+       "to": "1",
+       "toString": "Blocker"
+      }
+     ]
+    },
+    {
+     "id": "15867602",
+     "author": {
+      "accountId": "acc-2",
+      "displayName": "Drew Kim",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-08T05:14:00.288-0700",
+     "items": [
+      {
+       "field": "Acceptance criteria",
+       "fieldtype": "custom",
+       "fieldId": "customfield_16728",
+       "from": null,
+       "fromString": null,
+       "to": "",
+       "toString": "*Status codes*\n\n* AC1: Traffic under the limit (UC-01) always gets 200.\n* AC2: A burst of up to 300 requests (UC-02) gets 200; requests above the burst wait instead of failing.\n* AC3: Sustained traffic over the limit (UC-03) gets 429 with {{Retry-After}} under 60 seconds.\n* AC4: Two keys of the same partner (UC-04) are limited separately.\n* AC5: A bulk call (UC-05) counts as one request.\n* AC6: Webhook retries (UC-06) are never limited.\n* AC7: Deep pagination (UC-07) is limited from page 151, and the error body suggests cursor pagination.\n* AC8: An unknown key (UC-08) gets 401 and is not counted.\n\n*Decision logic*\n\n* AC9: The limit is read only from {{ratelimit.bucket}} of the API key. Neither the client IP nor {{X-Forwarded-For}} is used to decide.\n* AC10: No configuration change raises the limit of every partner; the partner-standard policy stays as it is.\n\n*Error handling*\n\n* AC11: A 429 always has a JSON body with {{code: RATE_LIMITED}} and the reset time. It is never a 503 or an empty body.\n* AC12: When Redis, which holds the buckets, is unavailable, requests are let through and an alert fires. The expected behaviour for bulk calls in that case still needs to be confirmed with Morgan Diaz.\n\n*Evidence*\n\n* AC13: All 11 cases have been run, and the result (status, error, rate-limit headers) is recorded in the results table of the ticket."
+      }
+     ]
+    },
+    {
+     "id": "15867597",
+     "author": {
+      "accountId": "acc-2",
+      "displayName": "Drew Kim",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-08T05:13:21.068-0700",
+     "items": [
+      {
+       "field": "description",
+       "fieldtype": "jira",
+       "fieldId": "description",
+       "from": null,
+       "fromString": "h3. Test use cases — Globex Retail catalog sync on the public API\n\nCommon precondition: the partner uses its production API key against {{api.staging.acme-shop.example}}, with the *partner-standard* rate-limit policy. Each case is run with the load script attached to the ticket.\n\n||ID||Scenario||Traffic||Expected status||Error shown||Additional check||\n|UC-01|Single client under the limit|50 req/min to /search for 10 min|200|—|X-RateLimit-Remaining never reaches 0|\n|UC-02|Burst at the start of a sync|400 requests in the first 5 s|200|—|The burst bucket (300) absorbs it; the rest wait under 1 s|\n|UC-03|Sustained over the limit|900 req/min for 5 min|429|Rate limit exceeded|Retry-After is set and is under 60 s|\n|UC-04|Two API keys of the same partner|2 × 400 req/min|200|—|The limit is per key, not per partner (see R2)|\n|UC-05|Bulk price update|1 × POST /prices/bulk with 5 000 items|202|—|Counted as one request, not 5 000|\n|UC-06|Webhook replay|200 webhook retries in 1 min|200|—|Webhook endpoints are not rate limited|\n|UC-07|Search with deep pagination|page=1..200 in 30 s|429 from page 151|Rate limit exceeded|Cursor pagination is suggested in the error body|\n|UC-08|Unknown API key|10 requests|401|Invalid API key|Not counted against any bucket|\n|UC-09|Catalog export|GET /products?limit=500, 60 pages|200|—|Finishes in under 2 minutes|\n|UC-10|Inventory poll|GET /inventory every 2 s|200|—|No 429 over 1 hour|\n|UC-11|Mixed traffic at peak|Recorded Black Friday traffic, 3× speed|200 / 429|Rate limit exceeded|Fewer than 0.5% of requests get a 429|\n\nh3. Rules that apply to every case\n\n* R1: The limit is decided by the token bucket of the API key ({{ratelimit.bucket}}), never by the client IP; partners call from shared egress IPs.\n* R2: Two keys of the same partner have separate buckets. A partner that needs more throughput asks for a second key, not a higher shared limit.\n* R3: A 429 always carries {{Retry-After}} and {{X-RateLimit-Reset}}. An empty body or a 503 instead of a 429 is a failure.\n* R4: Bulk endpoints count as one request per call. This is worth adding as UC-12: a bulk call with 50 000 items → expected status to be confirmed with the API owner.\n* R5: Webhook and health endpoints are never rate limited.\n\n",
+       "to": null,
+       "toString": "h3. Test use cases — Globex Retail catalog sync on the public API\n\nCommon precondition: the partner uses its production API key against {{api.staging.acme-shop.example}}, with the *partner-standard* rate-limit policy. Each case is run with the load script attached to the ticket.\n\n||ID||Scenario||Traffic||Expected status||Error shown||Additional check||\n|UC-01|Single client under the limit|50 req/min to /search for 10 min|200|—|X-RateLimit-Remaining never reaches 0|\n|UC-02|Burst at the start of a sync|400 requests in the first 5 s|200|—|The burst bucket (300) absorbs it; the rest wait under 1 s|\n|UC-03|Sustained over the limit|900 req/min for 5 min|429|Rate limit exceeded|Retry-After is set and is under 60 s|\n|UC-04|Two API keys of the same partner|2 × 400 req/min|200|—|The limit is per key, not per partner (see R2)|\n|UC-05|Bulk price update|1 × POST /prices/bulk with 5 000 items|202|—|Counted as one request, not 5 000|\n|UC-06|Webhook replay|200 webhook retries in 1 min|200|—|Webhook endpoints are not rate limited|\n|UC-07|Search with deep pagination|page=1..200 in 30 s|429 from page 151|Rate limit exceeded|Cursor pagination is suggested in the error body|\n|UC-08|Unknown API key|10 requests|401|Invalid API key|Not counted against any bucket|\n|UC-09|Catalog export|GET /products?limit=500, 60 pages|200|—|Finishes in under 2 minutes|\n|UC-10|Inventory poll|GET /inventory every 2 s|200|—|No 429 over 1 hour|\n|UC-11|Mixed traffic at peak|Recorded Black Friday traffic, 3× speed|200 / 429|Rate limit exceeded|Fewer than 0.5% of requests get a 429|\n\nh3. Rules that apply to every case\n\n* R1: The limit is decided by the token bucket of the API key ({{ratelimit.bucket}}), never by the client IP; partners call from shared egress IPs.\n* R2: Two keys of the same partner have separate buckets. A partner that needs more throughput asks for a second key, not a higher shared limit.\n* R3: A 429 always carries {{Retry-After}} and {{X-RateLimit-Reset}}. An empty body or a 503 instead of a 429 is a failure.\n* R4: Bulk endpoints count as one request per call. This is worth adding as UC-12: a bulk call with 50 000 items → expected status to be confirmed with the API owner.\n* R5: Webhook and health endpoints are never rate limited.\n\n\n\nhttps://example.com/acme-shop/load-tests/globex-2026-10.zip"
+      }
+     ]
+    },
+    {
+     "id": "15867553",
+     "author": {
+      "accountId": "acc-2",
+      "displayName": "Drew Kim",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-08T05:10:29.498-0700",
+     "items": [
+      {
+       "field": "summary",
+       "fieldtype": "jira",
+       "fieldId": "summary",
+       "from": null,
+       "fromString": "Test and find the rate-limit configuration which match with partner behaviour",
+       "to": null,
+       "toString": "Find the rate-limit configuration that gives the partner the behaviour they expect."
+      }
+     ]
+    }
+   ]
+  },
+  "fields": {
+   "statuscategorychangedate": "2026-10-13T20:51:34.102-0700",
+   "customfield_17460": null,
+   "customfield_17581": {
+    "type": "doc",
+    "version": 1,
+    "content": [
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "No impact on shop-api behaviour for other partners. Configuration and documentation only, tested on staging."
+       }
+      ]
+     }
+    ]
+   },
+   "issuetype": {
+    "id": "14533",
+    "description": "Tasks track small, distinct pieces of work.",
+    "name": "Task",
+    "subtask": false,
+    "entityId": "1888db5e-400f-482f-aebf-ee1a68436fe5",
+    "hierarchyLevel": 0
+   },
+   "timespent": null,
+   "customfield_16698": null,
+   "project": {
+    "id": "15624",
+    "key": "SHOP",
+    "name": "Acme Shop",
+    "projectTypeKey": "software",
+    "simplified": true,
+    "projectCategory": {
+     "id": "10100",
+     "description": "All Engineering Projects",
+     "name": "Engineering"
+    }
+   },
+   "customfield_17269": null,
+   "fixVersions": [],
+   "aggregatetimespent": null,
+   "statusCategory": {
+    "id": 3,
+    "key": "done",
+    "colorName": "green",
+    "name": "Done"
+   },
+   "resolution": {
+    "id": "10002",
+    "description": "",
+    "name": "Done"
+   },
+   "customfield_17703": null,
+   "customfield_17702": "2026-10-13T20:51:00.000-0700",
+   "customfield_16459": null,
+   "customfield_17701": null,
+   "customfield_16728": {
+    "type": "doc",
+    "version": 1,
+    "content": [
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "Status codes",
+        "marks": [
+         {
+          "type": "strong"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bulletList",
+      "content": [
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "AC1: Traffic under the limit (UC-01) always gets 200."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "AC2: A burst of up to 300 requests (UC-02) gets 200; requests above the burst wait instead of failing."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "AC3: Sustained traffic over the limit (UC-03) gets 429 with "
+           },
+           {
+            "type": "text",
+            "text": "Retry-After",
+            "marks": [
+             {
+              "type": "code"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "text": " under 60 seconds."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "AC4: Two keys of the same partner (UC-04) are limited separately."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "AC5: A bulk call (UC-05) counts as one request."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "AC6: Webhook retries (UC-06) are never limited."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "AC7: Deep pagination (UC-07) is limited from page 151, and the error body suggests cursor pagination."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "AC8: An unknown key (UC-08) gets 401 and is not counted."
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "Decision logic",
+        "marks": [
+         {
+          "type": "strong"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bulletList",
+      "content": [
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "AC9: The limit is read only from "
+           },
+           {
+            "type": "text",
+            "text": "ratelimit.bucket",
+            "marks": [
+             {
+              "type": "code"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "text": " of the API key. Neither the client IP nor "
+           },
+           {
+            "type": "text",
+            "text": "X-Forwarded-For",
+            "marks": [
+             {
+              "type": "code"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "text": " is used to decide."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "AC10: No configuration change raises the limit of every partner; the partner-standard policy stays as it is."
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "Error handling",
+        "marks": [
+         {
+          "type": "strong"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bulletList",
+      "content": [
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "AC11: A 429 always has a JSON body with "
+           },
+           {
+            "type": "text",
+            "text": "code: RATE_LIMITED",
+            "marks": [
+             {
+              "type": "code"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "text": " and the reset time. It is never a 503 or an empty body."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "AC12: When Redis, which holds the buckets, is unavailable, requests are let through and an alert fires. The expected behaviour for bulk calls in that case still needs to be confirmed with Morgan Diaz."
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "Evidence",
+        "marks": [
+         {
+          "type": "strong"
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "bulletList",
+      "content": [
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "AC13: All 11 cases have been run, and the result (status, error, rate-limit headers) is recorded in the results table of the ticket."
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "customfield_16727": {
+    "type": "doc",
+    "version": 1,
+    "content": [
+     {
+      "type": "bulletList",
+      "content": [
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "Keep the partner-standard policy (600 req/min, burst 300) and give Globex Retail a second API key for the catalog export."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "Count bulk endpoints as one request per call (shop-api #412)."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "Return cursor pagination hints in the 429 body of /search."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "Document the limits and headers in the partner API guide."
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "resolutiondate": "2026-10-13T20:51:34.093-0700",
+   "workratio": -1,
+   "customfield_17691": null,
+   "issuerestriction": {
+    "issuerestrictions": {},
+    "shouldDisplay": true
+   },
+   "lastViewed": "2026-10-11T21:29:56.467-0700",
+   "customfield_17690": null,
+   "customfield_21870": null,
+   "customfield_16486": 3,
+   "created": "2026-10-08T05:09:33.238-0700",
+   "customfield_17693": null,
+   "customfield_10021": "2026-10-09T01:46:27.681-0700",
+   "priority": {
+    "name": "Blocker",
+    "id": "1"
+   },
+   "labels": [
+    "skip_qa"
+   ],
+   "timeestimate": null,
+   "aggregatetimeoriginalestimate": null,
+   "versions": [],
+   "issuelinks": [],
+   "assignee": {
+    "accountId": "acc-5",
+    "displayName": "Riley Chen",
+    "active": true,
+    "accountType": "atlassian"
+   },
+   "updated": "2026-10-13T20:51:36.520-0700",
+   "status": {
+    "description": "",
+    "name": "WORK-DONE",
+    "id": "14374",
+    "statusCategory": {
+     "id": 3,
+     "key": "done",
+     "colorName": "green",
+     "name": "Done"
+    }
+   },
+   "components": [],
+   "customfield_17282": [
+    {
+     "accountId": "acc-5",
+     "displayName": "Riley Chen",
+     "active": true,
+     "accountType": "atlassian"
+    }
+   ],
+   "customfield_17564": null,
+   "customfield_17563": null,
+   "timeoriginalestimate": null,
+   "customfield_13320": "{}",
+   "description": {
+    "type": "doc",
+    "version": 1,
+    "content": [
+     {
+      "type": "heading",
+      "attrs": {
+       "level": 3
+      },
+      "content": [
+       {
+        "type": "text",
+        "text": "Test use cases — Globex Retail catalog sync on the public API"
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "Common precondition: the partner uses its production API key against "
+       },
+       {
+        "type": "text",
+        "text": "api.staging.acme-shop.example",
+        "marks": [
+         {
+          "type": "code"
+         }
+        ]
+       },
+       {
+        "type": "text",
+        "text": ", with the "
+       },
+       {
+        "type": "text",
+        "text": "partner-standard",
+        "marks": [
+         {
+          "type": "strong"
+         }
+        ]
+       },
+       {
+        "type": "text",
+        "text": " rate-limit policy. Each case is run with the load script attached to the ticket."
+       }
+      ]
+     },
+     {
+      "type": "table",
+      "attrs": {
+       "isNumberColumnEnabled": false,
+       "layout": "default"
+      },
+      "content": [
+       {
+        "type": "tableRow",
+        "content": [
+         {
+          "type": "tableHeader",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "ID"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableHeader",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Scenario"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableHeader",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Traffic"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableHeader",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Expected status"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableHeader",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Error shown"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableHeader",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Additional check"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableRow",
+        "content": [
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "UC-01"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Single client under the limit"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "50 req/min to /search for 10 min"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "200"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "—"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "X-RateLimit-Remaining never reaches 0"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableRow",
+        "content": [
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "UC-02"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Burst at the start of a sync"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "400 requests in the first 5 s"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "200"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "—"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "The burst bucket (300) absorbs it; the rest wait under 1 s"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableRow",
+        "content": [
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "UC-03"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Sustained over the limit"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "900 req/min for 5 min"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "429"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Rate limit exceeded"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Retry-After is set and is under 60 s"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableRow",
+        "content": [
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "UC-04"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Two API keys of the same partner"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "2 × 400 req/min"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "200"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "—"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "The limit is per key, not per partner (see R2)"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableRow",
+        "content": [
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "UC-05"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Bulk price update"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "1 × POST /prices/bulk with 5 000 items"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "202"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "—"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Counted as one request, not 5 000"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableRow",
+        "content": [
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "UC-06"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Webhook replay"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "200 webhook retries in 1 min"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "200"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "—"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Webhook endpoints are not rate limited"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableRow",
+        "content": [
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "UC-07"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Search with deep pagination"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "page=1..200 in 30 s"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "429 from page 151"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Rate limit exceeded"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Cursor pagination is suggested in the error body"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableRow",
+        "content": [
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "UC-08"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Unknown API key"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "10 requests"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "401"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Invalid API key"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Not counted against any bucket"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableRow",
+        "content": [
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "UC-09"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Catalog export"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "GET /products?limit=500, 60 pages"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "200"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "—"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Finishes in under 2 minutes"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableRow",
+        "content": [
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "UC-10"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Inventory poll"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "GET /inventory every 2 s"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "200"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "—"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "No 429 over 1 hour"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "tableRow",
+        "content": [
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "UC-11"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Mixed traffic at peak"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Recorded Black Friday traffic, 3× speed"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "200 / 429"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Rate limit exceeded"
+             }
+            ]
+           }
+          ]
+         },
+         {
+          "type": "tableCell",
+          "attrs": {},
+          "content": [
+           {
+            "type": "paragraph",
+            "content": [
+             {
+              "type": "text",
+              "text": "Fewer than 0.5% of requests get a 429"
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "heading",
+      "attrs": {
+       "level": 3
+      },
+      "content": [
+       {
+        "type": "text",
+        "text": "Rules that apply to every case"
+       }
+      ]
+     },
+     {
+      "type": "bulletList",
+      "content": [
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "R1: The limit is decided by the token bucket of the API key ("
+           },
+           {
+            "type": "text",
+            "text": "ratelimit.bucket",
+            "marks": [
+             {
+              "type": "code"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "text": "), never by the client IP; partners call from shared egress IPs."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "R2: Two keys of the same partner have separate buckets. A partner that needs more throughput asks for a second key, not a higher shared limit."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "R3: A 429 always carries "
+           },
+           {
+            "type": "text",
+            "text": "Retry-After",
+            "marks": [
+             {
+              "type": "code"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "text": " and "
+           },
+           {
+            "type": "text",
+            "text": "X-RateLimit-Reset",
+            "marks": [
+             {
+              "type": "code"
+             }
+            ]
+           },
+           {
+            "type": "text",
+            "text": ". An empty body or a 503 instead of a 429 is a failure."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "R4: Bulk endpoints count as one request per call. This is worth adding as UC-12: a bulk call with 50 000 items → expected status to be confirmed with the API owner."
+           }
+          ]
+         }
+        ]
+       },
+       {
+        "type": "listItem",
+        "content": [
+         {
+          "type": "paragraph",
+          "content": [
+           {
+            "type": "text",
+            "text": "R5: Webhook and health endpoints are never rate limited."
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     },
+     {
+      "type": "mediaSingle",
+      "attrs": {
+       "width": 800,
+       "widthType": "pixel",
+       "layout": "center"
+      },
+      "content": [
+       {
+        "type": "media",
+        "attrs": {
+         "type": "file",
+         "id": "00000000-0000-4000-8000-000003561001",
+         "alt": "image-20261008-120912.png",
+         "collection": "",
+         "height": 665,
+         "width": 1361
+        }
+       }
+      ]
+     },
+     {
+      "type": "paragraph",
+      "content": [
+       {
+        "type": "text",
+        "text": "https://example.com/acme-shop/load-tests/globex-2026-10.zip",
+        "marks": [
+         {
+          "type": "link",
+          "attrs": {
+           "href": "https://example.com/acme-shop/load-tests/globex-2026-10.zip"
+          }
+         }
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   "customfield_11220": "0|i45dsq:",
+   "customfield_17566": null,
+   "timetracking": {},
+   "security": null,
+   "customfield_31871": null,
+   "attachment": [
+    {
+     "id": "1161991",
+     "filename": "globex-load-test.zip",
+     "author": {
+      "accountId": "acc-8",
+      "displayName": "Jamie Patel",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-09T01:46:27.469-0700",
+     "size": 8613262,
+     "mimeType": "application/zip",
+     "content": "https://acme.atlassian.net/rest/api/3/attachment/content/1161991",
+     "thumbnail": "https://acme.atlassian.net/rest/api/3/attachment/thumbnail/1161991"
+    },
+    {
+     "id": "1160387",
+     "filename": "image-20261008-120912.png",
+     "author": {
+      "accountId": "acc-2",
+      "displayName": "Drew Kim",
+      "active": true,
+      "accountType": "atlassian"
+     },
+     "created": "2026-10-08T05:09:33.369-0700",
+     "size": 328602,
+     "mimeType": "image/png",
+     "content": "https://acme.atlassian.net/rest/api/3/attachment/content/1160387",
+     "thumbnail": "https://acme.atlassian.net/rest/api/3/attachment/thumbnail/1160387"
+    }
+   ],
+   "aggregatetimeestimate": null,
+   "customfield_17274": null,
+   "summary": "Find the rate-limit configuration that gives the partner the behaviour they expect.",
+   "customfield_17272": null,
+   "creator": {
+    "accountId": "acc-2",
+    "displayName": "Drew Kim",
+    "active": true,
+    "accountType": "atlassian"
+   },
+   "customfield_17271": null,
+   "customfield_17278": null,
+   "customfield_17277": null,
+   "subtasks": [],
+   "customfield_17276": null,
+   "reporter": {
+    "accountId": "acc-2",
+    "displayName": "Drew Kim",
+    "active": true,
+    "accountType": "atlassian"
+   },
+   "aggregateprogress": {
+    "progress": 0,
+    "total": 0
+   },
+   "customfield_10000": null,
+   "customfield_16747": null,
+   "customfield_16746": null,
+   "customfield_16745": null,
+   "customfield_10521": [
+    {
+     "id": 33774,
+     "name": "SHOP Sprint 52",
+     "state": "active",
+     "boardId": 600,
+     "goal": "Release Manager: Morgan Diaz",
+     "startDate": "2026-10-07T10:56:40.477Z",
+     "endDate": "2026-11-11T11:50:00.000Z"
+    }
+   ],
+   "environment": null,
+   "duedate": null,
+   "progress": {
+    "progress": 0,
+    "total": 0
+   },
+   "comment": {
+    "comments": [
+     {
+      "id": "2748593",
+      "author": {
+       "accountId": "acc-8",
+       "displayName": "Jamie Patel",
+       "active": true,
+       "accountType": "atlassian"
+      },
+      "body": {
+       "type": "doc",
+       "version": 1,
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "Hi "
+          },
+          {
+           "type": "mention",
+           "attrs": {
+            "id": "acc-5",
+            "text": "@Riley Chen",
+            "accessLevel": ""
+           }
+          },
+          {
+           "type": "text",
+           "text": "  "
+          },
+          {
+           "type": "mention",
+           "attrs": {
+            "id": "acc-2",
+            "text": "@Drew Kim",
+            "accessLevel": ""
+           }
+          },
+          {
+           "type": "text",
+           "text": " "
+          },
+          {
+           "type": "hardBreak"
+          },
+          {
+           "type": "hardBreak"
+          },
+          {
+           "type": "text",
+           "text": "The partner just replied with the details below, and I attached the load script they shared:"
+          },
+          {
+           "type": "hardBreak"
+          },
+          {
+           "type": "hardBreak"
+          }
+         ]
+        },
+        {
+         "type": "orderedList",
+         "content": [
+          {
+           "type": "listItem",
+           "content": [
+            {
+             "type": "paragraph",
+             "content": [
+              {
+               "type": "text",
+               "text": "They will run their catalog sync against staging with the attached script, covering every pattern they expect us to support."
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "listItem",
+           "content": [
+            {
+             "type": "paragraph",
+             "content": [
+              {
+               "type": "text",
+               "text": "They need an answer by Monday morning on whether a configuration exists that gives them the behaviour below."
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "listItem",
+           "content": [
+            {
+             "type": "paragraph",
+             "content": [
+              {
+               "type": "text",
+               "text": "Their go-live is next week, so they "
+              },
+              {
+               "type": "text",
+               "text": "cannot",
+               "marks": [
+                {
+                 "type": "strong"
+                }
+               ]
+              },
+              {
+               "type": "text",
+               "text": " wait for a code change on our side."
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "The traffic patterns and what they expect are in their guide: "
+          },
+          {
+           "type": "text",
+           "text": "Globex catalog sync guide",
+           "marks": [
+            {
+             "type": "link",
+             "attrs": {
+              "href": "https://example.com/globex/catalog-sync-guide"
+             }
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "mediaGroup",
+         "content": [
+          {
+           "type": "media",
+           "attrs": {
+            "type": "file",
+            "id": "00000000-0000-4000-8000-000003561002",
+            "collection": ""
+           }
+          }
+         ]
+        },
+        {
+         "type": "paragraph",
+         "content": []
+        }
+       ]
+      },
+      "updateAuthor": {
+       "accountId": "acc-8",
+       "displayName": "Jamie Patel",
+       "active": true,
+       "accountType": "atlassian"
+      },
+      "created": "2026-10-09T01:46:27.681-0700",
+      "updated": "2026-10-09T01:46:27.681-0700",
+      "jsdPublic": true
+     },
+     {
+      "id": "2752657",
+      "author": {
+       "accountId": "acc-5",
+       "displayName": "Riley Chen",
+       "active": true,
+       "accountType": "atlassian"
+      },
+      "body": {
+       "type": "doc",
+       "version": 1,
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "This is the configuration from "
+          },
+          {
+           "type": "text",
+           "text": "ratelimit.yaml",
+           "marks": [
+            {
+             "type": "code"
+            }
+           ]
+          },
+          {
+           "type": "text",
+           "text": " on staging:"
+          }
+         ]
+        },
+        {
+         "type": "bulletList",
+         "content": [
+          {
+           "type": "listItem",
+           "content": [
+            {
+             "type": "paragraph",
+             "content": [
+              {
+               "type": "text",
+               "text": "partner-standard",
+               "marks": [
+                {
+                 "type": "strong"
+                }
+               ]
+              },
+              {
+               "type": "text",
+               "text": ": 600 req/min, burst 300, per API key"
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "listItem",
+           "content": [
+            {
+             "type": "paragraph",
+             "content": [
+              {
+               "type": "text",
+               "text": "partner-bulk",
+               "marks": [
+                {
+                 "type": "strong"
+                }
+               ]
+              },
+              {
+               "type": "text",
+               "text": ": 60 req/min, each call counts as one"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "text",
+           "text": "Same as the ticket "
+          },
+          {
+           "type": "inlineCard",
+           "attrs": {
+            "url": "https://acme.atlassian.net/browse/SHOP-3389#icft=SHOP-3389"
+           }
+          },
+          {
+           "type": "text",
+           "text": " configuration, only the burst differs:"
+          }
+         ]
+        },
+        {
+         "type": "codeBlock",
+         "attrs": {
+          "language": "yaml",
+          "wrap": true
+         },
+         "content": [
+          {
+           "type": "text",
+           "text": "policies:\n  partner-standard:\n    rate: 600/min\n    burst: 300\n    key: api_key\n  partner-bulk:\n    rate: 60/min\n    burst: 10\n    key: api_key"
+          }
+         ]
+        }
+       ]
+      },
+      "updateAuthor": {
+       "accountId": "acc-5",
+       "displayName": "Riley Chen",
+       "active": true,
+       "accountType": "atlassian"
+      },
+      "created": "2026-10-11T21:36:53.257-0700",
+      "updated": "2026-10-11T21:47:55.002-0700",
+      "jsdPublic": true
+     },
+     {
+      "id": "2752763",
+      "author": {
+       "accountId": "acc-2",
+       "displayName": "Drew Kim",
+       "active": true,
+       "accountType": "atlassian"
+      },
+      "body": {
+       "type": "doc",
+       "version": 1,
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "mention",
+           "attrs": {
+            "id": "acc-8",
+            "text": "@Jamie Patel",
+            "accessLevel": ""
+           }
+          },
+          {
+           "type": "text",
+           "text": " I ran all 11 cases on staging:"
+          }
+         ]
+        },
+        {
+         "type": "bulletList",
+         "content": [
+          {
+           "type": "listItem",
+           "content": [
+            {
+             "type": "paragraph",
+             "content": [
+              {
+               "type": "text",
+               "text": "UC-01 to UC-06, UC-08 to UC-10",
+               "marks": [
+                {
+                 "type": "strong"
+                }
+               ]
+              },
+              {
+               "type": "text",
+               "text": ": as expected."
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "listItem",
+           "content": [
+            {
+             "type": "paragraph",
+             "content": [
+              {
+               "type": "text",
+               "text": "UC-07",
+               "marks": [
+                {
+                 "type": "strong"
+                }
+               ]
+              },
+              {
+               "type": "text",
+               "text": ": 429 from page 151 as expected, but the body has no pagination hint yet. "
+              },
+              {
+               "type": "text",
+               "text": "Fixed in shop-api #412",
+               "marks": [
+                {
+                 "type": "textColor",
+                 "attrs": {
+                  "color": "#36b37e"
+                 }
+                }
+               ]
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "listItem",
+           "content": [
+            {
+             "type": "paragraph",
+             "content": [
+              {
+               "type": "text",
+               "text": "UC-11",
+               "marks": [
+                {
+                 "type": "strong"
+                }
+               ]
+              },
+              {
+               "type": "text",
+               "text": ": 0.3% of requests got a 429, under the 0.5% target."
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "codeBlock",
+         "attrs": {
+          "language": "json",
+          "wrap": true
+         },
+         "content": [
+          {
+           "type": "text",
+           "text": "{\n  \"code\": \"RATE_LIMITED\",\n  \"message\": \"Rate limit exceeded\",\n  \"resetAt\": \"2026-10-10T08:15:00Z\"\n}"
+          }
+         ]
+        }
+       ]
+      },
+      "updateAuthor": {
+       "accountId": "acc-2",
+       "displayName": "Drew Kim",
+       "active": true,
+       "accountType": "atlassian"
+      },
+      "created": "2026-10-11T22:16:16.290-0700",
+      "updated": "2026-10-11T22:16:54.183-0700",
+      "jsdPublic": true
+     },
+     {
+      "id": "2753755",
+      "author": {
+       "accountId": "acc-8",
+       "displayName": "Jamie Patel",
+       "active": true,
+       "accountType": "atlassian"
+      },
+      "body": {
+       "type": "doc",
+       "version": 1,
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "mention",
+           "attrs": {
+            "id": "acc-2",
+            "text": "@Drew Kim",
+            "accessLevel": ""
+           }
+          },
+          {
+           "type": "text",
+           "text": " thanks!"
+          },
+          {
+           "type": "hardBreak"
+          },
+          {
+           "type": "text",
+           "text": "I will share this with the partner today."
+          }
+         ]
+        }
+       ]
+      },
+      "updateAuthor": {
+       "accountId": "acc-8",
+       "displayName": "Jamie Patel",
+       "active": true,
+       "accountType": "atlassian"
+      },
+      "created": "2026-10-12T01:29:11.876-0700",
+      "updated": "2026-10-12T01:29:11.876-0700",
+      "jsdPublic": true
+     },
+     {
+      "id": "2753986",
+      "author": {
+       "accountId": "acc-8",
+       "displayName": "Jamie Patel",
+       "active": true,
+       "accountType": "atlassian"
+      },
+      "body": {
+       "type": "doc",
+       "version": 1,
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "mention",
+           "attrs": {
+            "id": "acc-2",
+            "text": "@Drew Kim",
+            "accessLevel": ""
+           }
+          },
+          {
+           "type": "text",
+           "text": " "
+          },
+          {
+           "type": "mention",
+           "attrs": {
+            "id": "acc-5",
+            "text": "@Riley Chen",
+            "accessLevel": ""
+           }
+          },
+          {
+           "type": "hardBreak"
+          },
+          {
+           "type": "text",
+           "text": "The partner confirmed the results. Two follow-ups from them:"
+          }
+         ]
+        },
+        {
+         "type": "orderedList",
+         "content": [
+          {
+           "type": "listItem",
+           "content": [
+            {
+             "type": "paragraph",
+             "content": [
+              {
+               "type": "text",
+               "text": "Can the second API key be issued "
+              },
+              {
+               "type": "text",
+               "text": "before",
+               "marks": [
+                {
+                 "type": "strong"
+                }
+               ]
+              },
+              {
+               "type": "text",
+               "text": " Friday?"
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "listItem",
+           "content": [
+            {
+             "type": "paragraph",
+             "content": [
+              {
+               "type": "text",
+               "text": "Can the 429 body name the bucket that ran out?"
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      "updateAuthor": {
+       "accountId": "acc-8",
+       "displayName": "Jamie Patel",
+       "active": true,
+       "accountType": "atlassian"
+      },
+      "created": "2026-10-12T02:24:50.146-0700",
+      "updated": "2026-10-12T02:24:50.146-0700",
+      "jsdPublic": true
+     },
+     {
+      "id": "2758708",
+      "author": {
+       "accountId": "acc-2",
+       "displayName": "Drew Kim",
+       "active": true,
+       "accountType": "atlassian"
+      },
+      "body": {
+       "type": "doc",
+       "version": 1,
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "mention",
+           "attrs": {
+            "id": "acc-8",
+            "text": "@Jamie Patel",
+            "accessLevel": ""
+           }
+          },
+          {
+           "type": "text",
+           "text": " both are done:"
+          }
+         ]
+        },
+        {
+         "type": "bulletList",
+         "content": [
+          {
+           "type": "listItem",
+           "content": [
+            {
+             "type": "paragraph",
+             "content": [
+              {
+               "type": "text",
+               "text": "The second key is issued and shared through the partner portal."
+              }
+             ]
+            }
+           ]
+          },
+          {
+           "type": "listItem",
+           "content": [
+            {
+             "type": "paragraph",
+             "content": [
+              {
+               "type": "text",
+               "text": "The 429 body now names the bucket (shop-api #415, on staging)."
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      "updateAuthor": {
+       "accountId": "acc-2",
+       "displayName": "Drew Kim",
+       "active": true,
+       "accountType": "atlassian"
+      },
+      "created": "2026-10-13T08:13:28.344-0700",
+      "updated": "2026-10-13T08:13:28.344-0700",
+      "jsdPublic": true
+     },
+     {
+      "id": "2758710",
+      "author": {
+       "accountId": "acc-8",
+       "displayName": "Jamie Patel",
+       "active": true,
+       "accountType": "atlassian"
+      },
+      "body": {
+       "type": "doc",
+       "version": 1,
+       "content": [
+        {
+         "type": "paragraph",
+         "content": [
+          {
+           "type": "mention",
+           "attrs": {
+            "id": "acc-2",
+            "text": "@Drew Kim",
+            "accessLevel": ""
+           }
+          },
+          {
+           "type": "text",
+           "text": " great, closing this one. Thanks all."
+          }
+         ]
+        }
+       ]
+      },
+      "updateAuthor": {
+       "accountId": "acc-8",
+       "displayName": "Jamie Patel",
+       "active": true,
+       "accountType": "atlassian"
+      },
+      "created": "2026-10-13T08:15:49.640-0700",
+      "updated": "2026-10-13T08:15:49.640-0700",
+      "jsdPublic": true
+     }
+    ],
+    "maxResults": 7,
+    "total": 7,
+    "startAt": 0
+   },
+   "worklog": {
+    "startAt": 0,
+    "maxResults": 20,
+    "total": 0,
+    "worklogs": []
+   },
+   "customfield_21369": {
+    "value": "Passed",
+    "id": "23379"
+   }
+  }
+ },
+ "remoteLinks": [],
+ "transitions": {
+  "transitions": [
+   {
+    "id": "5",
+    "name": "CLOSE - CANCELLED",
+    "to": {
+     "description": "",
+     "name": "CLOSE - CANCELLED",
+     "id": "14370",
+     "statusCategory": {
+      "id": 3,
+      "key": "done",
+      "colorName": "green",
+      "name": "Done"
+     }
+    },
+    "hasScreen": false,
+    "isGlobal": true,
+    "isInitial": false,
+    "isAvailable": true,
+    "isConditional": false,
+    "fields": {},
+    "isLooped": false
+   },
+   {
+    "id": "11",
+    "name": "To Do",
+    "to": {
+     "description": "",
+     "name": "OPEN",
+     "id": "14365",
+     "statusCategory": {
+      "id": 2,
+      "key": "new",
+      "colorName": "blue-gray",
+      "name": "To Do"
+     }
+    },
+    "hasScreen": false,
+    "isGlobal": true,
+    "isInitial": false,
+    "isAvailable": true,
+    "isConditional": false,
+    "fields": {},
+    "isLooped": false
+   },
+   {
+    "id": "15",
+    "name": "Deployed to Pre-production",
+    "to": {
+     "description": "",
+     "name": "IN PRE-PRODUCTION",
+     "id": "14375",
+     "statusCategory": {
+      "id": 3,
+      "key": "done",
+      "colorName": "green",
+      "name": "Done"
+     }
+    },
+    "hasScreen": false,
+    "isGlobal": false,
+    "isInitial": false,
+    "isAvailable": true,
+    "isConditional": false,
+    "fields": {},
+    "isLooped": false
+   },
+   {
+    "id": "19",
+    "name": "Re-open",
+    "to": {
+     "description": "",
+     "name": "READY FOR DEV",
+     "id": "14368",
+     "statusCategory": {
+      "id": 2,
+      "key": "new",
+      "colorName": "blue-gray",
+      "name": "To Do"
+     }
+    },
+    "hasScreen": false,
+    "isGlobal": false,
+    "isInitial": false,
+    "isAvailable": true,
+    "isConditional": false,
+    "fields": {},
+    "isLooped": false
+   },
+   {
+    "id": "25",
+    "name": "Need to re-test",
+    "to": {
+     "description": "",
+     "name": "IN TEST",
+     "id": "14373",
+     "statusCategory": {
+      "id": 4,
+      "key": "indeterminate",
+      "colorName": "yellow",
+      "name": "In Progress"
+     }
+    },
+    "hasScreen": false,
+    "isGlobal": false,
+    "isInitial": false,
+    "isAvailable": true,
+    "isConditional": false,
+    "fields": {},
+    "isLooped": false
+   }
+  ]
+ }
+}

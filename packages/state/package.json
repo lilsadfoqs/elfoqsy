@@ -1,0 +1,17 @@
+{
+  "name": "@elfoqsy/state",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@elfoqsy/contracts": "workspace:^"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}

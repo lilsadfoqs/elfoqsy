@@ -1,0 +1,96 @@
+{
+  "_note": "Pick one portrait at random per state each time the state changes; never show the same one twice in a row. Portraits are 640px, cropped close to the face, for the 280px column; faces are 256px crops for circles from 30 to 112px. The fox badge sits on the top-left corner, its ring in the state colour. The avatar used in chat and on rails is faces/quiet-1-face.png.",
+  "states": {
+    "quiet": {
+      "label": "Quiet",
+      "ring": "#3A4443",
+      "fox": "fox/fox-quiet.png",
+      "portraits": [
+        "portraits/quiet-1.png",
+        "portraits/quiet-2.png",
+        "portraits/quiet-3.png"
+      ],
+      "faces": [
+        "faces/quiet-1-face.png",
+        "faces/quiet-2-face.png",
+        "faces/quiet-3-face.png"
+      ]
+    },
+    "working": {
+      "label": "Working",
+      "ring": "#5ca8fb",
+      "fox": "fox/fox-working.png",
+      "portraits": [
+        "portraits/working-1.png",
+        "portraits/working-2.png",
+        "portraits/working-3.png"
+      ],
+      "faces": [
+        "faces/working-1-face.png",
+        "faces/working-2-face.png",
+        "faces/working-3-face.png"
+      ]
+    },
+    "thinking": {
+      "label": "Thinking",
+      "ring": "#49b8b8",
+      "fox": "fox/fox-thinking.png",
+      "portraits": [
+        "portraits/thinking-1.png",
+        "portraits/thinking-2.png",
+        "portraits/thinking-3.png"
+      ],
+      "faces": [
+        "faces/thinking-1-face.png",
+        "faces/thinking-2-face.png",
+        "faces/thinking-3-face.png"
+      ]
+    },
+    "needs": {
+      "label": "Needs you",
+      "ring": "#e8d48a",
+      "fox": "fox/fox-needs.png",
+      "portraits": [
+        "portraits/needs-1.png",
+        "portraits/needs-2.png",
+        "portraits/needs-3.png"
+      ],
+      "faces": [
+        "faces/needs-1-face.png",
+        "faces/needs-2-face.png",
+        "faces/needs-3-face.png"
+      ]
+    },
+    "broken": {
+      "label": "Something broke",
+      "ring": "#fe726c",
+      "fox": "fox/fox-broken.png",
+      "portraits": [
+        "portraits/broken-1.png",
+        "portraits/broken-2.png",
+        "portraits/broken-3.png"
+      ],
+      "faces": [
+        "faces/broken-1-face.png",
+        "faces/broken-2-face.png",
+        "faces/broken-3-face.png"
+      ]
+    },
+    "done": {
+      "label": "Just finished",
+      "ring": "#4bbf73",
+      "fox": "fox/fox-done.png",
+      "portraits": [
+        "portraits/done-1.png",
+        "portraits/done-2.png",
+        "portraits/done-3.png"
+      ],
+      "faces": [
+        "faces/done-1-face.png",
+        "faces/done-2-face.png",
+        "faces/done-3-face.png"
+      ]
+    }
+  },
+  "avatar": "faces/quiet-1-face.png"
+}

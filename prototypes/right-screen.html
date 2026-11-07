@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1920">
+<title>Elfoqsy workspace, right screen (live prototype)</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;600;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<style>
+body{margin:0;background:#050606;color:#ECEFEE;font-family:'Atkinson Hyperlegible Next','Atkinson Hyperlegible',system-ui,sans-serif}
+#stage{position:relative;width:1920px;height:1080px;overflow:hidden}
+.chip{font-size:13px;font-weight:700;border-radius:4px;padding:4px 8px}
+button{font-family:inherit}
+</style>
+</head>
+<body>
+<!-- Standalone port of the agreed right screen. The simulation runs entirely in this file;
+     in the real build the same drawing is fed by the daemon's event stream (see docs/ui-spec.md). -->
+<div id="stage">
+<canvas id="cv" data-elf-sim="1" role="img" aria-label="Live map of Elfoqsy's agents" style="position:absolute;left:0;top:0;width:1920px;height:1080px;cursor:pointer"></canvas>
+<header style="position:absolute;left:40px;top:28px;display:flex;flex-direction:column;gap:10px;pointer-events:none">
+<span style="font-size:18px;color:#8E9897">Thursday 8 October, 14:06</span>
+<h1 style="margin:0;font-size:60px;line-height:1;font-weight:800;letter-spacing:-0.02em;color:#e8d48a">1 agent needs you.</h1>
+</header>
+<button id="elf" type="button" aria-label="Elfoqsy" style="position:absolute;left:704px;top:504px;width:112px;height:112px;padding:0;border:0;border-radius:50%;overflow:hidden;cursor:pointer;box-shadow:0 0 0 4px #050606,0 0 0 7px #007474;background:#0B0B0B">
+<img src="../assets/elfoqsy/needs-you.png" alt="" style="display:block;width:100%;height:100%;object-fit:cover;object-position:50% 28%">
+</button>
+<div style="position:absolute;left:40px;bottom:28px;display:flex;align-items:center;gap:14px">
+<button id="play" type="button" style="min-height:44px;padding:0 18px;border-radius:12px;border:1px solid #2A3333;background:#0D1010;color:#ECEFEE;font-size:16px;cursor:pointer">Pause</button>
+<span style="font-size:14px;color:#8E9897">Simulated. Click any agent, sub-agent or ticket.</span>
+</div>
+<aside id="panel" aria-label="Details" hidden style="position:absolute;right:40px;top:28px;bottom:28px;width:460px;box-sizing:border-box;background:#0D1010;border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:16px;box-shadow:0 0 0 1px #1A2121"></aside>
+</div>
+<script>
+class DCLogic { constructor(p){ this.props = p || {}; this.state = {}; } setState(o){ Object.assign(this.state, o); if (window.__render) window.__render(); } }
+
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { playing: true, sel: null };
+    this.cv = null;
+    this.t = 0;
+    this.last = 0;
+    this.hits = [];
+    var C = { x: 760, y: 560 };
+    var dir = function (deg) { var r = deg * Math.PI / 180; return { x: Math.cos(r), y: Math.sin(r) }; };
+    var mk = function (o) {
+      var d = dir(o.ang);
+      o.ax = C.x + d.x * 290; o.ay = C.y + d.y * 290;
+      o.tx = C.x + d.x * 500; o.ty = C.y + d.y * 500;
+      o.dx = d.x; o.dy = d.y;
+      return o;
+    };
+    this.C = C;
+    this.STEPS = ['Plan', 'Code', 'Test', 'PR', 'CI', 'Review', 'Merge'];
+    this.A = [
+      mk({ id: 1, ang: -140, key: 'SHOP-3533', type: 'Task', tfill: '#5E6968', sp: 3, step: 0, mode: 'waiting', period: 20,
+        name: 'Checkout benchmark v2: publish results to Confluence, and approve baselines there',
+        jobs: [],
+        log: ['Read the ticket and the checkout benchmark v2 notes.', 'Drafted the [BENCH] page: six checks, verdict, baseline, approval.', 'Waiting for you: which Confluence space, and which service account publishes?'] }),
+      mk({ id: 2, ang: -40, key: 'SHOP-3472', type: 'Story', tfill: '#3a8ce0', sp: 2, step: 4, mode: 'ci', period: 22,
+        name: 'Update vulnerable dependencies flagged for release 2.22.0',
+        jobs: [
+          { n: 'Run CI on #212', s: 0, d: 6, out: 'fail' },
+          { n: 'Read the failing integration log', s: 6.4, d: 3, out: 'ok' },
+          { n: 'Pin protobufjs to the version in #159', s: 9.6, d: 4, out: 'ok' },
+          { n: 'Re-run CI on #212', s: 14, d: 6.5, out: 'ok' }
+        ],
+        log: ['Rebased #212 on shop-shared #159.', 'CI failed on integration: protobufjs peer version mismatch.', 'Pinned protobufjs and re-ran CI.'] }),
+      mk({ id: 3, ang: 50, key: 'SHOP-2091', type: 'Bug', tfill: '#5E6968', sp: 2, step: 2, mode: 'work', period: 18,
+        name: 'Bundle discount applied to the whole cart when cart.split_bundles = false',
+        jobs: [
+          { n: 'Run the cart test suite', s: 0, d: 7, out: 'fail' },
+          { n: 'Run the unit tests', s: 0.6, d: 5, out: 'ok' },
+          { n: 'Run the pricing tests', s: 1.2, d: 4.5, out: 'ok' },
+          { n: 'Fix two cart expectations', s: 7.6, d: 5, out: 'ok' },
+          { n: 'Re-run the cart suite', s: 13, d: 4.5, out: 'ok' }
+        ],
+        log: ['Reproduced with split_bundles: false.', 'Applies the bundle discount to every line when bundles are not split.', 'Two cart tests disagreed with the new behaviour; fixing their expectations.'] }),
+      mk({ id: 4, ang: 140, key: 'SHOP-3546', type: 'Bug', tfill: '#5E6968', sp: 2, step: 1, mode: 'work', period: 19,
+        name: '[payments] Provider errors are dropped when the payment provider call fails (e.g. 429 throttle)',
+        jobs: [
+          { n: 'Search PaymentClient for where error_code is set', s: 0, d: 3.5, out: 'ok' },
+          { n: 'Read the 429 payload from integration', s: 0.5, d: 3, out: 'ok' },
+          { n: 'Lift error_code and error_details to the top level', s: 4, d: 6, out: 'ok' },
+          { n: 'Add the fallback in the checkout handler', s: 10.5, d: 5, out: 'ok' },
+          { n: 'Write unit tests with the 429 payload', s: 11, d: 6, out: 'ok' }
+        ],
+        log: ['Found where PaymentClient nests error_code inside details.', 'Lifting error_code and error_details to the top level.', 'Next: the same fallback in the checkout handler, then tests.'] })
+    ];
+    this.paths = {
+      Bug: { p: 'M12 8a4 4 0 0 1 4 4v4a4 4 0 0 1-8 0v-4a4 4 0 0 1 4-4zM9.5 8a2.5 2.5 0 0 1 5 0M8 12H4M20 12h-4M8 16H5M19 16h-3', fill: false },
+      Story: { p: 'M6 3h12v18l-6-4.5L6 21z', fill: true },
+      Task: { p: 'm5 12 4.5 4.5L19 7', fill: false }
+    };
+    this.loop = this.loop.bind(this);
+  }
+  componentDidMount() {
+    if (!this.cv && typeof document !== 'undefined') this.cv = document.querySelector('canvas[data-elf-sim]');
+    this.setup();
+    var reduce = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) { this.setState({ playing: false }); this.t = 5; this.draw(); return; }
+    this.raf = requestAnimationFrame(this.loop);
+  }
+  componentWillUnmount() { if (this.raf) cancelAnimationFrame(this.raf); }
+  setup() {
+    if (!this.cv) return;
+    var dpr = (typeof window !== 'undefined' && window.devicePixelRatio) || 1;
+    this.cv.width = 1920 * dpr; this.cv.height = 1080 * dpr;
+    this.ctx = this.cv.getContext('2d');
+    this.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    this.p2d = {};
+    for (var k in this.paths) this.p2d[k] = new Path2D(this.paths[k].p);
+  }
+  loop(ts) {
+    if (!this.last) this.last = ts;
+    var dt = Math.min(0.05, (ts - this.last) / 1000);
+    this.last = ts;
+    if (this.state.playing) this.t += dt;
+    this.draw();
+    this.raf = requestAnimationFrame(this.loop);
+  }
+  ease(x) { x = Math.max(0, Math.min(1, x)); return x < 0.5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2; }
+  glyph(type, cx, cy, s) {
+    var g = this.ctx, P = this.paths[type];
+    g.save(); g.translate(cx - s / 2, cy - s / 2); g.scale(s / 24, s / 24);
+    if (P.fill) { g.fillStyle = '#FFFFFF'; g.fill(this.p2d[type]); }
+    else { g.strokeStyle = '#FFFFFF'; g.lineWidth = 2.6; g.lineCap = 'round'; g.lineJoin = 'round'; g.stroke(this.p2d[type]); }
+    g.restore();
+  }
+  draw() {
+    var g = this.ctx; if (!g) { this.setup(); g = this.ctx; if (!g) return; }
+    var t = this.t, C = this.C, self = this;
+    var sel = this.state.sel;
+    g.clearRect(0, 0, 1920, 1080);
+    this.hits = [];
+    // core glow
+    var grd = g.createRadialGradient(C.x, C.y, 40, C.x, C.y, 220);
+    grd.addColorStop(0, 'rgba(0,116,116,0.28)'); grd.addColorStop(1, 'rgba(0,116,116,0)');
+    g.fillStyle = grd; g.beginPath(); g.arc(C.x, C.y, 220, 0, Math.PI * 2); g.fill();
+    // breathing ring around Elfoqsy
+    g.strokeStyle = 'rgba(73,184,184,' + (0.25 + 0.2 * Math.sin(t * 1.6)) + ')'; g.lineWidth = 2;
+    g.beginPath(); g.arc(C.x, C.y, 74 + 4 * Math.sin(t * 1.6), 0, Math.PI * 2); g.stroke();
+
+    this.A.forEach(function (a) {
+      var tau = a.period ? t % a.period : 0;
+      // tether Elfoqsy to agent
+      g.strokeStyle = '#0d3a3a'; g.lineWidth = 2;
+      g.beginPath(); g.moveTo(C.x + a.dx * 72, C.y + a.dy * 72); g.lineTo(a.ax - a.dx * 40, a.ay - a.dy * 40); g.stroke();
+      // agent to its ticket
+      g.setLineDash([6, 8]); g.strokeStyle = '#2A3333';
+      g.beginPath(); g.moveTo(a.ax + a.dx * 40, a.ay + a.dy * 40); g.lineTo(a.tx - a.dx * 30, a.ty - a.dy * 30); g.stroke();
+      g.setLineDash([]);
+      // instructions flowing out from Elfoqsy
+      if (a.mode !== 'waiting') {
+        for (var i = 0; i < 3; i++) {
+          var f = ((t * 0.45) + i / 3 + a.id * 0.17) % 1;
+          var px = C.x + a.dx * (72 + f * 178), py = C.y + a.dy * (72 + f * 178);
+          g.fillStyle = 'rgba(120,207,206,' + (0.9 - f * 0.6) + ')';
+          g.beginPath(); g.arc(px, py, 3, 0, Math.PI * 2); g.fill();
+        }
+      }
+      // ticket
+      var tr = (24 + 6 * a.sp) / 2;
+      g.fillStyle = a.tfill; g.beginPath(); g.arc(a.tx, a.ty, tr, 0, Math.PI * 2); g.fill();
+      if (sel && sel.kind === 'ticket' && sel.id === a.id) { g.strokeStyle = '#ECEFEE'; g.lineWidth = 2; g.beginPath(); g.arc(a.tx, a.ty, tr + 6, 0, Math.PI * 2); g.stroke(); }
+      self.glyph(a.type, a.tx, a.ty, tr * 0.9);
+      g.fillStyle = '#B9C1C0'; g.font = '600 15px "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", sans-serif'; g.textAlign = 'center';
+      g.fillText(a.key, a.tx, a.ty + tr + 22);
+      self.hits.push({ kind: 'ticket', id: a.id, x: a.tx, y: a.ty, r: tr + 8 });
+
+      // sub-agents
+      var slots = [-38, 0, 38, -72, 72];
+      var active = 0, failNow = false, okFlash = 0;
+      a.jobs.forEach(function (j, ji) {
+        var u = tau - j.s;
+        if (u < 0 || u > j.d + 0.9) return;
+        var slot = slots[ji % slots.length] * Math.PI / 180;
+        var bx = a.dx * Math.cos(slot) - a.dy * Math.sin(slot), by = a.dx * Math.sin(slot) + a.dy * Math.cos(slot);
+        var grow = self.ease(u / 0.7);
+        var back = u > j.d ? self.ease((u - j.d) / 0.9) : 0;
+        var dist = 98 * grow * (1 - back);
+        var sx = a.ax + bx * dist, sy = a.ay + by * dist;
+        var done = u > j.d - 0.6 && u <= j.d;
+        var col = '#119d9d';
+        if (done) col = j.out === 'fail' ? '#e54c4a' : '#16a356';
+        if (u > j.d) col = j.out === 'fail' ? '#e54c4a' : '#16a356';
+        if (j.out === 'fail' && u > j.d - 0.6) failNow = true;
+        if (j.out === 'ok' && u > j.d) okFlash = Math.max(okFlash, 1 - back);
+        if (u <= j.d) active++;
+        // thread to parent
+        g.strokeStyle = 'rgba(17,157,157,' + (0.5 * (1 - back)) + ')'; g.lineWidth = 1.5;
+        g.beginPath(); g.moveTo(a.ax, a.ay); g.lineTo(sx, sy); g.stroke();
+        // node
+        var r = 10 * Math.max(0.2, grow) * (1 - back * 0.7);
+        g.fillStyle = col; g.beginPath(); g.arc(sx, sy, r, 0, Math.PI * 2); g.fill();
+        if (u > 0.7 && u < j.d - 0.6) {
+          var sp = t * 5 + ji;
+          g.strokeStyle = '#78cfce'; g.lineWidth = 2.5;
+          g.beginPath(); g.arc(sx, sy, r + 6, sp, sp + Math.PI * 0.9); g.stroke();
+        }
+        if (done) {
+          var k = (u - (j.d - 0.6)) / 0.6;
+          g.strokeStyle = col; g.globalAlpha = 1 - k; g.lineWidth = 2;
+          g.beginPath(); g.arc(sx, sy, r + 6 + k * 16, 0, Math.PI * 2); g.stroke(); g.globalAlpha = 1;
+        }
+        if (sel && sel.kind === 'sub' && sel.id === a.id && sel.j === ji) { g.strokeStyle = '#ECEFEE'; g.lineWidth = 2; g.beginPath(); g.arc(sx, sy, r + 12, 0, Math.PI * 2); g.stroke(); }
+        // report flowing back to Elfoqsy after a job ends
+        if (u > j.d) {
+          var q = self.ease((u - j.d) / 0.9);
+          var rx = a.ax + (C.x - a.ax) * q, ry = a.ay + (C.y - a.ay) * q;
+          g.fillStyle = j.out === 'fail' ? '#fe726c' : '#4bbf73';
+          g.beginPath(); g.arc(rx, ry, 4, 0, Math.PI * 2); g.fill();
+        }
+        self.hits.push({ kind: 'sub', id: a.id, j: ji, x: sx, y: sy, r: 18 });
+      });
+
+      // agent: waiting pulses yellow; a failure flashes red
+      var halo = null;
+      if (a.mode === 'waiting') halo = 'rgba(232,212,138,' + (0.35 + 0.35 * Math.sin(t * 3)) + ')';
+      if (failNow) halo = 'rgba(254,114,108,0.8)';
+      if (halo) { g.strokeStyle = halo; g.lineWidth = 3; g.beginPath(); g.arc(a.ax, a.ay, 50 + (a.mode === 'waiting' ? 4 * Math.sin(t * 3) : 0), 0, Math.PI * 2); g.stroke(); }
+      // step ring: seven segments around the agent
+      var seg = Math.PI * 2 / 7, gap = 0.08;
+      for (var s = 0; s < 7; s++) {
+        var c2 = '#1a2121';
+        if (s < a.step) c2 = '#16a356';
+        if (s === a.step) {
+          if (a.mode === 'waiting') c2 = '#d8bc4e';
+          else if (failNow) c2 = '#e54c4a';
+          else c2 = 'rgba(92,168,251,' + (0.55 + 0.45 * Math.sin(t * 4)) + ')';
+        }
+        g.strokeStyle = c2; g.lineWidth = 6;
+        g.beginPath(); g.arc(a.ax, a.ay, 38, -Math.PI / 2 + s * seg + gap, -Math.PI / 2 + (s + 1) * seg - gap); g.stroke();
+      }
+      g.fillStyle = '#007474'; g.beginPath(); g.arc(a.ax, a.ay, 28, 0, Math.PI * 2); g.fill();
+      if (okFlash > 0) { g.strokeStyle = 'rgba(75,191,115,' + okFlash + ')'; g.lineWidth = 2; g.beginPath(); g.arc(a.ax, a.ay, 28, 0, Math.PI * 2); g.stroke(); }
+      if (sel && sel.kind === 'agent' && sel.id === a.id) { g.strokeStyle = '#ECEFEE'; g.lineWidth = 2; g.beginPath(); g.arc(a.ax, a.ay, 58, 0, Math.PI * 2); g.stroke(); }
+      g.fillStyle = '#FFFFFF'; g.font = '800 20px "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", sans-serif'; g.textAlign = 'center'; g.textBaseline = 'middle';
+      g.fillText(String(a.id), a.ax, a.ay + 1); g.textBaseline = 'alphabetic';
+      self.hits.push({ kind: 'agent', id: a.id, x: a.ax, y: a.ay, r: 46, active: active });
+      // waiting agent sends a question toward the left screen, where you talk to Elfoqsy
+      if (a.mode === 'waiting') {
+        var w = (t * 0.35) % 1;
+        var qx = a.ax + (0 - a.ax) * w, qy = a.ay + (a.ay - 40 - a.ay) * w;
+        g.fillStyle = 'rgba(232,212,138,' + (1 - w) + ')';
+        g.beginPath(); g.arc(qx, qy, 5, 0, Math.PI * 2); g.fill();
+      }
+    });
+  }
+  hit(e) {
+    if (!this.cv) return null;
+    var r = this.cv.getBoundingClientRect();
+    var x = (e.clientX - r.left) * 1920 / r.width, y = (e.clientY - r.top) * 1080 / r.height;
+    var best = null;
+    for (var i = 0; i < this.hits.length; i++) {
+      var h = this.hits[i], dd = Math.hypot(h.x - x, h.y - y);
+      if (dd <= h.r && (!best || dd < best.dd)) best = { h: h, dd: dd };
+    }
+    return best ? best.h : null;
+  }
+  renderVals() {
+    var self = this;
+    var sel = this.state.sel;
+    var MODE = { waiting: ['Waiting for you', '#e8d48a', '#2f2601'], ci: ['Working, CI', '#b6d8ff', '#00274c'], work: ['Working', '#b6d8ff', '#00274c'] };
+    var d = { chips: [], lines: [] }, show = false;
+    if (sel) {
+      show = true;
+      var a = this.A.filter(function (x) { return x.id === sel.id; })[0];
+      if (sel.kind === 'elf') {
+        d = { title: 'Elfoqsy', color: '#007474', sub: 'Orchestrating four agents on your sprint. Instructions flow out along the threads; results flow back.', chips: [{ t: '4 agents', fg: '#d3d8d7', bg: '#1a2121' }, { t: '1 waiting for you', fg: '#e8d48a', bg: '#2f2601' }], lines: [{ t: 'Agent 1 needs a decision on SHOP-3533.' }, { t: 'Agent 2 is fixing a CI failure on SHOP-3472.' }, { t: 'Agents 3 and 4 are coding and testing.' }] };
+      } else if (a && sel.kind === 'agent') {
+        var m = MODE[a.mode];
+        d = { title: 'Agent ' + a.id, color: '#007474', sub: a.key + ': ' + a.name, chips: [{ t: m[0], fg: m[1], bg: m[2] }, { t: 'Step: ' + this.STEPS[a.step], fg: '#d3d8d7', bg: '#1a2121' }, { t: a.jobs.length + ' sub-agent jobs', fg: '#d3d8d7', bg: '#1a2121' }], lines: a.log.map(function (l) { return { t: l }; }) };
+      } else if (a && sel.kind === 'sub') {
+        var j = a.jobs[sel.j];
+        d = { title: 'Sub-agent', color: '#119d9d', sub: j.n, chips: [{ t: 'Spawned by Agent ' + a.id, fg: '#d3d8d7', bg: '#1a2121' }, { t: a.key, fg: '#d3d8d7', bg: '#1a2121' }, { t: j.out === 'fail' ? 'Ends in a failure' : 'Ends in success', fg: j.out === 'fail' ? '#fec4be' : '#a6e6b6', bg: j.out === 'fail' ? '#4f0006' : '#003014' }], lines: [{ t: 'Runs about ' + Math.round(j.d) + ' seconds in this simulation, then reports back to Agent ' + a.id + ' and on to Elfoqsy.' }] };
+      } else if (a && sel.kind === 'ticket') {
+        d = { title: a.key, color: a.tfill, sub: a.name, chips: [{ t: a.type, fg: '#d3d8d7', bg: '#1a2121' }, { t: a.sp + ' story points', fg: '#d3d8d7', bg: '#1a2121' }, { t: 'Agent ' + a.id + ' on it', fg: '#78cfce', bg: '#001b1b' }], lines: [{ t: 'Open it on the left screen, or in Jira.' }] };
+      }
+    }
+    return {
+      setCanvas: function (el) { if (el && el !== self.cv) { self.cv = el; self.setup(); } },
+      onCanvasClick: function (e) {
+        var h = self.hit(e);
+        if (!h) { self.setState({ sel: null }); return; }
+        self.setState({ sel: { kind: h.kind, id: h.id, j: h.j } });
+      },
+      pickElf: function () { self.setState({ sel: { kind: 'elf' } }); },
+      togglePlay: function () { self.setState({ playing: !self.state.playing }); },
+      playLabel: this.state.playing ? 'Pause' : 'Play',
+      showDetail: show, d: d,
+      close: function () { self.setState({ sel: null }); }
+    };
+  }
+}
+
+var c = new Component({});
+c.cv = document.getElementById('cv');
+var esc = function (t) { return String(t).replace(/[&<>"]/g, function (m) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[m]; }); };
+window.__render = function () {
+  var v = c.renderVals();
+  document.getElementById('play').textContent = v.playLabel;
+  var p = document.getElementById('panel');
+  if (!v.showDetail) { p.hidden = true; return; }
+  p.hidden = false; p.style.display = 'flex';
+  p.innerHTML = '<div style="display:flex;align-items:center;gap:12px"><span style="width:14px;height:14px;border-radius:50%;background:' + v.d.color + '"></span><span style="font-size:20px;font-weight:800">' + esc(v.d.title) + '</span><button id="close" type="button" aria-label="Close details" style="margin-left:auto;width:40px;height:40px;border-radius:10px;border:1px solid #2A3333;background:transparent;color:#ECEFEE;font-size:20px;cursor:pointer">×</button></div>'
+    + '<span style="font-size:16px;line-height:1.45;color:#B9C1C0">' + esc(v.d.sub) + '</span>'
+    + '<div style="display:flex;flex-wrap:wrap;gap:8px">' + v.d.chips.map(function (x) { return '<span class="chip" style="color:' + x.fg + ';background:' + x.bg + '">' + esc(x.t) + '</span>'; }).join('') + '</div>'
+    + '<div style="flex:1;min-height:0;overflow-y:auto;display:flex;flex-direction:column;gap:10px;padding-top:14px;border-top:1px solid #1A2121">' + v.d.lines.map(function (l) { return '<span style="font-size:15px;line-height:1.5;color:#d3d8d7">' + esc(l.t) + '</span>'; }).join('') + '</div>';
+  document.getElementById('close').onclick = v.close;
+};
+document.getElementById('cv').addEventListener('click', function (e) { c.renderVals().onCanvasClick(e); });
+document.getElementById('elf').addEventListener('click', function () { c.renderVals().pickElf(); });
+document.getElementById('play').addEventListener('click', function () { c.renderVals().togglePlay(); });
+c.componentDidMount();
+window.__render();
+</script>
+</body>
+</html>

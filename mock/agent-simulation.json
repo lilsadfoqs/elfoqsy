@@ -1,0 +1,151 @@
+{
+  "_note": "Scripted activity for simulate mode, matching prototypes/right-screen.html. Times are seconds within each agent's loop. The simulator turns these into run.*, subagent.* and approval.* events and repeats every loopSeconds.",
+  "agents": [
+    {
+      "agentNumber": 1,
+      "ticket": "SHOP-3533",
+      "step": "plan",
+      "state": "waiting_for_you",
+      "loopSeconds": 20,
+      "approval": {
+        "kind": "question",
+        "question": "Which Confluence space should the [BENCH] pages go to, and which service account publishes them?",
+        "options": [
+          "Ask me in chat"
+        ]
+      },
+      "jobs": [],
+      "log": [
+        "Read the ticket and the checkout benchmark v2 notes.",
+        "Drafted the [BENCH] page: six checks, outcome, baseline, approval.",
+        "Waiting for you: which Confluence space, and which service account publishes?"
+      ]
+    },
+    {
+      "agentNumber": 2,
+      "ticket": "SHOP-3472",
+      "step": "ci",
+      "state": "running",
+      "loopSeconds": 22,
+      "jobs": [
+        {
+          "name": "Run CI on #212",
+          "start": 0,
+          "duration": 6,
+          "outcome": "failure"
+        },
+        {
+          "name": "Read the failing integration log",
+          "start": 6.4,
+          "duration": 3,
+          "outcome": "success"
+        },
+        {
+          "name": "Pin protobufjs to the version in #159",
+          "start": 9.6,
+          "duration": 4,
+          "outcome": "success"
+        },
+        {
+          "name": "Re-run CI on #212",
+          "start": 14,
+          "duration": 6.5,
+          "outcome": "success"
+        }
+      ],
+      "log": [
+        "Rebased #212 on shop-shared #159.",
+        "CI failed on integration: protobufjs peer version mismatch.",
+        "Pinned protobufjs and re-ran CI."
+      ]
+    },
+    {
+      "agentNumber": 3,
+      "ticket": "SHOP-2091",
+      "step": "test",
+      "state": "running",
+      "loopSeconds": 18,
+      "jobs": [
+        {
+          "name": "Run the pricing test suite",
+          "start": 0,
+          "duration": 7,
+          "outcome": "failure"
+        },
+        {
+          "name": "Run the unit tests",
+          "start": 0.6,
+          "duration": 5,
+          "outcome": "success"
+        },
+        {
+          "name": "Run the cart tests",
+          "start": 1.2,
+          "duration": 4.5,
+          "outcome": "success"
+        },
+        {
+          "name": "Fix two pricing expectations",
+          "start": 7.6,
+          "duration": 5,
+          "outcome": "success"
+        },
+        {
+          "name": "Re-run the pricing suite",
+          "start": 13,
+          "duration": 4.5,
+          "outcome": "success"
+        }
+      ],
+      "log": [
+        "Reproduced with split_bundles: false.",
+        "Applies the bundle discount to the bundle items only when bundles are not split.",
+        "Two pricing tests disagreed with the new behaviour; fixing their expectations."
+      ]
+    },
+    {
+      "agentNumber": 4,
+      "ticket": "SHOP-3546",
+      "step": "code",
+      "state": "running",
+      "loopSeconds": 19,
+      "jobs": [
+        {
+          "name": "Search PaymentClient for where error_code is set",
+          "start": 0,
+          "duration": 3.5,
+          "outcome": "success"
+        },
+        {
+          "name": "Read the 429 payload from integration",
+          "start": 0.5,
+          "duration": 3,
+          "outcome": "success"
+        },
+        {
+          "name": "Lift error_code and error_details to the top level",
+          "start": 4,
+          "duration": 6,
+          "outcome": "success"
+        },
+        {
+          "name": "Add the fallback in the webhook handler",
+          "start": 10.5,
+          "duration": 5,
+          "outcome": "success"
+        },
+        {
+          "name": "Write unit tests with the 429 payload",
+          "start": 11,
+          "duration": 6,
+          "outcome": "success"
+        }
+      ],
+      "log": [
+        "Found where PaymentClient nests error_code inside details.",
+        "Lifting error_code and error_details to the top level.",
+        "Next: the same fallback in the webhook handler, then tests."
+      ]
+    }
+  ]
+}
