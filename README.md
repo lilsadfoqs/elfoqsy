@@ -7,7 +7,7 @@
 
 Elfoqsy reads your sprint, starts a Claude coding agent for each ticket in its own clone, lets it split work into sub-agents, and stops to ask you whenever a decision or a risky action needs a human. Everything that happens is an event in an append-only log, and both screens are pure folds over that log. Close the browser, restart the daemon, or open last week's log: the screens rebuild exactly.
 
-![The two screens in simulate mode](docs/media/demo.gif)
+![The two screens in simulate mode](docs/media/demo.webp)
 
 | Left screen | Right screen |
 | --- | --- |
