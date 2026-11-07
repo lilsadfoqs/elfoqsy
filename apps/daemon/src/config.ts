@@ -150,7 +150,12 @@ export function loadConfig(env: NodeJS.ProcessEnv, mode: Mode): Config {
       const value = values[name];
       return Array.isArray(value) ? value.length === 0 : !value;
     });
-    if (missing.length) throw new ConfigError(`Missing environment variables for live mode: ${missing.join(', ')}`);
+    if (missing.length) {
+      throw new ConfigError(
+        `Missing environment variables for live mode: ${missing.join(', ')}.\n` +
+          'Copy .env.example to .env and fill them in, or run `pnpm dev:sim` for the demo, which needs no tokens.',
+      );
+    }
   }
   const worktreesRoot = resolve(values.WORKTREES_ROOT ?? defaultWorktreesRoot(env));
   // A run folder inside this repository (or inside his clones) would be part of that git repository:

@@ -29,7 +29,10 @@ describe('loadConfig', () => {
       }
     })();
     expect(error).toBeInstanceOf(ConfigError);
-    expect(error?.message).toBe('Missing environment variables for live mode: JIRA_EMAIL, GITHUB_REPOS, REPOS_ROOT');
+    expect(error?.message).toBe(
+      'Missing environment variables for live mode: JIRA_EMAIL, GITHUB_REPOS, REPOS_ROOT.\n' +
+        'Copy .env.example to .env and fill them in, or run `pnpm dev:sim` for the demo, which needs no tokens.',
+    );
     expect(error?.message).not.toContain(secret);
   });
 
