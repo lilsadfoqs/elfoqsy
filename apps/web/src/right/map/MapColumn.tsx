@@ -10,10 +10,15 @@ import { FoxBadge } from '../../ui/FoxBadge';
 import { stream } from '../../state/workspace';
 import { focusRun } from '../focus';
 import { drawMap, hitAt, readPalette, type MapHit, type Palette, type SubSides } from './draw';
-import { DEFAULT_HEAD, agentMode, layoutMap, mapScale, type Size } from './layout';
+import { DEFAULT_HEAD, agentMode, layoutMap, mapScale, type MapLayout, type Size } from './layout';
 import { useBox } from '../../panes/slot';
 
 const prefersReducedMotion = (): boolean => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/** Frames a second while agents are on the map (flowing dots, pulses, sub-agents growing out). */
+const MOTION_FPS = 20;
+/** Frames a second when only Elfoqsy's glow breathes. */
+const BREATH_FPS = 8;
 
 interface Props {
   state: WorkspaceState;
@@ -90,6 +95,7 @@ function MapCanvas({ state, head }: { state: WorkspaceState; head: Size }) {
   const sides = useRef<SubSides>(new Map());
   const palette = useRef<Palette | null>(null);
   const clock = useRef({ t: 4, last: 0 });
+  const laid = useRef<{ state: WorkspaceState; w: number; h: number; hw: number; hh: number; layout: MapLayout } | null>(null);
   const latest = useRef({ state, hover, selected, size, head });
   latest.current = { state, hover, selected, size, head };
 
@@ -116,7 +122,12 @@ function MapCanvas({ state, head }: { state: WorkspaceState; head: Size }) {
     const { state, hover, selected, size, head } = latest.current;
     if (!c || !size.w) return;
     palette.current ??= readPalette();
-    const layout = layoutMap(state, size.w, size.h, head);
+    // The layout depends only on the state and the sizes, so it is worked out again only when one of them changes.
+    let l = laid.current;
+    if (!l || l.state !== state || l.w !== size.w || l.h !== size.h || l.hw !== head.w || l.hh !== head.h) {
+      l = laid.current = { state, w: size.w, h: size.h, hw: head.w, hh: head.h, layout: layoutMap(state, size.w, size.h, head) };
+    }
+    const layout = l.layout;
     hits.current = drawMap(c.getContext('2d')!, { layout, state, now: stream.now(), t: clock.current.t, hover, selected, sides: sides.current }, palette.current);
   }, []);
 
@@ -132,11 +143,15 @@ function MapCanvas({ state, head }: { state: WorkspaceState; head: Size }) {
       draw();
       return;
     }
+    // The browser offers a frame on every refresh (60 or more a second); the map draws only as often as its motion needs.
     let frame = requestAnimationFrame(function loop(ts) {
       const c = clock.current;
-      if (c.last) c.t += Math.min(0.05, (ts - c.last) / 1000);
-      c.last = ts;
-      draw();
+      const fps = laid.current?.layout.agents.length ? MOTION_FPS : BREATH_FPS;
+      if (!c.last || ts - c.last >= 1000 / fps - 2) {
+        if (c.last) c.t += Math.min(0.2, (ts - c.last) / 1000);
+        c.last = ts;
+        draw();
+      }
       frame = requestAnimationFrame(loop);
     });
     return () => {
